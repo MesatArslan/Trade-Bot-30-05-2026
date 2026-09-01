@@ -1,0 +1,109 @@
+# BYBIT FUNDING GECMISI — son 30 gun  (hacim >= $5M, her slot top-1)
+# Slot saatleri: TR 03:00 / 11:00 / 19:00  (= UTC 00:00 / 08:00 / 16:00)
+# EN DUSUK = en negatif funding (shortlar oder -> LONG/squeeze adayi)
+# EN YUKSEK = en pozitif funding (longlar oder -> SHORT adayi)
+
+==============================================================================
+⏰  11:00 TR  —  son 30 gun
+==============================================================================
+TARIH        🔴 EN DUSUK (negatif)               🟢 EN YUKSEK (pozitif)
+2026-08-29   SKRUSDT:-0.2323%                   NIULAIUSDT:+0.1999%
+2026-08-28   COTIUSDT:-0.1357%                  LIGHTUSDT:+0.0518%
+2026-08-27   BICOUSDT:-0.8181%                  CASHCATUSDT:+0.0851%
+2026-08-26   EDENUSDT:-0.5520%                  CASHCATUSDT:+0.0980%
+2026-08-25   BICOUSDT:-0.2442%                  TACUSDT:+0.0955%
+2026-08-24   BICOUSDT:-0.2021%                  CASHCATUSDT:+0.0891%
+2026-08-23   COTIUSDT:-0.2221%                  BTWUSDT:+0.0414%
+2026-08-22   BICOUSDT:-0.1911%                  XMRUSDT:+0.1362%
+2026-08-21   ONGUSDT:-1.6767%                   BTRUSDT:+0.0725%
+2026-08-20   COTIUSDT:-0.2952%                  BTRUSDT:+0.0837%
+2026-08-19   COTIUSDT:-0.1917%                  SKHYNIXUSDT:+0.1278%
+2026-08-18   BICOUSDT:-0.4231%                  LIGHTUSDT:+0.0473%
+2026-08-17   BICOUSDT:-0.9099%                  SKHYNIXUSDT:+0.0624%
+2026-08-16   BICOUSDT:-0.5784%                  BTWUSDT:+0.1069%
+2026-08-15   BICOUSDT:-0.6675%                  BTWUSDT:+0.1087%
+2026-08-14   DOSUSDT:-0.2452%                   CLOUSDT:+0.2427%
+2026-08-13   DOSUSDT:-0.4073%                   BTRUSDT:+0.1559%
+2026-08-12   DEXEUSDT:-0.0806%                  SKHYNIXUSDT:+0.0643%
+2026-08-11   DEXEUSDT:-0.0505%                  BTRUSDT:+0.1117%
+2026-08-10   DEXEUSDT:-0.1163%                  SKHYNIXUSDT:+0.0820%
+2026-08-09   DEXEUSDT:-0.4088%                  TUTUSDT:+0.3371%
+2026-08-08   DEXEUSDT:-0.0861%                  4USDT:+0.0445%
+2026-08-07   DEXEUSDT:-0.0807%                  SKHYNIXUSDT:+0.1516%
+2026-08-06   BANKUSDT:-0.4666%                  BLESSUSDT:+0.1186%
+2026-08-05   SKRUSDT:-0.6515%                   BICOUSDT:+0.0612%
+2026-08-04   BANKUSDT:-0.7048%                  SPCXUSDT:+0.0700%
+2026-08-03   DEXEUSDT:-0.4423%                  NVDAUSDT:+0.1731%
+2026-08-02   DEXEUSDT:-0.5331%                  SOXLUSDT:+0.1580%
+2026-08-01   BANKUSDT:-0.2913%                  CLOUSDT:+0.1036%
+2026-07-31   BANKUSDT:-0.4036%                  SPCXUSDT:+0.1543%
+
+==============================================================================
+⏰  19:00 TR  —  son 30 gun
+==============================================================================
+TARIH        🔴 EN DUSUK (negatif)               🟢 EN YUKSEK (pozitif)
+2026-08-29   HNTUSDT:-0.7447%                   4USDT:+0.0819%
+2026-08-28   BICOUSDT:-0.1517%                  NIULAIUSDT:+0.1062%
+2026-08-27   ONGUSDT:-0.1205%                   LIGHTUSDT:+0.0846%
+2026-08-26   ONGUSDT:-1.7197%                   TACUSDT:+0.1161%
+2026-08-25   BICOUSDT:-0.1672%                  CASHCATUSDT:+0.1612%
+2026-08-24   BICOUSDT:-0.2382%                  BTWUSDT:+0.0661%
+2026-08-23   BICOUSDT:-0.1684%                  KORUUSDT:+0.0755%
+2026-08-22   COTIUSDT:-0.8000%                  BEATUSDT:+0.0445%
+2026-08-21   COTIUSDT:-0.4222%                  4USDT:+0.1243%
+2026-08-20   COTIUSDT:-0.2589%                  4USDT:+0.0632%
+2026-08-19   EDENUSDT:-0.0954%                  BTWUSDT:+0.0913%
+2026-08-18   BICOUSDT:-0.3305%                  CLOUSDT:+0.0592%
+2026-08-17   BICOUSDT:-0.4050%                  SKHYNIXUSDT:+0.0624%
+2026-08-16   BICOUSDT:-1.0571%                  BTWUSDT:+0.0609%
+2026-08-15   BICOUSDT:-0.3022%                  BTWUSDT:+0.0964%
+2026-08-14   BICOUSDT:-0.4622%                  BTWUSDT:+0.0628%
+2026-08-13   DOSUSDT:-0.3018%                   BTRUSDT:+0.1478%
+2026-08-12   BEATUSDT:-0.2759%                  BTRUSDT:+0.0466%
+2026-08-11   DEXEUSDT:-0.0914%                  XMRUSDT:+0.0553%
+2026-08-10   CLUSDT:-0.0514%                    LIGHTUSDT:+0.0493%
+2026-08-09   DEXEUSDT:-0.3539%                  BTWUSDT:+0.1574%
+2026-08-08   CYSUSDT:-0.6470%                   BTRUSDT:+0.0946%
+2026-08-07   BICOUSDT:-0.2657%                  BTRUSDT:+0.1006%
+2026-08-06   INJUSDT:-0.0315%                   4USDT:+0.1533%
+2026-08-05   CYSUSDT:-0.8314%                   4USDT:+0.0785%
+2026-08-04   DEXEUSDT:-0.3288%                  BTWUSDT:+0.0607%
+2026-08-03   DEXEUSDT:-1.7447%                  TACUSDT:+0.0848%
+2026-08-02   NILUSDT:-0.3034%                   BTWUSDT:+0.0909%
+2026-08-01   BANKUSDT:-0.1008%                  BLESSUSDT:+0.1501%
+2026-07-31   BANKUSDT:-0.5786%                  BTRUSDT:+0.0832%
+
+==============================================================================
+⏰  03:00 TR  —  son 30 gun
+==============================================================================
+TARIH        🔴 EN DUSUK (negatif)               🟢 EN YUKSEK (pozitif)
+2026-08-29   ONGUSDT:-0.2210%                   SOXLUSDT:+0.0676%
+2026-08-28   ONGUSDT:-0.6327%                   4USDT:+0.0937%
+2026-08-27   ONGUSDT:-2.5000%                   SKHYNIXUSDT:+0.1856%
+2026-08-26   BICOUSDT:-0.0808%                  ONGUSDT:+0.0628%
+2026-08-25   BICOUSDT:-0.2505%                  CASHCATUSDT:+0.2282%
+2026-08-24   BICOUSDT:-0.2285%                  4USDT:+0.0545%
+2026-08-23   ONGUSDT:-0.6580%                   BTWUSDT:+0.0680%
+2026-08-22   COTIUSDT:-0.8000%                  CLOUSDT:+0.1321%
+2026-08-21   ONGUSDT:-2.5000%                   BTRUSDT:+0.1260%
+2026-08-20   BICOUSDT:-0.2421%                  SKHYNIXUSDT:+0.0773%
+2026-08-19   COTIUSDT:-0.2406%                  CLOUSDT:+0.1917%
+2026-08-18   BICOUSDT:-0.3427%                  BTRUSDT:+0.0904%
+2026-08-17   BICOUSDT:-0.8100%                  BTWUSDT:+0.1418%
+2026-08-16   BICOUSDT:-0.4607%                  CYSUSDT:+0.3338%
+2026-08-15   BICOUSDT:-0.4462%                  BTWUSDT:+0.1462%
+2026-08-14   EDENUSDT:-0.0954%                  BTRUSDT:+0.1659%
+2026-08-13   DOSUSDT:-0.1658%                   BTRUSDT:+0.1099%
+2026-08-12   CLUSDT:-0.1474%                    XMRUSDT:+0.0951%
+2026-08-11   CLUSDT:-0.1269%                    4USDT:+0.0896%
+2026-08-10   DEXEUSDT:-0.2276%                  TUTUSDT:+0.1219%
+2026-08-09   CYSUSDT:-0.0198%                   BTRUSDT:+0.1156%
+2026-08-08   SPCXUSDT:-0.0903%                  BTRUSDT:+0.1166%
+2026-08-07   WLDUSDT:-0.0271%                   CASHCATUSDT:+0.1158%
+2026-08-06   SKRUSDT:-0.1751%                   CASHCATUSDT:+0.1145%
+2026-08-05   DEXEUSDT:-0.0678%                  BTWUSDT:+0.0502%
+2026-08-04   DEXEUSDT:-0.3876%                  CLOUSDT:+0.0619%
+2026-08-03   BANKUSDT:-0.2668%                  BLESSUSDT:+0.1289%
+2026-08-02   BANKUSDT:-0.1747%                  BTWUSDT:+0.1379%
+2026-08-01   BANKUSDT:-0.6109%                  CLOUSDT:+0.0733%
+2026-07-31   DEXEUSDT:-1.2506%                  SKHYNIXUSDT:+0.1720%

@@ -1,0 +1,7 @@
+[23:51:34] 🤖 CANLI bot başladı — MEXC çalıştırıcı: 🧪 DRY-RUN (emir gönderilmez) | anahtar YOK
+[23:51:34]    Teminat $5.0×10x, max 3 poz, conf≥62, 60dk
+[23:51:34]    🧪 DRY-RUN: hiçbir gerçek emir gönderilmez, sadece planlar loglanır.
+[23:51:40] 🟢 GİRİŞ #1 SHORT OP_USDT        @ 0.09492     527 kontrat (~$50 notional, teminat $5.00)
+[23:51:40]       [DRY] AÇ SHORT OP_USDT vol=527 lev=10x  side=3 type=5 SL 0.09508 TP 0.09455
+[23:51:40] 🟢 GİRİŞ #2 SHORT TRUMPOFFICIAL_USDT @ 2.259       221 kontrat (~$50 notional, teminat $4.99)
+[23:51:40]       [DRY] AÇ SHORT TRUMPOFFICIAL_USDT vol=221 lev=10x  side=3 type=5 SL 2.264 TP 2.248

@@ -1,0 +1,42 @@
+══════════════════════════════════════════════════════════════════════
+  PRO TREND PAPER BOT — ARA RAPOR   (00:37:19)
+══════════════════════════════════════════════════════════════════════
+  Başlangıç bakiye : $500.00      Kaldıraç: dinamik 4-15x (coin volatilitesine göre)
+  Bitiş equity     : $499.10
+  ► NET SONUÇ      : $-0.90   (-0.18%)
+  Brüt PnL (kom. öncesi): $+0.00
+  ► TOPLAM KOMİSYON: $0.899   (giriş+tp1 maker %0.020 / stop+trail taker %0.055)
+  Teminat/işlem: equity'nin %20'i (~$100) → notional = teminat × dinamik kaldıraç
+  Çıkış: stop 2.5×ATR | tp1 2.0R'de %40 | kalan 1.5R iz-süren
+  Pik equity $500.00 | dip equity $500.00 | max düşüş $+0.00
+----------------------------------------------------------------------
+  Kapanan işlem: 0   |   Açık: 3
+══════════════════════════════════════════════════════════════════════
+  İŞLEM DÖKÜMÜ (her pozisyon tek trade, kısmi çıkışlar altında)
+══════════════════════════════════════════════════════════════════════
+
+  #1 ❌ SHORT 1000BONKUSDT  [AÇIK]
+     Giriş  : 0.002974  @ 00:31:00   (conf 74.4, rr 4.0, adx1 33.0/adx5 58.3, atr 0.187%)
+     Boyut  : teminat $100.00 × 15x = notional $1500.00   (qty 5.044e+05)
+     Plan   : stop 0.0029879 (%0.47) 15x  tp1 0.00294619 (%0.93)→%40  kalan 1.5R iz-süren
+       → (henüz çıkış yok)
+     Komisyon: açılış $0.300 + kapanış $0.000 = $0.300
+     ► Bu coin NET: $-0.300   (teminata göre %-0.3)
+
+  #2 ❌ SHORT POLUSDT  [AÇIK]
+     Giriş  : 0.08867  @ 00:31:44   (conf 91.4, rr 4.0, adx1 50.5/adx5 64.0, atr 0.18%)
+     Boyut  : teminat $99.94 × 15x = notional $1499.10   (qty 1.691e+04)
+     Plan   : stop 0.089069 (%0.45) 15x  tp1 0.087872 (%0.9)→%40  kalan 1.5R iz-süren
+       → (henüz çıkış yok)
+     Komisyon: açılış $0.300 + kapanış $0.000 = $0.300
+     ► Bu coin NET: $-0.300   (teminata göre %-0.3)
+
+  #3 ❌ SHORT ETHFIUSDT  [AÇIK]
+     Giriş  : 0.5656  @ 00:31:44   (conf 66.6, rr 4.0, adx1 43.8/adx5 26.6, atr 0.216%)
+     Boyut  : teminat $99.88 × 15x = notional $1498.20   (qty 2649)
+     Plan   : stop 0.568654 (%0.54) 15x  tp1 0.559492 (%1.08)→%40  kalan 1.5R iz-süren
+       → (henüz çıkış yok)
+     Komisyon: açılış $0.300 + kapanış $0.000 = $0.300
+     ► Bu coin NET: $-0.300   (teminata göre %-0.3)
+
+══════════════════════════════════════════════════════════════════════

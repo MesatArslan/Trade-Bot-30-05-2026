@@ -1,0 +1,1584 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Funding Trader — Terminal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- CDN — yüklenmezse veri katmanı yine çalışır (graceful fallback) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<style>
+  :root{
+    --bg:#06070c; --bg2:#080a12;
+    --panel:rgba(20,24,34,.72); --panel2:rgba(27,32,45,.62);
+    --glass:rgba(255,255,255,.04); --line:rgba(255,255,255,.08);
+    --line2:rgba(255,255,255,.055);
+    --txt:#eef1f7; --dim:#8b93a7; --dim2:#5f6779;
+    --grn:#2fe08a; --grn-d:#0f2b1e; --red:#ff5470; --red-d:#2c1119;
+    --amb:#ffc148; --blu:#5b9dff; --acc:#8b6bff; --acc2:#c0a8ff;
+    --glow:rgba(139,107,255,.55);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html.lenis{height:auto}
+  .lenis.lenis-smooth{scroll-behavior:auto!important}
+  body{
+    background:var(--bg); color:var(--txt);
+    font:14px/1.55 "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+    letter-spacing:.1px;
+  }
+  .mono,.num{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;
+    font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+
+  /* ── atmosfer: aurora + grain ── */
+  .bg-fx{position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background:radial-gradient(120% 90% at 12% -8%,#12142a 0%,rgba(9,10,20,0) 55%),
+      radial-gradient(110% 90% at 92% 8%,#0e1f2a 0%,rgba(6,7,12,0) 52%),
+      radial-gradient(140% 120% at 50% 118%,#160f2e 0%,rgba(6,7,12,0) 60%),
+      var(--bg)}
+  .aurora{position:fixed;inset:-30% -10%;z-index:-2;pointer-events:none;filter:blur(90px);
+    opacity:.5;
+    background:
+      radial-gradient(40% 40% at 20% 30%,rgba(139,107,255,.42),transparent 70%),
+      radial-gradient(38% 38% at 82% 22%,rgba(47,224,138,.14),transparent 70%),
+      radial-gradient(42% 42% at 68% 82%,rgba(91,157,255,.22),transparent 70%);
+    animation:drift 26s ease-in-out infinite alternate}
+  @keyframes drift{
+    0%{transform:translate3d(0,0,0) scale(1)}
+    50%{transform:translate3d(3%,-2%,0) scale(1.08)}
+    100%{transform:translate3d(-3%,2%,0) scale(1.04)}}
+  .grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.045;
+    mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .scanline{position:fixed;left:0;right:0;top:0;height:1px;z-index:-1;pointer-events:none;
+    background:linear-gradient(90deg,transparent,rgba(139,107,255,.5),transparent);
+    box-shadow:0 0 14px rgba(139,107,255,.5);opacity:.6;
+    animation:scan 9s linear infinite}
+  @keyframes scan{0%{transform:translateY(0)}100%{transform:translateY(100vh)}}
+
+  /* ── cursor ── */
+  .cursor{position:fixed;top:0;left:0;width:26px;height:26px;border-radius:50%;
+    border:1px solid rgba(139,107,255,.55);z-index:9999;pointer-events:none;
+    transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s,border-color .25s;
+    mix-blend-mode:screen;will-change:transform}
+  .cursor.big{width:56px;height:56px;background:rgba(139,107,255,.12);border-color:transparent}
+  .cursor-dot{position:fixed;top:0;left:0;width:5px;height:5px;border-radius:50%;
+    background:var(--acc2);z-index:9999;pointer-events:none;transform:translate(-50%,-50%);
+    will-change:transform}
+  @media(hover:none),(pointer:coarse){.cursor,.cursor-dot{display:none}}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:26px 22px 60px;position:relative}
+
+  /* ── header ── */
+  header{display:flex;align-items:flex-start;justify-content:space-between;
+    flex-wrap:wrap;gap:16px;margin-bottom:26px}
+  .brand{display:flex;align-items:center;gap:13px}
+  .logo{width:40px;height:40px;border-radius:11px;position:relative;flex:none;
+    background:linear-gradient(145deg,#1a1730,#0d0b18);border:1px solid var(--line);
+    box-shadow:0 0 0 1px rgba(139,107,255,.15),0 8px 30px rgba(139,107,255,.22),
+      inset 0 1px 0 rgba(255,255,255,.06);overflow:hidden}
+  .logo::before{content:"";position:absolute;inset:0;
+    background:conic-gradient(from 210deg,transparent,rgba(139,107,255,.9),transparent 55%);
+    animation:spin 4.5s linear infinite;opacity:.9}
+  .logo::after{content:"";position:absolute;inset:2px;border-radius:9px;
+    background:linear-gradient(150deg,#14121f,#0a0912)}
+  .logo b{position:absolute;inset:0;display:grid;place-items:center;z-index:2;
+    font:700 17px/1 "Space Grotesk";color:var(--acc2);
+    text-shadow:0 0 12px rgba(139,107,255,.6)}
+  h1{font:600 22px/1 "Space Grotesk";margin:0;letter-spacing:-.4px}
+  h1 span{color:transparent;background:linear-gradient(120deg,var(--acc2),var(--blu));
+    -webkit-background-clip:text;background-clip:text}
+  .sub{color:var(--dim);font-size:12px;margin-top:4px;letter-spacing:.3px;
+    display:flex;align-items:center;gap:7px}
+  .live-dot{width:7px;height:7px;border-radius:50%;background:var(--grn);
+    box-shadow:0 0 0 0 rgba(47,224,138,.6);animation:pulse-dot 2s infinite}
+  @keyframes pulse-dot{0%{box-shadow:0 0 0 0 rgba(47,224,138,.55)}
+    70%{box-shadow:0 0 0 7px rgba(47,224,138,0)}100%{box-shadow:0 0 0 0 rgba(47,224,138,0)}}
+
+  .clock{text-align:right}
+  .clock .now{font:700 24px/1 "JetBrains Mono";letter-spacing:1px;
+    background:linear-gradient(180deg,#fff,#b9c0d4);-webkit-background-clip:text;
+    background-clip:text;color:transparent}
+  .clock .lbl{color:var(--dim2);font-size:10.5px;text-transform:uppercase;
+    letter-spacing:2px;margin-top:2px}
+  .cdbox{margin-top:9px;display:inline-flex;align-items:center;gap:9px;
+    padding:6px 12px;border-radius:10px;background:var(--glass);
+    border:1px solid var(--line);backdrop-filter:blur(8px)}
+  .cdbox .settle{color:var(--dim);font-size:11px}
+  .countdown{font-family:"JetBrains Mono";font-weight:700;color:var(--amb);
+    letter-spacing:.5px;text-shadow:0 0 14px rgba(255,193,72,.35)}
+
+  /* ── tabs ── */
+  .tabs{display:inline-flex;gap:4px;margin-bottom:20px;padding:5px;
+    background:var(--glass);border:1px solid var(--line);border-radius:13px;
+    backdrop-filter:blur(10px);position:relative}
+  .tab{padding:9px 20px;cursor:pointer;font-weight:600;color:var(--dim);
+    border-radius:9px;font-size:13.5px;position:relative;z-index:2;
+    transition:color .3s;letter-spacing:.2px}
+  .tab.on{color:#fff}
+  .tab-ind{position:absolute;top:5px;bottom:5px;border-radius:9px;z-index:1;
+    background:linear-gradient(135deg,rgba(139,107,255,.9),rgba(91,157,255,.75));
+    box-shadow:0 6px 22px rgba(139,107,255,.4),inset 0 1px 0 rgba(255,255,255,.2);
+    transition:left .45s cubic-bezier(.5,1.4,.4,1),width .45s cubic-bezier(.5,1.4,.4,1)}
+  .tab-panel{display:none}
+  .tab-panel.on{display:block}
+
+  /* ── plan sekmesi ── */
+  .armbtn{white-space:nowrap}
+  .armedbar{margin-top:10px}
+  .armw{display:flex;align-items:center;gap:8px;padding:6px 10px;margin-bottom:5px;
+    border:1px solid var(--line);border-radius:8px;font-size:12px;background:rgba(255,255,255,.02)}
+  .armw .s{font-weight:800;min-width:64px}
+  .armw .p{color:var(--muted);flex:1}
+  .armw .tag{font-size:10px;padding:1px 6px;border-radius:6px;background:#3a3;color:#fff;font-weight:700}
+  .armw .x{cursor:pointer;color:var(--muted);font-weight:700;padding:0 4px}
+  .armw .x:hover{color:#e55}
+  .armw.fire{border-color:#2e9e5b;background:rgba(46,158,91,.14)}
+  .armw.fire .p{color:#5fd68e;font-weight:800}
+  .armw.off{opacity:.55}
+  .res .tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:6px;
+    font-weight:700;margin:2px 3px 0 0;white-space:nowrap}
+  .res .tag.ok{background:rgba(46,158,91,.18);color:#5fd68e}
+  .res .tag.wait{background:rgba(255,255,255,.06);color:var(--muted)}
+  .res .tag.up{background:rgba(90,160,255,.16);color:#7db4ff}
+  .plan-wrap{display:grid;grid-template-columns:1fr 210px;gap:18px;margin-top:14px}
+  @media(max-width:820px){.plan-wrap{grid-template-columns:1fr}}
+  .ptable th{font-size:11px;vertical-align:bottom}
+  .ptable td{padding:9px 8px;vertical-align:top}
+  .ptable .sym{font-weight:700;font-family:"JetBrains Mono";color:var(--txt)}
+  .ptable .side{display:inline-block;padding:2px 8px;border-radius:6px;font-weight:700;
+    font-size:11px;background:var(--grn-d);color:var(--grn)}
+  .ptable .lv{font-family:"JetBrains Mono";font-variant-numeric:tabular-nums}
+  .ptable .pct{font-size:11px;color:var(--dim)}
+  .ptable .side.sh{background:rgba(255,84,112,.14);color:var(--red)}
+  .ptable .tgt{color:var(--grn)} .ptable .stp{color:var(--red)}
+  .ptable .res{font-family:"JetBrains Mono";font-size:11.5px;color:var(--amb);line-height:1.5}
+  .plan-side{border-left:1px solid var(--line);padding-left:16px}
+  @media(max-width:820px){.plan-side{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:14px}}
+  .phist{display:flex;flex-direction:column;gap:7px;max-height:440px;overflow-y:auto}
+  .phist .h{position:relative;padding:9px 11px;border:1px solid var(--line);border-radius:9px;cursor:pointer;
+    background:var(--glass);transition:border-color .2s,background .2s}
+  .phist .h:hover{border-color:var(--acc);background:rgba(139,107,255,.08)}
+  .phist .h.on{border-color:var(--acc);background:rgba(139,107,255,.12)}
+  .phist .h .t{font-family:"JetBrains Mono";font-size:12px;font-weight:600;color:var(--txt)}
+  .phist .h .m{font-size:10.5px;color:var(--dim);margin-top:2px;padding-right:18px}
+  .phist .del{position:absolute;top:6px;right:6px;width:20px;height:20px;line-height:18px;
+    text-align:center;border-radius:6px;border:1px solid var(--line);background:var(--glass);
+    color:var(--dim);font-size:13px;cursor:pointer;opacity:0;transition:.15s}
+  .phist .h:hover .del{opacity:1}
+  .phist .del:hover{border-color:var(--red);color:var(--red);background:var(--red-d)}
+  /* ── squeeze cards ── */
+  .sq-grid{display:grid;gap:13px;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+  .sq-card{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:14px;
+    padding:15px 17px;cursor:pointer;transition:.16s;position:relative}
+  .sq-card:hover{transform:translateY(-2px);border-color:rgba(139,107,255,.5)}
+  .sq-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px}
+  .sq-sym{font-size:21px;font-weight:700;font-family:"JetBrains Mono"}
+  .sq-tag{font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:20px;letter-spacing:.3px}
+  .sq-fresh{background:rgba(47,224,138,.14);color:var(--grn,#2fe08a);box-shadow:inset 0 0 0 1px rgba(47,224,138,.3)}
+  .sq-mid{background:rgba(255,193,72,.14);color:var(--amb);box-shadow:inset 0 0 0 1px rgba(255,193,72,.3)}
+  .sq-late{background:rgba(255,84,112,.14);color:var(--red);box-shadow:inset 0 0 0 1px rgba(255,84,112,.3)}
+  .sq-rows{display:grid;grid-template-columns:1fr 1fr;gap:7px 14px;font-size:12.5px}
+  .sq-rows .k{color:var(--dim)}
+  .sq-rows .v{text-align:right;font-weight:600;font-family:"JetBrains Mono";font-variant-numeric:tabular-nums}
+  .sq-foot{margin-top:11px;font-size:11px;color:var(--dim);border-top:1px solid var(--line);
+    padding-top:8px;font-family:"JetBrains Mono"}
+  .tr-plan{display:grid;grid-template-columns:auto 1fr;gap:5px 12px;margin-top:11px;
+    padding-top:9px;border-top:1px dashed var(--line);font-size:12.5px}
+  .tr-plan .k{color:var(--dim)}
+  .tr-plan .v{text-align:right;font-weight:700;font-family:"JetBrains Mono";font-variant-numeric:tabular-nums}
+  .tr-plan .v.tgt{color:var(--grn)} .tr-plan .v.stp{color:var(--red)}
+  .pt-conf{margin:10px 0 2px}
+  .pt-cbar{display:block;height:6px;border-radius:4px;background:var(--line);overflow:hidden}
+  .pt-cfill{display:block;height:100%;border-radius:4px;transition:width .4s ease}
+  .pt-clab{display:block;margin-top:5px;font-size:11.5px;font-weight:700;
+    font-family:"JetBrains Mono";letter-spacing:.2px}
+  .sq-legend{display:flex;gap:15px;flex-wrap:wrap;margin:2px 0 16px;font-size:11.5px;color:var(--dim)}
+  .sq-legend b{color:var(--txt,#fff)}
+  .sq-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle}
+
+  /* ── cards ── */
+  .card{position:relative;background:var(--panel);border:1px solid var(--line);
+    border-radius:18px;padding:20px;margin-bottom:18px;backdrop-filter:blur(16px);
+    box-shadow:0 18px 50px -20px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.04)}
+  .card::before{content:"";position:absolute;inset:0;border-radius:18px;padding:1px;
+    background:linear-gradient(140deg,rgba(255,255,255,.14),transparent 40%);
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.6}
+  .card-t{font:600 12px/1 "Space Grotesk";text-transform:uppercase;letter-spacing:2px;
+    color:var(--dim);display:flex;align-items:center;gap:9px}
+  .card-t .n{width:22px;height:22px;border-radius:7px;display:grid;place-items:center;
+    background:linear-gradient(135deg,rgba(139,107,255,.25),rgba(139,107,255,.05));
+    border:1px solid rgba(139,107,255,.3);color:var(--acc2);font-size:11px;font-weight:700}
+
+  /* ── buttons ── */
+  .btn{position:relative;background:linear-gradient(135deg,#8b6bff,#6d4df0);
+    color:#fff;border:0;border-radius:11px;padding:12px 20px;font-size:13.5px;
+    font-weight:600;cursor:pointer;letter-spacing:.2px;overflow:hidden;
+    font-family:inherit;
+    box-shadow:0 8px 26px -8px rgba(139,107,255,.6),inset 0 1px 0 rgba(255,255,255,.22);
+    transition:transform .25s cubic-bezier(.3,1.4,.4,1),box-shadow .25s,filter .2s}
+  .btn::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.35),transparent 70%);
+    transform:translateX(-120%);transition:transform .6s}
+  .btn:hover{filter:brightness(1.08);
+    box-shadow:0 12px 34px -8px rgba(139,107,255,.75),inset 0 1px 0 rgba(255,255,255,.25)}
+  .btn:hover::after{transform:translateX(120%)}
+  .btn:active{transform:scale(.97)}
+  .btn:disabled{opacity:.45;cursor:default;filter:grayscale(.3)}
+  .btn:disabled::after{display:none}
+  .btn.grn{background:linear-gradient(135deg,#2fe08a,#14b874);color:#032015;
+    box-shadow:0 8px 26px -8px rgba(47,224,138,.6),inset 0 1px 0 rgba(255,255,255,.3)}
+  .btn.red{background:linear-gradient(135deg,#ff5470,#e0324f);
+    box-shadow:0 8px 26px -8px rgba(255,84,112,.6),inset 0 1px 0 rgba(255,255,255,.2)}
+  .btn.ghost{background:var(--glass);border:1px solid var(--line);color:var(--txt);
+    box-shadow:none;backdrop-filter:blur(6px)}
+  .btn.ghost:hover{border-color:rgba(139,107,255,.5);background:rgba(139,107,255,.08)}
+  .mini{background:var(--glass);border:1px solid var(--line);color:var(--dim);
+    border-radius:9px;padding:7px 13px;font-size:12px;cursor:pointer;font-weight:600;
+    font-family:inherit;transition:.2s;backdrop-filter:blur(6px)}
+  .mini:hover{border-color:rgba(139,107,255,.5);color:var(--txt);
+    background:rgba(139,107,255,.08)}
+  .mini.on{color:#fff;border-color:rgba(139,107,255,.65);
+    background:linear-gradient(135deg,rgba(139,107,255,.85),rgba(91,157,255,.7));
+    box-shadow:0 4px 16px -4px rgba(139,107,255,.6)}
+  .hsel{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px;align-items:center}
+  .hsel .lbl{font-size:11px;color:var(--dim2);text-transform:uppercase;
+    letter-spacing:1.4px;font-weight:600;margin-right:4px}
+
+  .row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .muted{color:var(--dim)}
+  .hint{font-size:12.5px;color:var(--dim);line-height:1.6}
+  .hint b{color:var(--txt);font-weight:600}
+  a.link{color:var(--blu);text-decoration:none}
+
+  /* ── pills / badges ── */
+  .pill{display:inline-flex;align-items:center;gap:5px;padding:3px 11px;
+    border-radius:20px;font-size:11.5px;font-weight:700;letter-spacing:.4px;
+    text-transform:uppercase;line-height:1.4}
+  .pill.long{background:rgba(47,224,138,.14);color:var(--grn);
+    box-shadow:inset 0 0 0 1px rgba(47,224,138,.3)}
+  .pill.short{background:rgba(255,84,112,.14);color:var(--red);
+    box-shadow:inset 0 0 0 1px rgba(255,84,112,.3)}
+  .pill.wait{background:rgba(139,147,166,.12);color:var(--dim);
+    box-shadow:inset 0 0 0 1px var(--line)}
+
+  /* ── candidate cards ── */
+  .cand{position:relative;border:1px solid var(--line);border-radius:14px;
+    padding:16px;margin-top:12px;background:var(--panel2);overflow:hidden;
+    transition:transform .35s cubic-bezier(.2,.9,.3,1),border-color .3s,box-shadow .3s}
+  .cand::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:var(--line);transition:.3s}
+  .cand.trade{border-color:rgba(139,107,255,.32);
+    box-shadow:0 0 0 1px rgba(139,107,255,.06),0 20px 50px -30px rgba(139,107,255,.6)}
+  .cand.trade::before{background:linear-gradient(180deg,var(--acc),var(--blu));
+    box-shadow:0 0 18px rgba(139,107,255,.7)}
+  .cand.side-long::before{background:linear-gradient(180deg,var(--grn),#0fa968)}
+  .cand.side-short::before{background:linear-gradient(180deg,var(--red),#c62744)}
+  .cand:hover{transform:translateY(-3px);border-color:rgba(139,107,255,.45)}
+  .cand h3{margin:0;font:600 17px/1.2 "Space Grotesk";letter-spacing:-.2px;
+    display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .setup-tag{font-size:11px;color:var(--dim);font-weight:500;letter-spacing:.3px;
+    font-family:"Inter"}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));
+    gap:12px 18px;margin-top:14px}
+  .kv small{color:var(--dim2);display:block;font-size:10px;text-transform:uppercase;
+    letter-spacing:1.2px;margin-bottom:3px;font-weight:600}
+  .kv b{font:600 15px/1.1 "JetBrains Mono";letter-spacing:-.3px}
+  .kv b.pos{color:var(--grn)} .kv b.neg{color:var(--red)}
+  .plan{margin-top:16px;padding-top:16px;position:relative}
+  .plan::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;
+    background:repeating-linear-gradient(90deg,var(--line) 0 6px,transparent 6px 12px)}
+  .plan-label{font-size:10px;text-transform:uppercase;letter-spacing:2px;
+    color:var(--acc2);font-weight:700;margin-bottom:2px}
+  .plan .grid b{font-size:15px}
+
+  /* ── spinner ── */
+  .spinner{width:15px;height:15px;border:2px solid var(--line);
+    border-top-color:var(--acc);border-radius:50%;display:inline-block;
+    animation:spin .7s linear infinite;vertical-align:-3px;margin-right:5px}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .statusline{margin-top:12px;font-size:12.5px;color:var(--dim);
+    display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .stat-chip{font-family:"JetBrains Mono";font-size:11px;padding:3px 9px;
+    border-radius:7px;background:var(--glass);border:1px solid var(--line);color:var(--txt)}
+  .stat-chip.hi{color:var(--acc2);border-color:rgba(139,107,255,.35);
+    background:rgba(139,107,255,.08)}
+
+  /* ── phase stepper ── */
+  .steps{display:flex;gap:0;margin:16px 0 18px;position:relative;flex-wrap:wrap}
+  .step{flex:1;min-width:88px;text-align:center;padding:11px 6px;position:relative;
+    font-size:11.5px;color:var(--dim2);font-weight:600;letter-spacing:.3px;
+    border-radius:10px;background:var(--glass);border:1px solid var(--line2);
+    margin:0 3px;transition:.4s}
+  .step .si{display:block;width:8px;height:8px;border-radius:50%;margin:0 auto 6px;
+    background:var(--dim2);transition:.4s}
+  .step.on{color:#fff;border-color:var(--acc);background:rgba(139,107,255,.14);
+    box-shadow:0 0 22px -6px rgba(139,107,255,.7)}
+  .step.on .si{background:var(--acc2);box-shadow:0 0 12px var(--acc2);
+    animation:pulse-dot 1.6s infinite}
+  .step.ok{color:var(--grn);border-color:rgba(47,224,138,.35);
+    background:rgba(47,224,138,.08)}
+  .step.ok .si{background:var(--grn);box-shadow:0 0 10px rgba(47,224,138,.7)}
+
+  /* ── signals ── */
+  .signal{position:relative;padding:16px 18px;border-radius:14px;font-weight:700;
+    text-align:center;margin:14px 0;overflow:hidden;
+    font:700 17px/1.3 "Space Grotesk";letter-spacing:.3px}
+  .signal small{font:500 13px/1.5 "Inter";display:block;margin-top:4px}
+  .signal.entry{background:linear-gradient(135deg,rgba(47,224,138,.2),rgba(47,224,138,.06));
+    color:var(--grn);border:1px solid rgba(47,224,138,.5);
+    box-shadow:0 0 40px -8px rgba(47,224,138,.6);animation:sig-pulse-g 1.6s ease-in-out infinite}
+  .signal.exit{background:linear-gradient(135deg,rgba(255,193,72,.2),rgba(255,193,72,.05));
+    color:var(--amb);border:1px solid rgba(255,193,72,.5);
+    box-shadow:0 0 40px -8px rgba(255,193,72,.55);animation:sig-pulse-a 1.6s ease-in-out infinite}
+  @keyframes sig-pulse-g{0%,100%{box-shadow:0 0 30px -10px rgba(47,224,138,.5)}
+    50%{box-shadow:0 0 55px -6px rgba(47,224,138,.85)}}
+  @keyframes sig-pulse-a{0%,100%{box-shadow:0 0 30px -10px rgba(255,193,72,.45)}
+    50%{box-shadow:0 0 55px -6px rgba(255,193,72,.8)}}
+  .signal::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.14),transparent 65%);
+    transform:translateX(-120%);animation:shine 2.4s ease-in-out infinite}
+  @keyframes shine{0%,60%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+
+  .log{background:rgba(4,6,11,.7);border:1px solid var(--line);border-radius:12px;
+    padding:12px 14px;max-height:200px;overflow:auto;font-family:"JetBrains Mono",monospace;
+    font-size:11.5px;color:var(--dim);white-space:pre-wrap;line-height:1.7;margin-top:14px}
+  .log::-webkit-scrollbar{width:6px}
+  .log::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+  .big{font:700 24px/1 "JetBrains Mono";letter-spacing:-.5px;
+    background:linear-gradient(180deg,#fff,#c3cadd);-webkit-background-clip:text;
+    background-clip:text;color:transparent}
+
+  /* ── funding tables (heatmap) ── */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}
+  .col-h{font:600 13px/1.4 "Space Grotesk";margin-bottom:10px;display:flex;
+    align-items:center;gap:8px;letter-spacing:.2px}
+  .col-h.pos{color:var(--grn)} .col-h.neg{color:var(--red)}
+  .col-h .tri{font-size:15px}
+  .ftable{width:100%;border-collapse:separate;border-spacing:0 3px}
+  .ftable th{text-align:right;font-size:10px;text-transform:uppercase;
+    letter-spacing:1.4px;color:var(--dim2);padding:4px 10px;font-weight:600}
+  .ftable th:first-child{text-align:left}
+  .ftable td{padding:9px 10px;text-align:right;font-size:13px;position:relative;
+    font-family:"JetBrains Mono";font-variant-numeric:tabular-nums;
+    background:var(--glass);border-top:1px solid transparent;border-bottom:1px solid transparent}
+  .ftable td:first-child{text-align:left;font-weight:600;border-radius:9px 0 0 9px;
+    font-family:"Inter"}
+  .ftable td:last-child{border-radius:0 9px 9px 0}
+  .ftable tr{transition:.2s}
+  .ftable tbody tr:hover td{background:rgba(139,107,255,.07)}
+  .ftable .coin{display:flex;align-items:center;gap:6px}
+  .heat{position:relative}
+  .heat .bar{position:absolute;left:0;top:0;bottom:0;border-radius:9px;z-index:0;opacity:.85}
+  .heat .val{position:relative;z-index:1}
+  .fpos{color:var(--grn)} .fneg{color:var(--red)}
+  .rank{font-family:"JetBrains Mono";font-size:10px;color:var(--dim2);
+    width:16px;display:inline-block}
+
+  .dot{display:inline-block;width:7px;height:7px;border-radius:50%}
+  .dot.ok{background:var(--grn);box-shadow:0 0 7px rgba(47,224,138,.6)}
+  .dot.no{background:var(--amb);box-shadow:0 0 7px rgba(255,193,72,.4)}
+
+  .footer-note{text-align:center;margin-top:30px;font-size:12px;color:var(--dim2);
+    letter-spacing:.3px}
+
+  /* proximity bar */
+  .prox-track{height:6px;background:rgba(255,255,255,.05);border-radius:4px;
+    margin-top:9px;overflow:hidden;position:relative}
+  .prox-fill{height:100%;border-radius:4px;transition:width .6s cubic-bezier(.3,1,.3,1);
+    position:relative}
+  .prox-fill.hot{background:linear-gradient(90deg,#14b874,var(--grn));
+    box-shadow:0 0 12px rgba(47,224,138,.6)}
+  .prox-fill.warm{background:linear-gradient(90deg,#b8760f,var(--amb))}
+
+  .reveal{opacity:0;transform:translateY(24px)}
+  @media(max-width:720px){
+    .cols{grid-template-columns:1fr}
+    .wrap{padding:18px 14px 40px}
+    .clock{text-align:left}
+    .aurora{opacity:.35;filter:blur(70px)}
+    header{gap:12px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .aurora,.scanline,.logo::before,.signal::after,.signal,.step.on .si,.live-dot{animation:none!important}
+    .reveal{opacity:1;transform:none}
+    *{scroll-behavior:auto!important}
+  }
+</style>
+</head>
+<body>
+<div class="bg-fx"></div>
+<div class="aurora"></div>
+<div class="grain"></div>
+<div class="scanline"></div>
+
+<div class="wrap">
+
+  <header>
+    <div class="brand reveal">
+      <div class="logo"><b>ƒ</b></div>
+      <div>
+        <h1>Funding <span>Trader</span></h1>
+        <div class="sub"><span class="live-dot"></span>MEXC Futures · funding sıkışma terminali</div>
+      </div>
+    </div>
+    <div class="clock reveal">
+      <div class="now" id="clock">—</div>
+      <div class="lbl">İstanbul · TR</div>
+      <div class="cdbox">
+        <span class="settle">kesim <span id="settle" class="mono">—</span></span>
+        <span class="countdown" id="cd">—</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ SEKMELER ═══ -->
+  <div class="tabs reveal" id="tabs">
+    <div class="tab on" data-tab="funding">Funding Rate</div>
+    <div class="tab" data-tab="trend">⚡ Trend Scalp</div>
+    <div class="tab" data-tab="protrend">🎯 Pro Trend</div>
+    <div class="tab" data-tab="scalp">🔥 1dk Scalp</div>
+    <div class="tab" data-tab="squeeze">🔥 Squeeze</div>
+    <div class="tab" data-tab="pump">💥 Patlamış</div>
+    <div class="tab" data-tab="plan">🎯 Plan</div>
+    <div class="tab" data-tab="retest">🚀 Direnç Kırdı</div>
+    <div class="tab" data-tab="splan">📉 Short Plan</div>
+    <div class="tab-ind" id="tabInd"></div>
+  </div>
+
+  <!-- ═══ FUNDING RATELER ═══ -->
+  <div class="tab-panel on" id="tab-funding">
+    <div class="card reveal">
+      <div class="row" style="justify-content:space-between;align-items:flex-start">
+        <div style="max-width:620px">
+          <div class="card-t"><span class="n">≈</span> Tüm coinlerin funding rate'i</div>
+          <div class="hint" style="margin-top:9px">Anlık funding (MEXC + Binance). Solda funding en
+            <b>yüksek</b> (long kalabalık), sağda en <b>düşük/negatif</b>
+            (short kalabalık). Geçmiş çekmez — anında yüklenir.</div>
+        </div>
+        <button class="mini" onclick="loadFunding()">↻ Yenile</button>
+      </div>
+      <div id="fundStatus" class="statusline"></div>
+      <div class="cols">
+        <div>
+          <div class="col-h pos"><span class="tri">▲</span> En yüksek funding
+            <span class="muted" style="font-weight:400;font-size:11.5px">long kalabalık → short adayı</span></div>
+          <table class="ftable"><thead><tr>
+            <th>Coin</th><th>MEXC</th><th>Binance</th><th>OI</th></tr></thead>
+            <tbody id="fpos"></tbody></table>
+        </div>
+        <div>
+          <div class="col-h neg"><span class="tri">▼</span> En düşük funding
+            <span class="muted" style="font-weight:400;font-size:11.5px">short kalabalık → long adayı</span></div>
+          <table class="ftable"><thead><tr>
+            <th>Coin</th><th>MEXC</th><th>Binance</th><th>OI</th></tr></thead>
+            <tbody id="fneg"></tbody></table>
+        </div>
+      </div>
+      <div class="hint" style="margin-top:16px">Nokta: <span class="dot ok"></span>
+        Binance aynı yönde onaylıyor · <span class="dot no"></span> Binance'te yok/ters.</div>
+    </div>
+  </div>
+
+  <!-- ═══ SQUEEZE ADAYLARI (SKR profili) ═══ -->
+  <div class="tab-panel" id="tab-squeeze">
+    <div class="card reveal">
+      <div class="row" style="justify-content:space-between;align-items:flex-start">
+        <div style="max-width:640px">
+          <div class="card-t"><span class="n">🔥</span> Squeeze adayları · SKR profili</div>
+          <div class="hint" style="margin-top:9px">Bybit'te <b>derin & giderek negatifleşen funding</b>
+            (short kalabalık) + <b>küçük OI</b> + yeterli hacim olan coinler. Tarayıcı yakıtı bulur —
+            "uçar" garanti değil; kıvılcım (dip + dönüş) gelirse patlar. Karta tıkla → Bybit grafiği.</div>
+        </div>
+        <button class="mini" onclick="loadSqueeze()">↻ Yenile</button>
+      </div>
+      <div class="sq-legend">
+        <span><span class="sq-dot" style="background:#2fe08a"></span><b>TAZE KURULUM</b> — yüklü ama patlamamış (24h &lt; %15) → en erken</span>
+        <span><span class="sq-dot" style="background:#ffc148"></span><b>ORTA</b> — kısmen hareket etmiş</span>
+        <span><span class="sq-dot" style="background:#ff5470"></span><b>UÇTU / GEÇ</b> — çoktan patlamış (24h &gt; %40) → kovalama riski</span>
+      </div>
+      <div id="sqStatus" class="statusline"></div>
+      <div class="sq-grid" id="sqGrid"></div>
+    </div>
+  </div>
+
+  <!-- ═══ PATLAMIŞ / TÜKENİŞ (short / reversal adayları) ═══ -->
+  <div class="tab-panel" id="tab-pump">
+    <div class="card reveal">
+      <div class="row" style="justify-content:space-between;align-items:flex-start">
+        <div style="max-width:640px">
+          <div class="card-t"><span class="n">💥</span> Anlık patlama · ŞU AN aniden fırlayanlar</div>
+          <div class="hint" style="margin-top:9px">Bybit'te <b>şu an ani hareket</b> yapan coinler —
+            son <b>15dk / 30dk / 1s</b> momentumu + hacim patlamasına göre. 24s'te yavaş yükseleni
+            <b>değil</b>, tam şu an sert fırlayanı listeler. Skor yüksek = daha taze/sert anlık pump.
+            Karta tıkla → Bybit grafiği.</div>
+        </div>
+        <button class="mini" onclick="loadPump()">↻ Yenile</button>
+      </div>
+      <div class="sq-legend">
+        <span><span class="sq-dot" style="background:#2fe08a"></span><b>⚡ FIRLIYOR</b> — şu an aktif yükseliyor (taze) → momentum-long</span>
+        <span><span class="sq-dot" style="background:#ffc148"></span><b>TEPEDE</b> — momentum kesildi, dönüş bekliyor</span>
+        <span><span class="sq-dot" style="background:#ff5470"></span><b>🔻 DÖNÜYOR</b> — ani pump bitti, geri düşüyor → short adayı</span>
+      </div>
+      <div id="pumpStatus" class="statusline"></div>
+      <div class="sq-grid" id="pumpGrid"></div>
+    </div>
+  </div>
+
+  <!-- ═══ TREND SCALP · ŞU AN koşan trende atla (LONG + SHORT) ═══ -->
+  <div class="tab-panel" id="tab-trend">
+    <div class="card reveal">
+      <div class="row" style="justify-content:space-between;align-items:flex-start">
+        <div style="max-width:680px">
+          <div class="card-t"><span class="n">⚡</span> Trend Scalp · ŞU AN koşan trende atla</div>
+          <div class="hint" style="margin-top:9px"><b>Şu an aktif trendde</b> olan coinler —
+            <b>yükselişte</b> olanı LONG, <b>düşüşte</b> olanı SHORT. Pump gibi zaten +%15 fırlamış
+            <b>aşırı/geç</b> hareket değil; <b>EMA9 &gt; EMA21</b> dizilimiyle taze, sağlıklı, hâlâ akan
+            trend. Amaç: <b>tak diye trene atla, 15-20 dk vur çık</b>. Her kartta hazır
+            <b>giriş · stop · hedef1 · hedef2</b>. Karta tıkla → MEXC futures.</div>
+        </div>
+        <button class="mini" onclick="loadTrend()" style="font-weight:700">↻ Yenile</button>
+      </div>
+      <div class="sq-legend">
+        <span><span class="sq-dot" style="background:#2fe08a"></span><b>LONG</b> — yükseliş trendi, girişte al</span>
+        <span><span class="sq-dot" style="background:#ff5470"></span><b>SHORT</b> — düşüş trendi, girişte short aç</span>
+        <span>Giriş = <b>anlık piyasa</b>. Skor yüksek = daha güçlü/taze trend.</span>
+      </div>
+      <div id="trendStatus" class="statusline"></div>
+      <div class="sq-grid" id="trendGrid"></div>
+      <div class="hint" style="margin-top:14px">Kural: kartın <b>Giriş</b>'inde pozisyonu aç, hemen
+        <b>Stop</b>'u koy. <b>Hedef 1</b>'de yarını kapat + stop'u girişe çek (risk sıfır). Kalan yarı
+        <b>Hedef 2</b>'ye koşsun ya da 15-20 dk sonra momentum kesilince tümünü kapat. Trend
+        döndüyse (fiyat EMA9'un ters tarafına geçtiyse) bekleme, çık.</div>
+    </div>
+  </div>
+
+  <!-- ═══ PRO TREND · MTF (5dk trend + 1dk giriş, 4-5 mum devam) ═══ -->
+  <div class="tab-panel" id="tab-protrend">
+    <div class="card reveal">
+      <div class="row" style="justify-content:space-between;align-items:flex-start">
+        <div style="max-width:700px">
+          <div class="card-t"><span class="n">🎯</span> Pro Trend · 1dk giriş, 4-5 mum devam</div>
+          <div class="hint" style="margin-top:9px">Trend Scalp'in <b>profesyonel</b> sürümü —
+            <b>çoklu zaman dilimi (MTF)</b> teyidi. <b>5dk</b> trendin yönünü ve gücünü verir
+            (EMA9&gt;EMA21&gt;EMA50 tam dizilim + ADX), <b>1dk</b> taze girişi ve <b>4-5 mum
+            devam</b> olasılığını ölçer. Sen <b>1 dakika</b> grafikte girersin. Sadece iki zaman
+            dilimi de <b>aynı yönü + gücü</b> onayladığı, 1dk'da <b>aşırı uzamamış (taze)</b>
+            adaylar listelenir. Amaç: <b>verdikten sonra coin 4-5 mum aynı yöne koşsun</b>.
+            Karta tıkla → MEXC futures.</div>
+        </div>
+        <button class="mini" onclick="loadProTrend()" style="font-weight:700">↻ Yenile</button>
+      </div>
+      <div class="sq-legend">
+        <span><span class="sq-dot" style="background:#2fe08a"></span><b>LONG</b> — 5dk+1dk yükseliş, 1dk taze girişte al</span>
+        <span><span class="sq-dot" style="background:#ff5470"></span><b>SHORT</b> — 5dk+1dk düşüş, 1dk taze girişte short aç</span>
+        <span><b>Güven %</b> = 4-5 mum devam olasılığı · <b>ADX</b> = trend gücü · yüksek = daha sağlam.</span>
+      </div>
+      <div id="ptStatus" class="statusline"></div>
+      <div class="sq-grid" id="ptGrid"></div>
+      <div class="hint" style="margin-top:14px">Kural: <b>1dk grafikte</b> kartın <b>Giriş</b>'inde aç,
+        hemen <b>Stop</b>'u koy (dar — 1dk gürültüsü kadar). <b>Hedef 1</b>'de yarını kapat + stop'u
+        girişe çek (risksiz). Kalan yarı <b>Hedef 2</b>'ye (4-5. mum) koşsun. <b>1dk kapanışı EMA9'un
+        ters tarafına geçerse</b> ya da ard arda momentum mumu bittiyse bekleme, çık. Hedefler
+        4-5 mumluk ATR projeksiyonu — normal beklenen menzil, garanti değil.</div>
+    </div>
+  </div>
+
+  <!-- ═══ 1DK SCALP · en seçici scalp motoru (pullback/breakout + onay) ═══ -->
+  <div class="tab-panel" id="tab-scalp">
+    <div class="card reveal">
+      <div class="row" style="justify-content:space-between;align-items:flex-start">
+        <div style="max-width:720px">
+          <div class="card-t"><span class="n">🔥</span> 1dk Scalp · en seçici scalp motoru</div>
+          <div class="hint" style="margin-top:9px">Pro Trend'in <b>scalp'e özel, en seçici</b> sürümü.
+            Aynı MTF çekirdek (<b>5dk</b> trend + <b>1dk</b> giriş) üzerine <b>giriş kalitesi</b>
+            kapısı ekler: yalnızca <b>EMA9'a taze geri çekilme (pullback)</b>, <b>dipten dönüş</b>
+            ya da <b>temiz kırılım</b> anında + <b>onay mumu</b> ile sinyal verir. Ortada, uzamış
+            yerden giriş <b>yok</b>. Stop <b>salınım yapısının ardına</b> (gerçek scalp stopu),
+            hedefler <b>4-5 mum</b> ATR projeksiyonu. Az ama <b>en kaliteli</b> kurulumlar. Karta
+            tıkla → MEXC futures.</div>
+        </div>
+        <button class="mini" onclick="loadScalp()" style="font-weight:700">↻ Yenile</button>
+      </div>
+      <div class="sq-legend">
+        <span><span class="sq-dot" style="background:#2fe08a"></span><b>LONG</b> · girişte al</span>
+        <span><span class="sq-dot" style="background:#ff5470"></span><b>SHORT</b> · girişte short</span>
+        <span><b>PULLBACK</b> = EMA9'a çekilip dönüş (en iyi R:R) · <b>BREAKOUT</b> = taze kırılım devamı</span>
+        <span><b>Güven %</b> = kurulum kalitesi + 4-5 mum devam olasılığı.</span>
+      </div>
+      <div id="scStatus" class="statusline"></div>
+      <div class="sq-grid" id="scGrid"></div>
+      <div class="hint" style="margin-top:14px">Kural: <b>1dk grafikte</b> kartın <b>Giriş</b>'inde aç
+        (pullback ise EMA9'a yakın bekleyip dönüş mumunda, breakout ise piyasadan). <b>Stop</b>'u hemen
+        koy — salınım dibinin/tepesinin ardında. <b>Hedef 1</b>'de yarını kapat + stop'u girişe çek
+        (risksiz), kalan yarı <b>Hedef 2</b>'ye (4-5. mum) koşsun. <b>1dk kapanışı EMA9'un ters tarafına
+        geçerse</b> beklemeden çık. Sinyaller kaliteli seçilir ama <b>garanti değildir</b> — her işlemde
+        stop şart.</div>
+    </div>
+  </div>
+
+  <!-- ═══ PLAN · DİRENÇ / KIRILIM (araştırma) ═══ -->
+  <div class="tab-panel" id="tab-plan">
+    <div class="card reveal">
+      <div class="row" style="justify-content:space-between;align-items:flex-start">
+        <div style="max-width:660px">
+          <div class="card-t"><span class="n">🎯</span> Direnç / kırılım planı · sen çağırınca çalışır</div>
+          <div class="hint" style="margin-top:9px"><b>Tara</b>'ya bas → yükselen trendde bir
+            <b>direnç seviyesini test eden</b> LONG adayları çıkar. Her biri için sana verdiğim gibi
+            <b>giriş · stop · hedef1 · hedef2 · direnç noktaları</b>. Giriş kuralı:
+            <b>o seviyenin üstünde 15dk mum kapanınca al</b> — anlık dokunuşta değil. Her tarama
+            <b>saatiyle kaydedilir</b>; sağdaki geçmişten eskilerine bakabilirsin.</div>
+        </div>
+        <button class="mini" id="planScanBtn" onclick="runPlan()" style="font-weight:700">⟳ Tara</button>
+      </div>
+      <div id="planStatus" class="statusline"></div>
+      <div id="planArmed" class="armedbar"></div>
+      <div class="plan-wrap">
+        <div class="plan-main">
+          <div style="overflow-x:auto">
+          <table class="ftable ptable"><thead><tr>
+            <th>#</th><th>Coin</th><th>Yön</th><th>Giriş<br><span class="muted">üstünde kapanışta al</span></th>
+            <th>Stop</th><th>Hedef 1</th><th>Hedef 2</th>
+            <th>Direnç noktaları</th>
+            <th>En iyi giriş<br><span class="muted">1dk retest alarmı</span></th></tr></thead>
+            <tbody id="planRows">
+              <tr><td colspan="9" class="muted">Henüz tarama yok — <b>Tara</b>'ya bas.</td></tr>
+            </tbody></table>
+          </div>
+          <div class="hint" style="margin-top:14px">Kural: Giriş üstünde 15dk mum kapanınca LONG aç, hemen
+            <b>Stop</b>'u koy. <b>Hedef 1</b>'de yarını sat + stop'u girişe çek. Kalan yarı <b>Hedef 2</b>'ye
+            koşsun. Aynı anda max 2 pozisyon.</div>
+        </div>
+        <div class="plan-side">
+          <div class="col-h" style="margin-bottom:8px">🕘 Geçmiş taramalar</div>
+          <div id="planHistory" class="phist"><div class="muted" style="font-size:12px">—</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ RETEST DÖNÜŞ · kırdı + retest yaptı + şu an yukarı ═══ -->
+  <div class="tab-panel" id="tab-retest">
+    <div class="card reveal">
+      <div class="row" style="justify-content:space-between;align-items:flex-start">
+        <div style="max-width:660px">
+          <div class="card-t"><span class="n">🚀</span> Direnç kırdı · ŞU AN direncini kırmış coinler</div>
+          <div class="hint" style="margin-top:9px">Bybit'te <b>şu an bir direnci kırmış</b> ve fiyat hâlâ
+            seviyenin üstünde (henüz %8'den fazla uzamamış) coinler (5dk yapı). Durum kolonunda
+            <b>retest yaptı mı</b> ve <b>yukarı dönüyor mu</b> görünür — retest'i tamamlayıp yükselenler
+            skorla en üste çıkar. Satıra tıkla → Bybit grafiği.</div>
+        </div>
+        <button class="mini" id="retestBtn" onclick="loadRetest()" style="font-weight:700">↻ Yenile</button>
+      </div>
+      <div id="retestStatus" class="statusline"></div>
+      <div style="overflow-x:auto">
+      <table class="ftable ptable"><thead><tr>
+        <th>#</th><th>Coin</th><th>Fiyat</th>
+        <th>Seviye<br><span class="muted">kırılan direnç</span></th>
+        <th>Giriş<br><span class="muted">şu an</span></th>
+        <th>Stop</th><th>Hedef 1</th><th>Hedef 2</th>
+        <th>Durum<br><span class="muted">kırılım · retest · hacim</span></th></tr></thead>
+        <tbody id="retestRows">
+          <tr><td colspan="9" class="muted">Yükleniyor…</td></tr>
+        </tbody></table>
+      </div>
+      <div class="hint" style="margin-top:14px">Kural: Seviye retest'te tuttu ve yukarı dönüyor →
+        <b>Giriş</b> civarında LONG, <b>Stop</b>'u retest dibinin altına koy. <b>Hedef 1</b>'de yarını
+        sat + stop'u girişe çek. Fiyat seviyeden %8'den fazla uzaklaşmışsa kovalama (liste zaten eler).</div>
+    </div>
+  </div>
+
+  <!-- ═══ SHORT PLAN · DESTEK / KIRILIM (araştırma) ═══ -->
+  <div class="tab-panel" id="tab-splan">
+    <div class="card reveal">
+      <div class="row" style="justify-content:space-between;align-items:flex-start">
+        <div style="max-width:660px">
+          <div class="card-t"><span class="n">📉</span> Destek / kırılım planı · SHORT · sen çağırınca çalışır</div>
+          <div class="hint" style="margin-top:9px"><b>Tara</b>'ya bas → düşen trendde bir
+            <b>destek seviyesini test eden</b> SHORT adayları çıkar. Her biri için
+            <b>giriş · stop · hedef1 · hedef2 · destek noktaları</b>. Giriş kuralı:
+            <b>o seviyenin altında 15dk mum kapanınca short aç</b> — anlık dokunuşta değil. Her tarama
+            <b>saatiyle kaydedilir</b>; sağdaki geçmişten eskilerine bakabilirsin.</div>
+        </div>
+        <button class="mini" id="splanScanBtn" onclick="runSPlan()" style="font-weight:700">⟳ Tara</button>
+      </div>
+      <div id="splanStatus" class="statusline"></div>
+      <div class="plan-wrap">
+        <div class="plan-main">
+          <div style="overflow-x:auto">
+          <table class="ftable ptable"><thead><tr>
+            <th>#</th><th>Coin</th><th>Yön</th><th>Giriş<br><span class="muted">altında kapanışta sat</span></th>
+            <th>Stop</th><th>Hedef 1</th><th>Hedef 2</th>
+            <th>Destek noktaları</th></tr></thead>
+            <tbody id="splanRows">
+              <tr><td colspan="8" class="muted">Henüz tarama yok — <b>Tara</b>'ya bas.</td></tr>
+            </tbody></table>
+          </div>
+          <div class="hint" style="margin-top:14px">Kural: Giriş altında 15dk mum kapanınca SHORT aç, hemen
+            <b>Stop</b>'u koy. <b>Hedef 1</b>'de yarını kapat + stop'u girişe çek. Kalan yarı <b>Hedef 2</b>'ye
+            düşsün. Aynı anda max 2 pozisyon.</div>
+        </div>
+        <div class="plan-side">
+          <div class="col-h" style="margin-bottom:8px">🕘 Geçmiş taramalar</div>
+          <div id="splanHistory" class="phist"><div class="muted" style="font-size:12px">—</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer-note">
+    Bu araç sinyal verir; emri MEXC'te sen açarsın. Otomatik işlem yapmaz.
+  </div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const HAS_GSAP = typeof gsap !== 'undefined';
+const HAS_LENIS = typeof Lenis !== 'undefined';
+let nextSettleMs = 0;
+
+/* ═══════════ MOTION KATMANI (graceful — CDN yoksa atlanır) ═══════════ */
+// Lenis smooth scroll + GSAP ticker
+try{
+  if(HAS_LENIS && !RM){
+    const lenis = new Lenis({duration:1.1,easing:t=>Math.min(1,1.001-Math.pow(2,-10*t)),
+      smoothWheel:true});
+    if(HAS_GSAP){
+      gsap.ticker.add(t=>lenis.raf(t*1000));
+      gsap.ticker.lagSmoothing(0);
+      if(gsap.registerPlugin && typeof ScrollTrigger!=='undefined'){
+        gsap.registerPlugin(ScrollTrigger);
+        lenis.on('scroll', ScrollTrigger.update);
+      }
+    }else{
+      const raf=t=>{lenis.raf(t);requestAnimationFrame(raf)};requestAnimationFrame(raf);
+    }
+  }
+}catch(e){}
+
+// giriş reveal
+try{
+  if(HAS_GSAP && !RM){
+    gsap.set('.reveal',{opacity:0,y:24});
+    gsap.to('.reveal',{opacity:1,y:0,duration:1,ease:'expo.out',stagger:.09,delay:.15});
+  }else{
+    document.querySelectorAll('.reveal').forEach(el=>{el.style.opacity=1;el.style.transform='none'});
+  }
+}catch(e){document.querySelectorAll('.reveal').forEach(el=>{el.style.opacity=1;el.style.transform='none'});}
+
+// entrance yardımcısı (yeni render olan içeriğe)
+function enter(sel,parent){
+  if(!HAS_GSAP||RM) return;
+  const els=(parent||document).querySelectorAll(sel);
+  if(els.length) gsap.fromTo(els,{opacity:0,y:18},
+    {opacity:1,y:0,duration:.7,ease:'power3.out',stagger:.06,overwrite:true});
+}
+
+/* ═══════════ saat + geri sayım ═══════════ */
+function tickClock(){
+  const now = new Date();
+  const tr = new Date(now.getTime() + (now.getTimezoneOffset()+180)*60000);
+  $('#clock').textContent = tr.toLocaleTimeString('tr-TR');
+  if(nextSettleMs){
+    let s = Math.floor((nextSettleMs - Date.now())/1000);
+    if(s < 0) s = 0;
+    const h=Math.floor(s/3600), m=Math.floor(s%3600/60), ss=s%60;
+    const pad=n=>String(n).padStart(2,'0');
+    $('#cd').textContent = (h? h+':':'') + pad(m)+':'+pad(ss);
+    const cd=$('#cd');
+    if(s<=60 && s>0){cd.style.color='var(--red)';cd.style.textShadow='0 0 16px rgba(255,84,112,.5)';}
+    else{cd.style.color='var(--amb)';cd.style.textShadow='0 0 14px rgba(255,193,72,.35)';}
+  }
+}
+setInterval(tickClock, 1000);
+
+async function loadSchedule(){
+  try{
+    const r = await (await fetch('/api/schedule')).json();
+    nextSettleMs = r.next_settle_ms || 0;
+    $('#settle').textContent = r.next_settle_tr || '—';
+  }catch(e){}
+}
+loadSchedule(); setInterval(loadSchedule, 30000);
+
+/* ═══════════ funding lider tablosu (heatmap) ═══════════ */
+function fnum(n){
+  if(n===null||n===undefined) return '<span class="muted">—</span>';
+  const c = n>0?'fpos':(n<0?'fneg':'');
+  return `<span class="${c}">${(n*100).toFixed(4)}%</span>`;
+}
+function frow(x, i, maxAbs, positive){
+  const dot = x.agree===null?'<span class="dot no"></span>'
+            : x.agree?'<span class="dot ok"></span>':'<span class="dot no"></span>';
+  // heatmap bar — funding büyüklüğüne göre
+  const mag = maxAbs? Math.min(1, Math.abs(x.funding||0)/maxAbs) : 0;
+  const w = (mag*100).toFixed(0);
+  const col = positive
+    ? `linear-gradient(90deg,rgba(47,224,138,${.05+mag*.22}),rgba(47,224,138,${.02}))`
+    : `linear-gradient(90deg,rgba(255,84,112,${.05+mag*.22}),rgba(255,84,112,${.02}))`;
+  return `<tr>
+    <td><span class="coin"><span class="rank">${String(i+1).padStart(2,'0')}</span>${x.symbol.replace('_USDT','')}${dot}</span></td>
+    <td class="heat"><span class="bar" style="width:${w}%;background:${col}"></span><span class="val">${fnum(x.funding)}</span></td>
+    <td>${fnum(x.binance_funding)}</td>
+    <td>$${(x.oi_usd/1e6).toFixed(1)}M</td></tr>`;
+}
+let fundLoading=false;
+async function loadFunding(){
+  if(fundLoading) return;
+  fundLoading=true;
+  $('#fundStatus').innerHTML='<span class="spinner"></span> Yükleniyor...';
+  try{
+    const r = await (await fetch('/api/funding')).json();
+    const pos=r.positive||[], neg=r.negative||[];
+    const maxP=Math.max(0,...pos.map(x=>Math.abs(x.funding||0)));
+    const maxN=Math.max(0,...neg.map(x=>Math.abs(x.funding||0)));
+    $('#fpos').innerHTML = pos.map((x,i)=>frow(x,i,maxP,true)).join('') ||
+      '<tr><td colspan="4" class="muted">yok</td></tr>';
+    $('#fneg').innerHTML = neg.map((x,i)=>frow(x,i,maxN,false)).join('') ||
+      '<tr><td colspan="4" class="muted">yok</td></tr>';
+    $('#fundStatus').innerHTML =
+      `<span class="stat-chip hi">${r.count} likit coin</span>` +
+      `<span class="stat-chip">${new Date(r.ts*1000).toLocaleTimeString('tr-TR')}</span>`;
+    enter('#fpos tr, #fneg tr');
+  }catch(e){ $('#fundStatus').textContent='Hata: '+e; }
+  fundLoading=false;
+}
+
+/* ═══════════ squeeze adayları (SKR profili) ═══════════ */
+let sqLoading=false;
+function sqCard(r){
+  const s=r.symbol.replace('USDT','');
+  const ph={fresh:['sq-fresh','⏳ TAZE KURULUM'],mid:['sq-mid','🔶 ORTA'],late:['sq-late','🚀 UÇTU / GEÇ']}[r.phase];
+  const trTxt={worsening:'↓ kötüleşiyor',negative:'↓ negatif',mixed:'karışık'}[r.trend]||r.trend;
+  const seq=(r.vals||[]).slice(0,4).reverse().map(v=>(v*100).toFixed(2)).join('  ·  ');
+  const frCls=r.funding<0?'neg':'pos', pcCls=r.pc24<0?'neg':'pos';
+  return `<div class="sq-card" onclick="window.open('https://www.bybit.com/trade/usdt/${r.symbol}','_blank')">
+    <div class="sq-top"><span class="sq-sym">${s}</span><span class="sq-tag ${ph[0]}">${ph[1]}</span></div>
+    <div class="sq-rows">
+      <span class="k">Funding</span><span class="v ${frCls}">${(r.funding*100).toFixed(2)}%</span>
+      <span class="k">24s değişim</span><span class="v ${pcCls}">${(r.pc24*100).toFixed(0)}%</span>
+      <span class="k">Open Interest</span><span class="v">$${(r.oi_usd/1e6).toFixed(1)}M</span>
+      <span class="k">24s hacim</span><span class="v">$${(r.vol24/1e6).toFixed(0)}M</span>
+      <span class="k">Trend</span><span class="v">${trTxt}</span>
+      <span class="k">Yaş / tazelik</span><span class="v">${r.age_days==null?'?':r.age_days+'g'} · ${r.fresh}</span>
+    </div>
+    <div class="sq-foot">funding dizisi (eski→yeni): ${seq}</div>
+  </div>`;
+}
+async function loadSqueeze(){
+  if(sqLoading) return; sqLoading=true;
+  $('#sqStatus').innerHTML='<span class="spinner"></span> Bybit taranıyor...';
+  try{
+    const r=await (await fetch('/api/squeeze')).json();
+    const c=r.candidates||[];
+    $('#sqGrid').innerHTML = c.length? c.map(sqCard).join('')
+      : '<div class="muted" style="padding:30px">Şu an SKR profiline uyan aday yok — sistem her funding saatinde değişir.</div>';
+    $('#sqStatus').innerHTML = r.error ? ('Hata: '+r.error)
+      : `<span class="stat-chip hi">${r.count} aday</span>`+
+        `<span class="stat-chip">${new Date(r.ts*1000).toLocaleTimeString('tr-TR')}</span>`;
+    enter('#sqGrid .sq-card');
+  }catch(e){ $('#sqStatus').textContent='Hata: '+e; }
+  sqLoading=false;
+}
+
+/* ═══════════ patlamış / tükeniş (short adayları) ═══════════ */
+let pumpLoading=false;
+function pumpCard(r){
+  const s=r.symbol.replace('USDT','');
+  const ph={rolling:['sq-late','🔻 DÖNÜYOR'],topping:['sq-mid','🔶 TEPEDE'],running:['sq-fresh','⚡ FIRLIYOR']}[r.phase];
+  const sign=n=>(n>0?'+':'')+(n*100).toFixed(1)+'%';
+  const cls=n=>n<0?'neg':'pos';
+  return `<div class="sq-card" onclick="window.open('https://www.bybit.com/trade/usdt/${r.symbol}','_blank')">
+    <div class="sq-top"><span class="sq-sym">${s}</span><span class="sq-tag ${ph[0]}">${ph[1]}</span></div>
+    <div class="sq-rows">
+      <span class="k">Son 15dk</span><span class="v ${cls(r.m15)}">${sign(r.m15)}</span>
+      <span class="k">Son 30dk</span><span class="v ${cls(r.m30)}">${sign(r.m30)}</span>
+      <span class="k">Son 1s</span><span class="v ${cls(r.h1)}">${sign(r.h1)}</span>
+      <span class="k">Hacim patlaması</span><span class="v">${r.vspike.toFixed(1)}x</span>
+      <span class="k">1s tepeden ↓</span><span class="v neg">-${(r.fade*100).toFixed(1)}%</span>
+      <span class="k">24s toplam</span><span class="v ${cls(r.pc24)}">${sign(r.pc24)}</span>
+      <span class="k">24s hacim</span><span class="v">$${(r.vol24/1e6).toFixed(0)}M</span>
+      <span class="k">Funding</span><span class="v ${r.funding<0?'neg':'pos'}">${(r.funding*100).toFixed(3)}%</span>
+    </div>
+    <div class="sq-foot">skor ${r.score} · ⚡ firliyorsa momentum-long / 🔻 dönüyorsa short — teyit + dar stop</div>
+  </div>`;
+}
+async function loadPump(){
+  if(pumpLoading) return; pumpLoading=true;
+  $('#pumpStatus').innerHTML='<span class="spinner"></span> Bybit taranıyor... (pump + kline)';
+  try{
+    const r=await (await fetch('/api/pump')).json();
+    const c=r.candidates||[];
+    $('#pumpGrid').innerHTML = c.length? c.map(pumpCard).join('')
+      : '<div class="muted" style="padding:30px">Şu an +%15 üstü pump yapmış coin yok — piyasa sakin.</div>';
+    $('#pumpStatus').innerHTML = r.error ? ('Hata: '+r.error)
+      : `<span class="stat-chip hi">${r.count} patlamış coin</span>`+
+        `<span class="stat-chip">${new Date(r.ts*1000).toLocaleTimeString('tr-TR')}</span>`;
+    enter('#pumpGrid .sq-card');
+  }catch(e){ $('#pumpStatus').textContent='Hata: '+e; }
+  pumpLoading=false;
+}
+
+/* ═══════════ trend scalp (şu an koşan trend · long + short) ═══════════ */
+let trendLoading=false;
+function trendCard(r){
+  const s=r.symbol.replace('USDT','');
+  const isL=r.side==='LONG';
+  const tag=isL?['sq-fresh','🟢 LONG']:['sq-late','🔴 SHORT'];
+  const sign=n=>(n>0?'+':'')+(n*100).toFixed(1)+'%';
+  const cls=n=>n<0?'neg':'pos';
+  const pf=n=>{ n=+n; return n>=1?n.toLocaleString('en-US',{maximumFractionDigits:4})
+                                 :n.toPrecision(4); };
+  const mexc=r.symbol.replace(/USDT$/,'_USDT');
+  const url=`https://futures.mexc.com/exchange/${mexc}`
+    +`#ft_amt=5&ft_tp=${r.tp1}&ft_cls=80&ft_side=${isL?'long':'short'}`;
+  return `<div class="sq-card" onclick="window.open('${url}','_blank')">
+    <div class="sq-top"><span class="sq-sym">${s}</span><span class="sq-tag ${tag[0]}">${tag[1]}</span></div>
+    <div class="sq-rows">
+      <span class="k">Son 15dk</span><span class="v ${cls(r.m15)}">${sign(r.m15)}</span>
+      <span class="k">Son 30dk</span><span class="v ${cls(r.m30)}">${sign(r.m30)}</span>
+      <span class="k">Son 1s</span><span class="v ${cls(r.h1)}">${sign(r.h1)}</span>
+      <span class="k">Hacim</span><span class="v">${r.vspike.toFixed(1)}x</span>
+      <span class="k">Oynaklık (ATR)</span><span class="v">${r.atr_pct.toFixed(2)}%</span>
+      <span class="k">24s hacim</span><span class="v">$${(r.vol24/1e6).toFixed(0)}M</span>
+    </div>
+    <div class="tr-plan">
+      <span class="k">Giriş</span><span class="v">${pf(r.entry)}</span>
+      <span class="k">Stop</span><span class="v stp">${pf(r.stop)} · -${r.stop_pct}%</span>
+      <span class="k">Hedef 1</span><span class="v tgt">${pf(r.tp1)} · +${r.tp1_pct}%</span>
+      <span class="k">Hedef 2</span><span class="v tgt">${pf(r.tp2)} · +${r.tp2_pct}%</span>
+    </div>
+    <div class="sq-foot">skor ${r.score} · giriş = anlık piyasa · 15-20 dk vur-çık</div>
+  </div>`;
+}
+async function loadTrend(){
+  if(trendLoading) return; trendLoading=true;
+  $('#trendStatus').innerHTML='<span class="spinner"></span> Bybit taranıyor... (trend + kline)';
+  try{
+    const r=await (await fetch('/api/trend')).json();
+    const c=r.candidates||[];
+    $('#trendGrid').innerHTML = c.length? c.map(trendCard).join('')
+      : '<div class="muted" style="padding:30px">Şu an net trendde koşan coin yok — piyasa yönsüz/sıkışık. Birazdan tekrar dene.</div>';
+    $('#trendStatus').innerHTML = r.error ? ('Hata: '+r.error)
+      : `<span class="stat-chip hi">${r.count} trend adayı</span>`+
+        `<span class="stat-chip" style="color:var(--grn)">🟢 ${r.longs||0} long</span>`+
+        `<span class="stat-chip" style="color:var(--red)">🔴 ${r.shorts||0} short</span>`+
+        `<span class="stat-chip">${new Date(r.ts*1000).toLocaleTimeString('tr-TR')}</span>`;
+    enter('#trendGrid .sq-card');
+  }catch(e){ $('#trendStatus').textContent='Hata: '+e; }
+  trendLoading=false;
+}
+
+/* ═══════════ pro trend (MTF · 5dk trend + 1dk giris · 4-5 mum devam) ═══════════ */
+let ptLoading=false;
+function ptCard(r){
+  const s=r.symbol.replace('USDT','');
+  const isL=r.side==='LONG';
+  const tag=isL?['sq-fresh','🟢 LONG']:['sq-late','🔴 SHORT'];
+  const sign=n=>(n>0?'+':'')+(n*100).toFixed(2)+'%';
+  const cls=n=>n<0?'neg':'pos';
+  const pf=n=>{ n=+n; return n>=1?n.toLocaleString('en-US',{maximumFractionDigits:4})
+                                 :n.toPrecision(4); };
+  const mexc=r.symbol.replace(/USDT$/,'_USDT');
+  const url=`https://futures.mexc.com/exchange/${mexc}`
+    +`#ft_amt=5&ft_tp=${r.tp1}&ft_cls=80&ft_side=${isL?'long':'short'}`;
+  const cf=r.conf>=72?'#2fe08a':r.conf>=64?'#ffc148':'#a9b6d6';
+  return `<div class="sq-card" onclick="window.open('${url}','_blank')">
+    <div class="sq-top"><span class="sq-sym">${s}</span><span class="sq-tag ${tag[0]}">${tag[1]}</span></div>
+    <div class="pt-conf">
+      <span class="pt-cbar"><span class="pt-cfill" style="width:${Math.min(r.conf,100)}%;background:${cf}"></span></span>
+      <span class="pt-clab" style="color:${cf}">Güven %${r.conf} · ~${r.exp_candles} mum devam</span>
+    </div>
+    <div class="sq-rows">
+      <span class="k">ADX 1dk</span><span class="v">${r.adx1}</span>
+      <span class="k">ADX 5dk</span><span class="v">${r.adx5}</span>
+      <span class="k">Son 5dk</span><span class="v ${cls(r.m5)}">${sign(r.m5)}</span>
+      <span class="k">Son 15dk</span><span class="v ${cls(r.m15)}">${sign(r.m15)}</span>
+      <span class="k">Hacim</span><span class="v">${r.vspike.toFixed(1)}x</span>
+      <span class="k">Oynaklık (ATR)</span><span class="v">${r.atr_pct.toFixed(2)}%</span>
+    </div>
+    <div class="tr-plan">
+      <span class="k">Giriş (1dk)</span><span class="v">${pf(r.entry)}</span>
+      <span class="k">Stop</span><span class="v stp">${pf(r.stop)} · -${r.stop_pct}%</span>
+      <span class="k">Hedef 1</span><span class="v tgt">${pf(r.tp1)} · +${r.tp1_pct}%</span>
+      <span class="k">Hedef 2 (${r.exp_candles}. mum)</span><span class="v tgt">${pf(r.tp2)} · +${r.tp2_pct}%</span>
+    </div>
+    <div class="sq-foot">güven %${r.conf} · R:R ${r.rr} · 5dk+1dk teyitli · 1dk grafikte gir</div>
+  </div>`;
+}
+async function loadProTrend(){
+  if(ptLoading) return; ptLoading=true;
+  $('#ptStatus').innerHTML='<span class="spinner"></span> Bybit taranıyor... (5dk trend + 1dk giriş, MTF)';
+  try{
+    const r=await (await fetch('/api/protrend')).json();
+    const c=r.candidates||[];
+    $('#ptGrid').innerHTML = c.length? c.map(ptCard).join('')
+      : '<div class="muted" style="padding:30px">Şu an iki zaman diliminde de teyitli, taze bir kurulum yok — piyasa yönsüz/sıkışık. 4-5 mum devam garantisi olan aday çıkmadı, birazdan tekrar dene.</div>';
+    $('#ptStatus').innerHTML = r.error ? ('Hata: '+r.error)
+      : `<span class="stat-chip hi">${r.count} pro aday</span>`+
+        `<span class="stat-chip" style="color:var(--grn)">🟢 ${r.longs||0} long</span>`+
+        `<span class="stat-chip" style="color:var(--red)">🔴 ${r.shorts||0} short</span>`+
+        `<span class="stat-chip">${new Date(r.ts*1000).toLocaleTimeString('tr-TR')}</span>`;
+    enter('#ptGrid .sq-card');
+  }catch(e){ $('#ptStatus').textContent='Hata: '+e; }
+  ptLoading=false;
+}
+
+/* ═══════════ 1dk scalp (en secici · pullback/breakout + onay) ═══════════ */
+let scLoading=false;
+function scCard(r){
+  const s=r.symbol.replace('USDT','');
+  const isL=r.side==='LONG';
+  const tag=isL?['sq-fresh','🟢 LONG']:['sq-late','🔴 SHORT'];
+  const setupBadge=r.setup==='PULLBACK'?'↩︎ PULLBACK':'⚡ BREAKOUT';
+  const sign=n=>(n>0?'+':'')+(n*100).toFixed(2)+'%';
+  const cls=n=>n<0?'neg':'pos';
+  const pf=n=>{ n=+n; return n>=1?n.toLocaleString('en-US',{maximumFractionDigits:4})
+                                 :n.toPrecision(4); };
+  const mexc=r.symbol.replace(/USDT$/,'_USDT');
+  const url=`https://futures.mexc.com/exchange/${mexc}`
+    +`#ft_amt=5&ft_tp=${r.tp1}&ft_cls=80&ft_side=${isL?'long':'short'}`;
+  const cf=r.conf>=78?'#2fe08a':r.conf>=70?'#ffc148':'#a9b6d6';
+  return `<div class="sq-card" onclick="window.open('${url}','_blank')">
+    <div class="sq-top"><span class="sq-sym">${s}</span>
+      <span style="display:flex;gap:6px">
+        <span class="sq-tag" style="background:rgba(120,140,200,.14);color:#aeb9dd">${setupBadge}</span>
+        <span class="sq-tag ${tag[0]}">${tag[1]}</span></span></div>
+    <div class="pt-conf">
+      <span class="pt-cbar"><span class="pt-cfill" style="width:${Math.min(r.conf,100)}%;background:${cf}"></span></span>
+      <span class="pt-clab" style="color:${cf}">Güven %${r.conf} · ~${r.exp_candles} mum devam · R:R ${r.rr}</span>
+    </div>
+    <div class="sq-rows">
+      <span class="k">Kurulum</span><span class="v">${r.setup==='PULLBACK'?'Geri çekilme':'Kırılım'}</span>
+      <span class="k">ADX 1dk / 5dk</span><span class="v">${r.adx1} / ${r.adx5}</span>
+      <span class="k">EMA9 uzaklık</span><span class="v">${r.dist9}%</span>
+      <span class="k">Son 5dk</span><span class="v ${cls(r.m5)}">${sign(r.m5)}</span>
+      <span class="k">Hacim</span><span class="v">${r.vspike.toFixed(1)}x</span>
+      <span class="k">Oynaklık (ATR)</span><span class="v">${r.atr_pct.toFixed(2)}%</span>
+    </div>
+    <div class="tr-plan">
+      <span class="k">Giriş (1dk)</span><span class="v">${pf(r.entry)}</span>
+      <span class="k">Stop (yapı)</span><span class="v stp">${pf(r.stop)} · -${r.stop_pct}%</span>
+      <span class="k">Hedef 1</span><span class="v tgt">${pf(r.tp1)} · +${r.tp1_pct}%</span>
+      <span class="k">Hedef 2 (${r.exp_candles}. mum)</span><span class="v tgt">${pf(r.tp2)} · +${r.tp2_pct}%</span>
+    </div>
+    <div class="sq-foot">${r.setup==='PULLBACK'?'EMA9 pullback':'taze kırılım'} · güven %${r.conf} · 1dk grafikte gir, stop şart</div>
+  </div>`;
+}
+async function loadScalp(){
+  if(scLoading) return; scLoading=true;
+  $('#scStatus').innerHTML='<span class="spinner"></span> Bybit taranıyor... (5dk trend + 1dk scalp giriş kalitesi)';
+  try{
+    const r=await (await fetch('/api/scalp')).json();
+    const c=r.candidates||[];
+    $('#scGrid').innerHTML = c.length? c.map(scCard).join('')
+      : '<div class="muted" style="padding:30px">Şu an kaliteli bir 1dk scalp kurulumu yok — ne taze pullback ne temiz kırılım oluştu. Sistem kalitesiz/uzamış girişte coin uydurmaz. Birazdan tekrar dene.</div>';
+    $('#scStatus').innerHTML = r.error ? ('Hata: '+r.error)
+      : `<span class="stat-chip hi">${r.count} scalp kurulumu</span>`+
+        `<span class="stat-chip" style="color:var(--grn)">🟢 ${r.longs||0} long</span>`+
+        `<span class="stat-chip" style="color:var(--red)">🔴 ${r.shorts||0} short</span>`+
+        `<span class="stat-chip">${new Date(r.ts*1000).toLocaleTimeString('tr-TR')}</span>`;
+    enter('#scGrid .sq-card');
+  }catch(e){ $('#scStatus').textContent='Hata: '+e; }
+  scLoading=false;
+}
+
+/* ═══════════ tarama ═══════════ */
+async function doScan(){
+  $('#scanBtn').disabled = true;
+  $('#scanBtn').textContent = 'Taranıyor…';
+  await fetch('/api/scan', {method:'POST'});
+}
+
+function fmt(n, d=6){
+  if(n===null||n===undefined) return '—';
+  return (+n).toLocaleString('en-US',{maximumSignificantDigits:d});
+}
+function pct(n){ return n===null||n===undefined?'—':(n*100).toFixed(2)+'%'; }
+function pctCls(n){ return n>0?'pos':(n<0?'neg':''); }
+function crossBadge(c){
+  const bf = c.binance_funding;
+  const bft = bf===null||bf===undefined ? '' :
+    ` <span class="muted" style="font-family:'JetBrains Mono';font-size:11px">Binance ${(bf*100).toFixed(3)}%</span>`;
+  switch(c.cross){
+    case 'confirmed': return `<span class="pill long">✓ Binance onaylı</span>${bft}`;
+    case 'diverge':   return `<span class="pill short">⚠ Binance ters</span>${bft}`;
+    case 'mexc_only': return `<span class="pill" style="background:rgba(255,193,72,.14);color:var(--amb);box-shadow:inset 0 0 0 1px rgba(255,193,72,.3)">⚠ sadece MEXC</span>`;
+    case 'weak':      return `<span class="pill wait">Binance zayıf</span>${bft}`;
+    default: return '';
+  }
+}
+
+let lastScanSig='';
+function renderCands(sc){
+  const box = $('#cands');
+  if(sc.status==='running'){
+    $('#scanStatus').innerHTML = '<span class="spinner"></span> Taranıyor... 1000+ parite işleniyor (1-2 dk sürebilir)';
+    $('#scanBtn').disabled = true;
+    $('#scanBtn').textContent = 'Taranıyor…';
+    lastScanSig='running';
+    return;
+  }
+  $('#scanBtn').disabled = false;
+  $('#scanBtn').textContent = 'Tara ve Planla';
+  if(sc.status==='idle'){ $('#scanStatus').textContent=''; return; }
+  if(sc.status==='error'){ $('#scanStatus').textContent='Hata: '+sc.msg; return; }
+
+  const cands = sc.candidates||[];
+  const trade = cands.filter(c=>c.tradeable);
+  const wait  = cands.filter(c=>!c.tradeable);
+  const wl = sc.watchlist||[];
+
+  // diff — aynı veri her 2sn yeniden çizilip flicker/animasyon tekrarı yapmasın
+  const sig = JSON.stringify({t:sc.ts,s:sc.status,
+    tr:trade.map(c=>[c.symbol,c.side,c.z]),
+    wa:wait.map(c=>c.symbol),
+    wl:wl.map(w=>[w.symbol,w.proximity])});
+  if(sig===lastScanSig) return;
+  lastScanSig=sig;
+
+  $('#scanStatus').innerHTML =
+    `<span class="stat-chip">${cands.length} aday</span>`+
+    `<span class="stat-chip hi">${trade.length} işlenebilir</span>`+
+    `<span class="stat-chip">${new Date(sc.ts*1000).toLocaleTimeString('tr-TR')}</span>`;
+
+  let html='';
+  if(cands.length===0){
+    html += '<div class="cand"><b>İşlem sinyali yok.</b> <span class="muted">Şu an eşiği geçen '+
+      'sıkışmış kalabalık yok — bu normal, funding uç değil. '+
+      'Aşağıda en yakın coinler var; biri "yakınlık 1.0"a ulaşınca sinyal olur.</span></div>';
+  }
+  for(const c of trade){
+    const p=c.plan, side=c.side.toLowerCase();
+    html += `<div class="cand trade side-${side}">
+      <div class="row" style="justify-content:space-between">
+        <div><h3>${c.symbol} <span class="pill ${side}">${c.side}</span>
+          <span class="setup-tag">${c.setup}</span></h3>
+          <div style="margin-top:7px">${crossBadge(c)}</div></div>
+        <button class="btn grn" onclick="startWatch('${c.symbol}')">Canlı Takip Et →</button>
+      </div>
+      <div class="grid">
+        <div class="kv"><small>funding z</small><b>${c.z}</b></div>
+        <div class="kv"><small>funding 8s</small><b class="${pctCls(c.funding_norm)}">${pct(c.funding_norm)}</b></div>
+        <div class="kv"><small>8s getiri</small><b class="${pctCls(c.ret_8h)}">${pct(c.ret_8h)}</b></div>
+        <div class="kv"><small>ATR</small><b>${pct(c.atr_pct)}</b></div>
+        <div class="kv"><small>OI</small><b>$${(c.oi_usd/1e6).toFixed(1)}M</b></div>
+      </div>
+      <div class="plan"><div class="plan-label">İşlem Planı</div><div class="grid">
+        <div class="kv"><small>Giriş (limit)</small><b>${fmt(p.entry)}</b></div>
+        <div class="kv"><small>Stop</small><b class="neg">${fmt(p.stop)} <span class="muted" style="font-size:11px">${pct(p.stop_pct)}</span></b></div>
+        <div class="kv"><small>Hedef 1</small><b class="pos">${fmt(p.tp1)}</b></div>
+        <div class="kv"><small>Hedef 2</small><b class="pos">${fmt(p.tp2)}</b></div>
+        <div class="kv"><small>Boyut</small><b>$${p.notional_usd.toFixed(1)}</b></div>
+        <div class="kv"><small>Kaldıraç</small><b>${p.suggested_leverage}x</b></div>
+        <div class="kv"><small>Risk</small><b>$${p.risk_usd.toFixed(2)}</b></div>
+      </div>
+      <div class="hint" style="margin-top:10px">Rakamlar provizyonel (son 5dk). "Canlı Takip Et" gerçek
+        referans mumla kesinleştirir.</div></div>
+    </div>`;
+  }
+  if(wait.length){
+    html += '<div class="hint" style="margin-top:18px;font-weight:600;color:var(--dim)">İzlemede (yön henüz çelişmiyor)</div>';
+    for(const c of wait){
+      html += `<div class="cand"><div class="row" style="justify-content:space-between">
+        <div>${c.symbol} <span class="pill wait">${c.crowd} kalabalık</span>
+          <span class="muted mono" style="font-size:12px">z=${c.z} · funding ${pct(c.funding_norm)}</span></div>
+        <button class="btn ghost" onclick="startWatch('${c.symbol}')">Yine de izle</button>
+      </div></div>`;
+    }
+  }
+  if(wl.length){
+    html += '<div class="hint" style="margin-top:20px;border-top:1px solid var(--line);padding-top:16px;font-weight:600;color:var(--txt)">'+
+      '📡 İzleme listesi <span class="muted" style="font-weight:400">— eşiği geçmedi, funding oluşuyor mu diye izle (yakınlık 1.0 = sinyal)</span></div>';
+    for(const w of wl){
+      const bar = Math.min(100, Math.round(w.proximity*100));
+      const hot = bar>=100;
+      html += `<div class="cand" style="padding:13px 16px">
+        <div class="row" style="justify-content:space-between">
+          <div>${w.symbol}
+            <span class="pill ${w.crowd.toLowerCase()}">${w.crowd} kalabalık</span>
+            <span class="muted mono" style="font-size:12px">z=${w.z} · funding ${pct(w.funding_norm)}</span></div>
+          <div class="muted mono" style="font-size:12px">yakınlık ${w.proximity}</div>
+        </div>
+        <div style="margin-top:8px">${crossBadge(w)}</div>
+        <div class="prox-track">
+          <div class="prox-fill ${hot?'hot':'warm'}" style="width:${bar}%"></div>
+        </div>
+        <div class="hint" style="margin-top:7px">eksik: ${(w.fails||[]).join(', ')||'—'}</div>
+      </div>`;
+    }
+  }
+  box.innerHTML = html;
+  enter('#cands > .cand', box);
+}
+
+/* ═══════════ canlı takip ═══════════ */
+async function startWatch(sym){
+  await fetch('/api/watch',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({symbol:sym})});
+}
+async function confirmEntry(){ await fetch('/api/watch/confirm',{method:'POST'}); }
+async function stopWatch(){ await fetch('/api/watch/stop',{method:'POST'}); }
+
+const PHASES = [
+  ['reference','Referans mum'],['waiting','Tetik bekle'],
+  ['entry','Giriş'],['monitor','Çıkış izle'],['done','Bitti']
+];
+let lastWatchPhase='';
+function renderWatch(w){
+  const card=$('#watchCard');
+  if(!w){ card.style.display='none'; lastWatchPhase=''; return; }
+  const wasHidden = card.style.display==='none';
+  card.style.display='block';
+  if(wasHidden && HAS_GSAP && !RM)
+    gsap.fromTo(card,{opacity:0,y:20},{opacity:1,y:0,duration:.7,ease:'power3.out'});
+
+  const order=['init','reference','waiting','entry','monitor','done'];
+  const cur=order.indexOf(w.phase);
+  $('#steps').innerHTML = PHASES.map(([k,lbl])=>{
+    let cls='step';
+    const ki=order.indexOf(k);
+    if(w.phase===k) cls+=' on';
+    else if(ki>=0 && ki<cur) cls+=' ok';
+    if(w.phase==='done'&&k==='done') cls='step ok';
+    return `<div class="${cls}"><span class="si"></span>${lbl}</div>`;
+  }).join('');
+
+  let body=`<div class="row" style="justify-content:space-between">
+    <div><h3 style="margin:0;font:600 18px/1.2 'Space Grotesk';display:flex;gap:9px;align-items:center;flex-wrap:wrap">${w.symbol}
+      ${w.side?`<span class="pill ${w.side.toLowerCase()}">${w.side}</span>`:''}</h3>
+      <div class="hint" style="margin-top:5px">${w.message||''}</div></div>
+    <button class="btn red" onclick="stopWatch()">Durdur</button></div>`;
+
+  if(w.signal==='ENTRY'){
+    body += `<div class="signal entry">🟢 GİRİŞ SİNYALİ — ${w.side} ${w.symbol}
+      <small>MEXC'te aç: giriş ${fmt(w.plan.entry)}, stop ${fmt(w.plan.stop)}, ${w.plan.suggested_leverage}x</small></div>
+      <button class="btn grn" onclick="confirmEntry()">Pozisyonu Açtım →</button>`;
+  }
+  if(w.signal==='EXIT_TP')
+    body += `<div class="signal exit">🟡 KÂR AL <small>OI yakıtı bitiyor.</small></div>`;
+  if(w.signal==='EXIT_TIME')
+    body += `<div class="signal exit">⏹ ZAMAN STOPU <small>koşulsuz kapat.</small></div>`;
+
+  if(w.plan){
+    const p=w.plan;
+    body += `<div class="grid" style="margin-top:14px">
+      <div class="kv"><small>Fiyat</small><b class="big">${fmt(w.price)}</b></div>
+      <div class="kv"><small>Giriş/Tetik</small><b>${fmt(p.entry)}</b></div>
+      <div class="kv"><small>Stop</small><b class="neg">${fmt(p.stop)}</b></div>
+      <div class="kv"><small>Hedef 1 / 2</small><b class="pos">${fmt(p.tp1)} / ${fmt(p.tp2)}</b></div>
+      <div class="kv"><small>Boyut / Kaldıraç</small><b>$${p.notional_usd.toFixed(1)} · ${p.suggested_leverage}x</b></div>
+      ${w.oi_usd?`<div class="kv"><small>OI (düşüş)</small><b>$${(w.oi_usd/1e6).toFixed(1)}M <span class="muted" style="font-size:11px">${w.oi_drop_pct}%</span></b></div>`:''}
+      ${w.elapsed_min!=null?`<div class="kv"><small>Geçen süre</small><b>${w.elapsed_min} dk</b></div>`:''}
+    </div>`;
+  } else if(w.ref_high){
+    body += `<div class="grid" style="margin-top:14px">
+      <div class="kv"><small>Fiyat</small><b class="big">${fmt(w.price)}</b></div>
+      <div class="kv"><small>Ref H</small><b class="pos">${fmt(w.ref_high)}</b></div>
+      <div class="kv"><small>Ref L</small><b class="neg">${fmt(w.ref_low)}</b></div></div>`;
+  }
+  body += `<div class="log">${(w.log||[]).join('\n')}</div>`;
+  $('#watchBody').innerHTML = body;
+
+  // faz değişiminde vurgu animasyonu
+  const psig = w.phase+'|'+(w.signal||'');
+  if(psig!==lastWatchPhase){
+    lastWatchPhase=psig;
+    if(HAS_GSAP && !RM){
+      gsap.fromTo('#steps .step',{opacity:.4,y:8},
+        {opacity:1,y:0,duration:.55,ease:'power3.out',stagger:.06,overwrite:true});
+      const sigEl=document.querySelector('#watchBody .signal');
+      if(sigEl) gsap.fromTo(sigEl,{scale:.9,opacity:0},
+        {scale:1,opacity:1,duration:.6,ease:'back.out(1.7)'});
+    }
+  }
+}
+
+/* ═══════════ plan · direnç/kırılım ═══════════ */
+let planLoading=false, curPlanId=null;
+function fnum(x){
+  if(x==null) return '—';
+  const a=Math.abs(x);
+  const d = a>=100?2 : a>=1?4 : a>=0.01?5 : 7;
+  return (+x).toFixed(d).replace(/\.?0+$/,'');
+}
+function planRow(c,i){
+  return `<tr>
+    <td class="muted">${i+1}</td>
+    <td><span class="sym">${c.symbol.replace('USDT','')}</span></td>
+    <td><span class="side">🟢 ${c.side}</span></td>
+    <td><span class="lv">${fnum(c.entry)}</span></td>
+    <td><span class="lv stp">${fnum(c.stop)}</span> <span class="pct">−${c.stop_pct}%</span></td>
+    <td><span class="lv tgt">${fnum(c.tp1)}</span> <span class="pct">+${c.tp1_pct}%</span></td>
+    <td><span class="lv tgt">${fnum(c.tp2)}</span> <span class="pct">+${c.tp2_pct}%</span></td>
+    <td class="res">R1 ${fnum(c.res1)}<br>R2 ${fnum(c.res2)}<br><span class="muted">Dest ${fnum(c.support)}</span></td>
+    <td><button class="mini armbtn" id="arm-${c.symbol}" onclick="armPlan('${c.symbol}')">🔔 İzle</button></td>
+  </tr>`;
+}
+let planCands={};
+function renderPlan(d){
+  const cs=d.candidates||[];
+  planCands={}; cs.forEach(c=>{planCands[c.symbol]=c;});
+  $('#planRows').innerHTML = cs.length
+    ? cs.map(planRow).join('')
+    : '<tr><td colspan="9" class="muted">Şu an kritere uyan kırılım adayı yok. Sonra tekrar dene.</td></tr>';
+  const when = d.ts_tr || (d.ts? new Date(d.ts*1000).toLocaleString('tr-TR'):'');
+  $('#planStatus').innerHTML =
+    `<span class="stat-chip hi">${cs.length} aday</span>`+
+    (when?`<span class="stat-chip">${when}</span>`:'');
+  enter('#planRows tr');
+}
+async function runPlan(){
+  if(planLoading) return; planLoading=true;
+  const btn=$('#planScanBtn'); btn.disabled=true; const old=btn.textContent;
+  btn.textContent='⏳ Taranıyor…';
+  $('#planStatus').innerHTML='<span class="stat-chip">piyasa taranıyor, ~10 sn…</span>';
+  try{
+    const r=await fetch('/api/plan/scan',{method:'POST'}); const d=await r.json();
+    if(d.error) throw d.error;
+    curPlanId=d.id; renderPlan(d); loadPlanHistory();
+  }catch(e){ $('#planStatus').textContent='Hata: '+e; }
+  btn.disabled=false; btn.textContent=old; planLoading=false;
+}
+async function loadPlanHistory(){
+  try{
+    const r=await fetch('/api/plan/history'); const d=await r.json();
+    const runs=d.runs||[];
+    $('#planHistory').innerHTML = runs.length ? runs.map(x=>`
+      <div class="h ${x.id===curPlanId?'on':''}" onclick="showPlanRun('${x.id}')">
+        <div class="del" title="Sil" onclick="delPlanRun(event,'${x.id}')">×</div>
+        <div class="t">${(x.ts_tr||x.id).slice(5)}</div>
+        <div class="m">${x.count} aday · ${(x.symbols||[]).map(s=>s.replace('USDT','')).join(', ')||'—'}</div>
+      </div>`).join('') : '<div class="muted" style="font-size:12px">Henüz kayıt yok</div>';
+  }catch(e){}
+}
+async function delPlanRun(ev,id){
+  ev.stopPropagation();
+  try{
+    await fetch('/api/plan/delete',{method:'POST',
+      headers:{'Content-Type':'application/json'},body:JSON.stringify({id})});
+    if(id===curPlanId){ curPlanId=null;
+      $('#planRows').innerHTML='<tr><td colspan="9" class="muted">Tarama silindi — <b>Tara</b>\'ya bas veya geçmişten seç.</td></tr>';
+      $('#planStatus').innerHTML='';
+    }
+    loadPlanHistory();
+  }catch(e){}
+}
+async function showPlanRun(id){
+  try{
+    const r=await fetch('/api/plan/run?id='+encodeURIComponent(id)); const d=await r.json();
+    if(d.error) return;
+    curPlanId=id; renderPlan(d); loadPlanHistory();
+  }catch(e){}
+}
+
+/* ═══ Plan "en iyi giriş" · canlı 1dk retest alarmı ═══ */
+async function armPlan(sym){
+  const c=planCands[sym]; if(!c) return;
+  const b=$('#arm-'+sym); if(b){b.disabled=true;b.textContent='⏳';}
+  try{
+    await fetch('/api/plan/arm',{method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({symbol:sym, side:c.side,
+        level:c.res1!=null?c.res1:c.sup1, entry:c.entry, stop:c.stop,
+        tp1:c.tp1, tp2:c.tp2})});
+    pollArmed();
+  }catch(e){}
+  if(b){b.disabled=false;b.textContent='🔔 İzle';}
+}
+async function disarmPlan(sym){
+  try{ await fetch('/api/plan/disarm',{method:'POST',
+    headers:{'Content-Type':'application/json'},body:JSON.stringify({symbol:sym})});
+  }catch(e){}
+  pollArmed();
+}
+const PRW_PH={wait_break:['⏳','Kırılım bekleniyor'],
+  wait_retest:['👀','Retest bekleniyor'], fired:['🎯','ŞİMDİ GİR'],
+  expired:['✖︎','Sinyal yok'], cancel:['—','Durduruldu'], error:['⚠️','Hata']};
+async function pollArmed(){
+  try{
+    const r=await fetch('/api/plan/armed'); const d=await r.json();
+    const ws=d.watchers||[];
+    const el=$('#planArmed'); if(!el) return;
+    if(!ws.length){ el.innerHTML=''; return; }
+    el.innerHTML='<div class="col-h" style="margin:2px 0 6px">🔔 Retest izlenenler</div>'+
+      ws.map(w=>{
+        const ph=PRW_PH[w.phase]||['•',w.phase];
+        const cls=w.phase==='fired'?'armw fire':(w.phase==='expired'||w.phase==='cancel'||w.phase==='error'?'armw off':'armw');
+        return `<div class="${cls}">
+          <span class="s">${w.symbol.replace('USDT','')}</span>
+          <span class="p">${ph[0]} ${w.message||ph[1]}</span>
+          ${w.touched&&w.phase==='wait_retest'?'<span class="tag">dokundu</span>':''}
+          <span class="x" title="Durdur" onclick="disarmPlan('${w.symbol}')">×</span>
+        </div>`;
+      }).join('');
+  }catch(e){}
+}
+setInterval(pollArmed, 5000);
+
+/* ═══ Retest Dönüş · kırdı+retest+yukarı hazır fırsatlar ═══ */
+let retestLoading=false;
+function retestRow(c,i){
+  const chart=`https://www.bybit.com/trade/usdt/${c.symbol}`;
+  return `<tr onclick="window.open('${chart}','_blank')" style="cursor:pointer">
+    <td class="muted">${i+1}</td>
+    <td><span class="sym">${c.symbol.replace('USDT','')}</span></td>
+    <td><span class="lv">${fnum(c.price)}</span></td>
+    <td><span class="lv">${fnum(c.level)}</span> <span class="pct">+${c.dist_pct}%</span></td>
+    <td><span class="lv">${fnum(c.entry)}</span></td>
+    <td><span class="lv stp">${fnum(c.stop)}</span> <span class="pct">−${c.stop_pct}%</span></td>
+    <td><span class="lv tgt">${fnum(c.tp1)}</span> <span class="pct">+${c.tp1_pct}%</span></td>
+    <td><span class="lv tgt">${fnum(c.tp2)}</span> <span class="pct">+${c.tp2_pct}%</span></td>
+    <td class="res">${c.bars_ago*5}dk önce kırdı
+      <br>${c.retest_done?`<span class="tag ok">retest ✓ ${fnum(c.retest_low)}</span>`:'<span class="tag wait">retest bekliyor</span>'}
+      ${c.rising?'<span class="tag up">↑ yukarı</span>':''}
+      <br><span class="muted">hacim ${c.vol_mult}x</span></td>
+  </tr>`;
+}
+function renderRetest(d){
+  const cs=d.candidates||[];
+  $('#retestRows').innerHTML = cs.length
+    ? cs.map(retestRow).join('')
+    : '<tr><td colspan="9" class="muted">Şu an paterni tamamlamış (kırdı+retest+yukarı) coin yok. Birazdan tekrar dener.</td></tr>';
+  const when = d.ts? new Date(d.ts*1000).toLocaleTimeString('tr-TR'):'';
+  $('#retestStatus').innerHTML =
+    `<span class="stat-chip hi">${cs.length} coin kırdı</span>`+
+    (when?`<span class="stat-chip">${when}</span>`:'')+
+    (d.error?`<span class="stat-chip">Hata: ${d.error}</span>`:'');
+  enter('#retestRows tr');
+}
+async function loadRetest(){
+  if(retestLoading) return; retestLoading=true;
+  const btn=$('#retestBtn'); if(btn){btn.disabled=true;}
+  $('#retestStatus').innerHTML='<span class="stat-chip">taranıyor, ~10 sn…</span>';
+  try{
+    const r=await fetch('/api/retest'); const d=await r.json();
+    renderRetest(d);
+  }catch(e){ $('#retestStatus').textContent='Hata: '+e; }
+  if(btn){btn.disabled=false;}
+  retestLoading=false;
+}
+
+/* ═══════════ short plan · destek / kırılım ═══════════ */
+let splanLoading=false, curSPlanId=null;
+function splanRow(c,i){
+  return `<tr>
+    <td class="muted">${i+1}</td>
+    <td><span class="sym">${c.symbol.replace('USDT','')}</span></td>
+    <td><span class="side sh">🔴 ${c.side}</span></td>
+    <td><span class="lv">${fnum(c.entry)}</span></td>
+    <td><span class="lv stp">${fnum(c.stop)}</span> <span class="pct">+${c.stop_pct}%</span></td>
+    <td><span class="lv tgt">${fnum(c.tp1)}</span> <span class="pct">−${c.tp1_pct}%</span></td>
+    <td><span class="lv tgt">${fnum(c.tp2)}</span> <span class="pct">−${c.tp2_pct}%</span></td>
+    <td class="res">D1 ${fnum(c.sup1)}<br>D2 ${fnum(c.sup2)}<br><span class="muted">Dir ${fnum(c.resistance)}</span></td>
+  </tr>`;
+}
+function renderSPlan(d){
+  const cs=d.candidates||[];
+  $('#splanRows').innerHTML = cs.length
+    ? cs.map(splanRow).join('')
+    : '<tr><td colspan="8" class="muted">Şu an kritere uyan kırılım adayı yok. Sonra tekrar dene.</td></tr>';
+  const when = d.ts_tr || (d.ts? new Date(d.ts*1000).toLocaleString('tr-TR'):'');
+  $('#splanStatus').innerHTML =
+    `<span class="stat-chip hi">${cs.length} aday</span>`+
+    (when?`<span class="stat-chip">${when}</span>`:'');
+  enter('#splanRows tr');
+}
+async function runSPlan(){
+  if(splanLoading) return; splanLoading=true;
+  const btn=$('#splanScanBtn'); btn.disabled=true; const old=btn.textContent;
+  btn.textContent='⏳ Taranıyor…';
+  $('#splanStatus').innerHTML='<span class="stat-chip">piyasa taranıyor, ~10 sn…</span>';
+  try{
+    const r=await fetch('/api/splan/scan',{method:'POST'}); const d=await r.json();
+    if(d.error) throw d.error;
+    curSPlanId=d.id; renderSPlan(d); loadSPlanHistory();
+  }catch(e){ $('#splanStatus').textContent='Hata: '+e; }
+  btn.disabled=false; btn.textContent=old; splanLoading=false;
+}
+async function loadSPlanHistory(){
+  try{
+    const r=await fetch('/api/splan/history'); const d=await r.json();
+    const runs=d.runs||[];
+    $('#splanHistory').innerHTML = runs.length ? runs.map(x=>`
+      <div class="h ${x.id===curSPlanId?'on':''}" onclick="showSPlanRun('${x.id}')">
+        <div class="del" title="Sil" onclick="delSPlanRun(event,'${x.id}')">×</div>
+        <div class="t">${(x.ts_tr||x.id).slice(5)}</div>
+        <div class="m">${x.count} aday · ${(x.symbols||[]).map(s=>s.replace('USDT','')).join(', ')||'—'}</div>
+      </div>`).join('') : '<div class="muted" style="font-size:12px">Henüz kayıt yok</div>';
+  }catch(e){}
+}
+async function delSPlanRun(ev,id){
+  ev.stopPropagation();
+  try{
+    await fetch('/api/splan/delete',{method:'POST',
+      headers:{'Content-Type':'application/json'},body:JSON.stringify({id})});
+    if(id===curSPlanId){ curSPlanId=null;
+      $('#splanRows').innerHTML='<tr><td colspan="8" class="muted">Tarama silindi — <b>Tara</b>\'ya bas veya geçmişten seç.</td></tr>';
+      $('#splanStatus').innerHTML='';
+    }
+    loadSPlanHistory();
+  }catch(e){}
+}
+async function showSPlanRun(id){
+  try{
+    const r=await fetch('/api/splan/run?id='+encodeURIComponent(id)); const d=await r.json();
+    if(d.error) return;
+    curSPlanId=id; renderSPlan(d); loadSPlanHistory();
+  }catch(e){}
+}
+
+/* ═══════════ sekmeler ═══════════ */
+let curTab='funding';
+function moveInd(el){
+  const ind=$('#tabInd'); if(!ind||!el) return;
+  ind.style.left = el.offsetLeft+'px';
+  ind.style.width = el.offsetWidth+'px';
+}
+function selectTab(name){
+  curTab=name;
+  document.querySelectorAll('.tab').forEach(t=>{
+    const on=t.dataset.tab===name; t.classList.toggle('on',on);
+    if(on) moveInd(t);
+  });
+  document.querySelectorAll('.tab-panel').forEach(p=>{
+    p.classList.toggle('on', p.id==='tab-'+name);
+  });
+  if(name==='funding') loadFunding();
+  if(name==='trend') loadTrend();
+  if(name==='protrend') loadProTrend();
+  if(name==='scalp') loadScalp();
+  if(name==='squeeze') loadSqueeze();
+  if(name==='pump') loadPump();
+  if(name==='plan') loadPlanHistory();
+  if(name==='retest') loadRetest();
+  if(name==='splan') loadSPlanHistory();
+}
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click',()=>selectTab(t.dataset.tab));
+});
+// gösterge başlangıç konumu + pencere yeniden boyutlanınca
+setTimeout(()=>moveInd(document.querySelector('.tab.on')), 60);
+window.addEventListener('resize',()=>moveInd(document.querySelector('.tab.on')));
+
+/* ═══════════ ana döngü ═══════════ */
+loadFunding(); setInterval(loadFunding, 20000);  // funding tablosunu canlı tut
+setInterval(()=>{ if(curTab==='squeeze') loadSqueeze(); }, 60000); // squeeze adayları canlı
+setInterval(()=>{ if(curTab==='pump') loadPump(); }, 60000); // patlamış adaylar canlı
+setInterval(()=>{ if(curTab==='trend') loadTrend(); }, 30000); // trend scalp canlı
+setInterval(()=>{ if(curTab==='protrend') loadProTrend(); }, 25000); // pro trend (1dk) canlı
+setInterval(()=>{ if(curTab==='scalp') loadScalp(); }, 20000); // 1dk scalp canlı
+setInterval(()=>{ if(curTab==='retest') loadRetest(); }, 45000); // retest dönüş canlı
+tickClock();
+</script>
+</body>
+</html>
