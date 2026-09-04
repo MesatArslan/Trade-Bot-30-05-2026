@@ -1,0 +1,107 @@
+══════════════════════════════════════════════════════════════════════════
+  EMA50+StochRSI PAPER BOT [1m] — FİNAL RAPOR (15:32:57)
+══════════════════════════════════════════════════════════════════════════
+  TF 1dk | Başlangıç $500.00 | Bitiş equity $495.74
+  ► NET $-4.26 (-0.85%) | komisyon $12.020
+  Risk/işlem %1.0 | pik $500.00 dip $475.85
+  Kapanan 15 | ✅ 7 ❌ 8 | isabet %47 | PF 0.87 | açık 0
+══════════════════════════════════════════════════════════════════════════
+
+  #1 ✅ SHORT MARSCOINUSDT [KAPALI]
+     Giriş 0.06244 @ 15:03:00 | K 96.2 D 93.5 RSI 47.5 ADX 42.9 none distEMA -1.36% | skor 6.04
+     Notional $408 qty 6540 | stop %1.22 atr %1.02
+       → %100 @ 0.06216 [zaman   ] 15:28:05 (25.1dk) PnL $+1.831 kom $0.224
+     ► NET $+1.526
+
+  #2 ❌ SHORT UNIUSDT [KAPALI]
+     Giriş 5.751 @ 15:03:00 | K 93.1 D 95.4 RSI 44.2 ADX 32.3 none distEMA -1.13% | skor 5.27
+     Notional $1042 qty 181.1 | stop %0.48 atr %0.4
+       → %100 @ 5.7786 [stop    ] 15:07:11 (4.2dk) PnL $-4.999 kom $0.576
+     ► NET $-5.783
+
+  #3 ❌ LONG POLUSDT [KAPALI]
+     Giriş 0.09182 @ 15:03:00 | K 9.0 D 4.8 RSI 53.6 ADX 24.7 none distEMA +0.29% | skor 4.85
+     Notional $1499 qty 1.633e+04 | stop %0.18 atr %0.15
+       → %100 @ 0.0916554 [stop    ] 15:07:11 (4.2dk) PnL $-2.687 kom $0.823
+     ► NET $-3.810
+
+  #4 ❌ SHORT ARBUSDT [KAPALI]
+     Giriş 0.10734 @ 15:03:00 | K 83.3 D 90.8 RSI 50.6 ADX 29.6 none distEMA -0.40% | skor 4.06
+     Notional $1184 qty 1.103e+04 | stop %0.42 atr %0.35
+       → %100 @ 0.107793 [stop    ] 15:08:25 (5.4dk) PnL $-4.994 kom $0.654
+     ► NET $-5.885
+
+  #5 ❌ SHORT WLFIUSDT [KAPALI]
+     Giriş 0.0565 @ 15:07:45 | K 100.0 D 96.4 RSI 40.9 ADX 35.3 none distEMA -0.37% | skor 6.62
+     Notional $1470 qty 2.602e+04 | stop %0.19 atr %0.16
+       → %100 @ 0.0566063 [stop    ] 15:11:15 (3.5dk) PnL $-2.766 kom $0.810
+     ► NET $-3.870
+
+  #6 ✅ LONG CASHCATUSDT [KAPALI]
+     Giriş 0.26469 @ 15:07:45 | K 0.0 D 7.0 RSI 51.3 ADX 30.2 none distEMA +0.92% | skor 6.15
+     Notional $411 qty 1554 | stop %1.19 atr %0.99
+       → % 40 @ 0.269418 [tp1     ] 15:20:37 (12.9dk) PnL $+2.939 kom $0.033
+       → % 60 @ 0.268168 [trail   ] 15:23:16 (15.5dk) PnL $+3.243 kom $0.138
+     ► NET $+5.928
+
+  #7 ❌ LONG STXUSDT [KAPALI]
+     Giriş 0.2579 @ 15:08:32 | K 7.7 D 7.1 RSI 50.3 ADX 24.4 bull distEMA +0.25% | skor 6.52
+     Notional $1452 qty 5631 | stop %0.23 atr %0.19
+       → %100 @ 0.257309 [stop    ] 15:14:26 (5.9dk) PnL $-3.330 kom $0.797
+     ► NET $-4.418
+
+  #8 ❌ LONG LITUSDT [KAPALI]
+     Giriş 3.614 @ 15:13:52 | K 0.0 D 0.0 RSI 53.7 ADX 35.4 none distEMA +0.49% | skor 6.58
+     Notional $1112 qty 307.8 | stop %0.43 atr %0.36
+       → %100 @ 3.5984 [stop    ] 15:21:12 (7.3dk) PnL $-4.802 kom $0.609
+     ► NET $-5.634
+
+  #9 ✅ LONG SNDKUSDT [KAPALI]
+     Giriş 1532.43 @ 15:14:31 | K 10.9 D 7.2 RSI 63.1 ADX 42.5 bull distEMA +0.40% | skor 6.91
+     Notional $1428 qty 0.9316 | stop %0.16 atr %0.13
+       → % 40 @ 1536.12 [tp1     ] 15:17:27 (2.9dk) PnL $+1.374 kom $0.114
+       → % 30 @ 1538.58 [tp2     ] 15:20:52 (6.4dk) PnL $+1.718 kom $0.086
+       → % 30 @ 1540.18 [trail   ] 15:23:16 (8.8dk) PnL $+2.166 kom $0.237
+     ► NET $+4.535
+
+  #10 ✅ LONG KORUUSDT [KAPALI]
+     Giriş 19.29 @ 15:21:12 | K 3.6 D 3.6 RSI 52.0 ADX 39.5 none distEMA +0.53% | skor 6.32
+     Notional $1428 qty 74.02 | stop %0.28 atr %0.24
+       → % 40 @ 19.3723 [tp1     ] 15:21:28 (0.3dk) PnL $+2.436 kom $0.115
+       → % 30 @ 19.4271 [tp2     ] 15:21:28 (0.3dk) PnL $+3.045 kom $0.086
+       → % 30 @ 19.4742 [trail   ] 15:23:16 (2.1dk) PnL $+4.090 kom $0.238
+     ► NET $+8.847
+
+  #11 ✅ SHORT 0GUSDT [KAPALI]
+     Giriş 0.181 @ 15:23:20 | K 89.1 D 96.4 RSI 50.7 ADX 24.0 bear distEMA -0.22% | skor 6.09
+     Notional $1469 qty 8119 | stop %0.24 atr %0.2
+       → % 40 @ 0.180357 [tp1     ] 15:32:19 (9.0dk) PnL $+2.088 kom $0.117
+       → % 60 @ 0.1803 [süre-sonu] 15:32:57 (9.6dk) PnL $+3.410 kom $0.483
+     ► NET $+4.603
+
+  #12 ✅ LONG AKEUSDT [KAPALI]
+     Giriş 0.008672 @ 15:23:20 | K 15.9 D 15.7 RSI 61.3 ADX 38.6 bull distEMA +0.73% | skor 6.06
+     Notional $1469 qty 1.694e+05 | stop %0.22 atr %0.18
+       → % 40 @ 0.00870041 [tp1     ] 15:27:30 (4.2dk) PnL $+1.924 kom $0.118
+       → % 60 @ 0.00868727 [trail   ] 15:30:09 (6.8dk) PnL $+1.552 kom $0.485
+     ► NET $+2.579
+
+  #13 ❌ LONG TUSDT [KAPALI]
+     Giriş 0.005767 @ 15:23:20 | K 2.1 D 10.5 RSI 50.8 ADX 26.1 none distEMA +1.46% | skor 5.47
+     Notional $245 qty 4.256e+04 | stop %1.99 atr %1.66
+       → %100 @ 0.005763 [süre-sonu] 15:32:57 (9.6dk) PnL $-0.170 kom $0.135
+     ► NET $-0.354
+
+  #14 ✅ LONG DELLUSDT [KAPALI]
+     Giriş 462.58 @ 15:28:10 | K 0.0 D 4.4 RSI 46.4 ADX 37.8 none distEMA +0.12% | skor 6.84
+     Notional $1478 qty 3.195 | stop %0.16 atr %0.13
+       → %100 @ 462.98 [süre-sonu] 15:32:57 (4.8dk) PnL $+1.278 kom $0.814
+     ► NET $+0.169
+
+  #15 ❌ LONG ETHUSDT [KAPALI]
+     Giriş 2386.26 @ 15:30:09 | K 15.2 D 12.9 RSI 62.4 ADX 32.5 bull distEMA +0.23% | skor 5.99
+     Notional $1480 qty 0.6203 | stop %0.15 atr %0.12
+       → %100 @ 2383.7 [süre-sonu] 15:32:57 (2.8dk) PnL $-1.588 kom $0.813
+     ► NET $-2.697
+
+══════════════════════════════════════════════════════════════════════════

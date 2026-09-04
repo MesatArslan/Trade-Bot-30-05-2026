@@ -1,0 +1,215 @@
+# BYBIT FUNDING EKSTREMLERI — son 30 gun (2026-08-05 .. 2026-09-04), evren: linear USDT perp, 24s hacim >= $1M (288 coin)
+# Uretim: fund30.py (veri) + an30.py (analiz), saatler TR. ext% = tek settlement funding'i; 1h-interval coinlerde (ONG, COTI) saatlik oran!
+
+coin: 288 funding kayit: 37103 kline coin: 288
+n= 37103 p0.5% -0.0058604 p1% -0.0030785 p5% -0.00040117 p95 0.0002407 p99 0.00084097 p99.5 0.00119091
+neg olay 382 pos olay 23
+
+=== EN NEGATIF FUNDING (<= -0.30%/settlement) — coin bazinda en ekstrem olay ===
+COIN              ext% tarih(TR)     n gun |  once24     +1h     +4h     +8h    +24h    +72h |  maxUp24  maxDn24 |  ort+4h ort+24h |     ay% fund_top%  hacimM
+ONGUSDT         -2.500 08-21 03:00  55  15 |   +51.2   +49.1   +48.9    -3.7    -6.8   -19.7 |    +86.6    -14.6 |    -3.4   -11.3 |  +140.9     -77.2    19.1
+SKRUSDT         -2.500 08-31 19:00  32   5 |   +71.4    -4.5    -7.0    +0.1   -21.9   -35.3 |     +9.4    -22.0 |    +0.5    -6.7 |  +249.5     -28.0    19.4
+ACEUSDT         -2.000 08-07 11:00  43  15 |  +104.8    -4.4   -11.8   -27.2   -31.4   -21.0 |     +2.5    -32.5 |    -2.5    -3.5 |  +174.0     -46.7     5.5
+TUSDT           -2.000 09-02 15:00  15   2 |   +54.7    -1.5    -9.5    -7.7   -18.9       - |     +7.2    -22.2 |    -3.1   -13.2 |   +29.4     -16.1    13.9
+ZKCUSDT         -2.000 08-30 15:00   5   2 |   +73.9    -8.0    -2.2    -6.3   -21.3   -26.5 |     +6.6    -22.7 |    +1.2   -14.3 |   +37.0      -7.7     3.2
+COTIUSDT        -2.000 08-13 11:00  40  11 |   +18.4    -4.5    +6.6   +11.3    +4.3    -2.8 |    +20.4     -5.3 |    -0.7    -1.0 |    -6.4     -43.9     1.8
+UNITREEUSDT     -2.000 08-19 11:00   5   5 |   +24.2    -3.9    -4.7    -7.4   -20.8   -18.4 |     +0.0    -18.7 |    -2.5    -5.2 |    +5.6      -6.3     1.3
+KAITOUSDT       -1.998 08-10 19:00  29   6 |    -2.7    -0.7    +0.2    -2.3    -2.4   -31.2 |     +0.7     -4.8 |    -2.6   -10.3 |   -66.5     -30.9     2.0
+TUTUSDT         -1.700 08-29 15:00  11   4 |   -23.3   +11.1    +0.2    +0.2    +2.1   -11.8 |    +12.2     -6.5 |    -0.3    -6.6 |    +8.5     -11.1     4.6
+CYSUSDT         -1.387 08-09 07:00   3   3 |   -12.2    -3.0   +10.0   +18.1   +13.4   +41.1 |    +57.6     -7.2 |   +10.1   +17.3 |    -8.1      -1.9     7.4
+CXMTUSDT        -1.352 08-17 11:00   8   8 |   +13.5    -0.5    -3.3    -1.3    -5.5    -8.0 |     +0.0     -9.6 |    -1.2    -0.8 |    +4.5     -10.9     1.1
+ZORAUSDT        -1.311 08-31 11:00   3   1 |   +56.2    -8.5    -9.8    -6.2   -10.3   -25.4 |     +9.0    -17.4 |    -3.1   -14.2 |   +43.5      -3.1     3.7
+ANKRUSDT        -1.237 09-03 11:00   3   2 |    +9.3    -1.2    -3.4    -4.1    -5.3       - |     +4.3     -6.8 |    -2.6    -5.3 |   +22.5      -2.2     5.7
+BICOUSDT        -1.195 08-27 03:00  21  10 |   +25.8    +6.9   +21.7    +8.2    +7.1    -8.4 |    +28.4     -3.6 |    -0.2    -5.0 |   +24.3     -17.4     1.9
+PUFFERUSDT      -1.148 09-03 11:00   4   2 |   +27.9    -5.6    -8.9    -9.1    -5.2       - |     +0.2    -11.1 |    -0.1    -0.8 |   +36.1      -4.5     1.2
+LAUSDT          -1.147 09-02 15:00   8   3 |   +18.5    -4.6    -8.4    -9.2    -6.5       - |     +0.3    -11.3 |    -1.6    -0.3 |   +41.2      -9.8     5.4
+BMTUSDT         -0.994 08-25 23:00   8   6 |   +47.9    +2.4    +1.8    +4.5    -3.4    -0.5 |    +24.2     -8.0 |    +0.6    +5.2 |   +51.3     -10.1     2.2
+REDUSDT         -0.951 08-18 15:00   3   2 |   +18.4    -2.2    -7.1    -4.2   -10.5   +12.2 |     +0.0    -12.6 |    -2.7    -2.8 |   +41.0      -3.3     1.4
+CAPUSDT         -0.920 08-15 07:00  10   6 |   +14.8    +0.9    -3.0    -1.9    -1.0    +2.1 |     +3.6     -9.8 |    -1.5    +0.6 |   +68.7      -9.3    22.6
+HIVEUSDT        -0.901 09-04 07:00   4   2 |    -4.1    -3.3    -1.3       -       -       - |     +0.1     -3.9 |    -2.6    -5.5 |   +11.7      -1.4     1.3
+HNTUSDT         -0.876 08-30 11:00   8   4 |   +99.1    -5.2    +5.8   +43.1   +19.6   -11.1 |    +58.4     -8.6 |    +3.7   +20.1 |  +235.1      -4.6    20.9
+HOMEUSDT        -0.834 09-02 07:00  28  15 |    -1.6    +0.7    -0.3    +0.0    +0.2       - |     +1.3     -1.6 |    -1.8    -6.8 |   -30.0     -28.3     1.6
+MOVEUSDT        -0.803 08-23 07:00   7   3 |   -20.5    +1.5    +5.8   +10.2    +8.7   +18.5 |    +15.5     -1.3 |    -1.5    -1.1 |   +24.1      -5.6     2.2
+OKTAUSDT        -0.753 09-03 03:00   1   1 |    -2.0    -0.3    -0.4    +0.4    +4.1       - |     +5.3     -1.0 |    -0.4    +4.1 |    +3.0      -1.0     3.9
+FLOCKUSDT       -0.745 08-31 11:00   5   2 |   +36.8    -8.3   -10.3    -7.1   -14.0   -16.1 |     +5.8    -14.0 |    -2.4    -8.2 |   +42.6      -3.0    10.5
+BNCUSDT         -0.553 08-21 03:00   2   2 |    +2.1    +1.6    +2.3    +4.7   +19.1   +21.5 |    +19.6     -1.8 |    -1.1    +5.8 |   +36.6      +4.3     1.8
+EDENUSDT        -0.552 08-26 11:00   2   1 |   +24.6    -6.4    -4.6    +1.8    -1.7   +21.1 |    +21.8     -9.8 |    -2.8    -4.1 |   +58.5      -3.2     1.4
+PORTALUSDT      -0.533 08-22 15:00   4   3 |   +18.3    -1.2    -2.0    -1.0    -1.6   +12.2 |     +8.7     -8.2 |    -1.0    +1.1 |   +51.4      -3.6     4.2
+FWDIUSDT        -0.510 08-07 11:00   2   2 |    +0.4    -0.8    -0.2    +1.1    -1.8    +4.5 |     +2.6     -4.5 |    -1.3    -1.5 |   +64.3      +0.5     2.4
+BANKUSDT        -0.467 08-06 11:00   1   1 |   -10.3    -1.7    -3.6    -4.3    -6.7   -14.2 |     +2.5     -7.5 |    -3.6    -6.7 |   -14.5      -1.1     1.1
+DOSUSDT         -0.465 08-13 15:00   4   2 |   -21.9    +2.2    +0.3    +1.7    +0.2    -8.8 |     +4.8     -6.5 |    +0.2    +0.7 |   -32.8      -5.4     1.6
+DEXEUSDT        -0.459 08-09 15:00   3   1 |    -3.7    +0.4    -0.6    -0.6    -2.7   -12.9 |     +1.7     -3.3 |    +0.0    -1.8 |   -10.2      -5.5     1.7
+0GUSDT          -0.379 08-31 15:00   1   1 |   +36.5    -6.6    -6.9    -3.5    -8.2   -18.5 |    +15.1    -11.1 |    -6.9    -8.2 |   +35.8      -0.6     2.5
+TEMUSDT         -0.375 09-02 19:00   1   1 |    -1.9    -1.5    +0.2    +0.5    +4.6       - |     +4.9     -2.9 |    +0.2    +4.6 |    +1.8      -0.4     1.5
+GPROUSDT        -0.355 09-03 11:00   1   1 |   +49.3    -3.8    -6.9   -18.8   -21.6       - |     +3.1    -25.6 |    -6.9   -21.6 |   +18.7      -0.2     5.8
+SANDUSDT        -0.308 08-25 03:00   2   2 |    -7.0    -0.5    +1.7    +0.4    -3.1    -2.7 |     +3.2     -5.5 |    -0.4    -2.9 |    -6.1      -3.9     3.1
+
+=== EN POZITIF FUNDING (>= +0.30%/settlement) ===
+APLDUSDT        +0.843 08-09 19:00   4   2 |    -0.3    +0.6    +1.0    -0.5    -1.1    +4.1 |     +3.5     -2.8 |    +0.8    -0.1 |   -12.5      +3.4     3.4
+TSEMUSDT        +0.689 08-10 03:00   2   2 |    +0.7    +1.6    +1.5    +1.3    -0.5    +3.8 |     +4.6     -4.0 |    +0.8    -0.2 |   -11.6      +2.3     1.9
+BNCUSDT         +0.684 08-20 11:00   8   7 |    +1.8    +6.8    +3.9    +3.2    +4.3   +15.9 |    +11.1     -2.2 |    +0.7    +0.0 |   +36.6      +4.3     1.8
+RDWUSDT         +0.546 08-10 03:00   1   1 |    -0.5    +0.4    +0.3    +1.2    -5.9    -0.9 |     +2.1     -6.7 |    +0.3    -5.9 |    +6.4      +0.8     1.6
+FWDIUSDT        +0.540 08-19 03:00   1   1 |    +5.3    +1.4    +0.8    +1.2   +13.7   +21.4 |    +15.3     -1.6 |    +0.8   +13.7 |   +64.3      +0.5     2.4
+MARAUSDT        +0.401 08-31 03:00   2   2 |    -0.1    +0.3    +0.5    +1.1    +1.8    -1.9 |     +2.6     -2.4 |    +0.3    +1.1 |    -2.9      +5.0     4.9
+SHAZUSDT        +0.394 08-23 03:00   2   2 |    -0.1    +0.9    +1.5    +3.0    +2.9    +0.5 |     +4.6     +0.0 |    +1.3    +1.5 |    +0.7      +1.0     2.1
+COTIUSDT        +0.338 08-12 03:00   1   1 |   -12.1    +1.6    -2.4    -5.4   +28.0    +8.2 |    +39.1     -7.3 |    -2.4   +28.0 |    -6.4     -43.9     1.8
+TUTUSDT         +0.337 08-09 11:00   1   1 |  +242.2   -12.2   -10.1   -14.4   -13.5   -60.3 |    +40.4    -23.9 |   -10.1   -13.5 |    +8.5     -11.1     4.6
+CYSUSDT         +0.334 08-16 03:00   1   1 |   -37.4   -22.0   -12.6   -10.7    -9.0   -38.9 |     +3.6    -27.0 |   -12.6    -9.0 |    -8.1      -1.9     7.4
+
+=== TOPLU: tum negatif olaylar ===
+NEG 1h     n=362 med= -0.99% ort= -0.98% pozitif%=  35
+NEG 4h     n=362 med= -1.55% ort= -1.49% pozitif%=  35
+NEG 8h     n=362 med= -2.25% ort= -2.24% pozitif%=  33
+NEG 24h    n=362 med= -5.55% ort= -5.02% pozitif%=  28
+NEG 72h    n=301 med= -9.49% ort= -7.26% pozitif%=  31
+NEG mfe24  n=362 med= +5.32% ort=+12.08% pozitif%=  97
+NEG mae24  n=362 med= -9.75% ort=-12.60% pozitif%=   0
+NEG prev24 n=362 med= +5.58% ort=+15.36% pozitif%=  63
+=== TOPLU: tum pozitif olaylar ===
+POS 1h     n= 23 med= +0.48% ort= -0.79% pozitif%=  70
+POS 4h     n= 23 med= +0.39% ort= -0.46% pozitif%=  78
+POS 8h     n= 23 med= +1.13% ort= -0.66% pozitif%=  65
+POS 24h    n= 23 med= +0.14% ort= +0.78% pozitif%=  57
+POS 72h    n= 22 med= +3.54% ort= +0.16% pozitif%=  68
+POS mfe24  n= 23 med= +3.62% ort= +7.35% pozitif%= 100
+POS mae24  n= 23 med= -2.56% ort= -5.46% pozitif%=   0
+POS prev24 n= 23 med= +0.31% ort= +8.28% pozitif%=  52
+
+=== TEK OLAY SIRALAMASI: en negatif 25 settlement ===
+ONGUSDT         -2.500 08-21 03:00 int=1h | +4h   +48.9 +24h    -6.8 maxUp   +86.6 maxDn   -14.6 once24   +51.2
+ONGUSDT         -2.500 08-21 04:00 int=1h | +4h   +22.8 +24h   -25.5 maxUp   +46.8 maxDn   -32.8 once24   +88.7
+ONGUSDT         -2.500 08-21 05:00 int=1h | +4h    -9.9 +24h   -35.8 maxUp   +25.2 maxDn   -42.7 once24  +121.1
+ONGUSDT         -2.500 08-21 06:00 int=1h | +4h   -31.8 +24h   -45.5 maxUp    +7.2 maxDn   -50.9 once24  +158.8
+ONGUSDT         -2.500 08-21 07:00 int=1h | +4h   -38.1 +24h   -39.8 maxUp    +6.7 maxDn   -45.1 once24  +130.0
+ONGUSDT         -2.500 08-21 08:00 int=1h | +4h   -35.1 +24h   -40.2 maxUp    +6.7 maxDn   -42.7 once24  +121.5
+ONGUSDT         -2.500 08-21 09:00 int=1h | +4h   -37.1 +24h   -44.1 maxUp    +0.1 maxDn   -54.3 once24  +126.4
+ONGUSDT         -2.500 08-27 03:00 int=1h | +4h   -45.2 +24h   -38.5 maxUp    +2.4 maxDn   -49.1 once24  +116.3
+ONGUSDT         -2.500 08-27 04:00 int=1h | +4h   -25.3 +24h   -21.0 maxUp    +0.0 maxDn   -31.9 once24   +58.3
+ONGUSDT         -2.500 08-27 05:00 int=1h | +4h   -17.1 +24h   -19.8 maxUp    +0.0 maxDn   -25.4 once24   +48.1
+ONGUSDT         -2.500 08-27 06:00 int=1h | +4h    +1.3 +24h    +4.6 maxUp   +15.2 maxDn    -4.3 once24   +14.6
+SKRUSDT         -2.500 08-31 19:00 int=4h | +4h    -7.0 +24h   -21.9 maxUp    +9.4 maxDn   -22.0 once24   +71.4
+SKRUSDT         -2.455 08-31 03:00 int=4h | +4h   +11.3 +24h   +21.1 maxUp   +43.4 maxDn   -12.7 once24  +120.6
+ONGUSDT         -2.345 08-21 10:00 int=1h | +4h   -28.0 +24h   -35.4 maxUp    +0.1 maxDn   -46.9 once24   +99.8
+ONGUSDT         -2.054 08-26 23:00 int=1h | +4h    -2.3 +24h   -23.4 maxUp   +46.3 maxDn   -33.4 once24   +76.4
+ACEUSDT         -2.000 08-07 11:00 int=4h | +4h   -11.8 +24h   -31.4 maxUp    +2.5 maxDn   -32.5 once24  +104.8
+TUSDT           -2.000 09-02 15:00 int=4h | +4h    -9.5 +24h   -18.9 maxUp    +7.2 maxDn   -22.2 once24   +54.7
+ZKCUSDT         -2.000 08-30 15:00 int=4h | +4h    -2.2 +24h   -21.3 maxUp    +6.6 maxDn   -22.7 once24   +73.9
+COTIUSDT        -2.000 08-13 11:00 int=1h | +4h    +6.6 +24h    +4.3 maxUp   +20.4 maxDn    -5.3 once24   +18.4
+COTIUSDT        -2.000 08-13 15:00 int=1h | +4h    +0.5 +24h    -8.4 maxUp    +8.7 maxDn   -13.2 once24   +33.0
+UNITREEUSDT     -2.000 08-19 11:00 int=8h | +4h    -4.7 +24h   -20.8 maxUp    +0.0 maxDn   -18.7 once24   +24.2
+KAITOUSDT       -1.998 08-10 19:00 int=4h | +4h    +0.2 +24h    -2.4 maxUp    +0.7 maxDn    -4.8 once24    -2.7
+ACEUSDT         -1.965 08-15 15:00 int=4h | +4h   -13.5 +24h   -32.3 maxUp    +0.2 maxDn   -36.5 once24   -23.4
+KAITOUSDT       -1.894 08-12 11:00 int=4h | +4h   -23.0 +24h   -27.9 maxUp    +0.1 maxDn   -31.7 once24    -3.6
+COTIUSDT        -1.883 08-13 03:00 int=1h | +4h    -8.2 +24h   -10.7 maxUp    +7.4 maxDn   -15.5 once24   +25.5
+
+=== TEK OLAY SIRALAMASI: en pozitif 25 settlement ===
+APLDUSDT        +0.843 08-09 19:00 int=8h | +4h    +1.0 +24h    -1.1 maxUp    +3.5 maxDn    -2.8 once24    -0.3
+TSEMUSDT        +0.689 08-10 03:00 int=8h | +4h    +1.5 +24h    -0.5 maxUp    +4.6 maxDn    -4.0 once24    +0.7
+BNCUSDT         +0.684 08-20 11:00 int=8h | +4h    +3.9 +24h    +4.3 maxUp   +11.1 maxDn    -2.2 once24    +1.8
+APLDUSDT        +0.680 08-09 11:00 int=8h | +4h    +1.6 +24h    +1.8 maxUp    +2.9 maxDn    -1.5 once24    +0.3
+APLDUSDT        +0.678 08-10 03:00 int=8h | +4h    +0.5 +24h    -0.6 maxUp    +4.4 maxDn    -1.9 once24    -1.5
+APLDUSDT        +0.580 08-09 03:00 int=8h | +4h    +0.1 +24h    -0.5 maxUp    +1.6 maxDn    -1.4 once24    +1.1
+RDWUSDT         +0.546 08-10 03:00 int=8h | +4h    +0.3 +24h    -5.9 maxUp    +2.1 maxDn    -6.7 once24    -0.5
+FWDIUSDT        +0.540 08-19 03:00 int=8h | +4h    +0.8 +24h   +13.7 maxUp   +15.3 maxDn    -1.6 once24    +5.3
+BNCUSDT         +0.518 09-01 03:00 int=8h | +4h    +0.5 +24h    -8.7 maxUp    +1.5 maxDn    -8.8 once24    +3.3
+BNCUSDT         +0.495 08-19 11:00 int=8h | +4h    +0.4 +24h   +12.1 maxUp    +5.3 maxDn    -1.9 once24    +0.5
+BNCUSDT         +0.465 09-02 11:00 int=8h | +4h    -0.1 +24h    +2.0 maxUp    +5.4 maxDn    -2.1 once24    -7.0
+BNCUSDT         +0.438 08-25 11:00 int=8h | +4h    -1.7 +24h    +0.2 maxUp    +2.6 maxDn    -2.6 once24    -2.0
+MARAUSDT        +0.401 08-31 03:00 int=8h | +4h    +0.5 +24h    +1.8 maxUp    +2.6 maxDn    -2.4 once24    -0.1
+SHAZUSDT        +0.394 08-23 03:00 int=8h | +4h    +1.5 +24h    +2.9 maxUp    +4.6 maxDn    +0.0 once24    -0.1
+SHAZUSDT        +0.367 08-17 03:00 int=8h | +4h    +1.0 +24h    +0.0 maxUp    +5.9 maxDn    -4.4 once24    +0.9
+BNCUSDT         +0.351 09-01 11:00 int=8h | +4h    +0.0 +24h    -4.8 maxUp    +0.8 maxDn    -9.8 once24    +1.4
+BNCUSDT         +0.344 08-07 03:00 int=8h | +4h    +2.0 +24h    +2.3 maxUp    +5.9 maxDn    -2.6 once24    -8.9
+TSEMUSDT        +0.343 08-09 11:00 int=8h | +4h    +0.1 +24h    +0.1 maxUp    +0.9 maxDn    -2.6 once24    +1.9
+BNCUSDT         +0.342 08-31 19:00 int=8h | +4h    +0.4 +24h    -7.5 maxUp    +3.2 maxDn    -7.4 once24    +0.9
+COTIUSDT        +0.338 08-12 03:00 int=1h | +4h    -2.4 +24h   +28.0 maxUp   +39.1 maxDn    -7.3 once24   -12.1
+TUTUSDT         +0.337 08-09 11:00 int=4h | +4h   -10.1 +24h   -13.5 maxUp   +40.4 maxDn   -23.9 once24  +242.2
+CYSUSDT         +0.334 08-16 03:00 int=4h | +4h   -12.6 +24h    -9.0 maxUp    +3.6 maxDn   -27.0 once24   -37.4
+MARAUSDT        +0.323 08-08 19:00 int=8h | +4h    +0.1 +24h    +0.5 maxUp    +1.7 maxDn    -0.5 once24    +0.0
+TUTUSDT         +0.298 08-10 07:00 int=4h | +4h   -33.1 +24h   -49.7 maxUp    +7.2 maxDn   -54.6 once24   +56.7
+MARAUSDT        +0.293 08-23 03:00 int=8h | +4h    -0.3 +24h    +0.3 maxUp    +1.0 maxDn    -1.2 once24    -0.3
+
+=== GUNLUK TOPLAM FUNDING (tum settlementlerin gunluk toplami) — en dusuk 25 coin-gun ===
+COIN                  gun fund/gun% | onceki gun   o gun   maxUp   maxDn   +2gun   +4gun
+ONGUSDT        2026-08-21    -22.22 |      +52.7    -5.9   +86.6   -14.6   -21.7   -11.5
+SKRUSDT        2026-08-31    -12.63 |     +123.9   +16.2   +43.4   -12.7    -9.3   -18.4
+ONGUSDT        2026-08-27    -11.96 |     +126.3   -42.1    +2.4   -49.1   -45.8   -51.9
+COTIUSDT       2026-08-13    -11.26 |      +25.4   -10.7    +7.4   -15.5   -14.4   -17.4
+ACEUSDT        2026-08-07    -10.81 |      +56.0    -1.6   +39.5    -3.9   +30.9   +10.5
+TUSDT          2026-09-02    -10.66 |       +0.8   +44.7   +66.5    -0.1   +26.8       -
+COTIUSDT       2026-08-22     -9.96 |      +16.0    -0.6    +8.1   -20.4    +6.2    +1.4
+ONGUSDT        2026-09-01     -9.61 |      -14.5   +22.1   +43.5    -2.2    +9.2       -
+SKRUSDT        2026-09-01     -7.71 |      +16.2   -22.0   +13.9   -23.5   -19.3       -
+KAITOUSDT      2026-08-09     -7.15 |      -12.4    -4.6    +1.3    -9.5    -8.7   -36.2
+KAITOUSDT      2026-08-10     -6.24 |       -4.6    -4.3    +3.6    -7.6    -8.4   -37.7
+TUTUSDT        2026-08-30     -6.13 |       -5.7    -4.8    +3.3    -5.6   -16.5   -31.2
+KAITOUSDT      2026-08-12     -5.34 |       -4.4   -27.0    +0.5   -29.5   -31.9   -40.7
+ZKCUSDT        2026-08-30     -5.15 |       +1.1   +50.8   +82.5    -0.6   +31.7   +20.3
+ACEUSDT        2026-08-15     -5.03 |     +107.7   -39.4   +36.8   -40.7   -47.2   -10.4
+TUSDT          2026-09-03     -4.51 |      +44.7   -12.3    +5.6   -16.5       -       -
+ONGUSDT        2026-08-28     -4.50 |      -42.1    -6.4    +8.1   -14.4    +0.1   -29.0
+KAITOUSDT      2026-08-11     -4.41 |       -4.3    -4.4    +1.6    -7.1   -30.1   -38.4
+COTIUSDT       2026-08-23     -4.14 |       -0.6    +6.9   +12.1    -0.0    +9.4    +8.9
+ACEUSDT        2026-08-16     -3.82 |      -39.4   -12.9    +3.4   -14.9    +1.1   +23.0
+ONGUSDT        2026-09-03     -3.67 |      -10.6    +4.8   +10.7    -4.7       -       -
+ONGUSDT        2026-08-26     -3.63 |      +16.2  +126.3  +153.2    -3.3   +31.0   +31.2
+ONGUSDT        2026-08-31     -3.51 |      -17.1   -14.5    +4.3   -15.3    +4.4    -2.1
+ZORAUSDT       2026-08-31     -3.40 |      +26.8   +14.3   +47.2    -3.9    -0.7    -1.3
+HOMEUSDT       2026-08-14     -3.32 |       +6.2    -1.2   +17.1    -3.5   -12.7   -33.5
+
+=== GUNLUK TOPLAM FUNDING — en yuksek 20 coin-gun ===
+COIN                  gun fund/gun% | onceki gun   o gun   maxUp   maxDn   +2gun   +4gun
+APLDUSDT       2026-08-09     +2.10 |       +1.5    -0.8    +1.6    -1.4    -2.2    +5.1
+BTRUSDT        2026-08-13     +0.98 |       -0.1    +0.1    +5.6    -4.8    -3.6    +2.2
+TUTUSDT        2026-08-09     +0.95 |     +179.9   +84.8  +201.3   -15.5    -1.2   -38.5
+APLDUSDT       2026-08-10     +0.91 |       -0.8    -1.4    +4.4    -1.9    +4.4    +4.2
+BNCUSDT        2026-09-01     +0.90 |       +2.9    -7.5    +1.5    -8.8    -6.2       -
+BTWUSDT        2026-08-09     +0.77 |       -8.8    +5.2    +9.3   -28.7    -3.7   +27.6
+BNCUSDT        2026-08-20     +0.74 |       +1.9    +1.6   +13.3    -1.1   +20.9   +23.9
+MARAUSDT       2026-08-08     +0.69 |       -4.7    +0.3    +0.9    -0.7    -0.4    -4.0
+COTIUSDT       2026-08-12     +0.66 |      -13.2   +25.4   +39.1    -7.3   +12.0    +5.2
+TSEMUSDT       2026-08-10     +0.66 |       +1.0    -0.5    +4.6    -4.0    -0.4    +1.4
+CASHCATUSDT    2026-08-25     +0.64 |      +24.6    -6.1   +23.2    -9.6   +22.9    +2.5
+TSEMUSDT       2026-08-09     +0.62 |       -0.7    +1.0    +2.7    -0.6    +0.5    +4.5
+BNCUSDT        2026-08-07     +0.62 |       -9.0    +2.2    +5.9    -2.6    +3.2    +5.0
+BTRUSDT        2026-08-07     +0.61 |       +6.5    +6.3    +7.5    -0.4   +14.8    -3.2
+4USDT          2026-08-06     +0.61 |      +10.7    +0.5   +10.9    -1.7    +4.2   +31.7
+BTWUSDT        2026-08-15     +0.60 |      +13.4    -2.3    +3.9   -11.4   +28.3   +39.5
+MARAUSDT       2026-08-23     +0.58 |       -0.4    -0.1    +1.0    -1.2    -0.9    +0.4
+BNCUSDT        2026-09-03     +0.57 |       +1.3   +18.2   +21.5    -1.8       -       -
+CLOUSDT        2026-08-19     +0.57 |      +22.9   -15.2    +0.6   -17.8   -26.0   -24.5
+NIULAIUSDT     2026-08-30     +0.56 |       -1.8   +84.2  +158.1    -0.7   +87.1   +41.6
+
+=== HABER/DUYURU ESLESMESI (news_cache.json, son 30g) ===
+
+4USDT:
+   09-02 11:30 [binance/listing_spot] Binance Exchange Adds 4 bStocks Trading Pairs on Binance Spot/Convert - 2026-09-02
+   09-02 12:30 [binance/listing_spot] Binance Will Add 4 bStocks Tokenized Securities as Collateral Asset - 2026-09-02
+
+CASHCATUSDT:
+   08-05 13:16 [bybit/listing_perp] New listing: CASHCATUSDT Perpetual Contract in Innovation Zone, with up to 10x leverage
+
+CXMTUSDT:
+   08-24 10:28 [bybit/campaign] Token Buzz: Trade CXMT. Win your share of up to $100,000.
+
+DOSUSDT:
+   08-11 17:00 [binance/listing_perp] Binance Futures Will Launch USDⓈ-Margined DOSUSDT Perpetual Contract (2026-08-11)
+   08-12 09:32 [bybit/listing_perp] New listing: DOSUSDT Perpetual Contract in Innovation Zone, with up to 20x leverage
+
+GPROUSDT:
+   09-02 11:26 [bybit/listing_perp] New listing: GPROUSDT TradFi Perpetual Contract, with up to 25x leverage
+
+NIULAIUSDT:
+   09-01 06:58 [bybit/campaign] Stock Buzz: Trade 牛来 (NIULAI). Compete for a share of $100,000.
+   09-01 14:57 [bybit/campaign] NIULAIUSDT is now available on Bybit Trading Bots
+
+OKTAUSDT:
+   08-31 12:48 [bybit/listing_perp] New listing: OKTAUSDT TradFi Perpetual Contract, with up to 25x leverage
+
+TEMUSDT:
+   08-31 12:48 [bybit/listing_perp] New listing: TEMUSDT TradFi Perpetual Contract, with up to 25x leverage
+
+UNITREEUSDT:
+   08-19 05:30 [binance/listing_perp] Binance Futures Will Launch UNITREEUSDT USDⓈ-Margined Perpetual Contract (2026-08-19)
+   08-19 10:24 [bybit/listing_perp] Bybit to convert UNITREEUSDT Pre-Market Perpetual Contract to standard Perpetual Contract
+   08-24 10:27 [bybit/campaign] Token Buzz: Trade UNITREE. Win your share of up to a $100,000 prize pool.

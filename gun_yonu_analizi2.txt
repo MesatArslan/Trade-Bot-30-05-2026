@@ -1,0 +1,72 @@
+GÜNÜN YÖNÜ NE ZAMAN BELLİ OLUR? — son 365 gün, 1 saatlik, BTC / ETH / 20 coin sepet (TR saati)
+
+══ (1) 03:00 TR (UTC gün) başlangıcı: K saat geçtikten sonra 'gün şu ana kadar' yönü, KALAN saatlerin yönünü tahmin ediyor mu? ══
+   ('aynı yön' şans=%50; |gün şu ana kadar|>%0.5 filtresiyle; kalan = K→24. saat)
+ K saat | BTC aynı yön  kalan+ (yukarı gün)  kalan− (aşağı gün)   corr |  ETH aynı   corr |  SEPET aynı   corr
+      1 |          59%        55% (+0.43)        64% (-0.21)  +0.15 |       56%  +0.17 |         57%  +0.06
+      2 |          57%        60% (+0.14)        53% (-0.13)  +0.15 |       48%  +0.15 |         58%  +0.10
+      3 |          48%        53% (+0.01)        43% (-0.06)  +0.11 |       50%  +0.08 |         55%  +0.03
+      4 |          55%        53% (-0.09)        57% (-0.16)  +0.10 |       49%  +0.11 |         53%  +0.04
+      5 |          53%        48% (+0.09)        57% (-0.11)  +0.11 |       44%  +0.07 |         55%  +0.03
+      6 |          50%        50% (+0.06)        50% (-0.19)  +0.13 |       49%  +0.12 |         56%  +0.08
+      7 |          49%        48% (+0.07)        51% (-0.19)  +0.08 |       45%  +0.08 |         54%  +0.10
+      8 |          53%        52% (-0.01)        54% (-0.26)  +0.09 |       48%  +0.09 |         54%  +0.09
+      9 |          50%        50% (-0.05)        50% (-0.23)  +0.06 |       50%  +0.08 |         53%  +0.04
+     10 |          51%        54% (+0.09)        49% (-0.05)  +0.06 |       49%  +0.07 |         52%  +0.05
+     11 |          53%        54% (+0.03)        51% (-0.10)  +0.07 |       48%  +0.07 |         53%  +0.04
+     12 |          53%        51% (+0.13)        55% (-0.22)  +0.13 |       53%  +0.10 |         54%  +0.07
+     13 |          55%        54% (+0.03)        55% (-0.03)  +0.09 |       49%  +0.10 |         54%  +0.05
+     14 |          48%        49% (-0.00)        47% (+0.01)  +0.05 |       47%  +0.07 |         51%  +0.03
+     15 |          44%        48% (-0.05)        40% (+0.09)  +0.07 |       49%  +0.13 |         48%  +0.07
+     16 |          45%        42% (-0.11)        47% (-0.05)  +0.04 |       45%  +0.16 |         44%  +0.06
+     17 |          47%        47% (-0.05)        46% (+0.01)  +0.03 |       44%  +0.09 |         49%  +0.02
+     18 |          40%        41% (-0.06)        39% (+0.14)  -0.05 |       43%  +0.02 |         46%  -0.03
+     19 |          44%        44% (-0.08)        44% (+0.14)  -0.10 |       41%  -0.05 |         43%  -0.08
+     20 |          40%        38% (-0.07)        42% (+0.14)  -0.10 |       39%  -0.06 |         44%  -0.10
+     21 |          46%        45% (+0.02)        46% (+0.02)  -0.01 |       42%  -0.05 |         44%  -0.06
+
+══ (2) HERHANGİ BİR SAATTE: son N saatin yönü, SONRAKİ 4 saati tahmin ediyor mu? (tüm saatler, 365 gün) ══
+son N saat | BTC aynı yön |son N|>%1 aynı   corr |  ETH aynı   >%1 |  SEPET aynı   >%1   corr
+         1 |          48%             47%  +0.00 |       48%   49% |         49%   47%  +0.01
+         2 |          48%             47%  -0.00 |       48%   46% |         49%   48%  +0.01
+         4 |          48%             46%  -0.01 |       47%   46% |         49%   48%  +0.01
+         6 |          47%             44%  -0.02 |       46%   45% |         48%   48%  -0.00
+         8 |          47%             44%  -0.02 |       47%   45% |         48%   48%  -0.02
+        12 |          47%             46%  -0.01 |       47%   46% |         48%   48%  -0.02
+        24 |          48%             48%  +0.01 |       48%   48% |         48%   47%  -0.02
+
+══ (3) SİNYAL ANINDA PİYASA DURUMU → DİP/ZİRVE DOĞRULUĞU (30 gün, 36.614 sinyal; sepet = 119 coin medyan) ══
+   ölçüt A: 4s kapanış yön lehine (%),  ölçüt B: önce %1 lehte (%).  Devam hipotezi: piyasa yukarıysa AL iyi olmalı. Dönüş hipotezi: tersi.
+  ── gün şu ana kadar (03:00'ten) ──
+     piyasa > +%1      LONG  n= 1001  A % 65  ort %+1.16  B % 52  lehte>aleyhte %64
+     piyasa > +%1      SHORT n= 2912  A % 49  ort %-0.35  B % 40  lehte>aleyhte %48
+     piyasa +0.3..+1   LONG  n= 2050  A % 51  ort %+0.24  B % 45  lehte>aleyhte %55
+     piyasa +0.3..+1   SHORT n= 4298  A % 53  ort %-0.25  B % 44  lehte>aleyhte %51
+     piyasa yatay ±0.3 LONG  n= 5927  A % 53  ort %+0.20  B % 40  lehte>aleyhte %54
+     piyasa yatay ±0.3 SHORT n= 6709  A % 51  ort %-0.15  B % 36  lehte>aleyhte %48
+     piyasa −0.3..−1   LONG  n= 3813  A % 55  ort %+0.23  B % 44  lehte>aleyhte %53
+     piyasa −0.3..−1   SHORT n= 2231  A % 50  ort %-0.31  B % 40  lehte>aleyhte %49
+     piyasa < −%1      LONG  n= 3521  A % 56  ort %+0.27  B % 46  lehte>aleyhte %53
+     piyasa < −%1      SHORT n= 1532  A % 54  ort %-0.13  B % 50  lehte>aleyhte %54
+  ── son 4 saat ──
+     piyasa > +%1      LONG  n=  433  A % 64  ort %+1.11  B % 46  lehte>aleyhte %64
+     piyasa > +%1      SHORT n= 2335  A % 50  ort %-0.22  B % 43  lehte>aleyhte %50
+     piyasa +0.3..+1   LONG  n= 1398  A % 57  ort %+0.37  B % 46  lehte>aleyhte %58
+     piyasa +0.3..+1   SHORT n= 4689  A % 52  ort %-0.22  B % 41  lehte>aleyhte %48
+     piyasa yatay ±0.3 LONG  n= 7466  A % 52  ort %+0.17  B % 41  lehte>aleyhte %53
+     piyasa yatay ±0.3 SHORT n= 8401  A % 52  ort %-0.16  B % 40  lehte>aleyhte %50
+     piyasa −0.3..−1   LONG  n= 4785  A % 56  ort %+0.28  B % 46  lehte>aleyhte %55
+     piyasa −0.3..−1   SHORT n= 2000  A % 48  ort %-0.40  B % 42  lehte>aleyhte %49
+     piyasa < −%1      LONG  n= 2434  A % 56  ort %+0.42  B % 44  lehte>aleyhte %53
+     piyasa < −%1      SHORT n=  451  A % 54  ort %-0.58  B % 43  lehte>aleyhte %52
+  ── son 1 saat ──
+     piyasa > +%1      LONG  n=   51  A % 53  ort %-0.71  B % 49  lehte>aleyhte %55
+     piyasa > +%1      SHORT n=  677  A % 53  ort %+0.01  B % 44  lehte>aleyhte %49
+     piyasa +0.3..+1   LONG  n=  609  A % 56  ort %+0.59  B % 44  lehte>aleyhte %57
+     piyasa +0.3..+1   SHORT n= 4783  A % 52  ort %-0.15  B % 44  lehte>aleyhte %51
+     piyasa yatay ±0.3 LONG  n= 9869  A % 54  ort %+0.26  B % 42  lehte>aleyhte %55
+     piyasa yatay ±0.3 SHORT n=11628  A % 51  ort %-0.23  B % 39  lehte>aleyhte %49
+     piyasa −0.3..−1   LONG  n= 4736  A % 53  ort %+0.23  B % 46  lehte>aleyhte %51
+     piyasa −0.3..−1   SHORT n=  814  A % 52  ort %-0.51  B % 46  lehte>aleyhte %52
+     piyasa < −%1      LONG  n= 1342  A % 60  ort %+0.48  B % 50  lehte>aleyhte %57
+     piyasa < −%1      SHORT n=   61  A % 41  ort %-1.49  B % 33  lehte>aleyhte %39

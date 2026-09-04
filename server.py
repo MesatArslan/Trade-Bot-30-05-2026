@@ -22,6 +22,7 @@ import mexc
 import binance
 import scan
 import decide
+import sr_board
 import config as C
 
 PORT = 8787
@@ -110,6 +111,20 @@ def squeeze_board(max_detail=30):
     tk = _bybit_get(f"{_BYBIT}/v5/market/tickers?category=linear")["result"]["list"]
     info = _bybit_get(f"{_BYBIT}/v5/market/instruments-info?category=linear&limit=1000")["result"]["list"]
     launch = {i["symbol"]: int(i.get("launchTime", "0") or 0) for i in info}
+    # Bybit sembolunu -> gercek MEXC sembolune eslemek icin arama tablosu.
+    # MEXC tokenize hisseleri "STOCK" ekiyle listeler (TEM -> TEMSTOCK_USDT),
+    # o yuzden hem duz hem STOCK'suz alias'i ekliyoruz.
+    mexc_lookup = {}
+    try:
+        for sym in mexc.contract_sizes().keys():
+            if not sym.endswith("_USDT"):
+                continue
+            base = sym[:-5]
+            mexc_lookup.setdefault(base, sym)
+            if base.endswith("STOCK"):
+                mexc_lookup.setdefault(base[:-5], sym)
+    except Exception:
+        mexc_lookup = {}
 
     now = time.time()
     cands = []
@@ -151,6 +166,7 @@ def squeeze_board(max_detail=30):
             "vol24": int(tov), "pc24": round(pc, 4), "trend": trend,
             "age_days": None if age > 9000 else round(age),
             "fresh": fresh, "phase": phase,
+            "mexc_sym": mexc_lookup.get(s[:-4]),
             "vals": [round(v, 6) for v in vals[:4]], "score": round(sc, 2),
         })
     out.sort(key=lambda r: r["score"], reverse=True)
@@ -176,6 +192,73 @@ def _bybit_kl(sym, interval, limit):
         f"{_BYBIT}/v5/market/kline?category=linear&symbol={sym}"
         f"&interval={interval}&limit={limit}")
     return sorted(d["result"]["list"], key=lambda x: int(x[0]))  # [ts,o,h,l,c,vol,turn]
+
+
+# ─── BTC 5dk REJİM (yukarı / aşağı / yatay) ─────────────────────────
+# EMA20/50 konumu + EMA50 eğimi + ADX14 yönü. 30 sn cache.
+_BTCR_CACHE = {"ts": 0, "data": None}
+_BTCR_LOCK = threading.Lock()
+
+
+def _btcr_ema(vals, n):
+    a = 2 / (n + 1); e = [vals[0]]
+    for v in vals[1:]:
+        e.append(e[-1] + a * (v - e[-1]))
+    return e
+
+
+def btc_regime_5m():
+    """BTCUSDT 5dk mumlardan anlik rejim: up / down / flat + ADX ve skor."""
+    with _BTCR_LOCK:
+        if _BTCR_CACHE["data"] is not None and time.time() - _BTCR_CACHE["ts"] < 30:
+            return _BTCR_CACHE["data"]
+    try:
+        k = _bybit_kl("BTCUSDT", "5", 300)[:-1]   # son mum kapanmamis → at
+        c = [float(x[4]) for x in k]; h = [float(x[2]) for x in k]; l = [float(x[3]) for x in k]
+        e20, e50 = _btcr_ema(c, 20), _btcr_ema(c, 50)
+        tr, pdm, ndm = [], [], []
+        for i in range(1, len(k)):
+            tr.append(max(h[i] - l[i], abs(h[i] - c[i - 1]), abs(l[i] - c[i - 1])))
+            up = h[i] - h[i - 1]; dn = l[i - 1] - l[i]
+            pdm.append(up if up > dn and up > 0 else 0)
+            ndm.append(dn if dn > up and dn > 0 else 0)
+
+        def wilder(v, n=14):
+            o = [sum(v[:n])]
+            for x in v[n:]:
+                o.append(o[-1] - o[-1] / n + x)
+            return o
+        atr, P, N = wilder(tr), wilder(pdm), wilder(ndm)
+        pdi = [100 * p / a if a else 0 for p, a in zip(P, atr)]
+        ndi = [100 * n / a if a else 0 for n, a in zip(N, atr)]
+        dx = [100 * abs(p - n) / (p + n) if p + n else 0 for p, n in zip(pdi, ndi)]
+        adx = [sum(dx[:14]) / 14]
+        for v in dx[14:]:
+            adx.append((adx[-1] * 13 + v) / 14)
+        sc = 0
+        sc += 1 if c[-1] > e20[-1] else -1
+        sc += 1 if c[-1] > e50[-1] else -1
+        sc += 1 if e20[-1] > e50[-1] else -1
+        sc += 1 if e50[-1] > e50[-7] else -1
+        sc += 1 if pdi[-1] > ndi[-1] else -1
+        # ADX < 20 → yon ne olursa olsun yatay; skor ±3 altinda da yatay
+        if adx[-1] < 20 or abs(sc) < 3:
+            regime = "flat"
+        else:
+            regime = "up" if sc > 0 else "down"
+        data = {
+            "regime": regime, "score": sc, "adx": round(adx[-1], 1),
+            "pdi": round(pdi[-1], 1), "ndi": round(ndi[-1], 1),
+            "price": c[-1], "ema20": round(e20[-1], 1), "ema50": round(e50[-1], 1),
+            "r30m": round(c[-1] / c[-7] - 1, 4), "r1h": round(c[-1] / c[-13] - 1, 4),
+            "r4h": round(c[-1] / c[-49] - 1, 4),
+            "bar_ts": int(k[-1][0]) // 1000, "ts": int(time.time()),
+        }
+    except Exception as e:
+        data = {"regime": "na", "error": str(e), "ts": int(time.time())}
+    with _BTCR_LOCK:
+        _BTCR_CACHE["ts"] = time.time(); _BTCR_CACHE["data"] = data
+    return data
 
 
 def pump_board(max_detail=40):
@@ -1646,6 +1729,884 @@ def disarm_plan_retest(symbol):
     return True
 
 
+# ─── STOCH RSI CANLI SİNYAL (Bybit 1dk) — kullanıcının verdiği coinler ───
+def _rsi_series(closes, n=14):
+    """Wilder RSI serisi. closes uzunluğu > n olmalı. Her bar için bir RSI."""
+    if len(closes) < n + 1:
+        return []
+    gains, losses = [], []
+    for i in range(1, len(closes)):
+        ch = closes[i] - closes[i - 1]
+        gains.append(max(ch, 0.0))
+        losses.append(max(-ch, 0.0))
+    avg_g = sum(gains[:n]) / n
+    avg_l = sum(losses[:n]) / n
+    out = []
+    def _rsi(ag, al):
+        if al == 0:
+            return 100.0
+        rs = ag / al
+        return 100.0 - 100.0 / (1.0 + rs)
+    out.append(_rsi(avg_g, avg_l))
+    for i in range(n, len(gains)):
+        avg_g = (avg_g * (n - 1) + gains[i]) / n
+        avg_l = (avg_l * (n - 1) + losses[i]) / n
+        out.append(_rsi(avg_g, avg_l))
+    return out  # RSI[0] ilk n+1. bara denk gelir
+
+
+def _stoch_rsi(closes, rsi_n=14, stoch_n=14, k_smooth=3, d_smooth=3):
+    """StochRSI %K ve %D serisi döndürür (0-100). Standart 14/14/3/3."""
+    rsi = _rsi_series(closes, rsi_n)
+    if len(rsi) < stoch_n + k_smooth + d_smooth:
+        return None
+    raw = []  # ham stochrsi (0-100)
+    for i in range(stoch_n - 1, len(rsi)):
+        win = rsi[i - stoch_n + 1:i + 1]
+        lo, hi = min(win), max(win)
+        raw.append(0.0 if hi == lo else (rsi[i] - lo) / (hi - lo) * 100.0)
+    # %K = raw'ın k_smooth SMA'sı
+    k = [sum(raw[i - k_smooth + 1:i + 1]) / k_smooth
+         for i in range(k_smooth - 1, len(raw))]
+    # %D = %K'nin d_smooth SMA'sı
+    d = [sum(k[i - d_smooth + 1:i + 1]) / d_smooth
+         for i in range(d_smooth - 1, len(k))]
+    # k ve d'yi son elemanları hizalı olacak şekilde döndür
+    return k, d
+
+
+def _signal_one(sym):
+    """Tek coin için 1dk StochRSI sinyalini hesaplar."""
+    kl = _bybit_kl(sym, "1", 200)  # son ~3.3 saat 1dk mum
+    if not kl or len(kl) < 60:
+        raise ValueError("yetersiz veri")
+    o = [float(x[1]) for x in kl]; h = [float(x[2]) for x in kl]
+    l = [float(x[3]) for x in kl]; c = [float(x[4]) for x in kl]
+    price = c[-1]
+    sr = _stoch_rsi(c)
+    if sr is None:
+        raise ValueError("yetersiz veri")
+    k_ser, d_ser = sr
+    k, d = k_ser[-1], d_ser[-1]
+    pk, pd = (k_ser[-2], d_ser[-2]) if len(k_ser) > 1 and len(d_ser) > 1 else (k, d)
+    rsi_ser = _rsi_series(c)
+    rsi = rsi_ser[-1] if rsi_ser else 50.0
+    # EMA9/EMA21 yön teyidi
+    ema9 = _ema(c, 9); ema21 = _ema(c, 21)
+    trend_up = ema9 is not None and ema21 is not None and ema9 > ema21
+
+    bull_cross = pk <= pd and k > d       # %K, %D'yi yukarı kesti
+    bear_cross = pk >= pd and k < d       # %K, %D'yi aşağı kesti
+    zone_buy = k <= 30
+    zone_sell = k >= 70
+
+    signal, strength, note = "BEKLE", "", ""
+    if zone_sell:
+        signal = "SAT"
+        if bear_cross and rsi >= 55 and not trend_up:
+            strength, note = "GÜÇLÜ", "70 bandı + %K aşağı kesişim + RSI/EMA teyit"
+        elif bear_cross:
+            strength, note = "GÜÇLÜ", "70 bandı + %K %D'yi aşağı kesti"
+        else:
+            strength, note = "İZLE", "70 üstü — aşağı kesişimi bekle"
+    elif zone_buy:
+        signal = "AL"
+        if bull_cross and rsi <= 45 and trend_up:
+            strength, note = "GÜÇLÜ", "30 bandı + %K yukarı kesişim + RSI/EMA teyit"
+        elif bull_cross:
+            strength, note = "GÜÇLÜ", "30 bandı + %K %D'yi yukarı kesti"
+        else:
+            strength, note = "İZLE", "30 altı — yukarı kesişimi bekle"
+    else:
+        note = "nötr bölge (30–70) — sinyal yok"
+
+    return {
+        "symbol": sym, "price": price,
+        "k": round(k, 1), "d": round(d, 1), "rsi": round(rsi, 1),
+        "cross": "bull" if bull_cross else ("bear" if bear_cross else "none"),
+        "trend": "up" if trend_up else "down",
+        "signal": signal, "strength": strength, "note": note,
+        "ts": int(time.time()),
+    }
+
+
+def signal_snapshot(symbols):
+    """Kullanıcının verdiği coin listesi için canlı StochRSI sinyalleri."""
+    out = []
+    syms = []
+    for s in symbols:
+        s = (s or "").strip().upper().replace("_USDT", "USDT").replace("-", "")
+        if not s:
+            continue
+        if not s.endswith("USDT"):
+            s += "USDT"
+        if s not in syms:
+            syms.append(s)
+    if not syms:
+        return {"rows": [], "ts": int(time.time())}
+    results = {}
+    with ThreadPoolExecutor(max_workers=min(8, len(syms))) as ex:
+        futs = {ex.submit(_signal_one, s): s for s in syms}
+        for f in futs:
+            s = futs[f]
+            try:
+                results[s] = f.result()
+            except Exception as e:
+                results[s] = {"symbol": s, "error": str(e)}
+    for s in syms:                       # istenen sırayı koru
+        out.append(results.get(s, {"symbol": s, "error": "veri yok"}))
+    return {"rows": out, "ts": int(time.time())}
+
+
+# ─── EMA50 + STOCHRSI TARAYICI (Bybit) — kullanıcının verdiği kurulum ───
+# EMA:  Length 50, source close, smoothing line EMA(9).
+# StochRSI: RSI 14, Stoch 14, %K 3, %D 3.
+# LONG  : fiyat > EMA50  ve  StochRSI %K < 30  (yukarı trend + aşırı satım / dip)
+# SHORT : fiyat < EMA50  ve  StochRSI %K > 70  (aşağı trend + aşırı alım / tepe)
+ES_MIN_TURNOVER = 5_000_000       # 24s hacim >= $5M (likidite)
+ES_UNIVERSE     = 200             # hacme göre ilk N coini kline ile tara
+ES_TF_ALLOWED   = {"1", "3", "5", "15", "30", "60", "240"}
+# REJİM FİLTRESİ: StochRSI k<30/k>70 kuralı YATAY piyasada sürekli tetikler
+# (whipsaw). ADX ile trend gücü şartı koşuluyor. Backtest (Bybit 19-22 likit
+# perp, ~62 gün): ADX>=22 → 15dk avgR 0.026→0.055, PF 1.04→1.10, maxDD 116→47R;
+# 60dk avgR 0.002→0.026, PF 1.00→1.04. Her iki TF'de expectancy+PF+DD iyileşti.
+ES_ADX_MIN      = 22
+_ES_CACHE = {}                    # tf -> {"ts", "data"}
+_ES_LOCK  = threading.Lock()
+
+
+def _adx_last(hi, lo, cl, n=14):
+    """Wilder ADX'in SON değeri (trend gücü, 0-100). Veri yetersizse None.
+    hi/lo/cl aynı uzunlukta KAPANMIŞ bar listeleri."""
+    N = len(cl)
+    if N < 2 * n + 2:
+        return None
+    tr = [0.0] * N; pdm = [0.0] * N; mdm = [0.0] * N
+    for i in range(1, N):
+        up = hi[i] - hi[i - 1]; dn = lo[i - 1] - lo[i]
+        pdm[i] = up if (up > dn and up > 0) else 0.0
+        mdm[i] = dn if (dn > up and dn > 0) else 0.0
+        tr[i] = max(hi[i] - lo[i], abs(hi[i] - cl[i - 1]), abs(lo[i] - cl[i - 1]))
+    tr_s = sum(tr[1:n + 1]); p_s = sum(pdm[1:n + 1]); m_s = sum(mdm[1:n + 1])
+    dxs = []
+    for i in range(n + 1, N):
+        tr_s = tr_s - tr_s / n + tr[i]
+        p_s = p_s - p_s / n + pdm[i]
+        m_s = m_s - m_s / n + mdm[i]
+        pdi = 100 * p_s / tr_s if tr_s else 0.0
+        mdi = 100 * m_s / tr_s if tr_s else 0.0
+        den = pdi + mdi
+        dxs.append(100 * abs(pdi - mdi) / den if den else 0.0)
+    if len(dxs) < n:
+        return None
+    adx = sum(dxs[:n]) / n                 # ilk ADX = DX'in n-ortalaması
+    for dx in dxs[n:]:                      # sonra Wilder yumuşatma
+        adx = (adx * (n - 1) + dx) / n
+    return adx
+
+
+def _ema_series(xs, n):
+    """Tüm seri için EMA değerleri (girişle aynı uzunlukta liste)."""
+    if not xs:
+        return []
+    k = 2.0 / (n + 1)
+    e = xs[0]
+    out = [e]
+    for v in xs[1:]:
+        e = v * k + e * (1 - k)
+        out.append(e)
+    return out
+
+
+def _emastoch_detail(item, tf):
+    """Tek bir coin öğesini (symbol, turnover24h, funding, pc24) EMA50+StochRSI
+    kurulumuna göre değerlendirir. Kurulumu tutmuyorsa None döner.
+    Hem tarayıcı (emastoch_board) hem izleme (emastoch_watch) bunu kullanır."""
+    s, tov, fr, pc = item
+    try:
+        k = _bybit_kl(s, tf, 250)
+        hi = [float(x[2]) for x in k]
+        lo = [float(x[3]) for x in k]
+        cl = [float(x[4]) for x in k]
+    except Exception:
+        return None
+    # Son mum HALA OLUŞUYOR (kapanmamış) — değerleri saniyede bir değişir ve
+    # grafikte tutmaz. TradingView ile birebir olması için canlı mumu düşüp
+    # SON KAPANMIŞ mum üzerinden hesapla.
+    if len(cl) >= 2:
+        hi, lo, cl = hi[:-1], lo[:-1], cl[:-1]
+    n = len(cl)
+    if n < 120:                          # EMA50 + StochRSI için yeterli veri
+        return None
+    price = cl[-1]
+    ema_ser = _ema_series(cl, 50)        # EMA50 (close)
+    ema50 = ema_ser[-1]
+    ema200 = _ema_series(cl, 200)[-1]    # üst-trend proxy (aynı TF, ek API yok)
+    smooth = _ema(ema_ser[-40:], 9)      # EMA50'nin EMA9 yumuşatma çizgisi
+    sr = _stoch_rsi(cl)                  # 14/14/3/3
+    if sr is None:
+        return None
+    k_ser, d_ser = sr
+    kv, dv = k_ser[-1], d_ser[-1]
+    pk, pd = (k_ser[-2], d_ser[-2]) if len(k_ser) > 1 and len(d_ser) > 1 else (kv, dv)
+    rsi_ser = _rsi_series(cl)
+    rsi = rsi_ser[-1] if rsi_ser else 50.0
+
+    side = None
+    if price > ema50 and kv < 30:
+        side = "LONG"
+    elif price < ema50 and kv > 70:
+        side = "SHORT"
+    if side is None:
+        return None
+
+    # REJİM FİLTRESİ (ADX): yatay piyasadaki whipsaw sinyallerini ele.
+    # Backtest'te en yüksek etkili tek iyileştirme (yukarıdaki ES_ADX_MIN notu).
+    adx = _adx_last(hi, lo, cl, 14)
+    if adx is None or adx < ES_ADX_MIN:
+        return None
+
+    # ATR (son 14 mum) — plan için
+    trs = [hi[i] - lo[i] for i in range(n - 14, n)]
+    atr_abs = sum(trs) / 14
+    atr_pct = atr_abs / price if price else 0
+    dist_ema = (price / ema50 - 1) * 100      # fiyatın EMA50'ye uzaklığı %
+
+    entry = price
+    if side == "LONG":
+        stop = entry - 1.2 * atr_abs
+        sd = entry - stop
+        tp1 = entry + 1.5 * sd
+        tp2 = entry + 2.5 * sd
+        stop_pct = (entry - stop) / entry * 100 if entry else 0
+        tp1_pct = (tp1 - entry) / entry * 100 if entry else 0
+        tp2_pct = (tp2 - entry) / entry * 100 if entry else 0
+        cross = "bull" if (pk <= pd and kv > dv) else "none"
+        depth = (30 - kv) / 30                 # ne kadar dip (aşırı satım)
+    else:
+        stop = entry + 1.2 * atr_abs
+        sd = stop - entry
+        tp1 = entry - 1.5 * sd
+        tp2 = entry - 2.5 * sd
+        stop_pct = (stop - entry) / entry * 100 if entry else 0
+        tp1_pct = (entry - tp1) / entry * 100 if entry else 0
+        tp2_pct = (entry - tp2) / entry * 100 if entry else 0
+        cross = "bear" if (pk >= pd and kv < dv) else "none"
+        depth = (kv - 70) / 30                 # ne kadar tepe (aşırı alım)
+
+    # TREND UYUMU (EMA200 aynı TF): StochRSI dönüşü SADECE üst-trendle aynı
+    # yöndeyken değerli. Backtest (40 likit perp, ~15.6 gün, 15dk) 2x2 bucket:
+    #   cross=VAR & uyumlu   → avgR +0.078  PF 1.14  maxDD -10.9  (TEK artı bucket)
+    #   cross=VAR & TERS     → avgR -0.322  PF 0.52  (en kötü bucket — bıçak)
+    #   cross=YOK (uyumlu)   → avgR -0.047  PF 0.92
+    # Ters-trend (uyumsuz) adayları elemek yerine skorda cezalandırıp kademeye
+    # düşürüyoruz (izleme sekmesi ters kurulumu da göstermeli). cross'u ZORUNLU
+    # filtre YAPMADIK: walk-forward'da cross tek başına dönemler arası kararsız
+    # (dilim avgR -0.039 / -0.093 / +0.113) ve zorunlu yapınca schedule kayıp
+    # daha geniş/kötü popülasyon giriyor → toplam expectancy düşüyor. Bu yüzden
+    # cross bir kalite/kademe sinyali olarak kalır, giriş filtresi değil.
+    aligned = (side == "LONG" and price > ema200) or \
+              (side == "SHORT" and price < ema200)
+    trend = "up" if price > ema200 else "down"   # EMA200'e göre üst-trend yönü
+
+    near = max(0.0, 1 - abs(dist_ema) / 6)     # EMA'dan <%6 uzak = taze giriş
+    has_cross = cross != "none"
+    cross_b = 1.5 if has_cross else 0.0        # %K/%D dönüş kesişimi teyidi
+    adx_b = min(1.0, max(0.0, (adx - ES_ADX_MIN) / 18.0))  # güçlü trendi öne al
+    align_b = 1.5 if aligned else 0.0          # trend uyumu (EMA200) primi
+    # ters-trend + kesişim = ölçülen en kötü bucket → sert ceza (dibe it)
+    counter_pen = 2.0 if (has_cross and not aligned) else (0.8 if not aligned else 0.0)
+    score = max(0.0, depth * 4 + near * 2 + cross_b + adx_b + align_b - counter_pen)
+
+    # KADEME (A/B/C) — ölçülen bucket'lara birebir eşlenir:
+    #   A = uyumlu + kesişim (tek artı-beklenti bucket)
+    #   B = uyumlu, kesişim yok (trend doğru ama teyit zayıf)
+    #   C = ters-trend (dikkat — negatif beklenti, özellikle kesişimliyse)
+    if aligned and has_cross:
+        grade = "A"
+    elif aligned:
+        grade = "B"
+    else:
+        grade = "C"
+    # 0-100 normalize kalite (UI rozeti). Skor ~0..9 aralığını ölçekle.
+    q = int(max(0, min(100, round(score / 9.0 * 100))))
+
+    return {
+        "symbol": s, "side": side, "price": round(price, 8),
+        "ema50": round(ema50, 8), "ema200": round(ema200, 8),
+        "smooth": round(smooth, 8) if smooth is not None else None,
+        "dist_ema": round(dist_ema, 2),
+        "k": round(kv, 1), "d": round(dv, 1), "rsi": round(rsi, 1),
+        "adx": round(adx, 1),
+        "cross": cross, "aligned": aligned, "trend": trend,
+        "grade": grade, "q": q,
+        "entry": round(entry, 8), "stop": round(stop, 8),
+        "tp1": round(tp1, 8), "tp2": round(tp2, 8),
+        "stop_pct": round(stop_pct, 2), "tp1_pct": round(tp1_pct, 2),
+        "tp2_pct": round(tp2_pct, 2), "atr_pct": round(atr_pct * 100, 2),
+        "funding": round(fr, 6), "pc24": round(pc, 4),
+        "vol24": int(tov), "score": round(score, 2),
+        # kar = TP2'ye kadar potansiyel kazanç %'si (sabit 2.5R olduğundan
+        # yüksek = daha hareketli fırsat). Sekmede en yüksek kar en üstte.
+        "kar": round(tp2_pct, 2),
+    }
+
+
+def emastoch_board(tf="15", max_detail=40):
+    """EMA50 + StochRSI(14/14/3/3) kurulumuna uyan Bybit coinlerini tarar.
+    LONG: fiyat EMA50 üstünde + %K < 30.  SHORT: fiyat EMA50 altında + %K > 70."""
+    tf = tf if tf in ES_TF_ALLOWED else "15"
+    with _ES_LOCK:
+        c = _ES_CACHE.get(tf)
+        if c and c["data"] is not None and time.time() - c["ts"] < 30:
+            return c["data"]
+
+    tk = _bybit_get(f"{_BYBIT}/v5/market/tickers?category=linear")["result"]["list"]
+    liq = []
+    for t in tk:
+        s = t["symbol"]
+        if not s.endswith("USDT"):
+            continue
+        try:
+            tov = float(t["turnover24h"]); fr = float(t.get("fundingRate") or 0)
+            pc = float(t["price24hPcnt"])
+        except (KeyError, ValueError, TypeError):
+            continue
+        if tov < ES_MIN_TURNOVER:
+            continue
+        liq.append((s, tov, fr, pc))
+    liq.sort(key=lambda x: x[1], reverse=True)
+
+    with ThreadPoolExecutor(max_workers=16) as ex:
+        res = list(ex.map(lambda it: _emastoch_detail(it, tf), liq[:ES_UNIVERSE]))
+    out = [r for r in res if r]
+    # Sıralama v2: ÖNCE kalite kademesi (A/B/C — ölçülen bucket beklentisi),
+    # sonra skor, en son kar potansiyeli. Böylece backtestte tek artı-beklenti
+    # bucket'ı (uyumlu+kesişim = A) en üste çıkar; ters-trend (C) dibe düşer.
+    # (Eski sıralama kar'ı öne alıyordu — kar sadece ATR büyüklüğü, edge değil.)
+    _grank = {"A": 3, "B": 2, "C": 1}
+    out.sort(key=lambda r: (_grank.get(r.get("grade"), 0), r["score"], r["kar"]),
+             reverse=True)
+    out = out[:max_detail]
+    # TF UYGUNLUK notu (backtest, ~15.6/8.7/3.1 gün, 40 likit perp):
+    #   1dk avgR -0.24 PF 0.67 · 5dk avgR -0.14 PF 0.79 · 15dk PF ~0.92-0.99.
+    # Alt TF'ler net negatif beklenti → kullanıcıyı 15dk+'ya yönlendir.
+    if tf in ("1", "3"):
+        tf_grade, tf_note = "kotu", ("⚠️ 1dk backtestte NET NEGATİF (avgR -0.24, "
+            "PF 0.67) — whipsaw + komisyon. Bu kurulum için ÖNERİLMEZ, 15dk+ kullan.")
+    elif tf == "5":
+        tf_grade, tf_note = "zayif", ("⚠️ 5dk backtestte negatif beklenti "
+            "(PF ~0.79). 15dk daha dengeli — dikkatli.")
+    else:
+        tf_grade, tf_note = "uygun", ("15dk+ bu kurulum için en dengeli TF "
+            "(en düşük drawdown, A-kademe girişlere odaklan).")
+    data = {
+        "candidates": out, "count": len(out), "tf": tf,
+        "tf_grade": tf_grade, "tf_note": tf_note,
+        "longs": sum(1 for r in out if r["side"] == "LONG"),
+        "shorts": sum(1 for r in out if r["side"] == "SHORT"),
+        "grades": {g: sum(1 for r in out if r.get("grade") == g)
+                   for g in ("A", "B", "C")},
+        "ts": int(time.time()),
+    }
+    with _ES_LOCK:
+        _ES_CACHE[tf] = {"ts": time.time(), "data": data}
+    return data
+
+
+def emastoch_watch(symbols, tf="15"):
+    """Kullanıcının İZLEMEYE aldığı coin listesini EMA50+StochRSI kurulumuna
+    karşı denetler. Tüm evreni taramaz — sadece verilen coinleri kontrol eder
+    ve YALNIZCA kurulumu tutanları döndürür (LONG→AL, SHORT). Kurulumu
+    tutmayan izlenen coinler alt kısımda gösterilmez."""
+    tf = tf if tf in ES_TF_ALLOWED else "15"
+    syms = []
+    for s in symbols:
+        s = (s or "").strip().upper().replace("_USDT", "USDT").replace("-", "")
+        if not s:
+            continue
+        if not s.endswith("USDT"):
+            s += "USDT"
+        if s not in syms:
+            syms.append(s)
+    if not syms:
+        return {"candidates": [], "count": 0, "watched": 0, "tf": tf,
+                "longs": 0, "shorts": 0, "ts": int(time.time())}
+
+    # ticker verisi (funding / 24s hacim / 24s %) — kart için bilgi amaçlı
+    info = {}
+    try:
+        tk = _bybit_get(f"{_BYBIT}/v5/market/tickers?category=linear")["result"]["list"]
+        for t in tk:
+            info[t["symbol"]] = t
+    except Exception:
+        pass
+
+    items = []
+    for s in syms:
+        t = info.get(s, {})
+        try:
+            tov = float(t.get("turnover24h") or 0)
+            fr = float(t.get("fundingRate") or 0)
+            pc = float(t.get("price24hPcnt") or 0)
+        except (ValueError, TypeError):
+            tov = fr = pc = 0.0
+        items.append((s, tov, fr, pc))
+
+    with ThreadPoolExecutor(max_workers=min(8, len(items))) as ex:
+        res = list(ex.map(lambda it: _emastoch_detail(it, tf), items))
+    out = [r for r in res if r]
+    out.sort(key=lambda r: r["score"], reverse=True)
+    return {
+        "candidates": out, "count": len(out), "watched": len(syms), "tf": tf,
+        "longs": sum(1 for r in out if r["side"] == "LONG"),
+        "shorts": sum(1 for r in out if r["side"] == "SHORT"),
+        "ts": int(time.time()),
+    }
+
+
+# ─── DİP / ZİRVE TARAYICI (çoklu indikatör confluence — 5dk odaklı) ──────
+# "En dipte al, en tepede sat" — bu trend-takip DEĞİL, aşırı uçlarda DÖNÜŞ
+# yakalar (EMA50 sekmesinin tamamlayıcısı). Basit indikatörlerin AYNI ANDA
+# aşırı-satım / aşırı-alım göstermesini (confluence) arar; ne kadar çok
+# indikatör birlikte uçtaysa o kadar "en dip / en tepe":
+#   1) RSI(14)          — aşırı satım ≤34 / aşırı alım ≥66 (derin: ≤25 / ≥75)
+#   2) StochRSI %K       — ≤27 / ≥73  +  DÖNÜŞ kesişimi (%K, %D'yi kesti) = momentum döndü
+#   3) Bollinger(20,2)   — fiyat alt/üst banda değdi/taştı = istatistiksel uç
+#   4) EMA50 esneme      — fiyat EMA50'den ATR bazında çok uzak = aşırı gerilmiş
+#   5) Dönüş mumu        — son kapanan mum ters yönde (yeşil dip / kırmızı tepe) = teyit
+# Kademe: A = dönüş teyitli (kesişim + istatistiksel uç), B = uç ama teyit zayıf,
+# C = sadece temel kapı (teyitsiz — "düşen bıçak" riski, dikkat). Sıralama A üstte.
+# NOT: dönüş (mean-reversion) doğası gereği risklidir; temel kapı iki BAĞIMSIZ
+# osilatörün (RSI + StochRSI) birlikte uçta olmasını şart koşar ki tek gösterge
+# gürültüsüyle tetiklenmesin. Kesin sinyal değil, güçlü confluence adayıdır.
+DZ_MIN_TURNOVER = 5_000_000       # 24s hacim >= $5M (likidite)
+DZ_UNIVERSE     = 200             # hacme göre ilk N coini tara
+DZ_TF_ALLOWED   = {"1", "3", "5", "15", "30", "60"}
+_DZ_CACHE = {}                    # tf -> {"ts", "data"}
+_DZ_LOCK  = threading.Lock()
+
+
+def _bollinger(closes, n=20, k=2.0):
+    """Bollinger Bantları — SON değerler (mid, up, low). SMA(n) ± k·std."""
+    if len(closes) < n:
+        return None
+    win = closes[-n:]
+    mid = sum(win) / n
+    var = sum((x - mid) ** 2 for x in win) / n
+    sd = var ** 0.5
+    return mid, mid + k * sd, mid - k * sd
+
+
+def _dipzirve_detail(item, tf):
+    """Tek coini çoklu-indikatör dip/zirve confluence'ına göre değerlendirir.
+    Temel kapıyı (RSI + StochRSI birlikte uçta) tutmuyorsa None döner."""
+    s, tov, fr, pc = item
+    try:
+        kl = _bybit_kl(s, tf, 250)
+        op = [float(x[1]) for x in kl]
+        hi = [float(x[2]) for x in kl]
+        lo = [float(x[3]) for x in kl]
+        cl = [float(x[4]) for x in kl]
+    except Exception:
+        return None
+    # canlı (kapanmamış) mumu düş — TradingView ile birebir olsun
+    if len(cl) >= 2:
+        op, hi, lo, cl = op[:-1], hi[:-1], lo[:-1], cl[:-1]
+    bar_ts = int(kl[-2][0]) if len(kl) >= 2 else int(kl[-1][0])   # son KAPANMIŞ mum
+    n = len(cl)
+    if n < 120:
+        return None
+    price = cl[-1]
+    ema50 = _ema_series(cl, 50)[-1]
+    sr = _stoch_rsi(cl)
+    if sr is None:
+        return None
+    k_ser, d_ser = sr
+    kv, dv = k_ser[-1], d_ser[-1]
+    pk, pd = (k_ser[-2], d_ser[-2]) if len(k_ser) > 1 and len(d_ser) > 1 else (kv, dv)
+    rsi_ser = _rsi_series(cl)
+    rsi = rsi_ser[-1] if rsi_ser else 50.0
+    bb = _bollinger(cl, 20, 2.0)
+    if bb is None:
+        return None
+    bb_mid, bb_up, bb_low = bb
+    rng = bb_up - bb_low
+    bb_pos = (price - bb_low) / rng * 100 if rng else 50.0   # %B: 0=alt bant, 100=üst
+    trs = [max(hi[i] - lo[i], abs(hi[i] - cl[i - 1]), abs(lo[i] - cl[i - 1]))
+           for i in range(n - 14, n)]
+    atr_abs = sum(trs) / 14
+    atr_pct = atr_abs / price if price else 0
+    dist_ema = (price / ema50 - 1) * 100
+    stretch = abs(price - ema50) / atr_abs if atr_abs else 0   # EMA50'den kaç ATR uzak
+    bull_cross = pk <= pd and kv > dv
+    bear_cross = pk >= pd and kv < dv
+    last_green = cl[-1] > op[-1]
+    last_red = cl[-1] < op[-1]
+
+    # ── Temel kapı: iki BAĞIMSIZ osilatör de aynı uçta olmalı ──
+    side = None
+    if rsi <= 34 and kv <= 27:
+        side = "LONG"      # DİP → al
+    elif rsi >= 66 and kv >= 73:
+        side = "SHORT"     # ZİRVE → sat
+    if side is None:
+        return None
+
+    # ── Confluence koşulları (her biri +1, hangileri tuttu = "reasons") ──
+    reasons = []
+    if side == "LONG":
+        c_rsi_deep = rsi <= 25
+        c_stoch    = kv <= 20
+        c_bb       = price <= bb_low
+        c_stretch  = stretch >= 1.8
+        c_turn     = bull_cross
+        c_candle   = last_green
+        depth = max(0.0, (30 - kv) / 30) + max(0.0, (35 - rsi) / 35)
+    else:
+        c_rsi_deep = rsi >= 75
+        c_stoch    = kv >= 80
+        c_bb       = price >= bb_up
+        c_stretch  = stretch >= 1.8
+        c_turn     = bear_cross
+        c_candle   = last_red
+        depth = max(0.0, (kv - 70) / 30) + max(0.0, (rsi - 65) / 35)
+
+    conds = 0
+    if c_rsi_deep: conds += 1; reasons.append("RSI derin uç")
+    if c_stoch:    conds += 1; reasons.append("StochRSI uç bölge")
+    if c_bb:       conds += 1; reasons.append("Bollinger bandı taştı")
+    if c_stretch:  conds += 1; reasons.append(f"EMA50'den {stretch:.1f}×ATR uzak")
+    if c_turn:     conds += 1; reasons.append("StochRSI dönüş kesişimi")
+    if c_candle:   conds += 1; reasons.append("Dönüş mumu")
+
+    # ── Kademe: dönüş teyidi (kesişim) + en az bir istatistiksel uç = A ──
+    extreme = c_bb or c_rsi_deep or c_stretch
+    if c_turn and extreme:
+        grade = "A"        # momentum döndü + fiyat gerçekten uçta
+    elif extreme or c_turn:
+        grade = "B"        # uç var ama teyit zayıf (ya da tersi)
+    else:
+        grade = "C"        # sadece temel kapı — teyitsiz, düşen bıçak riski
+
+    # ── Plan (ATR bazlı; ilk hedef = ortalamaya dönüş / Bollinger orta bant) ──
+    entry = price
+    if side == "LONG":
+        stop = min(min(lo[-3:]) - 0.2 * atr_abs, entry - 1.0 * atr_abs)
+        sd = entry - stop
+        tp1 = max(bb_mid, entry + 1.2 * sd)
+        tp2 = entry + 2.5 * sd
+        stop_pct = (entry - stop) / entry * 100 if entry else 0
+        tp1_pct = (tp1 - entry) / entry * 100 if entry else 0
+        tp2_pct = (tp2 - entry) / entry * 100 if entry else 0
+    else:
+        stop = max(max(hi[-3:]) + 0.2 * atr_abs, entry + 1.0 * atr_abs)
+        sd = stop - entry
+        tp1 = min(bb_mid, entry - 1.2 * sd)
+        tp2 = entry - 2.5 * sd
+        stop_pct = (stop - entry) / entry * 100 if entry else 0
+        tp1_pct = (entry - tp1) / entry * 100 if entry else 0
+        tp2_pct = (entry - tp2) / entry * 100 if entry else 0
+
+    score = depth * 3 + conds * 1.2 + (1.5 if grade == "A" else 0)
+    q = int(max(0, min(100, round(conds / 6 * 60 + depth * 20))))
+
+    return {
+        "symbol": s, "side": side, "price": round(price, 8),
+        "ema50": round(ema50, 8), "dist_ema": round(dist_ema, 2),
+        "k": round(kv, 1), "d": round(dv, 1), "rsi": round(rsi, 1),
+        "bb_low": round(bb_low, 8), "bb_mid": round(bb_mid, 8),
+        "bb_up": round(bb_up, 8), "bb_pos": round(bb_pos, 1),
+        "stretch": round(stretch, 1), "cross": ("bull" if bull_cross else
+            ("bear" if bear_cross else "none")),
+        "conds": conds, "reasons": reasons, "grade": grade, "q": q,
+        "entry": round(entry, 8), "stop": round(stop, 8),
+        "tp1": round(tp1, 8), "tp2": round(tp2, 8),
+        "stop_pct": round(stop_pct, 2), "tp1_pct": round(tp1_pct, 2),
+        "tp2_pct": round(tp2_pct, 2), "atr_pct": round(atr_pct * 100, 2),
+        "funding": round(fr, 6), "pc24": round(pc, 4),
+        "vol24": int(tov), "score": round(score, 2),
+        "kar": round(tp2_pct, 2), "bar_ts": bar_ts,
+    }
+
+
+def dipzirve_board(tf="5", max_detail=40):
+    """Tüm likit Bybit evrenini tarar; çoklu indikatör confluence ile aşırı
+    uçtaki (en dip / en tepe) dönüş adaylarını döndürür. 5dk odaklı."""
+    tf = tf if tf in DZ_TF_ALLOWED else "5"
+    with _DZ_LOCK:
+        c = _DZ_CACHE.get(tf)
+        if c and c["data"] is not None and time.time() - c["ts"] < 30:
+            return c["data"]
+
+    tk = _bybit_get(f"{_BYBIT}/v5/market/tickers?category=linear")["result"]["list"]
+    liq = []
+    for t in tk:
+        s = t["symbol"]
+        if not s.endswith("USDT"):
+            continue
+        try:
+            tov = float(t["turnover24h"]); fr = float(t.get("fundingRate") or 0)
+            pc = float(t["price24hPcnt"])
+        except (KeyError, ValueError, TypeError):
+            continue
+        if tov < DZ_MIN_TURNOVER:
+            continue
+        liq.append((s, tov, fr, pc))
+    liq.sort(key=lambda x: x[1], reverse=True)
+
+    with ThreadPoolExecutor(max_workers=16) as ex:
+        res = list(ex.map(lambda it: _dipzirve_detail(it, tf), liq[:DZ_UNIVERSE]))
+    out = [r for r in res if r]
+    try:
+        _dz_record(tf, out)          # taze tetikleri kalıcı deftere yaz
+    except Exception as e:
+        print("dipzirve log hata:", e)
+    # Önce kademe (A dönüş teyidi üstte), sonra confluence skoru, sonra derinlik.
+    _grank = {"A": 3, "B": 2, "C": 1}
+    out.sort(key=lambda r: (_grank.get(r.get("grade"), 0), r["score"], r["q"]),
+             reverse=True)
+    out = out[:max_detail]
+    data = {
+        "candidates": out, "count": len(out), "tf": tf,
+        "longs": sum(1 for r in out if r["side"] == "LONG"),
+        "shorts": sum(1 for r in out if r["side"] == "SHORT"),
+        "grades": {g: sum(1 for r in out if r.get("grade") == g)
+                   for g in ("A", "B", "C")},
+        "ts": int(time.time()),
+    }
+    with _DZ_LOCK:
+        _DZ_CACHE[tf] = {"ts": time.time(), "data": data}
+    return data
+
+
+# ─── DİP / ZİRVE SİNYAL DEFTERİ (kalıcı kayıt + geçmiş sekmesi) ───────────
+# Her tarama sonrası "taze tetik" (rising edge: bu mumda kapı açık, bir önceki
+# mumda AYNI yön kapalı) sinyaller dipzirve_signals.jsonl'e eklenir — backtest
+# ile aynı tanım. 5dk için arka planda 60 sn'de bir tarama yapılır (sekme
+# açık olmasa da), diğer TF'ler sadece sekme açıkken taranır/kaydedilir.
+DZ_LOG_FILE  = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                            "dipzirve_signals.jsonl")
+DZ_BG_TF     = "5"                # arka planda sürekli kaydedilen TF
+DZ_BG_PERIOD = 60                 # sn
+_DZ_LAST_BAR = {}                 # (tf, sym, side) -> kapı açık görülen son bar_ts
+_DZ_LOG_LOCK = threading.Lock()
+_DZ_PX_CACHE = {"ts": 0, "px": {}}
+
+
+def _dz_record(tf, cands):
+    """Taramadaki adaylardan yalnızca TAZE tetikleri deftere yazar."""
+    tf_ms = int(tf) * 60_000
+    now = int(time.time())
+    new_rows = []
+    with _DZ_LOG_LOCK:
+        for r in cands:
+            key = (tf, r["symbol"], r["side"])
+            bts = r.get("bar_ts") or 0
+            last = _DZ_LAST_BAR.get(key)
+            # aynı mum tekrar görüldü -> atla; bir önceki mumda da açıktı -> süregelen, atla
+            fresh = last is None or (bts - last) > tf_ms
+            _DZ_LAST_BAR[key] = max(bts, last or 0)
+            if not fresh or bts == last:
+                continue
+            row = dict(r)
+            row.update({"ts": now, "tf": tf, "src": "live",
+                        "id": f"{tf}_{r['symbol']}_{r['side']}_{bts}"})
+            new_rows.append(row)
+        if new_rows:
+            with open(DZ_LOG_FILE, "a", encoding="utf-8") as f:
+                for row in new_rows:
+                    f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    return len(new_rows)
+
+
+def _dz_read_log():
+    rows = []
+    if not os.path.exists(DZ_LOG_FILE):
+        return rows
+    with _DZ_LOG_LOCK:
+        with open(DZ_LOG_FILE, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    rows.append(json.loads(line))
+                except ValueError:
+                    continue
+    return rows
+
+
+def _dz_prices():
+    """Bybit anlık fiyatlar (30 sn cache) — sinyalden bu yana getiri için."""
+    if time.time() - _DZ_PX_CACHE["ts"] < 30 and _DZ_PX_CACHE["px"]:
+        return _DZ_PX_CACHE["px"]
+    tk = _bybit_get(f"{_BYBIT}/v5/market/tickers?category=linear")["result"]["list"]
+    px = {}
+    for t in tk:
+        try:
+            px[t["symbol"]] = float(t["lastPrice"])
+        except (KeyError, ValueError, TypeError):
+            pass
+    _DZ_PX_CACHE.update({"ts": time.time(), "px": px})
+    return px
+
+
+def dipzirve_log(tf="all", hours=24, limit=2000):
+    """Kaydedilmiş dip/zirve sinyalleri (en yeni üstte) + anlık sonuç."""
+    rows = _dz_read_log()
+    cutoff = time.time() - float(hours) * 3600
+    sel = [r for r in rows if r.get("ts", 0) >= cutoff
+           and (tf == "all" or r.get("tf") == tf)]
+    # aynı id iki kez yazılmışsa (restart) tekilleştir
+    seen, uniq = set(), []
+    for r in sel:
+        if r.get("id") in seen:
+            continue
+        seen.add(r.get("id")); uniq.append(r)
+    uniq.sort(key=lambda r: r.get("ts", 0), reverse=True)
+    uniq = uniq[:limit]
+    try:
+        px = _dz_prices()
+    except Exception:
+        px = {}
+    wins = 0
+    for r in uniq:
+        p = px.get(r["symbol"])
+        if p and r.get("entry"):
+            chg = (p / r["entry"] - 1) * 100
+            r["now_price"] = p
+            r["now_pct"] = round(chg if r["side"] == "LONG" else -chg, 2)
+            if r["now_pct"] > 0:
+                wins += 1
+        else:
+            r["now_price"] = None; r["now_pct"] = None
+    return {
+        "signals": uniq, "count": len(uniq), "tf": tf, "hours": hours,
+        "longs": sum(1 for r in uniq if r["side"] == "LONG"),
+        "shorts": sum(1 for r in uniq if r["side"] == "SHORT"),
+        "grades": {g: sum(1 for r in uniq if r.get("grade") == g)
+                   for g in ("A", "B", "C")},
+        "wins": wins, "total_logged": len(rows), "ts": int(time.time()),
+    }
+
+
+def _dz_recorder_loop():
+    """Arka plan: 5dk taramasını sürekli çalıştırır ki sekme kapalıyken de
+    sinyaller deftere düşsün."""
+    time.sleep(5)
+    while True:
+        try:
+            dipzirve_board(DZ_BG_TF)
+        except Exception as e:
+            print("dipzirve arka plan tarama hatası:", e)
+        time.sleep(DZ_BG_PERIOD)
+
+
+# ─── EMA50+StochRSI PAPER BOT İZLEME ─────────────────────────────
+# emastoch_bot.py çalışırken işlemlerini <base>/emastoch_bot_<tf>m_trades.json
+# dosyasına yazar. Bu fonksiyon o dosyayı okuyup panele canlı özet döndürür.
+_BOT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+def _bot_running(tf):
+    """emastoch_bot.py <tf> ... süreci canlı mı? (pgrep)"""
+    try:
+        import subprocess
+        out = subprocess.run(["pgrep", "-fl", "emastoch_bot.py"],
+                             capture_output=True, text=True, timeout=3).stdout
+        for line in out.splitlines():
+            parts = line.split("emastoch_bot.py", 1)
+            if len(parts) == 2 and parts[1].split()[:1] == [str(tf)]:
+                return True
+        return False
+    except Exception:
+        return False
+
+
+def bot_trades_snapshot(tf="5", limit=30, before=None, since=None, watch=None):
+    """Sinyal botunun (emastoch_bot.py v4) kayıtlarını + özetini döndürür (canlı panel için).
+    Bot kendi giriş yapmaz; kurulumu tutan her coin için giriş/stop/TP sinyali kaydeder.
+
+    Sayfalama / artımlı güncelleme (panel tüm listeyi yeniden çizmesin diye):
+      limit  : bir sayfada en fazla kaç sinyal (en yeni üstte)
+      before : sadece id < before olan sinyaller (geriye doğru sayfa: "daha eski yükle")
+      since  : sadece id > since olan sinyaller ("new") — poll'da yalnızca yeni geleni ekle
+      watch  : virgüllü id listesi → o sinyallerin güncel hali ("watch"); ekranda açık
+               görünen kartların TP/stop durumunu yerinde tazelemek için."""
+    tf = str(tf)
+    try:
+        limit = max(1, min(int(limit or 30), 200))
+    except Exception:
+        limit = 30
+    path = os.path.join(_BOT_DIR, f"emastoch_bot_{tf}m_trades.json")
+    if not os.path.exists(path):
+        return {"exists": False, "running": _bot_running(tf), "tf": tf,
+                "trades": [], "ts": int(time.time())}
+    try:
+        with open(path) as f:
+            d = json.load(f)
+    except Exception as e:
+        return {"exists": False, "running": _bot_running(tf), "tf": tf,
+                "trades": [], "error": str(e), "ts": int(time.time())}
+    sigs = d.get("trades", [])
+    done = [s for s in sigs if s.get("closed")]
+    openp = [s for s in sigs if not s.get("closed")]
+    tp1 = [s for s in sigs if s.get("tp1_hit")]
+    tp2 = [s for s in sigs if s.get("tp2_hit")]
+    stp = [s for s in done if s.get("result") == "stop"]
+    avg_end = round(sum(s.get("end_r") or 0 for s in done) / len(done), 2) if done else 0.0
+    avg_max = round(sum(s.get("max_r") or 0 for s in done) / len(done), 2) if done else 0.0
+    out = {
+        "exists": True, "running": _bot_running(tf), "tf": tf,
+        "mode": d.get("mode", "paper"),
+        "count": len(sigs), "open": len(openp), "closed": len(done),
+        "tp1": len(tp1), "tp2": len(tp2), "stops": len(stp),
+        "tp1_pct": round(100 * len(tp1) / len(sigs)) if sigs else 0,
+        "tp2_pct": round(100 * len(tp2) / len(sigs)) if sigs else 0,
+        "stop_pct": round(100 * len(stp) / len(done)) if done else 0,
+        "avg_end_r": avg_end, "avg_max_r": avg_max,
+        "updated": d.get("updated"),
+        "total": len(sigs),
+        "ts": int(time.time()),
+    }
+    def _id(s):
+        try:
+            return int(s.get("id"))
+        except Exception:
+            return -1
+    newest_first = sorted(sigs, key=_id, reverse=True)
+    if since is not None:
+        # artımlı poll: sadece yeni gelenler (+ izlenen kartların güncel hali)
+        try:
+            since_i = int(since)
+        except Exception:
+            since_i = -1
+        out["new"] = [s for s in newest_first if _id(s) > since_i][:limit]
+        wids = set()
+        for w in str(watch or "").split(","):
+            w = w.strip()
+            if w.isdigit():
+                wids.add(int(w))
+        out["watch"] = [s for s in sigs if _id(s) in wids] if wids else []
+        out["trades"] = []
+        return out
+    # sayfa: before verilmişse id < before olanlardan, yoksa en yeniden itibaren
+    page_src = newest_first
+    if before is not None:
+        try:
+            before_i = int(before)
+            page_src = [s for s in newest_first if _id(s) < before_i]
+        except Exception:
+            pass
+    page = page_src[:limit]
+    out["trades"] = page
+    out["has_more"] = len(page_src) > len(page)
+    out["min_id"] = _id(page[-1]) if page else None
+    out["max_id"] = _id(page[0]) if page else None
+    return out
+
+
 # ─── HTTP ───────────────────────────────────────────────────────
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, *a):
@@ -1691,9 +2652,13 @@ class Handler(BaseHTTPRequestHandler):
             except Exception as e:
                 self._json({"positive": [], "negative": [], "error": str(e)}, 500)
             return
+        if path == "/api/btc_regime":
+            self._json(btc_regime_5m())
+            return
         if path == "/api/squeeze":
             try:
-                self._json(squeeze_board())
+                d = dict(squeeze_board()); d["btc"] = btc_regime_5m()
+                self._json(d)
             except Exception as e:
                 self._json({"candidates": [], "count": 0, "error": str(e)}, 500)
             return
@@ -1724,6 +2689,75 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/api/scalp":
             try:
                 self._json(scalp_board())
+            except Exception as e:
+                self._json({"candidates": [], "count": 0, "error": str(e)}, 500)
+            return
+        if path == "/api/signal":
+            qs = parse_qs(urlparse(self.path).query)
+            raw = qs.get("symbols", [""])[0]
+            syms = [x for x in raw.split(",") if x.strip()]
+            try:
+                self._json(signal_snapshot(syms))
+            except Exception as e:
+                self._json({"rows": [], "error": str(e)}, 500)
+            return
+        if path == "/api/emastoch":
+            qs = parse_qs(urlparse(self.path).query)
+            tf = qs.get("tf", ["15"])[0]
+            try:
+                self._json(emastoch_board(tf))
+            except Exception as e:
+                self._json({"candidates": [], "count": 0, "error": str(e)}, 500)
+            return
+        if path == "/api/dipzirve":
+            qs = parse_qs(urlparse(self.path).query)
+            tf = qs.get("tf", ["5"])[0]
+            try:
+                self._json(dipzirve_board(tf))
+            except Exception as e:
+                self._json({"candidates": [], "count": 0, "error": str(e)}, 500)
+            return
+        if path == "/api/dipzirve_log":
+            qs = parse_qs(urlparse(self.path).query)
+            tf = qs.get("tf", ["all"])[0]
+            try:
+                hours = float(qs.get("hours", ["24"])[0])
+            except ValueError:
+                hours = 24
+            try:
+                self._json(dipzirve_log(tf, hours))
+            except Exception as e:
+                self._json({"signals": [], "count": 0, "error": str(e)}, 500)
+            return
+        if path == "/api/sr":
+            qs = parse_qs(urlparse(self.path).query)
+            tf = qs.get("tf", ["5"])[0]
+            try:
+                self._json(sr_board.sr_board(tf))
+            except Exception as e:
+                self._json({"candidates": [], "count": 0, "error": str(e)}, 500)
+            return
+        if path == "/api/bottrades":
+            qs = parse_qs(urlparse(self.path).query)
+            tf = qs.get("tf", ["5"])[0]
+            g = lambda k: qs.get(k, [None])[0]
+            try:
+                d = dict(bot_trades_snapshot(tf, limit=g("limit") or 30, before=g("before"),
+                                             since=g("since"), watch=g("watch")))
+                d["btc"] = btc_regime_5m()     # BTC 5dk rejimi (yukari/asagi/yatay)
+                self._json(d)
+            except Exception as e:
+                self._json({"exists": False, "trades": [], "error": str(e)}, 500)
+            return
+        if path == "/api/signal_watch":
+            # İzlenen coinleri EMA50+StochRSI kurulumuna karşı denetle;
+            # yalnızca kurulumu tutanları döndür.
+            qs = parse_qs(urlparse(self.path).query)
+            raw = qs.get("symbols", [""])[0]
+            tf = qs.get("tf", ["15"])[0]
+            syms = [x for x in raw.split(",") if x.strip()]
+            try:
+                self._json(emastoch_watch(syms, tf))
             except Exception as e:
                 self._json({"candidates": [], "count": 0, "error": str(e)}, 500)
             return
@@ -1826,6 +2860,7 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def main():
+    threading.Thread(target=_dz_recorder_loop, daemon=True).start()   # dip/zirve defteri
     srv = ThreadingHTTPServer(("127.0.0.1", PORT), Handler)
     url = f"http://localhost:{PORT}"
     print(f"\n  Funding Trader web arayüzü çalışıyor:  {url}")

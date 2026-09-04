@@ -1,0 +1,474 @@
+DİP/ZİRVE — SON 30 GÜN — 'TAMAMEN DOĞRU' ZAMAN DİLİMİ TARAMASI (5/10/15/30/60 dk, TR saati)
+36614 sinyal, 31 gün. Her dilim için: n, doğru oranı, kaç günde çoğunluk doğru, ayın 1. yarısı / 2. yarısı oranı (kararlılık), 4s kapanış ort.
+
+TABAN (tüm sinyaller) — önce %1 lehte (±1 yarışı): %42.4
+TABAN (tüm sinyaller) — 4s lehte>aleyhte: %51.9
+TABAN (tüm sinyaller) — 4s kapanış lehte: %53.0
+TABAN (tüm sinyaller) — 4s içinde ≥%1 lehte: %48.7
+
+════════════ ÖLÇÜT: önce %1 lehte (±1 yarışı) ════════════
+── TÜMÜ (taban %42) ──
+  [5dk] en iyi 5 (n≥25):
+     16:55-17:00  n= 165  doğru %  64  gün-çoğunluk 15/29  1.yarı % 58 / 2.yarı % 66  4s kap %-0.08  lehte med %1.67 aleyhte med %0.96
+     21:40-21:45  n= 122  doğru %  61  gün-çoğunluk 15/30  1.yarı % 51 / 2.yarı % 68  4s kap %+0.58  lehte med %1.07 aleyhte med %0.49
+     14:40-14:45  n= 155  doğru %  59  gün-çoğunluk 13/30  1.yarı % 52 / 2.yarı % 62  4s kap %-0.37  lehte med %1.75 aleyhte med %1.24
+     14:45-14:50  n= 139  doğru %  59  gün-çoğunluk 15/28  1.yarı % 56 / 2.yarı % 62  4s kap %+0.25  lehte med %1.75 aleyhte med %0.91
+     02:50-02:55  n= 129  doğru %  59  gün-çoğunluk 12/29  1.yarı % 42 / 2.yarı % 69  4s kap %+0.32  lehte med %1.30 aleyhte med %0.45
+     en kötü: 22:40-22:45 n=106 doğru %25
+  [10dk] en iyi 5 (n≥40):
+     14:40-14:50  n= 294  doğru %  59  gün-çoğunluk 14/30  1.yarı % 55 / 2.yarı % 62  4s kap %-0.07  lehte med %1.75 aleyhte med %1.14
+     20:40-20:50  n= 189  doğru %  57  gün-çoğunluk 18/30  1.yarı % 53 / 2.yarı % 62  4s kap %+0.14  lehte med %1.11 aleyhte med %0.75
+     19:40-19:50  n= 253  doğru %  57  gün-çoğunluk 14/30  1.yarı % 52 / 2.yarı % 60  4s kap %-0.05  lehte med %1.30 aleyhte med %0.85
+     21:40-21:50  n= 225  doğru %  56  gün-çoğunluk 13/30  1.yarı % 45 / 2.yarı % 63  4s kap %+0.43  lehte med %1.13 aleyhte med %0.50
+     20:30-20:40  n= 203  doğru %  55  gün-çoğunluk 15/30  1.yarı % 47 / 2.yarı % 62  4s kap %+0.45  lehte med %1.29 aleyhte med %0.78
+     en kötü: 22:40-22:50 n=231 doğru %25
+  [15dk] en iyi 5 (n≥60):
+     20:30-20:45  n= 294  doğru %  55  gün-çoğunluk 17/30  1.yarı % 50 / 2.yarı % 61  4s kap %+0.44  lehte med %1.25 aleyhte med %0.79
+     21:30-21:45  n= 369  doğru %  54  gün-çoğunluk 14/30  1.yarı % 36 / 2.yarı % 68  4s kap %+0.21  lehte med %1.12 aleyhte med %0.57
+     14:45-15:00  n= 353  doğru %  54  gün-çoğunluk 17/29  1.yarı % 54 / 2.yarı % 54  4s kap %+0.73  lehte med %1.73 aleyhte med %1.06
+     16:45-17:00  n= 525  doğru %  52  gün-çoğunluk 10/30  1.yarı % 41 / 2.yarı % 61  4s kap %-0.20  lehte med %1.44 aleyhte med %1.07
+     12:45-13:00  n= 333  doğru %  50  gün-çoğunluk 12/30  1.yarı % 49 / 2.yarı % 51  4s kap %+0.41  lehte med %1.25 aleyhte med %0.82
+     en kötü: 22:45-23:00 n=373 doğru %28
+  [30dk] en iyi 5 (n≥100):
+     21:30-22:00  n= 708  doğru %  52  gün-çoğunluk 17/30  1.yarı % 41 / 2.yarı % 60  4s kap %+0.30  lehte med %1.13 aleyhte med %0.58
+     20:30-21:00  n= 584  doğru %  50  gün-çoğunluk 14/30  1.yarı % 46 / 2.yarı % 55  4s kap %+0.24  lehte med %1.07 aleyhte med %0.78
+     14:30-15:00  n= 757  doğru %  50  gün-çoğunluk 12/30  1.yarı % 49 / 2.yarı % 51  4s kap %+0.36  lehte med %1.49 aleyhte med %1.19
+     19:30-20:00  n= 644  doğru %  49  gün-çoğunluk 12/30  1.yarı % 45 / 2.yarı % 51  4s kap %-0.03  lehte med %1.13 aleyhte med %0.87
+     15:30-16:00  n= 809  doğru %  48  gün-çoğunluk 13/30  1.yarı % 43 / 2.yarı % 52  4s kap %-0.20  lehte med %1.23 aleyhte med %1.07
+     en kötü: 23:30-00:00 n=656 doğru %32
+  [60dk] en iyi 5 (n≥150):
+     20:00-21:00  n=1208  doğru %  49  gün-çoğunluk 13/30  1.yarı % 43 / 2.yarı % 55  4s kap %+0.14  lehte med %1.11 aleyhte med %0.78
+     14:00-15:00  n=1506  doğru %  48  gün-çoğunluk 12/30  1.yarı % 46 / 2.yarı % 50  4s kap %+0.08  lehte med %1.31 aleyhte med %1.11
+     15:00-16:00  n=1617  doğru %  47  gün-çoğunluk 11/30  1.yarı % 50 / 2.yarı % 45  4s kap %+0.00  lehte med %1.24 aleyhte med %1.00
+     12:00-13:00  n=1430  doğru %  47  gün-çoğunluk 11/30  1.yarı % 42 / 2.yarı % 52  4s kap %+0.12  lehte med %0.99 aleyhte med %0.86
+     21:00-22:00  n=1475  doğru %  46  gün-çoğunluk  9/30  1.yarı % 37 / 2.yarı % 52  4s kap %+0.23  lehte med %0.95 aleyhte med %0.71
+     en kötü: 23:00-00:00 n=1366 doğru %35
+── AL (taban %44) ──
+  [5dk] en iyi 5 (n≥12):
+     16:55-17:00  n= 103  doğru %  75  gün-çoğunluk 14/24  1.yarı % 61 / 2.yarı % 81  4s kap %+0.22  lehte med %1.70 aleyhte med %0.53
+     14:00-14:05  n=  36  doğru %  72  gün-çoğunluk 13/20  1.yarı % 71 / 2.yarı % 75  4s kap %-0.03  lehte med %1.05 aleyhte med %0.64
+     21:40-21:45  n=  74  doğru %  72  gün-çoğunluk 15/23  1.yarı % 59 / 2.yarı % 80  4s kap %+0.92  lehte med %1.20 aleyhte med %0.43
+     02:50-02:55  n=  63  doğru %  70  gün-çoğunluk 12/21  1.yarı % 60 / 2.yarı % 74  4s kap %+0.41  lehte med %1.85 aleyhte med %0.62
+     13:50-13:55  n=  58  doğru %  69  gün-çoğunluk 12/21  1.yarı % 52 / 2.yarı % 86  4s kap %+0.31  lehte med %2.26 aleyhte med %0.69
+     en kötü: 23:40-23:45 n=70 doğru %10
+  [10dk] en iyi 5 (n≥20):
+     16:50-17:00  n= 169  doğru %  65  gün-çoğunluk 15/29  1.yarı % 54 / 2.yarı % 71  4s kap %+0.17  lehte med %1.59 aleyhte med %0.59
+     14:40-14:50  n= 102  doğru %  64  gün-çoğunluk 14/23  1.yarı % 65 / 2.yarı % 63  4s kap %+0.44  lehte med %1.66 aleyhte med %1.14
+     21:40-21:50  n= 127  doğru %  62  gün-çoğunluk 13/26  1.yarı % 51 / 2.yarı % 69  4s kap %+0.80  lehte med %1.20 aleyhte med %0.47
+     07:50-08:00  n= 112  doğru %  61  gün-çoğunluk 12/25  1.yarı % 49 / 2.yarı % 69  4s kap %+1.29  lehte med %1.11 aleyhte med %0.43
+     14:00-14:10  n= 106  doğru %  59  gün-çoğunluk  9/24  1.yarı % 56 / 2.yarı % 67  4s kap %+0.03  lehte med %1.19 aleyhte med %0.70
+     en kötü: 23:40-23:50 n=148 doğru %20
+  [15dk] en iyi 5 (n≥30):
+     16:45-17:00  n= 258  doğru %  64  gün-çoğunluk 17/30  1.yarı % 49 / 2.yarı % 72  4s kap %+0.09  lehte med %1.70 aleyhte med %0.87
+     21:30-21:45  n= 237  doğru %  59  gün-çoğunluk 12/30  1.yarı % 34 / 2.yarı % 76  4s kap %+0.53  lehte med %1.19 aleyhte med %0.52
+     13:30-13:45  n= 157  doğru %  58  gün-çoğunluk  9/24  1.yarı % 42 / 2.yarı % 74  4s kap %+0.31  lehte med %1.28 aleyhte med %0.76
+     17:15-17:30  n= 212  doğru %  57  gün-çoğunluk 14/27  1.yarı % 50 / 2.yarı % 68  4s kap %+0.23  lehte med %1.32 aleyhte med %0.75
+     14:00-14:15  n= 143  doğru %  57  gün-çoğunluk 11/29  1.yarı % 52 / 2.yarı % 65  4s kap %+0.05  lehte med %1.37 aleyhte med %0.87
+     en kötü: 23:30-23:45 n=179 doğru %22
+  [30dk] en iyi 5 (n≥50):
+     21:30-22:00  n= 434  doğru %  57  gün-çoğunluk 12/30  1.yarı % 41 / 2.yarı % 70  4s kap %+0.70  lehte med %1.25 aleyhte med %0.53
+     16:30-17:00  n= 541  doğru %  55  gün-çoğunluk 13/30  1.yarı % 49 / 2.yarı % 60  4s kap %+0.17  lehte med %1.56 aleyhte med %0.97
+     13:30-14:00  n= 281  doğru %  55  gün-çoğunluk 12/29  1.yarı % 40 / 2.yarı % 72  4s kap %+0.22  lehte med %1.33 aleyhte med %0.75
+     14:00-14:30  n= 274  doğru %  55  gün-çoğunluk 12/30  1.yarı % 53 / 2.yarı % 58  4s kap %+0.23  lehte med %1.37 aleyhte med %0.90
+     12:00-12:30  n= 423  doğru %  52  gün-çoğunluk 14/30  1.yarı % 44 / 2.yarı % 62  4s kap %+0.35  lehte med %1.01 aleyhte med %0.78
+     en kötü: 23:30-00:00 n=349 doğru %24
+  [60dk] en iyi 5 (n≥75):
+     14:00-15:00  n= 561  doğru %  53  gün-çoğunluk 15/30  1.yarı % 52 / 2.yarı % 53  4s kap %+0.91  lehte med %1.40 aleyhte med %0.95
+     16:00-17:00  n= 977  doğru %  51  gün-çoğunluk 14/30  1.yarı % 46 / 2.yarı % 56  4s kap %+0.27  lehte med %1.34 aleyhte med %0.99
+     12:00-13:00  n= 808  doğru %  50  gün-çoğunluk 12/30  1.yarı % 42 / 2.yarı % 59  4s kap %+0.43  lehte med %1.10 aleyhte med %0.80
+     15:00-16:00  n= 793  doğru %  49  gün-çoğunluk 15/30  1.yarı % 48 / 2.yarı % 51  4s kap %+0.59  lehte med %1.21 aleyhte med %0.87
+     07:00-08:00  n= 530  doğru %  48  gün-çoğunluk 13/30  1.yarı % 42 / 2.yarı % 53  4s kap %+0.62  lehte med %0.99 aleyhte med %0.65
+     en kötü: 23:00-00:00 n=677 doğru %32
+── SAT (taban %41) ──
+  [5dk] en iyi 5 (n≥12):
+     14:50-14:55  n=  59  doğru %  64  gün-çoğunluk 13/23  1.yarı % 70 / 2.yarı % 58  4s kap %+0.25  lehte med %1.65 aleyhte med %0.80
+     20:10-20:15  n=  48  doğru %  62  gün-çoğunluk  7/21  1.yarı % 42 / 2.yarı % 76  4s kap %+0.14  lehte med %1.51 aleyhte med %0.61
+     20:40-20:45  n=  65  doğru %  62  gün-çoğunluk 13/24  1.yarı % 61 / 2.yarı % 63  4s kap %+0.38  lehte med %1.24 aleyhte med %0.78
+     20:30-20:35  n=  56  doğru %  61  gün-çoğunluk 10/20  1.yarı % 63 / 2.yarı % 59  4s kap %+0.16  lehte med %1.17 aleyhte med %0.83
+     15:55-16:00  n=  55  doğru %  58  gün-çoğunluk  6/21  1.yarı % 37 / 2.yarı % 69  4s kap %+0.02  lehte med %2.24 aleyhte med %1.19
+     en kötü: 11:40-11:45 n=71 doğru %20
+  [10dk] en iyi 5 (n≥20):
+     14:50-15:00  n= 115  doğru %  59  gün-çoğunluk 14/26  1.yarı % 59 / 2.yarı % 59  4s kap %+0.15  lehte med %1.65 aleyhte med %1.03
+     20:30-20:40  n= 100  doğru %  58  gün-çoğunluk 13/27  1.yarı % 61 / 2.yarı % 55  4s kap %+0.41  lehte med %1.34 aleyhte med %0.81
+     20:40-20:50  n= 118  doğru %  58  gün-çoğunluk 13/27  1.yarı % 57 / 2.yarı % 59  4s kap %+0.03  lehte med %1.11 aleyhte med %0.76
+     14:40-14:50  n= 192  doğru %  57  gün-çoğunluk 14/30  1.yarı % 46 / 2.yarı % 61  4s kap %-0.35  lehte med %1.77 aleyhte med %1.14
+     19:40-19:50  n= 142  doğru %  56  gün-çoğunluk 12/26  1.yarı % 51 / 2.yarı % 58  4s kap %+0.02  lehte med %1.48 aleyhte med %1.08
+     en kötü: 13:00-13:10 n=123 doğru %28
+  [15dk] en iyi 5 (n≥30):
+     20:30-20:45  n= 165  doğru %  59  gün-çoğunluk 13/27  1.yarı % 61 / 2.yarı % 57  4s kap %+0.39  lehte med %1.29 aleyhte med %0.80
+     14:45-15:00  n= 201  doğru %  58  gün-çoğunluk 16/28  1.yarı % 56 / 2.yarı % 60  4s kap %-0.06  lehte med %1.75 aleyhte med %1.03
+     20:00-20:15  n= 162  doğru %  51  gün-çoğunluk  8/28  1.yarı % 39 / 2.yarı % 61  4s kap %+0.07  lehte med %1.29 aleyhte med %0.75
+     19:45-20:00  n= 191  doğru %  50  gün-çoğunluk 13/29  1.yarı % 51 / 2.yarı % 49  4s kap %+0.12  lehte med %1.37 aleyhte med %1.02
+     19:30-19:45  n= 184  doğru %  48  gün-çoğunluk 12/29  1.yarı % 43 / 2.yarı % 52  4s kap %-0.16  lehte med %1.19 aleyhte med %1.04
+     en kötü: 11:00-11:15 n=273 doğru %29
+  [30dk] en iyi 5 (n≥50):
+     20:30-21:00  n= 318  doğru %  53  gün-çoğunluk 18/30  1.yarı % 55 / 2.yarı % 50  4s kap %+0.19  lehte med %1.13 aleyhte med %0.78
+     14:30-15:00  n= 470  doğru %  50  gün-çoğunluk 11/30  1.yarı % 47 / 2.yarı % 52  4s kap %-0.37  lehte med %1.46 aleyhte med %1.25
+     19:30-20:00  n= 375  doğru %  49  gün-çoğunluk 10/30  1.yarı % 47 / 2.yarı % 51  4s kap %-0.02  lehte med %1.26 aleyhte med %1.03
+     20:00-20:30  n= 327  doğru %  47  gün-çoğunluk 10/29  1.yarı % 38 / 2.yarı % 57  4s kap %-0.09  lehte med %1.17 aleyhte med %0.83
+     15:00-15:30  n= 447  doğru %  47  gün-çoğunluk 15/30  1.yarı % 60 / 2.yarı % 33  4s kap %-0.33  lehte med %1.27 aleyhte med %1.04
+     en kötü: 13:00-13:30 n=341 doğru %32
+  [60dk] en iyi 5 (n≥75):
+     20:00-21:00  n= 645  doğru %  50  gün-çoğunluk 11/30  1.yarı % 47 / 2.yarı % 53  4s kap %+0.05  lehte med %1.15 aleyhte med %0.80
+     19:00-20:00  n= 744  doğru %  47  gün-çoğunluk  9/30  1.yarı % 45 / 2.yarı % 49  4s kap %-0.21  lehte med %1.10 aleyhte med %0.98
+     15:00-16:00  n= 824  doğru %  45  gün-çoğunluk 11/30  1.yarı % 51 / 2.yarı % 39  4s kap %-0.56  lehte med %1.27 aleyhte med %1.33
+     14:00-15:00  n= 945  doğru %  45  gün-çoğunluk 12/30  1.yarı % 41 / 2.yarı % 48  4s kap %-0.42  lehte med %1.25 aleyhte med %1.22
+     21:00-22:00  n= 573  doğru %  44  gün-çoğunluk 10/30  1.yarı % 44 / 2.yarı % 44  4s kap %-0.18  lehte med %0.94 aleyhte med %0.72
+     en kötü: 11:00-12:00 n=903 doğru %35
+
+════════════ ÖLÇÜT: 4s lehte>aleyhte ════════════
+── TÜMÜ (taban %52) ──
+  [5dk] en iyi 5 (n≥25):
+     07:50-07:55  n= 127  doğru %  72  gün-çoğunluk 16/28  1.yarı % 63 / 2.yarı % 79  4s kap %+1.34  lehte med %1.21 aleyhte med %0.46
+     21:40-21:45  n= 122  doğru %  67  gün-çoğunluk 16/30  1.yarı % 68 / 2.yarı % 67  4s kap %+0.58  lehte med %1.07 aleyhte med %0.49
+     02:50-02:55  n= 129  doğru %  67  gün-çoğunluk 16/29  1.yarı % 44 / 2.yarı % 80  4s kap %+0.32  lehte med %1.30 aleyhte med %0.45
+     12:00-12:05  n=  98  doğru %  66  gün-çoğunluk 17/28  1.yarı % 64 / 2.yarı % 69  4s kap %+0.22  lehte med %1.38 aleyhte med %0.70
+     21:50-21:55  n= 148  doğru %  66  gün-çoğunluk 15/29  1.yarı % 60 / 2.yarı % 69  4s kap %+0.83  lehte med %1.41 aleyhte med %0.52
+     en kötü: 00:00-00:05 n=115 doğru %32
+  [10dk] en iyi 5 (n≥40):
+     07:50-08:00  n= 225  doğru %  64  gün-çoğunluk 14/30  1.yarı % 59 / 2.yarı % 69  4s kap %+0.87  lehte med %1.08 aleyhte med %0.64
+     21:40-21:50  n= 225  doğru %  64  gün-çoğunluk 16/30  1.yarı % 61 / 2.yarı % 67  4s kap %+0.43  lehte med %1.13 aleyhte med %0.50
+     11:50-12:00  n= 273  doğru %  63  gün-çoğunluk 22/30  1.yarı % 58 / 2.yarı % 66  4s kap %+0.40  lehte med %1.13 aleyhte med %0.64
+     03:10-03:20  n= 406  doğru %  62  gün-çoğunluk 20/30  1.yarı % 59 / 2.yarı % 65  4s kap %+0.39  lehte med %1.06 aleyhte med %0.61
+     21:30-21:40  n= 247  doğru %  62  gün-çoğunluk 18/30  1.yarı % 50 / 2.yarı % 70  4s kap %+0.04  lehte med %1.13 aleyhte med %0.65
+     en kötü: 23:40-23:50 n=260 doğru %37
+  [15dk] en iyi 5 (n≥60):
+     21:30-21:45  n= 369  doğru %  63  gün-çoğunluk 21/30  1.yarı % 56 / 2.yarı % 69  4s kap %+0.21  lehte med %1.12 aleyhte med %0.57
+     14:45-15:00  n= 353  doğru %  60  gün-çoğunluk 19/29  1.yarı % 61 / 2.yarı % 59  4s kap %+0.73  lehte med %1.73 aleyhte med %1.06
+     00:45-01:00  n= 378  doğru %  60  gün-çoğunluk 16/30  1.yarı % 63 / 2.yarı % 57  4s kap %+0.27  lehte med %1.13 aleyhte med %0.89
+     05:30-05:45  n= 432  doğru %  60  gün-çoğunluk 18/30  1.yarı % 54 / 2.yarı % 64  4s kap %+0.01  lehte med %1.17 aleyhte med %0.77
+     18:15-18:30  n= 361  doğru %  60  gün-çoğunluk 16/30  1.yarı % 54 / 2.yarı % 67  4s kap %+0.63  lehte med %1.17 aleyhte med %0.74
+     en kötü: 23:30-23:45 n=334 doğru %37
+  [30dk] en iyi 5 (n≥100):
+     21:30-22:00  n= 708  doğru %  61  gün-çoğunluk 17/30  1.yarı % 53 / 2.yarı % 67  4s kap %+0.30  lehte med %1.13 aleyhte med %0.58
+     03:00-03:30  n=1040  doğru %  59  gün-çoğunluk 21/30  1.yarı % 56 / 2.yarı % 62  4s kap %+0.14  lehte med %0.96 aleyhte med %0.68
+     05:30-06:00  n= 786  doğru %  59  gün-çoğunluk 20/30  1.yarı % 54 / 2.yarı % 62  4s kap %+0.24  lehte med %1.02 aleyhte med %0.72
+     00:30-01:00  n= 743  doğru %  58  gün-çoğunluk 16/30  1.yarı % 63 / 2.yarı % 53  4s kap %+0.17  lehte med %1.05 aleyhte med %0.87
+     20:00-20:30  n= 624  doğru %  58  gün-çoğunluk 20/30  1.yarı % 58 / 2.yarı % 58  4s kap %+0.04  lehte med %1.14 aleyhte med %0.77
+     en kötü: 23:30-00:00 n=656 doğru %38
+  [60dk] en iyi 5 (n≥150):
+     20:00-21:00  n=1208  doğru %  57  gün-çoğunluk 17/30  1.yarı % 55 / 2.yarı % 58  4s kap %+0.14  lehte med %1.11 aleyhte med %0.78
+     21:00-22:00  n=1475  doğru %  56  gün-çoğunluk 18/30  1.yarı % 50 / 2.yarı % 61  4s kap %+0.23  lehte med %0.95 aleyhte med %0.71
+     03:00-04:00  n=1884  doğru %  56  gün-çoğunluk 21/30  1.yarı % 54 / 2.yarı % 57  4s kap %+0.20  lehte med %1.02 aleyhte med %0.75
+     07:00-08:00  n=1221  doğru %  55  gün-çoğunluk 18/30  1.yarı % 50 / 2.yarı % 60  4s kap %+0.24  lehte med %0.99 aleyhte med %0.80
+     15:00-16:00  n=1617  doğru %  55  gün-çoğunluk 19/30  1.yarı % 59 / 2.yarı % 50  4s kap %+0.00  lehte med %1.24 aleyhte med %1.00
+     en kötü: 23:00-00:00 n=1366 doğru %44
+── AL (taban %54) ──
+  [5dk] en iyi 5 (n≥12):
+     04:00-04:05  n=  55  doğru %  80  gün-çoğunluk 15/19  1.yarı % 88 / 2.yarı % 70  4s kap %+0.64  lehte med %0.93 aleyhte med %0.47
+     07:50-07:55  n=  64  doğru %  80  gün-çoğunluk 15/20  1.yarı % 64 / 2.yarı % 84  4s kap %+1.74  lehte med %1.33 aleyhte med %0.40
+     21:40-21:45  n=  74  doğru %  78  gün-çoğunluk 14/23  1.yarı % 72 / 2.yarı % 82  4s kap %+0.92  lehte med %1.20 aleyhte med %0.43
+     13:50-13:55  n=  58  doğru %  76  gün-çoğunluk 14/21  1.yarı % 69 / 2.yarı % 83  4s kap %+0.31  lehte med %2.26 aleyhte med %0.69
+     12:50-12:55  n=  62  doğru %  76  gün-çoğunluk 15/24  1.yarı % 73 / 2.yarı % 78  4s kap %+2.05  lehte med %1.96 aleyhte med %0.78
+     en kötü: 23:40-23:45 n=70 doğru %16
+  [10dk] en iyi 5 (n≥20):
+     21:40-21:50  n= 127  doğru %  75  gün-çoğunluk 14/26  1.yarı % 71 / 2.yarı % 77  4s kap %+0.80  lehte med %1.20 aleyhte med %0.47
+     11:50-12:00  n= 165  doğru %  72  gün-çoğunluk 19/26  1.yarı % 69 / 2.yarı % 73  4s kap %+0.88  lehte med %1.15 aleyhte med %0.52
+     07:50-08:00  n= 112  doğru %  71  gün-çoğunluk 14/25  1.yarı % 58 / 2.yarı % 81  4s kap %+1.29  lehte med %1.11 aleyhte med %0.43
+     03:10-03:20  n= 163  doğru %  71  gün-çoğunluk 20/30  1.yarı % 68 / 2.yarı % 72  4s kap %+0.89  lehte med %1.39 aleyhte med %0.52
+     04:00-04:10  n= 117  doğru %  70  gün-çoğunluk 14/25  1.yarı % 78 / 2.yarı % 58  4s kap %+0.92  lehte med %0.93 aleyhte med %0.49
+     en kötü: 23:40-23:50 n=148 doğru %23
+  [15dk] en iyi 5 (n≥30):
+     11:45-12:00  n= 234  doğru %  69  gün-çoğunluk 18/26  1.yarı % 73 / 2.yarı % 67  4s kap %+0.68  lehte med %1.02 aleyhte med %0.52
+     21:30-21:45  n= 237  doğru %  69  gün-çoğunluk 16/30  1.yarı % 56 / 2.yarı % 77  4s kap %+0.53  lehte med %1.19 aleyhte med %0.52
+     16:45-17:00  n= 258  doğru %  68  gün-çoğunluk 18/30  1.yarı % 58 / 2.yarı % 74  4s kap %+0.09  lehte med %1.70 aleyhte med %0.87
+     00:45-01:00  n= 202  doğru %  66  gün-çoğunluk 15/28  1.yarı % 54 / 2.yarı % 79  4s kap %+0.69  lehte med %1.26 aleyhte med %0.74
+     18:15-18:30  n= 161  doğru %  66  gün-çoğunluk 13/27  1.yarı % 58 / 2.yarı % 79  4s kap %+0.70  lehte med %1.17 aleyhte med %0.57
+     en kötü: 23:30-23:45 n=179 doğru %28
+  [30dk] en iyi 5 (n≥50):
+     21:30-22:00  n= 434  doğru %  67  gün-çoğunluk 18/30  1.yarı % 55 / 2.yarı % 77  4s kap %+0.70  lehte med %1.25 aleyhte med %0.53
+     13:30-14:00  n= 281  doğru %  64  gün-çoğunluk 16/29  1.yarı % 59 / 2.yarı % 71  4s kap %+0.22  lehte med %1.33 aleyhte med %0.75
+     00:30-01:00  n= 376  doğru %  64  gün-çoğunluk 17/29  1.yarı % 56 / 2.yarı % 74  4s kap %+0.62  lehte med %1.26 aleyhte med %0.80
+     16:30-17:00  n= 541  doğru %  62  gün-çoğunluk 19/30  1.yarı % 60 / 2.yarı % 64  4s kap %+0.17  lehte med %1.56 aleyhte med %0.97
+     14:30-15:00  n= 287  doğru %  62  gün-çoğunluk 13/29  1.yarı % 64 / 2.yarı % 60  4s kap %+1.57  lehte med %1.50 aleyhte med %1.04
+     en kötü: 23:30-00:00 n=349 doğru %31
+  [60dk] en iyi 5 (n≥75):
+     13:00-14:00  n= 688  doğru %  61  gün-çoğunluk 20/30  1.yarı % 53 / 2.yarı % 69  4s kap %+0.25  lehte med %1.30 aleyhte med %0.86
+     14:00-15:00  n= 561  doğru %  60  gün-çoğunluk 20/30  1.yarı % 61 / 2.yarı % 59  4s kap %+0.91  lehte med %1.40 aleyhte med %0.95
+     15:00-16:00  n= 793  doğru %  60  gün-çoğunluk 21/30  1.yarı % 61 / 2.yarı % 59  4s kap %+0.59  lehte med %1.21 aleyhte med %0.87
+     16:00-17:00  n= 977  doğru %  59  gün-çoğunluk 19/30  1.yarı % 59 / 2.yarı % 59  4s kap %+0.27  lehte med %1.34 aleyhte med %0.99
+     03:00-04:00  n= 767  doğru %  59  gün-çoğunluk 20/30  1.yarı % 59 / 2.yarı % 59  4s kap %+0.44  lehte med %1.10 aleyhte med %0.65
+     en kötü: 23:00-00:00 n=677 doğru %40
+── SAT (taban %50) ──
+  [5dk] en iyi 5 (n≥12):
+     12:00-12:05  n=  45  doğru %  69  gün-çoğunluk 11/17  1.yarı % 67 / 2.yarı % 71  4s kap %-0.38  lehte med %1.81 aleyhte med %0.71
+     01:20-01:25  n=  65  doğru %  68  gün-çoğunluk 11/21  1.yarı % 74 / 2.yarı % 61  4s kap %+1.62  lehte med %1.68 aleyhte med %1.08
+     05:30-05:35  n= 133  doğru %  67  gün-çoğunluk  9/23  1.yarı % 44 / 2.yarı % 73  4s kap %+0.26  lehte med %1.52 aleyhte med %0.63
+     20:10-20:15  n=  48  doğru %  67  gün-çoğunluk 10/21  1.yarı % 47 / 2.yarı % 79  4s kap %+0.14  lehte med %1.51 aleyhte med %0.61
+     03:20-03:25  n= 118  doğru %  65  gün-çoğunluk 18/27  1.yarı % 62 / 2.yarı % 67  4s kap %+0.07  lehte med %1.22 aleyhte med %0.70
+     en kötü: 14:10-14:15 n=68 doğru %29
+  [10dk] en iyi 5 (n≥20):
+     05:30-05:40  n= 213  doğru %  64  gün-çoğunluk 13/27  1.yarı % 50 / 2.yarı % 72  4s kap %+0.30  lehte med %1.40 aleyhte med %0.68
+     03:20-03:30  n= 216  doğru %  62  gün-çoğunluk 17/29  1.yarı % 64 / 2.yarı % 61  4s kap %+0.14  lehte med %1.12 aleyhte med %0.69
+     01:30-01:40  n=  79  doğru %  62  gün-çoğunluk 14/24  1.yarı % 68 / 2.yarı % 58  4s kap %+0.34  lehte med %1.03 aleyhte med %0.67
+     01:10-01:20  n= 134  doğru %  62  gün-çoğunluk 14/27  1.yarı % 79 / 2.yarı % 43  4s kap %+0.17  lehte med %1.40 aleyhte med %0.77
+     20:00-20:10  n= 114  doğru %  61  gün-çoğunluk 15/27  1.yarı % 53 / 2.yarı % 70  4s kap %+0.04  lehte med %1.26 aleyhte med %0.83
+     en kötü: 00:10-00:20 n=174 doğru %34
+  [15dk] en iyi 5 (n≥30):
+     20:00-20:15  n= 162  doğru %  63  gün-çoğunluk 12/28  1.yarı % 52 / 2.yarı % 73  4s kap %+0.07  lehte med %1.29 aleyhte med %0.75
+     05:30-05:45  n= 282  doğru %  60  gün-çoğunluk 11/29  1.yarı % 47 / 2.yarı % 67  4s kap %-0.41  lehte med %1.28 aleyhte med %0.88
+     03:15-03:30  n= 331  doğru %  60  gün-çoğunluk 20/29  1.yarı % 63 / 2.yarı % 57  4s kap %+0.09  lehte med %1.12 aleyhte med %0.72
+     21:15-21:30  n= 167  doğru %  59  gün-çoğunluk 15/28  1.yarı % 60 / 2.yarı % 59  4s kap %-0.06  lehte med %1.07 aleyhte med %0.82
+     02:45-03:00  n= 202  doğru %  58  gün-çoğunluk 13/28  1.yarı % 51 / 2.yarı % 65  4s kap %+0.16  lehte med %0.84 aleyhte med %0.61
+     en kötü: 11:00-11:15 n=273 doğru %37
+  [30dk] en iyi 5 (n≥50):
+     20:00-20:30  n= 327  doğru %  59  gün-çoğunluk 15/29  1.yarı % 52 / 2.yarı % 66  4s kap %-0.09  lehte med %1.17 aleyhte med %0.83
+     03:00-03:30  n= 645  doğru %  58  gün-çoğunluk 21/30  1.yarı % 55 / 2.yarı % 61  4s kap %-0.02  lehte med %0.88 aleyhte med %0.69
+     05:30-06:00  n= 491  doğru %  58  gün-çoğunluk 16/30  1.yarı % 50 / 2.yarı % 65  4s kap %-0.04  lehte med %1.12 aleyhte med %0.75
+     19:30-20:00  n= 375  doğru %  57  gün-çoğunluk 20/30  1.yarı % 56 / 2.yarı % 57  4s kap %-0.02  lehte med %1.26 aleyhte med %1.03
+     18:30-19:00  n= 443  doğru %  57  gün-çoğunluk 19/30  1.yarı % 53 / 2.yarı % 62  4s kap %+0.40  lehte med %0.97 aleyhte med %0.64
+     en kötü: 11:00-11:30 n=491 doğru %38
+  [60dk] en iyi 5 (n≥75):
+     20:00-21:00  n= 645  doğru %  58  gün-çoğunluk 20/30  1.yarı % 54 / 2.yarı % 62  4s kap %+0.05  lehte med %1.15 aleyhte med %0.80
+     05:00-06:00  n= 866  doğru %  55  gün-çoğunluk 19/30  1.yarı % 51 / 2.yarı % 60  4s kap %-0.12  lehte med %1.05 aleyhte med %0.83
+     19:00-20:00  n= 744  doğru %  55  gün-çoğunluk 19/30  1.yarı % 54 / 2.yarı % 55  4s kap %-0.21  lehte med %1.10 aleyhte med %0.98
+     01:00-02:00  n= 667  doğru %  54  gün-çoğunluk 16/30  1.yarı % 63 / 2.yarı % 46  4s kap %+0.22  lehte med %1.11 aleyhte med %0.99
+     21:00-22:00  n= 573  doğru %  54  gün-çoğunluk 14/30  1.yarı % 54 / 2.yarı % 54  4s kap %-0.18  lehte med %0.94 aleyhte med %0.72
+     en kötü: 11:00-12:00 n=903 doğru %41
+
+════════════ ÖLÇÜT: 4s kapanış lehte ════════════
+── TÜMÜ (taban %53) ──
+  [5dk] en iyi 5 (n≥25):
+     07:50-07:55  n= 127  doğru %  71  gün-çoğunluk 16/28  1.yarı % 67 / 2.yarı % 74  4s kap %+1.34  lehte med %1.21 aleyhte med %0.46
+     05:45-05:50  n= 133  doğru %  71  gün-çoğunluk 21/29  1.yarı % 71 / 2.yarı % 71  4s kap %+0.59  lehte med %0.92 aleyhte med %0.66
+     21:40-21:45  n= 122  doğru %  68  gün-çoğunluk 19/30  1.yarı % 68 / 2.yarı % 68  4s kap %+0.58  lehte med %1.07 aleyhte med %0.49
+     21:50-21:55  n= 148  doğru %  68  gün-çoğunluk 15/29  1.yarı % 53 / 2.yarı % 74  4s kap %+0.83  lehte med %1.41 aleyhte med %0.52
+     12:45-12:50  n= 125  doğru %  67  gün-çoğunluk 21/28  1.yarı % 58 / 2.yarı % 77  4s kap %+0.79  lehte med %1.22 aleyhte med %0.73
+     en kötü: 12:20-12:25 n=143 doğru %34
+  [10dk] en iyi 5 (n≥40):
+     07:50-08:00  n= 225  doğru %  67  gün-çoğunluk 17/30  1.yarı % 63 / 2.yarı % 70  4s kap %+0.87  lehte med %1.08 aleyhte med %0.64
+     20:00-20:10  n= 202  doğru %  65  gün-çoğunluk 18/30  1.yarı % 63 / 2.yarı % 67  4s kap %+0.01  lehte med %1.14 aleyhte med %0.76
+     21:30-21:40  n= 247  doğru %  65  gün-çoğunluk 21/30  1.yarı % 55 / 2.yarı % 73  4s kap %+0.04  lehte med %1.13 aleyhte med %0.65
+     05:40-05:50  n= 249  doğru %  64  gün-çoğunluk 21/30  1.yarı % 63 / 2.yarı % 65  4s kap %-0.16  lehte med %1.09 aleyhte med %0.89
+     21:40-21:50  n= 225  doğru %  64  gün-çoğunluk 20/30  1.yarı % 62 / 2.yarı % 64  4s kap %+0.43  lehte med %1.13 aleyhte med %0.50
+     en kötü: 23:50-00:00 n=184 doğru %40
+  [15dk] en iyi 5 (n≥60):
+     21:30-21:45  n= 369  doğru %  66  gün-çoğunluk 22/30  1.yarı % 59 / 2.yarı % 71  4s kap %+0.21  lehte med %1.12 aleyhte med %0.57
+     05:45-06:00  n= 354  doğru %  63  gün-çoğunluk 24/30  1.yarı % 56 / 2.yarı % 69  4s kap %+0.52  lehte med %0.87 aleyhte med %0.67
+     20:15-20:30  n= 337  doğru %  63  gün-çoğunluk 18/30  1.yarı % 63 / 2.yarı % 63  4s kap %+0.14  lehte med %1.13 aleyhte med %0.77
+     18:15-18:30  n= 361  doğru %  63  gün-çoğunluk 20/30  1.yarı % 56 / 2.yarı % 71  4s kap %+0.63  lehte med %1.17 aleyhte med %0.74
+     12:45-13:00  n= 333  doğru %  62  gün-çoğunluk 21/30  1.yarı % 56 / 2.yarı % 66  4s kap %+0.41  lehte med %1.25 aleyhte med %0.82
+     en kötü: 23:30-23:45 n=334 doğru %39
+  [30dk] en iyi 5 (n≥100):
+     21:30-22:00  n= 708  doğru %  62  gün-çoğunluk 22/30  1.yarı % 54 / 2.yarı % 69  4s kap %+0.30  lehte med %1.13 aleyhte med %0.58
+     05:30-06:00  n= 786  doğru %  61  gün-çoğunluk 22/30  1.yarı % 55 / 2.yarı % 66  4s kap %+0.24  lehte med %1.02 aleyhte med %0.72
+     20:00-20:30  n= 624  doğru %  61  gün-çoğunluk 21/30  1.yarı % 60 / 2.yarı % 61  4s kap %+0.04  lehte med %1.14 aleyhte med %0.77
+     07:30-08:00  n= 661  doğru %  60  gün-çoğunluk 19/30  1.yarı % 57 / 2.yarı % 64  4s kap %+0.57  lehte med %1.02 aleyhte med %0.80
+     18:30-19:00  n= 700  doğru %  59  gün-çoğunluk 22/30  1.yarı % 57 / 2.yarı % 62  4s kap %+0.22  lehte med %0.88 aleyhte med %0.74
+     en kötü: 23:30-00:00 n=656 doğru %41
+  [60dk] en iyi 5 (n≥150):
+     21:00-22:00  n=1475  doğru %  59  gün-çoğunluk 22/30  1.yarı % 51 / 2.yarı % 66  4s kap %+0.23  lehte med %0.95 aleyhte med %0.71
+     20:00-21:00  n=1208  doğru %  58  gün-çoğunluk 19/30  1.yarı % 57 / 2.yarı % 60  4s kap %+0.14  lehte med %1.11 aleyhte med %0.78
+     18:00-19:00  n=1496  doğru %  58  gün-çoğunluk 23/30  1.yarı % 56 / 2.yarı % 60  4s kap %+0.26  lehte med %0.97 aleyhte med %0.82
+     07:00-08:00  n=1221  doğru %  57  gün-çoğunluk 19/30  1.yarı % 55 / 2.yarı % 60  4s kap %+0.24  lehte med %0.99 aleyhte med %0.80
+     03:00-04:00  n=1884  doğru %  55  gün-çoğunluk 20/30  1.yarı % 53 / 2.yarı % 57  4s kap %+0.20  lehte med %1.02 aleyhte med %0.75
+     en kötü: 23:00-00:00 n=1366 doğru %45
+── AL (taban %55) ──
+  [5dk] en iyi 5 (n≥12):
+     14:30-14:35  n=  47  doğru %  81  gün-çoğunluk 11/15  1.yarı % 81 / 2.yarı % 80  4s kap %+1.99  lehte med %1.88 aleyhte med %1.04
+     21:50-21:55  n=  88  doğru %  77  gün-çoğunluk 14/25  1.yarı % 58 / 2.yarı % 89  4s kap %+1.65  lehte med %2.34 aleyhte med %0.54
+     07:50-07:55  n=  64  doğru %  75  gün-çoğunluk 12/20  1.yarı % 57 / 2.yarı % 80  4s kap %+1.74  lehte med %1.33 aleyhte med %0.40
+     20:00-20:05  n=  40  doğru %  75  gün-çoğunluk 10/13  1.yarı % 85 / 2.yarı % 57  4s kap %+0.05  lehte med %1.09 aleyhte med %0.48
+     20:20-20:25  n=  40  doğru %  75  gün-çoğunluk 15/23  1.yarı % 67 / 2.yarı % 82  4s kap %+0.75  lehte med %1.82 aleyhte med %0.67
+     en kötü: 23:40-23:45 n=70 doğru %21
+  [10dk] en iyi 5 (n≥20):
+     07:50-08:00  n= 112  doğru %  74  gün-çoğunluk 14/25  1.yarı % 62 / 2.yarı % 82  4s kap %+1.29  lehte med %1.11 aleyhte med %0.43
+     14:30-14:40  n=  86  doğru %  73  gün-çoğunluk 13/21  1.yarı % 70 / 2.yarı % 79  4s kap %+2.34  lehte med %1.25 aleyhte med %0.80
+     00:50-01:00  n= 123  doğru %  72  gün-çoğunluk 15/25  1.yarı % 66 / 2.yarı % 76  4s kap %+0.81  lehte med %1.39 aleyhte med %0.82
+     01:00-01:10  n= 150  doğru %  71  gün-çoğunluk 14/26  1.yarı % 71 / 2.yarı % 69  4s kap %+0.31  lehte med %1.08 aleyhte med %0.51
+     06:00-06:10  n= 109  doğru %  70  gün-çoğunluk 17/27  1.yarı % 67 / 2.yarı % 73  4s kap %+0.64  lehte med %0.92 aleyhte med %0.74
+     en kötü: 23:40-23:50 n=148 doğru %30
+  [15dk] en iyi 5 (n≥30):
+     21:30-21:45  n= 237  doğru %  68  gün-çoğunluk 17/30  1.yarı % 54 / 2.yarı % 77  4s kap %+0.53  lehte med %1.19 aleyhte med %0.52
+     00:45-01:00  n= 202  doğru %  68  gün-çoğunluk 16/28  1.yarı % 61 / 2.yarı % 76  4s kap %+0.69  lehte med %1.26 aleyhte med %0.74
+     11:45-12:00  n= 234  doğru %  68  gün-çoğunluk 18/26  1.yarı % 69 / 2.yarı % 67  4s kap %+0.68  lehte med %1.02 aleyhte med %0.52
+     20:15-20:30  n= 172  doğru %  67  gün-çoğunluk 17/29  1.yarı % 69 / 2.yarı % 66  4s kap %+0.50  lehte med %1.16 aleyhte med %0.67
+     14:30-14:45  n= 135  doğru %  67  gün-çoğunluk 14/23  1.yarı % 71 / 2.yarı % 62  4s kap %+1.34  lehte med %1.45 aleyhte med %0.99
+     en kötü: 23:30-23:45 n=179 doğru %31
+  [30dk] en iyi 5 (n≥50):
+     21:30-22:00  n= 434  doğru %  67  gün-çoğunluk 16/30  1.yarı % 51 / 2.yarı % 78  4s kap %+0.70  lehte med %1.25 aleyhte med %0.53
+     00:30-01:00  n= 376  doğru %  64  gün-çoğunluk 18/29  1.yarı % 60 / 2.yarı % 70  4s kap %+0.62  lehte med %1.26 aleyhte med %0.80
+     14:30-15:00  n= 287  doğru %  63  gün-çoğunluk 16/29  1.yarı % 67 / 2.yarı % 60  4s kap %+1.57  lehte med %1.50 aleyhte med %1.04
+     06:00-06:30  n= 347  doğru %  63  gün-çoğunluk 14/30  1.yarı % 57 / 2.yarı % 68  4s kap %+0.40  lehte med %0.88 aleyhte med %0.63
+     20:00-20:30  n= 297  doğru %  62  gün-çoğunluk 17/30  1.yarı % 66 / 2.yarı % 58  4s kap %+0.18  lehte med %1.12 aleyhte med %0.72
+     en kötü: 23:30-00:00 n=349 doğru %36
+  [60dk] en iyi 5 (n≥75):
+     14:00-15:00  n= 561  doğru %  61  gün-çoğunluk 18/30  1.yarı % 64 / 2.yarı % 59  4s kap %+0.91  lehte med %1.40 aleyhte med %0.95
+     21:00-22:00  n= 902  doğru %  61  gün-çoğunluk 17/30  1.yarı % 45 / 2.yarı % 71  4s kap %+0.50  lehte med %0.96 aleyhte med %0.69
+     03:00-04:00  n= 767  doğru %  60  gün-çoğunluk 21/30  1.yarı % 61 / 2.yarı % 60  4s kap %+0.44  lehte med %1.10 aleyhte med %0.65
+     15:00-16:00  n= 793  doğru %  60  gün-çoğunluk 19/30  1.yarı % 60 / 2.yarı % 60  4s kap %+0.59  lehte med %1.21 aleyhte med %0.87
+     20:00-21:00  n= 563  doğru %  60  gün-çoğunluk 18/30  1.yarı % 58 / 2.yarı % 61  4s kap %+0.24  lehte med %1.04 aleyhte med %0.75
+     en kötü: 23:00-00:00 n=677 doğru %42
+── SAT (taban %51) ──
+  [5dk] en iyi 5 (n≥12):
+     12:45-12:50  n=  42  doğru %  74  gün-çoğunluk 15/18  1.yarı % 67 / 2.yarı % 83  4s kap %+0.40  lehte med %1.04 aleyhte med %0.87
+     18:30-18:35  n=  79  doğru %  72  gün-çoğunluk 16/23  1.yarı % 67 / 2.yarı % 78  4s kap %+0.46  lehte med %1.04 aleyhte med %0.71
+     01:20-01:25  n=  65  doğru %  71  gün-çoğunluk 12/21  1.yarı % 71 / 2.yarı % 71  4s kap %+1.62  lehte med %1.68 aleyhte med %1.08
+     05:45-05:50  n=  76  doğru %  70  gün-çoğunluk 17/25  1.yarı % 72 / 2.yarı % 68  4s kap %+0.52  lehte med %0.98 aleyhte med %0.70
+     18:25-18:30  n=  78  doğru %  69  gün-çoğunluk 14/23  1.yarı % 69 / 2.yarı % 70  4s kap %+1.05  lehte med %1.78 aleyhte med %0.55
+     en kötü: 14:10-14:15 n=68 doğru %24
+  [10dk] en iyi 5 (n≥20):
+     05:30-05:40  n= 213  doğru %  66  gün-çoğunluk 13/27  1.yarı % 54 / 2.yarı % 73  4s kap %+0.30  lehte med %1.40 aleyhte med %0.68
+     18:30-18:40  n= 150  doğru %  66  gün-çoğunluk 18/28  1.yarı % 59 / 2.yarı % 73  4s kap %+0.52  lehte med %1.05 aleyhte med %0.66
+     12:40-12:50  n=  82  doğru %  66  gün-çoğunluk 16/25  1.yarı % 60 / 2.yarı % 75  4s kap %-0.04  lehte med %1.04 aleyhte med %1.02
+     21:30-21:40  n=  84  doğru %  64  gün-çoğunluk 17/26  1.yarı % 71 / 2.yarı % 59  4s kap %-0.59  lehte med %1.10 aleyhte med %0.88
+     21:20-21:30  n= 123  doğru %  64  gün-çoğunluk 14/27  1.yarı % 60 / 2.yarı % 67  4s kap %-0.04  lehte med %1.07 aleyhte med %0.77
+     en kötü: 14:10-14:20 n=148 doğru %35
+  [15dk] en iyi 5 (n≥30):
+     18:30-18:45  n= 243  doğru %  66  gün-çoğunluk 20/30  1.yarı % 62 / 2.yarı % 72  4s kap %+0.57  lehte med %1.05 aleyhte med %0.60
+     21:30-21:45  n= 132  doğru %  63  gün-çoğunluk 17/28  1.yarı % 68 / 2.yarı % 59  4s kap %-0.36  lehte med %1.03 aleyhte med %0.78
+     18:15-18:30  n= 200  doğru %  62  gün-çoğunluk 16/29  1.yarı % 60 / 2.yarı % 65  4s kap %+0.57  lehte med %1.16 aleyhte med %0.86
+     05:30-05:45  n= 282  doğru %  62  gün-çoğunluk 13/29  1.yarı % 51 / 2.yarı % 69  4s kap %-0.41  lehte med %1.28 aleyhte med %0.88
+     21:15-21:30  n= 167  doğru %  62  gün-çoğunluk 16/28  1.yarı % 62 / 2.yarı % 63  4s kap %-0.06  lehte med %1.07 aleyhte med %0.82
+     en kötü: 16:15-16:30 n=193 doğru %40
+  [30dk] en iyi 5 (n≥50):
+     18:30-19:00  n= 443  doğru %  63  gün-çoğunluk 21/30  1.yarı % 60 / 2.yarı % 68  4s kap %+0.40  lehte med %0.97 aleyhte med %0.64
+     05:30-06:00  n= 491  doğru %  62  gün-çoğunluk 20/30  1.yarı % 54 / 2.yarı % 68  4s kap %-0.04  lehte med %1.12 aleyhte med %0.75
+     20:00-20:30  n= 327  doğru %  60  gün-çoğunluk 14/29  1.yarı % 55 / 2.yarı % 65  4s kap %-0.09  lehte med %1.17 aleyhte med %0.83
+     07:30-08:00  n= 374  doğru %  60  gün-çoğunluk 18/30  1.yarı % 61 / 2.yarı % 58  4s kap %+0.52  lehte med %1.03 aleyhte med %0.94
+     21:00-21:30  n= 299  doğru %  59  gün-çoğunluk 16/30  1.yarı % 59 / 2.yarı % 59  4s kap %-0.03  lehte med %1.03 aleyhte med %0.85
+     en kötü: 13:00-13:30 n=341 doğru %41
+  [60dk] en iyi 5 (n≥75):
+     18:00-19:00  n= 895  doğru %  60  gün-çoğunluk 23/30  1.yarı % 60 / 2.yarı % 60  4s kap %+0.34  lehte med %1.00 aleyhte med %0.84
+     05:00-06:00  n= 866  doğru %  58  gün-çoğunluk 21/30  1.yarı % 53 / 2.yarı % 63  4s kap %-0.12  lehte med %1.05 aleyhte med %0.83
+     21:00-22:00  n= 573  doğru %  58  gün-çoğunluk 19/30  1.yarı % 58 / 2.yarı % 57  4s kap %-0.18  lehte med %0.94 aleyhte med %0.72
+     20:00-21:00  n= 645  doğru %  58  gün-çoğunluk 18/30  1.yarı % 56 / 2.yarı % 59  4s kap %+0.05  lehte med %1.15 aleyhte med %0.80
+     19:00-20:00  n= 744  doğru %  57  gün-çoğunluk 19/30  1.yarı % 58 / 2.yarı % 56  4s kap %-0.21  lehte med %1.10 aleyhte med %0.98
+     en kötü: 13:00-14:00 n=756 doğru %44
+
+════════════ ÖLÇÜT: 4s içinde ≥%1 lehte ════════════
+── TÜMÜ (taban %49) ──
+  [5dk] en iyi 5 (n≥25):
+     14:50-14:55  n= 117  doğru %  73  gün-çoğunluk 17/26  1.yarı % 68 / 2.yarı % 76  4s kap %+1.20  lehte med %1.80 aleyhte med %1.14
+     14:45-14:50  n= 139  doğru %  72  gün-çoğunluk 18/28  1.yarı % 60 / 2.yarı % 83  4s kap %+0.25  lehte med %1.75 aleyhte med %0.91
+     16:55-17:00  n= 165  doğru %  71  gün-çoğunluk 17/29  1.yarı % 58 / 2.yarı % 77  4s kap %-0.08  lehte med %1.67 aleyhte med %0.96
+     14:40-14:45  n= 155  doğru %  68  gün-çoğunluk 17/30  1.yarı % 52 / 2.yarı % 74  4s kap %-0.37  lehte med %1.75 aleyhte med %1.24
+     12:50-12:55  n= 103  doğru %  66  gün-çoğunluk 15/26  1.yarı % 57 / 2.yarı % 73  4s kap %+0.86  lehte med %1.50 aleyhte med %0.79
+     en kötü: 09:20-09:25 n=123 doğru %31
+  [10dk] en iyi 5 (n≥40):
+     14:40-14:50  n= 294  doğru %  70  gün-çoğunluk 20/30  1.yarı % 57 / 2.yarı % 77  4s kap %-0.07  lehte med %1.75 aleyhte med %1.14
+     14:50-15:00  n= 214  doğru %  69  gün-çoğunluk 21/29  1.yarı % 63 / 2.yarı % 75  4s kap %+1.04  lehte med %1.64 aleyhte med %1.12
+     16:50-17:00  n= 335  doğru %  64  gün-çoğunluk 18/30  1.yarı % 55 / 2.yarı % 70  4s kap %-0.20  lehte med %1.40 aleyhte med %1.11
+     15:50-16:00  n= 239  doğru %  62  gün-çoğunluk 17/30  1.yarı % 42 / 2.yarı % 76  4s kap %-0.05  lehte med %1.38 aleyhte med %1.07
+     20:30-20:40  n= 203  doğru %  62  gün-çoğunluk 18/30  1.yarı % 47 / 2.yarı % 73  4s kap %+0.45  lehte med %1.29 aleyhte med %0.78
+     en kötü: 22:50-23:00 n=248 doğru %33
+  [15dk] en iyi 5 (n≥60):
+     14:45-15:00  n= 353  doğru %  70  gün-çoğunluk 24/29  1.yarı % 62 / 2.yarı % 78  4s kap %+0.73  lehte med %1.73 aleyhte med %1.06
+     16:45-17:00  n= 525  doğru %  64  gün-çoğunluk 16/30  1.yarı % 52 / 2.yarı % 73  4s kap %-0.20  lehte med %1.44 aleyhte med %1.07
+     20:30-20:45  n= 294  doğru %  61  gün-çoğunluk 19/30  1.yarı % 49 / 2.yarı % 72  4s kap %+0.44  lehte med %1.25 aleyhte med %0.79
+     14:30-14:45  n= 404  doğru %  60  gün-çoğunluk 15/30  1.yarı % 46 / 2.yarı % 70  4s kap %+0.05  lehte med %1.31 aleyhte med %1.32
+     15:30-15:45  n= 442  doğru %  58  gün-çoğunluk 19/30  1.yarı % 55 / 2.yarı % 62  4s kap %-0.24  lehte med %1.26 aleyhte med %1.05
+     en kötü: 23:30-23:45 n=334 doğru %32
+  [30dk] en iyi 5 (n≥100):
+     14:30-15:00  n= 757  doğru %  65  gün-çoğunluk 21/30  1.yarı % 54 / 2.yarı % 73  4s kap %+0.36  lehte med %1.49 aleyhte med %1.19
+     16:30-17:00  n=1048  doğru %  61  gün-çoğunluk 17/30  1.yarı % 50 / 2.yarı % 70  4s kap %-0.18  lehte med %1.34 aleyhte med %1.13
+     15:30-16:00  n= 809  doğru %  58  gün-çoğunluk 20/30  1.yarı % 50 / 2.yarı % 66  4s kap %-0.20  lehte med %1.23 aleyhte med %1.07
+     15:00-15:30  n= 808  doğru %  57  gün-çoğunluk 19/30  1.yarı % 58 / 2.yarı % 56  4s kap %+0.20  lehte med %1.25 aleyhte med %0.94
+     13:30-14:00  n= 696  doğru %  57  gün-çoğunluk 17/30  1.yarı % 45 / 2.yarı % 69  4s kap %-0.16  lehte med %1.23 aleyhte med %0.93
+     en kötü: 23:30-00:00 n=656 doğru %38
+  [60dk] en iyi 5 (n≥150):
+     14:00-15:00  n=1506  doğru %  59  gün-çoğunluk 17/30  1.yarı % 50 / 2.yarı % 69  4s kap %+0.08  lehte med %1.31 aleyhte med %1.11
+     15:00-16:00  n=1617  doğru %  58  gün-çoğunluk 18/30  1.yarı % 54 / 2.yarı % 61  4s kap %+0.00  lehte med %1.24 aleyhte med %1.00
+     16:00-17:00  n=1874  doğru %  56  gün-çoğunluk 16/30  1.yarı % 46 / 2.yarı % 66  4s kap %-0.18  lehte med %1.22 aleyhte med %1.08
+     20:00-21:00  n=1208  doğru %  53  gün-çoğunluk 19/30  1.yarı % 42 / 2.yarı % 65  4s kap %+0.14  lehte med %1.11 aleyhte med %0.78
+     13:00-14:00  n=1444  doğru %  53  gün-çoğunluk 14/30  1.yarı % 43 / 2.yarı % 63  4s kap %-0.23  lehte med %1.10 aleyhte med %1.04
+     en kötü: 23:00-00:00 n=1366 doğru %39
+── AL (taban %49) ──
+  [5dk] en iyi 5 (n≥12):
+     02:50-02:55  n=  63  doğru %  79  gün-çoğunluk 15/21  1.yarı % 65 / 2.yarı % 86  4s kap %+0.41  lehte med %1.85 aleyhte med %0.62
+     13:50-13:55  n=  58  doğru %  78  gün-çoğunluk 14/21  1.yarı % 62 / 2.yarı % 93  4s kap %+0.31  lehte med %2.26 aleyhte med %0.69
+     16:55-17:00  n= 103  doğru %  77  gün-çoğunluk 14/24  1.yarı % 58 / 2.yarı % 86  4s kap %+0.22  lehte med %1.70 aleyhte med %0.53
+     21:50-21:55  n=  88  doğru %  76  gün-çoğunluk 15/25  1.yarı % 48 / 2.yarı % 93  4s kap %+1.65  lehte med %2.34 aleyhte med %0.54
+     12:50-12:55  n=  62  doğru %  76  gün-çoğunluk 18/24  1.yarı % 69 / 2.yarı % 81  4s kap %+2.05  lehte med %1.96 aleyhte med %0.78
+     en kötü: 23:40-23:45 n=70 doğru %16
+  [10dk] en iyi 5 (n≥20):
+     14:40-14:50  n= 102  doğru %  71  gün-çoğunluk 15/23  1.yarı % 63 / 2.yarı % 78  4s kap %+0.44  lehte med %1.66 aleyhte med %1.14
+     16:50-17:00  n= 169  doğru %  70  gün-çoğunluk 16/29  1.yarı % 54 / 2.yarı % 79  4s kap %+0.17  lehte med %1.59 aleyhte med %0.59
+     16:40-16:50  n= 157  doğru %  69  gün-çoğunluk 13/27  1.yarı % 50 / 2.yarı % 80  4s kap %-0.09  lehte med %1.73 aleyhte med %1.25
+     12:50-13:00  n= 111  doğru %  67  gün-çoğunluk 20/28  1.yarı % 66 / 2.yarı % 67  4s kap %+0.84  lehte med %1.60 aleyhte med %0.86
+     02:50-03:00  n= 106  doğru %  66  gün-çoğunluk 13/23  1.yarı % 50 / 2.yarı % 77  4s kap %+0.32  lehte med %1.45 aleyhte med %0.73
+     en kötü: 22:50-23:00 n=105 doğru %30
+  [15dk] en iyi 5 (n≥30):
+     16:45-17:00  n= 258  doğru %  72  gün-çoğunluk 21/30  1.yarı % 53 / 2.yarı % 83  4s kap %+0.09  lehte med %1.70 aleyhte med %0.87
+     14:45-15:00  n= 152  doğru %  67  gün-çoğunluk 17/26  1.yarı % 54 / 2.yarı % 78  4s kap %+1.77  lehte med %1.63 aleyhte med %1.14
+     12:45-13:00  n= 194  doğru %  64  gün-çoğunluk 21/29  1.yarı % 48 / 2.yarı % 75  4s kap %+0.90  lehte med %1.46 aleyhte med %0.82
+     21:45-22:00  n= 197  doğru %  63  gün-çoğunluk 14/30  1.yarı % 42 / 2.yarı % 82  4s kap %+0.90  lehte med %1.45 aleyhte med %0.57
+     14:00-14:15  n= 143  doğru %  62  gün-çoğunluk 17/29  1.yarı % 52 / 2.yarı % 82  4s kap %+0.05  lehte med %1.37 aleyhte med %0.87
+     en kötü: 23:30-23:45 n=179 doğru %25
+  [30dk] en iyi 5 (n≥50):
+     16:30-17:00  n= 541  doğru %  67  gün-çoğunluk 20/30  1.yarı % 56 / 2.yarı % 75  4s kap %+0.17  lehte med %1.56 aleyhte med %0.97
+     14:30-15:00  n= 287  doğru %  65  gün-çoğunluk 16/29  1.yarı % 51 / 2.yarı % 77  4s kap %+1.57  lehte med %1.50 aleyhte med %1.04
+     14:00-14:30  n= 274  doğru %  61  gün-çoğunluk 19/30  1.yarı % 50 / 2.yarı % 79  4s kap %+0.23  lehte med %1.37 aleyhte med %0.90
+     13:30-14:00  n= 281  doğru %  61  gün-çoğunluk 17/29  1.yarı % 44 / 2.yarı % 81  4s kap %+0.22  lehte med %1.33 aleyhte med %0.75
+     02:30-03:00  n= 356  doğru %  60  gün-çoğunluk 18/30  1.yarı % 51 / 2.yarı % 68  4s kap %+0.64  lehte med %1.28 aleyhte med %0.93
+     en kötü: 23:30-00:00 n=349 doğru %33
+  [60dk] en iyi 5 (n≥75):
+     14:00-15:00  n= 561  doğru %  63  gün-çoğunluk 22/30  1.yarı % 51 / 2.yarı % 78  4s kap %+0.91  lehte med %1.40 aleyhte med %0.95
+     16:00-17:00  n= 977  doğru %  61  gün-çoğunluk 16/30  1.yarı % 53 / 2.yarı % 68  4s kap %+0.27  lehte med %1.34 aleyhte med %0.99
+     13:00-14:00  n= 688  doğru %  58  gün-çoğunluk 14/30  1.yarı % 39 / 2.yarı % 76  4s kap %+0.25  lehte med %1.30 aleyhte med %0.86
+     15:00-16:00  n= 793  doğru %  57  gün-çoğunluk 18/30  1.yarı % 47 / 2.yarı % 68  4s kap %+0.59  lehte med %1.21 aleyhte med %0.87
+     17:00-18:00  n= 777  doğru %  54  gün-çoğunluk 17/30  1.yarı % 43 / 2.yarı % 69  4s kap %+0.32  lehte med %1.12 aleyhte med %1.01
+     en kötü: 23:00-00:00 n=677 doğru %37
+── SAT (taban %49) ──
+  [5dk] en iyi 5 (n≥12):
+     14:50-14:55  n=  59  doğru %  75  gün-çoğunluk 16/23  1.yarı % 79 / 2.yarı % 69  4s kap %+0.25  lehte med %1.65 aleyhte med %0.80
+     14:45-14:50  n=  86  doğru %  73  gün-çoğunluk 11/22  1.yarı % 61 / 2.yarı % 81  4s kap %-0.35  lehte med %2.00 aleyhte med %1.00
+     19:45-19:50  n=  75  doğru %  71  gün-çoğunluk 14/21  1.yarı % 63 / 2.yarı % 73  4s kap %+0.11  lehte med %1.77 aleyhte med %1.14
+     14:55-15:00  n=  56  doğru %  70  gün-çoğunluk 15/22  1.yarı % 64 / 2.yarı % 78  4s kap %+0.05  lehte med %1.66 aleyhte med %1.27
+     05:30-05:35  n= 133  doğru %  68  gün-çoğunluk 11/23  1.yarı % 33 / 2.yarı % 77  4s kap %+0.26  lehte med %1.52 aleyhte med %0.63
+     en kötü: 04:45-04:50 n=63 doğru %24
+  [10dk] en iyi 5 (n≥20):
+     14:50-15:00  n= 115  doğru %  72  gün-çoğunluk 19/26  1.yarı % 71 / 2.yarı % 73  4s kap %+0.15  lehte med %1.65 aleyhte med %1.03
+     14:40-14:50  n= 192  doğru %  70  gün-çoğunluk 17/30  1.yarı % 53 / 2.yarı % 77  4s kap %-0.35  lehte med %1.77 aleyhte med %1.14
+     15:50-16:00  n= 103  doğru %  64  gün-çoğunluk 11/27  1.yarı % 29 / 2.yarı % 81  4s kap %-0.69  lehte med %1.90 aleyhte med %1.83
+     20:30-20:40  n= 100  doğru %  64  gün-çoğunluk 18/27  1.yarı % 51 / 2.yarı % 78  4s kap %+0.41  lehte med %1.34 aleyhte med %0.81
+     19:40-19:50  n= 142  doğru %  63  gün-çoğunluk 16/26  1.yarı % 59 / 2.yarı % 65  4s kap %+0.02  lehte med %1.48 aleyhte med %1.08
+     en kötü: 22:20-22:30 n=105 doğru %32
+  [15dk] en iyi 5 (n≥30):
+     14:45-15:00  n= 201  doğru %  73  gün-çoğunluk 21/28  1.yarı % 68 / 2.yarı % 77  4s kap %-0.06  lehte med %1.75 aleyhte med %1.03
+     20:30-20:45  n= 165  doğru %  62  gün-çoğunluk 15/27  1.yarı % 54 / 2.yarı % 74  4s kap %+0.39  lehte med %1.29 aleyhte med %0.80
+     19:45-20:00  n= 191  doğru %  61  gün-çoğunluk 17/29  1.yarı % 51 / 2.yarı % 66  4s kap %+0.12  lehte med %1.37 aleyhte med %1.02
+     14:30-14:45  n= 269  doğru %  59  gün-çoğunluk 15/30  1.yarı % 44 / 2.yarı % 68  4s kap %-0.60  lehte med %1.29 aleyhte med %1.46
+     15:45-16:00  n= 168  doğru %  59  gün-çoğunluk 17/30  1.yarı % 42 / 2.yarı % 70  4s kap %-0.89  lehte med %1.24 aleyhte med %1.99
+     en kötü: 22:15-22:30 n=157 doğru %36
+  [30dk] en iyi 5 (n≥50):
+     14:30-15:00  n= 470  doğru %  65  gün-çoğunluk 21/30  1.yarı % 56 / 2.yarı % 71  4s kap %-0.37  lehte med %1.46 aleyhte med %1.25
+     19:30-20:00  n= 375  doğru %  58  gün-çoğunluk 18/30  1.yarı % 49 / 2.yarı % 65  4s kap %-0.02  lehte med %1.26 aleyhte med %1.03
+     15:00-15:30  n= 447  doğru %  58  gün-çoğunluk 19/30  1.yarı % 66 / 2.yarı % 50  4s kap %-0.33  lehte med %1.27 aleyhte med %1.04
+     15:30-16:00  n= 377  doğru %  58  gün-çoğunluk 17/30  1.yarı % 54 / 2.yarı % 62  4s kap %-0.84  lehte med %1.26 aleyhte med %1.76
+     20:00-20:30  n= 327  doğru %  56  gün-çoğunluk 15/29  1.yarı % 43 / 2.yarı % 70  4s kap %-0.09  lehte med %1.17 aleyhte med %0.83
+     en kötü: 23:00-23:30 n=382 doğru %40
+  [60dk] en iyi 5 (n≥75):
+     15:00-16:00  n= 824  doğru %  58  gün-çoğunluk 18/30  1.yarı % 61 / 2.yarı % 55  4s kap %-0.56  lehte med %1.27 aleyhte med %1.33
+     14:00-15:00  n= 945  doğru %  57  gün-çoğunluk 17/30  1.yarı % 49 / 2.yarı % 64  4s kap %-0.42  lehte med %1.25 aleyhte med %1.22
+     20:00-21:00  n= 645  doğru %  56  gün-çoğunluk 18/30  1.yarı % 46 / 2.yarı % 67  4s kap %+0.05  lehte med %1.15 aleyhte med %0.80
+     01:00-02:00  n= 667  doğru %  55  gün-çoğunluk 18/30  1.yarı % 51 / 2.yarı % 58  4s kap %+0.22  lehte med %1.11 aleyhte med %0.99
+     19:00-20:00  n= 744  doğru %  53  gün-çoğunluk 18/30  1.yarı % 44 / 2.yarı % 60  4s kap %-0.21  lehte med %1.10 aleyhte med %0.98
+     en kötü: 23:00-00:00 n=689 doğru %42
+
+════════════ %100 DOĞRU DİLİM VAR MI? (5dk, ölçüt: önce %1 lehte) ════════════
+  TÜMÜ: n≥5 ile %100 doğru dilim: YOK  |  n≥20 ile en yüksek oran: %64 (16:55-17:00, n=165)
+  AL: n≥5 ile %100 doğru dilim: YOK  |  n≥20 ile en yüksek oran: %75 (16:55-17:00, n=103)
+  SAT: n≥5 ile %100 doğru dilim: YOK  |  n≥20 ile en yüksek oran: %64 (14:50-14:55, n=59)
+
+════════════ ŞANS KIYASI (zaman damgaları karıştırıldı, 200 tekrar) — 'en iyi dilim' şansla ne kadar iyi görünür? ════════════
+  önce %1 lehte (±1 yarışı)    [5dk ] gerçek en iyi %64 (16:55-17:00, n=165)  |  şansla en iyi: medyan %56, %95 üst sınır %59  → ŞANSIN ÜSTÜNDE
+  önce %1 lehte (±1 yarışı)    [10dk] gerçek en iyi %59 (14:40-14:50, n=294)  |  şansla en iyi: medyan %51, %95 üst sınır %53  → ŞANSIN ÜSTÜNDE
+  önce %1 lehte (±1 yarışı)    [60dk] gerçek en iyi %49 (20:00-21:00, n=1208)  |  şansla en iyi: medyan %45, %95 üst sınır %46  → ŞANSIN ÜSTÜNDE
+  4s lehte>aleyhte             [5dk ] gerçek en iyi %72 (07:50-07:55, n=127)  |  şansla en iyi: medyan %65, %95 üst sınır %69  → ŞANSIN ÜSTÜNDE
+  4s lehte>aleyhte             [10dk] gerçek en iyi %64 (07:50-08:00, n=225)  |  şansla en iyi: medyan %60, %95 üst sınır %62  → ŞANSIN ÜSTÜNDE
+  4s lehte>aleyhte             [60dk] gerçek en iyi %57 (20:00-21:00, n=1208)  |  şansla en iyi: medyan %54, %95 üst sınır %56  → ŞANSIN ÜSTÜNDE
+  4s kapanış lehte             [5dk ] gerçek en iyi %71 (07:50-07:55, n=127)  |  şansla en iyi: medyan %66, %95 üst sınır %69  → ŞANSIN ÜSTÜNDE
+  4s kapanış lehte             [10dk] gerçek en iyi %67 (07:50-08:00, n=225)  |  şansla en iyi: medyan %61, %95 üst sınır %64  → ŞANSIN ÜSTÜNDE
+  4s kapanış lehte             [60dk] gerçek en iyi %59 (21:00-22:00, n=1475)  |  şansla en iyi: medyan %55, %95 üst sınır %57  → ŞANSIN ÜSTÜNDE
+  4s içinde ≥%1 lehte          [5dk ] gerçek en iyi %73 (14:50-14:55, n=117)  |  şansla en iyi: medyan %62, %95 üst sınır %66  → ŞANSIN ÜSTÜNDE
+  4s içinde ≥%1 lehte          [10dk] gerçek en iyi %70 (14:40-14:50, n=294)  |  şansla en iyi: medyan %57, %95 üst sınır %60  → ŞANSIN ÜSTÜNDE
+  4s içinde ≥%1 lehte          [60dk] gerçek en iyi %59 (14:00-15:00, n=1506)  |  şansla en iyi: medyan %51, %95 üst sınır %53  → ŞANSIN ÜSTÜNDE
+
+════════════ A KADEMESİ (n=892) — saatlik, ölçüt: önce %1 lehte ════════════
+  19:00-20:00  n= 44  doğru %59  gün 11/21  1.yarı %71 / 2.yarı %52  4s kap %+0.33
+  05:00-06:00  n= 36  doğru %58  gün 10/21  1.yarı %59 / 2.yarı %58  4s kap %-0.38
+  23:00-00:00  n= 30  doğru %57  gün 12/19  1.yarı %59 / 2.yarı %54  4s kap %+0.71
+  20:00-21:00  n= 27  doğru %56  gün 8/17  1.yarı %54 / 2.yarı %57  4s kap %-0.05
+  14:00-15:00  n= 27  doğru %56  gün 7/16  1.yarı %47 / 2.yarı %67  4s kap %-0.10
+  08:00-09:00  n= 38  doğru %50  gün 9/21  1.yarı %44 / 2.yarı %55  4s kap %+0.98

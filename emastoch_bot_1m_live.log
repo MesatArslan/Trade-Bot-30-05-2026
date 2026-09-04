@@ -1,0 +1,178 @@
+[15:35:05][1m] 🤖 EMA50+StochRSI bot başladı — TF 1dk, $500.0, risk %1.0/işlem, 30dk, max 4 poz, skor≥3.0, cross-teyit=AÇIK, zaman-stop 25dk
+[15:35:13][1m] 🟢 LONG GİRİŞ #1 SOXLUSDT      @ 104.04      skor 7.71 | K 0.3 D 0.1 ADX 27.2 bull distEMA +0.11% | risk $5.00 stop %0.32 notional $1500 | tp1 +1.5R tp2 +2.5R | kom $0.300
+[15:35:13][1m] 🟢 LONG GİRİŞ #2 CRVUSDT       @ 0.3619      skor 7.81 | K 1.7 D 0.6 ADX 32.0 bull distEMA +0.04% | risk $5.00 stop %0.3 notional $1499 | tp1 +1.5R tp2 +2.5R | kom $0.300
+[15:35:13][1m] 🔴 SHORT GİRİŞ #3 SOXSUSDT      @ 53.12       skor 7.52 | K 98.3 D 99.4 ADX 27.3 bear distEMA -0.14% | risk $4.99 stop %0.3 notional $1498 | tp1 +1.5R tp2 +2.5R | kom $0.300
+[15:35:13][1m] 🟢 LONG GİRİŞ #4 ENAUSDT       @ 0.15239     skor 6.24 | K 11.1 D 5.5 ADX 28.4 bull distEMA +0.42% | risk $4.99 stop %0.25 notional $1497 | tp1 +1.5R tp2 +2.5R | kom $0.299
+[15:35:13][1m] 👀 board 40 aday (L39/S1) top: PONSUSDT:L5.05, UAIUSDT:L5.04, UNIUSDT:L6.08, SNXXUSDT:L6.19, SOXLUSDT:L7.71
+[15:35:29][1m] 👀 board 40 aday (L39/S1) top: PONSUSDT:L5.05, UAIUSDT:L5.04, UNIUSDT:L6.08, SNXXUSDT:L6.19, SOXLUSDT:L7.71
+[15:35:49][1m] 👀 board 40 aday (L39/S1) top: PONSUSDT:L5.05, UAIUSDT:L5.04, UNIUSDT:L6.08, SNXXUSDT:L6.19, SOXLUSDT:L7.71
+[15:36:05][1m]    ❌ ÇIKIŞ #2 CRVUSDT       @ 0.360803    %100 [stop] PnL $-4.545 kom $0.822 | equity $493.43
+[15:36:05][1m] 👀 board 40 aday (L39/S1) top: PONSUSDT:L5.05, UAIUSDT:L5.04, UNIUSDT:L6.08, SNXXUSDT:L6.19, SOXLUSDT:L7.71
+[15:36:05][1m] … döngü 4 | equity $493.43 | açık 3 | kapanan 1 | kom $2.021 | kalan 28dk
+[15:36:21][1m]    ❌ ÇIKIŞ #4 ENAUSDT       @ 0.152008    %100 [stop] PnL $-3.756 kom $0.821 | equity $488.86
+[15:36:36][1m] ⚠️ board hatası: The read operation timed out
+[15:36:57][1m] 🟢 LONG GİRİŞ #5 UNIUSDT       @ 5.857       skor 6.79 | K 8.3 D 7.1 ADX 31.8 bull distEMA +0.42% | risk $4.89 stop %0.41 notional $1206 | tp1 +1.5R tp2 +2.5R | kom $0.241
+[15:36:57][1m] 🟢 LONG GİRİŞ #6 SNXXUSDT      @ 13.78       skor 7.14 | K 8.0 D 6.5 ADX 54.2 bull distEMA +0.88% | risk $4.89 stop %0.3 notional $1466 | tp1 +1.5R tp2 +2.5R | kom $0.293
+[15:36:57][1m] 👀 board 40 aday (L39/S1) top: PONSUSDT:L4.65, UAIUSDT:L5.11, BEATUSDT:L3.32, ONGUSDT:L3.46, UNIUSDT:L6.79
+[15:37:12][1m]    ❌ ÇIKIŞ #5 UNIUSDT       @ 5.83326     %100 [stop] PnL $-4.889 kom $0.661 | equity $482.77
+[15:37:12][1m] 🟢 LONG GİRİŞ #7 KORUUSDT      @ 19.3        skor 6.77 | K 5.7 D 1.9 ADX 23.4 bull distEMA +0.15% | risk $4.83 stop %0.29 notional $1448 | tp1 +1.5R tp2 +2.5R | kom $0.290
+[15:37:12][1m] 👀 board 40 aday (L39/S1) top: PONSUSDT:L4.65, UAIUSDT:L5.11, BEATUSDT:L3.32, ONGUSDT:L3.46, UNIUSDT:L6.79
+[15:37:33][1m] 👀 board 39 aday (L38/S1) top: UAIUSDT:L5.98, BEATUSDT:L4.68, UNIUSDT:L5.33, ONGUSDT:L6.4, SOXLUSDT:L6.03
+[15:37:33][1m] … döngü 8 | equity $482.48 | açık 4 | kapanan 3 | kom $4.327 | kalan 27dk
+[15:37:48][1m] ⚠️ hata: <urlopen error [Errno 54] Connection reset by peer>
+[15:38:09][1m] 👀 board 30 aday (L30/S0) top: PONSUSDT:L4.14, UAIUSDT:L6.59, HEMIUSDT:L3.27, BEATUSDT:L4.51, ONGUSDT:L5.79
+[15:38:25][1m]    ❌ ÇIKIŞ #6 SNXXUSDT      @ 13.7389     %100 [stop] PnL $-4.377 kom $0.804 | equity $477.30
+[15:38:25][1m]    ❌ ÇIKIŞ #7 KORUUSDT      @ 19.2434     %100 [stop] PnL $-4.245 kom $0.794 | equity $472.26
+[15:38:25][1m] 🟢 LONG GİRİŞ #8 XPLUSDT       @ 0.08284     skor 6.86 | K 5.3 D 3.2 ADX 24.5 bull distEMA +0.20% | risk $4.72 stop %0.21 notional $1417 | tp1 +1.5R tp2 +2.5R | kom $0.283
+[15:38:25][1m] 👀 board 30 aday (L30/S0) top: PONSUSDT:L4.14, UAIUSDT:L6.59, HEMIUSDT:L3.27, BEATUSDT:L4.51, ONGUSDT:L5.79
+[15:38:47][1m] 👀 board 26 aday (L26/S0) top: PONSUSDT:L4.14, UAIUSDT:L6.59, USELESSUSDT:L3.42, HEMIUSDT:L3.27, BEATUSDT:L4.51
+[15:38:47][1m] … döngü 12 | equity $471.98 | açık 3 | kapanan 5 | kom $6.208 | kalan 26dk
+[15:39:03][1m]    ❌ ÇIKIŞ #1 SOXLUSDT      @ 103.704     %100 [stop] PnL $-4.844 kom $0.822 | equity $466.31
+[15:39:03][1m]    ❌ ÇIKIŞ #3 SOXSUSDT      @ 53.2769     %100 [stop] PnL $-4.424 kom $0.826 | equity $461.06
+[15:39:03][1m] 👀 board 26 aday (L26/S0) top: PONSUSDT:L4.14, UAIUSDT:L6.59, USELESSUSDT:L3.42, HEMIUSDT:L3.27, BEATUSDT:L4.51
+[15:39:23][1m] 🟢 LONG GİRİŞ #9 BEATUSDT      @ 0.13485     skor 5.58 | K 17.9 D 15.3 ADX 37.3 bull distEMA +1.17% | risk $4.61 stop %0.64 notional $725 | tp1 +1.5R tp2 +2.5R | kom $0.145
+[15:39:23][1m] 🟢 LONG GİRİŞ #10 ONGUSDT       @ 0.10039     skor 6.76 | K 8.5 D 5.2 ADX 30.5 bull distEMA +0.22% | risk $4.61 stop %0.4 notional $1156 | tp1 +1.5R tp2 +2.5R | kom $0.231
+[15:39:23][1m] 👀 board 26 aday (L26/S0) top: PONSUSDT:L3.03, UAIUSDT:L6.56, USELESSUSDT:L4.06, HEMIUSDT:L4.77, BEATUSDT:L5.58
+[15:39:39][1m] 👀 board 26 aday (L26/S0) top: PONSUSDT:L3.03, UAIUSDT:L6.56, USELESSUSDT:L4.06, HEMIUSDT:L4.77, BEATUSDT:L5.58
+[15:40:12][1m] 👀 board 20 aday (L20/S0) top: PONSUSDT:L3.03, USELESSUSDT:L4.06, HEMIUSDT:L4.77, BEATUSDT:L5.58, INJUSDT:L6.89
+[15:40:12][1m] … döngü 16 | equity $460.69 | açık 3 | kapanan 7 | kom $8.233 | kalan 24dk
+[15:40:28][1m] 👀 board 20 aday (L20/S0) top: PONSUSDT:L3.03, USELESSUSDT:L4.06, HEMIUSDT:L4.77, BEATUSDT:L5.58, INJUSDT:L6.89
+[15:40:49][1m] 🟢 LONG GİRİŞ #11 INJUSDT       @ 4.826       skor 7.57 | K 4.8 D 1.6 ADX 36.6 bull distEMA +0.30% | risk $4.61 stop %0.26 notional $1382 | tp1 +1.5R tp2 +2.5R | kom $0.276
+[15:40:49][1m] 👀 board 35 aday (L33/S2) top: UAIUSDT:L6.52, USELESSUSDT:L4.07, HEMIUSDT:L5.86, BEATUSDT:L3.64, LITUSDT:L2.0
+[15:41:05][1m] 👀 board 35 aday (L33/S2) top: UAIUSDT:L6.52, USELESSUSDT:L4.07, HEMIUSDT:L5.86, BEATUSDT:L3.64, LITUSDT:L2.0
+[15:41:25][1m] 👀 board 31 aday (L28/S3) top: UAIUSDT:L7.8, LAUSDT:S4.12, BEATUSDT:L3.5, UNIUSDT:L2.81, ONGUSDT:L5.79
+[15:41:25][1m] … döngü 20 | equity $460.41 | açık 4 | kapanan 7 | kom $8.510 | kalan 23dk
+[15:41:41][1m] 👀 board 31 aday (L28/S3) top: UAIUSDT:L7.8, LAUSDT:S4.12, BEATUSDT:L3.5, UNIUSDT:L2.81, ONGUSDT:L5.79
+[15:42:05][1m] 👀 board 18 aday (L16/S2) top: SKRUSDT:L2.37, UAIUSDT:L5.75, HEMIUSDT:L6.98, LAUSDT:S6.56, BEATUSDT:L2.59
+[15:42:22][1m] 👀 board 18 aday (L16/S2) top: SKRUSDT:L2.37, UAIUSDT:L5.75, HEMIUSDT:L6.98, LAUSDT:S6.56, BEATUSDT:L2.59
+[15:42:43][1m] 👀 board 19 aday (L17/S2) top: SKRUSDT:L2.37, UAIUSDT:L5.75, HEMIUSDT:L6.98, LAUSDT:S6.56, BEATUSDT:L2.59
+[15:42:43][1m] … döngü 24 | equity $460.41 | açık 4 | kapanan 7 | kom $8.510 | kalan 22dk
+[15:42:59][1m] 👀 board 19 aday (L17/S2) top: SKRUSDT:L2.37, UAIUSDT:L5.75, HEMIUSDT:L6.98, LAUSDT:S6.56, BEATUSDT:L2.59
+[15:43:19][1m] 👀 board 18 aday (L15/S3) top: SKRUSDT:L4.76, HEMIUSDT:L5.2, UAIUSDT:L4.9, LAUSDT:S6.9, ONGUSDT:L3.13
+[15:43:35][1m] 👀 board 18 aday (L15/S3) top: SKRUSDT:L4.76, HEMIUSDT:L5.2, UAIUSDT:L4.9, LAUSDT:S6.9, ONGUSDT:L3.13
+[15:44:09][1m] 👀 board 18 aday (L15/S3) top: SKRUSDT:L4.76, HEMIUSDT:L5.2, UAIUSDT:L4.9, LAUSDT:S6.9, ONGUSDT:L3.13
+[15:44:09][1m] … döngü 28 | equity $460.41 | açık 4 | kapanan 7 | kom $8.510 | kalan 20dk
+[15:44:25][1m] 👀 board 18 aday (L15/S3) top: SKRUSDT:L4.76, HEMIUSDT:L5.2, UAIUSDT:L4.9, LAUSDT:S6.9, ONGUSDT:L3.13
+[15:44:45][1m] 👀 board 13 aday (L10/S3) top: SKRUSDT:L4.29, HEMIUSDT:L4.73, UAIUSDT:L3.5, FLOCKUSDT:S3.55, INJUSDT:L6.34
+[15:45:01][1m]    ❌ ÇIKIŞ #11 INJUSDT       @ 4.8134      %100 [stop] PnL $-3.608 kom $0.758 | equity $456.04
+[15:45:01][1m] 👀 board 13 aday (L10/S3) top: SKRUSDT:L4.29, HEMIUSDT:L4.73, UAIUSDT:L3.5, FLOCKUSDT:S3.55, INJUSDT:L6.34
+[15:45:21][1m] 🟢 LONG GİRİŞ #12 SKRUSDT       @ 0.022262    skor 5.24 | K 18.3 D 14.6 ADX 51.8 bull distEMA +2.46% | risk $4.56 stop %1.03 notional $443 | tp1 +1.5R tp2 +2.5R | kom $0.089
+[15:45:21][1m] 👀 board 15 aday (L11/S4) top: MARSCOINUSDT:S3.5, SKRUSDT:L5.24, HEMIUSDT:L4.67, BEATUSDT:L4.22, FLOCKUSDT:S6.71
+[15:45:21][1m] … döngü 32 | equity $455.96 | açık 4 | kapanan 8 | kom $9.357 | kalan 19dk
+[15:45:37][1m] 👀 board 15 aday (L11/S4) top: MARSCOINUSDT:S3.5, SKRUSDT:L5.24, HEMIUSDT:L4.67, BEATUSDT:L4.22, FLOCKUSDT:S6.71
+[15:46:09][1m] 👀 board 15 aday (L11/S4) top: MARSCOINUSDT:S3.5, SKRUSDT:L5.24, HEMIUSDT:L4.67, BEATUSDT:L4.22, FLOCKUSDT:S6.71
+[15:46:25][1m] 👀 board 15 aday (L11/S4) top: MARSCOINUSDT:S3.5, SKRUSDT:L5.24, HEMIUSDT:L4.67, BEATUSDT:L4.22, FLOCKUSDT:S6.71
+[15:46:41][1m]    ❌ ÇIKIŞ #8 XPLUSDT       @ 0.0826677   %100 [stop] PnL $-2.947 kom $0.778 | equity $452.23
+[15:46:45][1m] 👀 board 13 aday (L9/S4) top: MARSCOINUSDT:S5.16, SKRUSDT:L3.46, HEMIUSDT:L3.82, BEATUSDT:L4.59, FLOCKUSDT:S6.73
+[15:46:45][1m] … döngü 36 | equity $452.23 | açık 3 | kapanan 9 | kom $10.134 | kalan 18dk
+[15:47:01][1m] 👀 board 13 aday (L9/S4) top: MARSCOINUSDT:S5.16, SKRUSDT:L3.46, HEMIUSDT:L3.82, BEATUSDT:L4.59, FLOCKUSDT:S6.73
+[15:47:21][1m] 👀 board 14 aday (L9/S5) top: BTRUSDT:L1.77, MARSCOINUSDT:S5.3, SKRUSDT:L4.82, HEMIUSDT:L4.14, BEATUSDT:L4.35
+[15:47:37][1m] 👀 board 14 aday (L9/S5) top: BTRUSDT:L1.77, MARSCOINUSDT:S5.3, SKRUSDT:L4.82, HEMIUSDT:L4.14, BEATUSDT:L4.35
+[15:47:59][1m] 👀 board 14 aday (L9/S5) top: BTRUSDT:L1.77, MARSCOINUSDT:S5.3, SKRUSDT:L4.82, HEMIUSDT:L4.14, BEATUSDT:L4.35
+[15:47:59][1m] … döngü 40 | equity $452.23 | açık 3 | kapanan 9 | kom $10.134 | kalan 17dk
+[15:48:15][1m] 👀 board 14 aday (L9/S5) top: BTRUSDT:L1.77, MARSCOINUSDT:S5.3, SKRUSDT:L4.82, HEMIUSDT:L4.14, BEATUSDT:L4.35
+[15:48:34][1m] 🔴 SHORT GİRİŞ #13 MARSCOINUSDT  @ 0.06115     skor 6.25 | K 88.4 D 90.6 ADX 34.3 bear distEMA -1.18% | risk $4.52 stop %1.23 notional $368 | tp1 +1.5R tp2 +2.5R | kom $0.074
+[15:48:34][1m] 👀 board 12 aday (L9/S3) top: BTRUSDT:L4.04, MARSCOINUSDT:S6.25, SKRUSDT:L6.04, HEMIUSDT:L4.64, BEATUSDT:L5.38
+[15:48:51][1m] 👀 board 12 aday (L9/S3) top: BTRUSDT:L4.04, MARSCOINUSDT:S6.25, SKRUSDT:L6.04, HEMIUSDT:L4.64, BEATUSDT:L5.38
+[15:49:12][1m] 👀 board 11 aday (L7/S4) top: BTRUSDT:L3.91, MARSCOINUSDT:S4.34, SKRUSDT:L5.6, HEMIUSDT:L4.41, FLOCKUSDT:S6.75
+[15:49:12][1m] … döngü 44 | equity $452.16 | açık 4 | kapanan 9 | kom $10.208 | kalan 15dk
+[15:49:28][1m] 👀 board 11 aday (L7/S4) top: BTRUSDT:L3.91, MARSCOINUSDT:S4.34, SKRUSDT:L5.6, HEMIUSDT:L4.41, FLOCKUSDT:S6.75
+[15:49:49][1m] 👀 board 11 aday (L7/S4) top: BTRUSDT:L3.91, MARSCOINUSDT:S4.34, SKRUSDT:L5.6, HEMIUSDT:L4.41, FLOCKUSDT:S6.75
+[15:50:04][1m] ⚠️ hata: <urlopen error [Errno 54] Connection reset by peer>
+[15:50:38][1m] 👀 board 9 aday (L5/S4) top: BTRUSDT:L5.35, MARSCOINUSDT:S4.75, SKRUSDT:L5.86, BEATUSDT:L5.97, FLOCKUSDT:S4.63
+[15:50:38][1m] … döngü 48 | equity $452.16 | açık 4 | kapanan 9 | kom $10.208 | kalan 14dk
+[16:07:39][1m] ⏹️ Süre doldu — açık pozisyonlar kapatılıyor…
+[16:07:41][1m]    ❌ ÇIKIŞ #9 BEATUSDT      @ 0.13479     %100 [süre-sonu] PnL $-0.323 kom $0.399 | equity $451.44
+[16:07:41][1m]    ✅ ÇIKIŞ #10 ONGUSDT       @ 0.10066     %100 [süre-sonu] PnL $+3.109 kom $0.637 | equity $453.91
+[16:07:41][1m]    ✅ ÇIKIŞ #12 SKRUSDT       @ 0.02289     %100 [süre-sonu] PnL $+12.500 kom $0.251 | equity $466.16
+[16:07:41][1m]    ✅ ÇIKIŞ #13 MARSCOINUSDT  @ 0.05861     %100 [süre-sonu] PnL $+15.298 kom $0.194 | equity $481.26
+
+══════════════════════════════════════════════════════════════════════════
+  EMA50+StochRSI PAPER BOT [1m] — FİNAL RAPOR (16:07:41)
+══════════════════════════════════════════════════════════════════════════
+  TF 1dk | Başlangıç $500.00 | Bitiş equity $481.26
+  ► NET $-18.74 (-3.75%) | komisyon $11.689
+  Risk/işlem %1.0 | pik $500.00 dip $451.44
+  Kapanan 13 | ✅ 3 ❌ 10 | isabet %23 | PF 0.61 | açık 0
+══════════════════════════════════════════════════════════════════════════
+
+  #1 ❌ LONG SOXLUSDT [KAPALI]
+     Giriş 104.04 @ 15:35:13 | K 0.3 D 0.1 RSI 45.2 ADX 27.2 bull distEMA +0.11% | skor 7.71
+     Notional $1500 qty 14.42 | stop %0.32 atr %0.27
+       → %100 @ 103.704 [stop    ] 15:39:03 (3.8dk) PnL $-4.844 kom $0.822
+     ► NET $-5.967
+
+  #2 ❌ LONG CRVUSDT [KAPALI]
+     Giriş 0.3619 @ 15:35:13 | K 1.7 D 0.6 RSI 47.8 ADX 32.0 bull distEMA +0.04% | skor 7.81
+     Notional $1499 qty 4142 | stop %0.3 atr %0.25
+       → %100 @ 0.360803 [stop    ] 15:36:05 (0.9dk) PnL $-4.545 kom $0.822
+     ► NET $-5.667
+
+  #3 ❌ SHORT SOXSUSDT [KAPALI]
+     Giriş 53.12 @ 15:35:13 | K 98.3 D 99.4 RSI 54.1 ADX 27.3 bear distEMA -0.14% | skor 7.52
+     Notional $1498 qty 28.2 | stop %0.3 atr %0.25
+       → %100 @ 53.2769 [stop    ] 15:39:03 (3.8dk) PnL $-4.424 kom $0.826
+     ► NET $-5.550
+
+  #4 ❌ LONG ENAUSDT [KAPALI]
+     Giriş 0.15239 @ 15:35:13 | K 11.1 D 5.5 RSI 59.0 ADX 28.4 bull distEMA +0.42% | skor 6.24
+     Notional $1497 qty 9825 | stop %0.25 atr %0.21
+       → %100 @ 0.152008 [stop    ] 15:36:21 (1.1dk) PnL $-3.756 kom $0.821
+     ► NET $-4.877
+
+  #5 ❌ LONG UNIUSDT [KAPALI]
+     Giriş 5.857 @ 15:36:57 | K 8.3 D 7.1 RSI 57.5 ADX 31.8 bull distEMA +0.42% | skor 6.79
+     Notional $1206 qty 205.9 | stop %0.41 atr %0.34
+       → %100 @ 5.83326 [stop    ] 15:37:12 (0.3dk) PnL $-4.889 kom $0.661
+     ► NET $-5.790
+
+  #6 ❌ LONG SNXXUSDT [KAPALI]
+     Giriş 13.78 @ 15:36:57 | K 8.0 D 6.5 RSI 59.3 ADX 54.2 bull distEMA +0.88% | skor 7.14
+     Notional $1466 qty 106.4 | stop %0.3 atr %0.25
+       → %100 @ 13.7389 [stop    ] 15:38:25 (1.5dk) PnL $-4.377 kom $0.804
+     ► NET $-5.474
+
+  #7 ❌ LONG KORUUSDT [KAPALI]
+     Giriş 19.3 @ 15:37:12 | K 5.7 D 1.9 RSI 46.2 ADX 23.4 bull distEMA +0.15% | skor 6.77
+     Notional $1448 qty 75.04 | stop %0.29 atr %0.24
+       → %100 @ 19.2434 [stop    ] 15:38:25 (1.2dk) PnL $-4.245 kom $0.794
+     ► NET $-5.329
+
+  #8 ❌ LONG XPLUSDT [KAPALI]
+     Giriş 0.08284 @ 15:38:25 | K 5.3 D 3.2 RSI 52.9 ADX 24.5 bull distEMA +0.20% | skor 6.86
+     Notional $1417 qty 1.71e+04 | stop %0.21 atr %0.17
+       → %100 @ 0.0826677 [stop    ] 15:46:41 (8.3dk) PnL $-2.947 kom $0.778
+     ► NET $-4.008
+
+  #9 ❌ LONG BEATUSDT [KAPALI]
+     Giriş 0.13485 @ 15:39:23 | K 17.9 D 15.3 RSI 62.4 ADX 37.3 bull distEMA +1.17% | skor 5.58
+     Notional $725 qty 5379 | stop %0.64 atr %0.53
+       → %100 @ 0.13479 [süre-sonu] 16:07:41 (28.3dk) PnL $-0.323 kom $0.399
+     ► NET $-0.867
+
+  #10 ✅ LONG ONGUSDT [KAPALI]
+     Giriş 0.10039 @ 15:39:23 | K 8.5 D 5.2 RSI 48.6 ADX 30.5 bull distEMA +0.22% | skor 6.76
+     Notional $1156 qty 1.151e+04 | stop %0.4 atr %0.33
+       → %100 @ 0.10066 [süre-sonu] 16:07:41 (28.3dk) PnL $+3.109 kom $0.637
+     ► NET $+2.240
+
+  #11 ❌ LONG INJUSDT [KAPALI]
+     Giriş 4.826 @ 15:40:49 | K 4.8 D 1.6 RSI 51.6 ADX 36.6 bull distEMA +0.30% | skor 7.57
+     Notional $1382 qty 286.4 | stop %0.26 atr %0.22
+       → %100 @ 4.8134 [stop    ] 15:45:01 (4.2dk) PnL $-3.608 kom $0.758
+     ► NET $-4.643
+
+  #12 ✅ LONG SKRUSDT [KAPALI]
+     Giriş 0.022262 @ 15:45:21 | K 18.3 D 14.6 RSI 63.5 ADX 51.8 bull distEMA +2.46% | skor 5.24
+     Notional $443 qty 1.991e+04 | stop %1.03 atr %0.86
+       → %100 @ 0.02289 [süre-sonu] 16:07:41 (22.3dk) PnL $+12.500 kom $0.251
+     ► NET $+12.161
+
+  #13 ✅ SHORT MARSCOINUSDT [KAPALI]
+     Giriş 0.06115 @ 15:48:34 | K 88.4 D 90.6 RSI 45.5 ADX 34.3 bear distEMA -1.18% | skor 6.25
+     Notional $368 qty 6023 | stop %1.23 atr %1.02
+       → %100 @ 0.05861 [süre-sonu] 16:07:41 (19.1dk) PnL $+15.298 kom $0.194
+     ► NET $+15.030
+
+══════════════════════════════════════════════════════════════════════════
+[16:07:41][1m] ✅ Bitti. Rapor: /Users/mea/Desktop/Funding trader/emastoch_bot_1m_report.txt

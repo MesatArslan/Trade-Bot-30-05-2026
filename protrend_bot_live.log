@@ -1,7 +1,285 @@
-[00:30:55] 🤖 Bot başladı — $500.0, dinamik 4-15x, 60dk, Pro Trend conf≥62, max 3 poz | stop 2.5×ATR, tp1 2.0R %40, trail 1.5R
-[00:31:00] 🟢 GİRİŞ #1 SHORT 1000BONKUSDT  @ 0.002974    teminat $100×15x=$1500 qty 5.044e+05 | stop 0.47% tp1 0.93%→%40 trail 1.5R conf 74.4 adx1 33.0 adx5 58.3 atr 0.187% | açılış(maker) kom $0.300
-[00:31:44] 🟢 GİRİŞ #2 SHORT POLUSDT       @ 0.08867     teminat $100×15x=$1499 qty 1.691e+04 | stop 0.45% tp1 0.9%→%40 trail 1.5R conf 91.4 adx1 50.5 adx5 64.0 atr 0.18% | açılış(maker) kom $0.300
-[00:31:44] 🟢 GİRİŞ #3 SHORT ETHFIUSDT     @ 0.5656      teminat $100×15x=$1498 qty 2649 | stop 0.54% tp1 1.08%→%40 trail 1.5R conf 66.6 adx1 43.8 adx5 26.6 atr 0.216% | açılış(maker) kom $0.300
-[00:32:48] … döngü 6 | equity $499.10 | açık 3 | kapanan 0 | kom $0.899 | kalan 58dk
-[00:35:03] … döngü 12 | equity $499.10 | açık 3 | kapanan 0 | kom $0.899 | kalan 55dk
-[00:37:19] … döngü 18 | equity $499.10 | açık 3 | kapanan 0 | kom $0.899 | kalan 53dk
+[02:54:55] 🤖 Bot başladı — $500.0, dinamik 4-8x, 180dk, conf≥62, adx1≤60, max 3 poz | stop 2.5×ATR, tp1 2.0R %40, trail 1.5R, devre kesici -%6
+[02:55:43] 🟢 GİRİŞ #1 LONG  ACEUSDT       @ 0.21557     teminat $100×5x=$500 qty 2319 | stop 1.91% tp1 3.81%→%40 trail 1.5R conf 70.6 adx1 38.1 adx5 33.4 atr 0.762% | açılış(maker) kom $0.100
+[02:56:50] … döngü 6 | equity $499.90 | açık 1 | kapanan 0 | kom $0.100 | kalan 178dk
+[02:57:13] 🟢 GİRİŞ #2 LONG  WLDUSDT       @ 0.3647      teminat $100×8x=$800 qty 2193 | stop 0.35% tp1 0.7%→%40 trail 1.5R conf 62.8 adx1 43.1 adx5 24.7 atr 0.119% | açılış(maker) kom $0.160
+[02:58:43] 🟢 GİRİŞ #3 LONG  FFUSDT        @ 0.09886     teminat $100×8x=$800 qty 8088 | stop 1.0% tp1 2.01%→%40 trail 1.5R conf 63.8 adx1 50.8 adx5 27.7 atr 0.402% | açılış(maker) kom $0.160
+[02:59:04] … döngü 12 | equity $499.58 | açık 3 | kapanan 0 | kom $0.420 | kalan 175dk
+[03:01:18] … döngü 18 | equity $499.58 | açık 3 | kapanan 0 | kom $0.420 | kalan 173dk
+[03:02:50]    ❌ ÇIKIŞ #3 FFUSDT        @ 0.0978665   %100 [stop] PnL $-8.036 kom $0.435 | equity $491.11
+[03:03:35] … döngü 24 | equity $491.11 | açık 2 | kapanan 1 | kom $0.855 | kalan 171dk
+[03:05:49] … döngü 30 | equity $491.11 | açık 2 | kapanan 1 | kom $0.855 | kalan 169dk
+[03:08:05] … döngü 36 | equity $491.11 | açık 2 | kapanan 1 | kom $0.855 | kalan 166dk
+[03:10:18] … döngü 42 | equity $491.11 | açık 2 | kapanan 1 | kom $0.855 | kalan 164dk
+[03:12:32] … döngü 48 | equity $491.11 | açık 2 | kapanan 1 | kom $0.855 | kalan 162dk
+[03:12:56] 🟢 GİRİŞ #4 LONG  XMRUSDT       @ 505.54      teminat $98×8x=$786 qty 1.554 | stop 0.43% tp1 0.85%→%40 trail 1.5R conf 66.0 adx1 30.3 adx5 39.4 atr 0.171% | açılış(maker) kom $0.157
+[03:14:48] … döngü 54 | equity $490.95 | açık 3 | kapanan 1 | kom $1.012 | kalan 160dk
+[03:17:01] … döngü 60 | equity $490.95 | açık 3 | kapanan 1 | kom $1.012 | kalan 157dk
+[03:19:16] … döngü 66 | equity $490.95 | açık 3 | kapanan 1 | kom $1.012 | kalan 155dk
+[03:21:31] … döngü 72 | equity $490.95 | açık 3 | kapanan 1 | kom $1.012 | kalan 153dk
+[03:23:45] … döngü 78 | equity $490.95 | açık 3 | kapanan 1 | kom $1.012 | kalan 151dk
+[03:24:29]    ✅ ÇIKIŞ #1 ACEUSDT       @ 0.223783    %40 [tp1] PnL $+7.620 kom $0.042 | equity $498.53
+[03:24:29]    ↳ #1 ACEUSDT tp1→%40 alındı, stop breakeven, kalan %60 1.5R iz-süren stop
+[03:25:58] … döngü 84 | equity $498.53 | açık 3 | kapanan 1 | kom $1.054 | kalan 148dk
+[03:26:19]    ❌ ÇIKIŞ #2 WLDUSDT       @ 0.363424    %100 [stop] PnL $-2.799 kom $0.438 | equity $495.29
+[03:26:22] 🟢 GİRİŞ #5 SHORT HEMIUSDT      @ 0.013872    teminat $99×5x=$495 qty 3.571e+04 | stop 1.69% tp1 3.37%→%40 trail 1.5R conf 62.1 adx1 45.0 adx5 30.1 atr 0.674% | açılış(maker) kom $0.099
+[03:28:11] … döngü 90 | equity $495.19 | açık 3 | kapanan 2 | kom $1.591 | kalan 146dk
+[03:30:28] … döngü 96 | equity $495.19 | açık 3 | kapanan 2 | kom $1.591 | kalan 144dk
+[03:32:41] … döngü 102 | equity $495.19 | açık 3 | kapanan 2 | kom $1.591 | kalan 142dk
+[03:34:54] … döngü 108 | equity $495.19 | açık 3 | kapanan 2 | kom $1.591 | kalan 140dk
+[03:35:39]    ✅ ÇIKIŞ #1 ACEUSDT       @ 0.22027     %60 [trail] PnL $+6.541 kom $0.169 | equity $501.57
+[03:35:39] 🟢 GİRİŞ #6 LONG  KORUUSDT      @ 19.79       teminat $100×8x=$802 qty 40.55 | stop 1.05% tp1 2.11%→%40 trail 1.5R conf 75.8 adx1 56.8 adx5 39.8 atr 0.422% | açılış(maker) kom $0.160
+[03:37:08] … döngü 114 | equity $501.41 | açık 3 | kapanan 3 | kom $1.920 | kalan 137dk
+[03:39:22] … döngü 120 | equity $501.41 | açık 3 | kapanan 3 | kom $1.920 | kalan 135dk
+[03:41:35] … döngü 126 | equity $501.41 | açık 3 | kapanan 3 | kom $1.920 | kalan 133dk
+[03:43:49] … döngü 132 | equity $501.41 | açık 3 | kapanan 3 | kom $1.920 | kalan 131dk
+[03:46:02] … döngü 138 | equity $501.41 | açık 3 | kapanan 3 | kom $1.920 | kalan 128dk
+[03:48:16] … döngü 144 | equity $501.41 | açık 3 | kapanan 3 | kom $1.920 | kalan 126dk
+[03:49:22]    ❌ ÇIKIŞ #5 HEMIUSDT      @ 0.0141057   %100 [stop] PnL $-8.346 kom $0.277 | equity $492.78
+[03:49:25] 🟢 GİRİŞ #7 SHORT DASHUSDT      @ 42.91       teminat $99×8x=$788 qty 18.38 | stop 0.61% tp1 1.21%→%40 trail 1.5R conf 79.6 adx1 59.7 adx5 36.7 atr 0.243% | açılış(maker) kom $0.158
+[03:50:35] … döngü 150 | equity $492.62 | açık 3 | kapanan 4 | kom $2.355 | kalan 124dk
+[03:52:48] … döngü 156 | equity $492.62 | açık 3 | kapanan 4 | kom $2.355 | kalan 122dk
+[03:53:09]    ❌ ÇIKIŞ #4 XMRUSDT       @ 505.12      %100 [zaman] PnL $-0.653 kom $0.432 | equity $491.54
+[03:53:12] 🟢 GİRİŞ #8 LONG  CLUSDT        @ 91.71       teminat $98×8x=$786 qty 8.576 | stop 0.35% tp1 0.7%→%40 trail 1.5R conf 81.0 adx1 43.3 adx5 38.7 atr 0.118% | açılış(maker) kom $0.157
+[03:55:04] … döngü 162 | equity $491.38 | açık 3 | kapanan 5 | kom $2.944 | kalan 119dk
+[03:57:18] … döngü 168 | equity $491.38 | açık 3 | kapanan 5 | kom $2.944 | kalan 117dk
+[03:59:32] … döngü 174 | equity $491.38 | açık 3 | kapanan 5 | kom $2.944 | kalan 115dk
+[04:01:46] … döngü 180 | equity $491.38 | açık 3 | kapanan 5 | kom $2.944 | kalan 113dk
+[04:04:00] … döngü 186 | equity $491.38 | açık 3 | kapanan 5 | kom $2.944 | kalan 110dk
+[04:06:13] … döngü 192 | equity $491.38 | açık 3 | kapanan 5 | kom $2.944 | kalan 108dk
+[04:08:29] … döngü 198 | equity $491.38 | açık 3 | kapanan 5 | kom $2.944 | kalan 106dk
+[04:10:42] … döngü 204 | equity $491.38 | açık 3 | kapanan 5 | kom $2.944 | kalan 104dk
+[04:12:56] … döngü 210 | equity $491.38 | açık 3 | kapanan 5 | kom $2.944 | kalan 101dk
+[04:15:11] … döngü 216 | equity $491.38 | açık 3 | kapanan 5 | kom $2.944 | kalan 99dk
+[04:15:56]    ✅ ÇIKIŞ #6 KORUUSDT      @ 19.86       %100 [zaman] PnL $+2.838 kom $0.443 | equity $493.78
+[04:15:56] 🟢 GİRİŞ #9 SHORT NEARUSDT      @ 1.856       teminat $99×8x=$790 qty 425.7 | stop 0.43% tp1 0.86%→%40 trail 1.5R conf 64.7 adx1 31.9 adx5 41.3 atr 0.173% | açılış(maker) kom $0.158
+[04:17:26] … döngü 222 | equity $493.62 | açık 3 | kapanan 6 | kom $3.545 | kalan 97dk
+[04:19:41] … döngü 228 | equity $493.62 | açık 3 | kapanan 6 | kom $3.545 | kalan 95dk
+[04:21:57] … döngü 234 | equity $493.62 | açık 3 | kapanan 6 | kom $3.545 | kalan 92dk
+[04:24:10] … döngü 240 | equity $493.62 | açık 3 | kapanan 6 | kom $3.545 | kalan 90dk
+[04:26:24] … döngü 246 | equity $493.62 | açık 3 | kapanan 6 | kom $3.545 | kalan 88dk
+[04:28:38] … döngü 252 | equity $493.62 | açık 3 | kapanan 6 | kom $3.545 | kalan 86dk
+[04:29:43]    ✅ ÇIKIŞ #7 DASHUSDT      @ 42.7        %100 [zaman] PnL $+3.859 kom $0.432 | equity $497.05
+[04:30:52] … döngü 258 | equity $497.05 | açık 2 | kapanan 7 | kom $3.977 | kalan 84dk
+[04:31:16] 🟢 GİRİŞ #10 SHORT HNTUSDT       @ 0.5486      teminat $99×6x=$596 qty 1087 | stop 1.58% tp1 3.17%→%40 trail 1.5R conf 64.8 adx1 41.7 adx5 25.1 atr 0.634% | açılış(maker) kom $0.119
+[04:33:06] … döngü 264 | equity $496.93 | açık 3 | kapanan 7 | kom $4.096 | kalan 81dk
+[04:33:27]    ❌ ÇIKIŞ #8 CLUSDT        @ 91.66       %100 [zaman] PnL $-0.429 kom $0.432 | equity $496.07
+[04:35:18] … döngü 270 | equity $496.07 | açık 2 | kapanan 8 | kom $4.528 | kalan 79dk
+[04:35:42] 🟢 GİRİŞ #11 SHORT SKRUSDT       @ 0.019629    teminat $99×4x=$397 qty 2.022e+04 | stop 2.15% tp1 4.3%→%40 trail 1.5R conf 64.6 adx1 43.4 adx5 44.4 atr 0.86% | açılış(maker) kom $0.079
+[04:36:46]    ✅ ÇIKIŞ #9 NEARUSDT      @ 1.83995     %40 [tp1] PnL $+2.734 kom $0.063 | equity $498.66
+[04:36:46]    ↳ #9 NEARUSDT tp1→%40 alındı, stop breakeven, kalan %60 1.5R iz-süren stop
+[04:37:30] … döngü 276 | equity $498.66 | açık 3 | kapanan 8 | kom $4.670 | kalan 77dk
+[04:39:43]    ❌ ÇIKIŞ #11 SKRUSDT       @ 0.020051    %100 [stop] PnL $-8.532 kom $0.223 | equity $489.90
+[04:39:43] … döngü 282 | equity $489.90 | açık 2 | kapanan 9 | kom $4.893 | kalan 75dk
+[04:40:07] 🟢 GİRİŞ #12 SHORT DASHUSDT      @ 42.2        teminat $98×8x=$784 qty 18.57 | stop 0.72% tp1 1.44%→%40 trail 1.5R conf 79.8 adx1 45.2 adx5 49.7 atr 0.289% | açılış(maker) kom $0.157
+[04:41:57] … döngü 288 | equity $489.75 | açık 3 | kapanan 9 | kom $5.050 | kalan 72dk
+[04:44:11] … döngü 294 | equity $489.75 | açık 3 | kapanan 9 | kom $5.050 | kalan 70dk
+[04:46:26]    ❌ ÇIKIŞ #10 HNTUSDT       @ 0.557295    %100 [stop] PnL $-9.454 kom $0.333 | equity $479.96
+[04:46:26] 🟢 GİRİŞ #13 SHORT DOGEUSDT      @ 0.08071     teminat $96×8x=$768 qty 9515 | stop 0.37% tp1 0.74%→%40 trail 1.5R conf 87.4 adx1 42.9 adx5 36.5 atr 0.148% | açılış(maker) kom $0.154
+[04:46:26] … döngü 300 | equity $479.81 | açık 3 | kapanan 10 | kom $5.537 | kalan 68dk
+[04:48:40] … döngü 306 | equity $479.81 | açık 3 | kapanan 10 | kom $5.537 | kalan 66dk
+[04:50:53] … döngü 312 | equity $479.81 | açık 3 | kapanan 10 | kom $5.537 | kalan 64dk
+[04:53:07] … döngü 318 | equity $479.81 | açık 3 | kapanan 10 | kom $5.537 | kalan 61dk
+[04:55:19] … döngü 324 | equity $479.81 | açık 3 | kapanan 10 | kom $5.537 | kalan 59dk
+[04:56:04]    ✅ ÇIKIŞ #9 NEARUSDT      @ 1.837       %60 [zaman] PnL $+4.853 kom $0.258 | equity $484.40
+[04:56:04] 🟢 GİRİŞ #14 SHORT GRAMUSDT      @ 1.298       teminat $97×8x=$775 qty 597.1 | stop 0.52% tp1 1.04%→%40 trail 1.5R conf 86.4 adx1 42.4 adx5 40.8 atr 0.209% | açılış(maker) kom $0.155
+[04:57:33] … döngü 330 | equity $484.25 | açık 3 | kapanan 11 | kom $5.950 | kalan 57dk
+[04:59:46] … döngü 336 | equity $484.25 | açık 3 | kapanan 11 | kom $5.950 | kalan 55dk
+[05:01:59] … döngü 342 | equity $484.25 | açık 3 | kapanan 11 | kom $5.950 | kalan 52dk
+[05:04:14] … döngü 348 | equity $484.25 | açık 3 | kapanan 11 | kom $5.950 | kalan 50dk
+[05:06:30] … döngü 354 | equity $484.25 | açık 3 | kapanan 11 | kom $5.950 | kalan 48dk
+[05:08:44] … döngü 360 | equity $484.25 | açık 3 | kapanan 11 | kom $5.950 | kalan 46dk
+[05:10:57] … döngü 366 | equity $484.25 | açık 3 | kapanan 11 | kom $5.950 | kalan 43dk
+[05:13:12] … döngü 372 | equity $484.25 | açık 3 | kapanan 11 | kom $5.950 | kalan 41dk
+[05:15:24] … döngü 378 | equity $484.25 | açık 3 | kapanan 11 | kom $5.950 | kalan 39dk
+[05:17:38] … döngü 384 | equity $484.25 | açık 3 | kapanan 11 | kom $5.950 | kalan 37dk
+[05:19:52] … döngü 390 | equity $484.25 | açık 3 | kapanan 11 | kom $5.950 | kalan 35dk
+[05:20:12]    ✅ ÇIKIŞ #12 DASHUSDT      @ 42.09       %100 [zaman] PnL $+2.043 kom $0.430 | equity $485.86
+[05:20:15] 🟢 GİRİŞ #15 SHORT TUTUSDT       @ 0.029537    teminat $97×8x=$777 qty 2.632e+04 | stop 0.85% tp1 1.7%→%40 trail 1.5R conf 65.0 adx1 45.6 adx5 31.2 atr 0.339% | açılış(maker) kom $0.155
+[05:20:56]    ❌ ÇIKIŞ #13 DOGEUSDT      @ 0.0810086   %100 [stop] PnL $-2.841 kom $0.424 | equity $482.44
+[05:22:05] … döngü 396 | equity $482.44 | açık 2 | kapanan 13 | kom $6.959 | kalan 32dk
+[05:24:19] … döngü 402 | equity $482.44 | açık 2 | kapanan 13 | kom $6.959 | kalan 30dk
+[05:26:12] 🟢 GİRİŞ #16 LONG  ZROUSDT       @ 1.0195      teminat $96×8x=$772 qty 757.2 | stop 0.49% tp1 0.98%→%40 trail 1.5R conf 66.8 adx1 52.9 adx5 22.4 atr 0.195% | açılış(maker) kom $0.154
+[05:26:32] … döngü 408 | equity $482.28 | açık 3 | kapanan 13 | kom $7.114 | kalan 28dk
+[05:28:50]    ❌ ÇIKIŞ #14 GRAMUSDT      @ 1.30478     %100 [stop] PnL $-4.050 kom $0.428 | equity $477.81
+[05:28:50] … döngü 414 | equity $477.81 | açık 2 | kapanan 14 | kom $7.542 | kalan 26dk
+[05:29:13] 🟢 GİRİŞ #17 LONG  1000BONKUSDT  @ 0.002996    teminat $96×8x=$764 qty 2.552e+05 | stop 0.45% tp1 0.9%→%40 trail 1.5R conf 64.2 adx1 51.2 adx5 22.8 atr 0.179% | açılış(maker) kom $0.153
+[05:31:04] … döngü 420 | equity $477.65 | açık 3 | kapanan 14 | kom $7.695 | kalan 23dk
+[05:33:17] … döngü 426 | equity $477.65 | açık 3 | kapanan 14 | kom $7.695 | kalan 21dk
+[05:35:31] … döngü 432 | equity $477.65 | açık 3 | kapanan 14 | kom $7.695 | kalan 19dk
+[05:37:45] … döngü 438 | equity $477.65 | açık 3 | kapanan 14 | kom $7.695 | kalan 17dk
+[05:39:57] … döngü 444 | equity $477.65 | açık 3 | kapanan 14 | kom $7.695 | kalan 14dk
+[05:42:10] … döngü 450 | equity $477.65 | açık 3 | kapanan 14 | kom $7.695 | kalan 12dk
+[05:44:23] … döngü 456 | equity $477.65 | açık 3 | kapanan 14 | kom $7.695 | kalan 10dk
+[05:46:37]    ✅ ÇIKIŞ #16 ZROUSDT       @ 1.02944     %40 [tp1] PnL $+3.010 kom $0.062 | equity $480.60
+[05:46:37]    ↳ #16 ZROUSDT tp1→%40 alındı, stop breakeven, kalan %60 1.5R iz-süren stop
+[05:46:37] … döngü 462 | equity $480.60 | açık 3 | kapanan 14 | kom $7.758 | kalan 8dk
+[05:48:49] … döngü 468 | equity $480.60 | açık 3 | kapanan 14 | kom $7.758 | kalan 6dk
+[05:49:35]    ✅ ÇIKIŞ #15 TUTUSDT       @ 0.0290363   %40 [tp1] PnL $+5.271 kom $0.061 | equity $485.81
+[05:49:35]    ↳ #15 TUTUSDT tp1→%40 alındı, stop breakeven, kalan %60 1.5R iz-süren stop
+[05:51:05] … döngü 474 | equity $485.81 | açık 3 | kapanan 14 | kom $7.819 | kalan 3dk
+[05:53:20] … döngü 480 | equity $485.81 | açık 3 | kapanan 14 | kom $7.819 | kalan 1dk
+[05:55:10] ⏹️ Süre doldu — açık pozisyonlar canlı fiyattan kapatılıyor…
+[05:55:11]    ✅ ÇIKIŞ #15 TUTUSDT       @ 0.028952    %60 [süre-sonu] PnL $+9.238 kom $0.251 | equity $494.80
+[05:55:11]    ✅ ÇIKIŞ #16 ZROUSDT       @ 1.0307      %60 [süre-sonu] PnL $+5.088 kom $0.258 | equity $499.63
+[05:55:11]    ❌ ÇIKIŞ #17 1000BONKUSDT  @ 0.002993    %100 [süre-sonu] PnL $-0.766 kom $0.420 | equity $498.44
+
+══════════════════════════════════════════════════════════════════════
+  PRO TREND PAPER BOT — FİNAL RAPOR   (05:55:11)
+══════════════════════════════════════════════════════════════════════
+  Başlangıç bakiye : $500.00      Kaldıraç: dinamik 4-8x (coin volatilitesine göre)
+  Bitiş equity     : $498.44
+  ► NET SONUÇ      : $-1.56   (-0.31%)
+  Brüt PnL (kom. öncesi): $+7.19
+  ► TOPLAM KOMİSYON: $8.748   (giriş+tp1 maker %0.020 / stop+trail taker %0.055)
+  Teminat/işlem: equity'nin %20'i (~$100) → notional = teminat × dinamik kaldıraç
+  Çıkış: stop 2.5×ATR | tp1 2.0R'de %40 | kalan 1.5R iz-süren
+  Pik equity $501.57 | dip equity $477.81 | max düşüş $-22.19
+----------------------------------------------------------------------
+  Kapanan işlem: 17  |  ✅ kazanan 7   ❌ kaybeden 10   isabet %41
+  Ort. tutuş süresi: 30.2 dk   |   Açık kalan: 0
+══════════════════════════════════════════════════════════════════════
+  İŞLEM DÖKÜMÜ (her pozisyon tek trade, kısmi çıkışlar altında)
+══════════════════════════════════════════════════════════════════════
+
+  #1 ✅ LONG ACEUSDT  [KAPALI]
+     Giriş  : 0.21557  @ 02:55:43   (conf 70.6, rr 4.0, adx1 38.1/adx5 33.4, atr 0.762%)
+     Boyut  : teminat $100.00 × 5x = notional $500.00   (qty 2319)
+     Plan   : stop 0.211463 (%1.91) 5x  tp1 0.223783 (%3.81)→%40  kalan 1.5R iz-süren
+       → çıkış % 40 @ 0.223783  [tp1     ] 03:24:29 (28.8dk)  PnL $+7.620  kom $0.042
+       → çıkış % 60 @ 0.22027  [trail   ] 03:35:39 (39.9dk)  PnL $+6.541  kom $0.169
+     Komisyon: açılış $0.100 + kapanış $0.210 = $0.310
+     ► Bu coin NET: $+13.851   (teminata göre %+13.9)
+
+  #2 ❌ LONG WLDUSDT  [KAPALI]
+     Giriş  : 0.3647  @ 02:57:13   (conf 62.8, rr 4.0, adx1 43.1/adx5 24.7, atr 0.119%)
+     Boyut  : teminat $99.98 × 8x = notional $799.84   (qty 2193)
+     Plan   : stop 0.363424 (%0.35) 8x  tp1 0.367253 (%0.7)→%40  kalan 1.5R iz-süren
+       → çıkış %100 @ 0.363424  [stop    ] 03:26:19 (29.1dk)  PnL $-2.799  kom $0.438
+     Komisyon: açılış $0.160 + kapanış $0.438 = $0.598
+     ► Bu coin NET: $-3.398   (teminata göre %-3.4)
+
+  #3 ❌ LONG FFUSDT  [KAPALI]
+     Giriş  : 0.09886  @ 02:58:43   (conf 63.8, rr 4.0, adx1 50.8/adx5 27.7, atr 0.402%)
+     Boyut  : teminat $99.95 × 8x = notional $799.60   (qty 8088)
+     Plan   : stop 0.0978665 (%1.0) 8x  tp1 0.100847 (%2.01)→%40  kalan 1.5R iz-süren
+       → çıkış %100 @ 0.0978665  [stop    ] 03:02:50 (4.1dk)  PnL $-8.036  kom $0.435
+     Komisyon: açılış $0.160 + kapanış $0.435 = $0.595
+     ► Bu coin NET: $-8.631   (teminata göre %-8.6)
+
+  #4 ❌ LONG XMRUSDT  [KAPALI]
+     Giriş  : 505.54  @ 03:12:56   (conf 66.0, rr 4.0, adx1 30.3/adx5 39.4, atr 0.171%)
+     Boyut  : teminat $98.22 × 8x = notional $785.76   (qty 1.554)
+     Plan   : stop 503.379 (%0.43) 8x  tp1 509.862 (%0.85)→%40  kalan 1.5R iz-süren
+       → çıkış %100 @ 505.12  [zaman   ] 03:53:09 (40.2dk)  PnL $-0.653  kom $0.432
+     Komisyon: açılış $0.157 + kapanış $0.432 = $0.589
+     ► Bu coin NET: $-1.242   (teminata göre %-1.3)
+
+  #5 ❌ SHORT HEMIUSDT  [KAPALI]
+     Giriş  : 0.013872  @ 03:26:22   (conf 62.1, rr 4.0, adx1 45.0/adx5 30.1, atr 0.674%)
+     Boyut  : teminat $99.06 × 5x = notional $495.30   (qty 3.571e+04)
+     Plan   : stop 0.0141057 (%1.69) 5x  tp1 0.0134045 (%3.37)→%40  kalan 1.5R iz-süren
+       → çıkış %100 @ 0.0141057  [stop    ] 03:49:22 (23.0dk)  PnL $-8.346  kom $0.277
+     Komisyon: açılış $0.099 + kapanış $0.277 = $0.376
+     ► Bu coin NET: $-8.722   (teminata göre %-8.8)
+
+  #6 ✅ LONG KORUUSDT  [KAPALI]
+     Giriş  : 19.79  @ 03:35:39   (conf 75.8, rr 4.0, adx1 56.8/adx5 39.8, atr 0.422%)
+     Boyut  : teminat $100.31 × 8x = notional $802.48   (qty 40.55)
+     Plan   : stop 19.5812 (%1.05) 8x  tp1 20.2076 (%2.11)→%40  kalan 1.5R iz-süren
+       → çıkış %100 @ 19.86  [zaman   ] 04:15:56 (40.3dk)  PnL $+2.838  kom $0.443
+     Komisyon: açılış $0.160 + kapanış $0.443 = $0.603
+     ► Bu coin NET: $+2.235   (teminata göre %+2.2)
+
+  #7 ✅ SHORT DASHUSDT  [KAPALI]
+     Giriş  : 42.91  @ 03:49:25   (conf 79.6, rr 4.0, adx1 59.7/adx5 36.7, atr 0.243%)
+     Boyut  : teminat $98.56 × 8x = notional $788.48   (qty 18.38)
+     Plan   : stop 43.1707 (%0.61) 8x  tp1 42.3886 (%1.21)→%40  kalan 1.5R iz-süren
+       → çıkış %100 @ 42.7  [zaman   ] 04:29:43 (40.3dk)  PnL $+3.859  kom $0.432
+     Komisyon: açılış $0.158 + kapanış $0.432 = $0.589
+     ► Bu coin NET: $+3.270   (teminata göre %+3.3)
+
+  #8 ❌ LONG CLUSDT  [KAPALI]
+     Giriş  : 91.71  @ 03:53:12   (conf 81.0, rr 4.0, adx1 43.3/adx5 38.7, atr 0.118%)
+     Boyut  : teminat $98.31 × 8x = notional $786.48   (qty 8.576)
+     Plan   : stop 91.389 (%0.35) 8x  tp1 92.352 (%0.7)→%40  kalan 1.5R iz-süren
+       → çıkış %100 @ 91.66  [zaman   ] 04:33:27 (40.2dk)  PnL $-0.429  kom $0.432
+     Komisyon: açılış $0.157 + kapanış $0.432 = $0.590
+     ► Bu coin NET: $-1.018   (teminata göre %-1.0)
+
+  #9 ✅ SHORT NEARUSDT  [KAPALI]
+     Giriş  : 1.856  @ 04:15:56   (conf 64.7, rr 4.0, adx1 31.9/adx5 41.3, atr 0.173%)
+     Boyut  : teminat $98.76 × 8x = notional $790.08   (qty 425.7)
+     Plan   : stop 1.86403 (%0.43) 8x  tp1 1.83995 (%0.86)→%40  kalan 1.5R iz-süren
+       → çıkış % 40 @ 1.83995  [tp1     ] 04:36:46 (20.8dk)  PnL $+2.734  kom $0.063
+       → çıkış % 60 @ 1.837  [zaman   ] 04:56:04 (40.1dk)  PnL $+4.853  kom $0.258
+     Komisyon: açılış $0.158 + kapanış $0.321 = $0.479
+     ► Bu coin NET: $+7.108   (teminata göre %+7.2)
+
+  #10 ❌ SHORT HNTUSDT  [KAPALI]
+     Giriş  : 0.5486  @ 04:31:16   (conf 64.8, rr 4.0, adx1 41.7/adx5 25.1, atr 0.634%)
+     Boyut  : teminat $99.41 × 6x = notional $596.46   (qty 1087)
+     Plan   : stop 0.557295 (%1.58) 6x  tp1 0.531209 (%3.17)→%40  kalan 1.5R iz-süren
+       → çıkış %100 @ 0.557295  [stop    ] 04:46:26 (15.2dk)  PnL $-9.454  kom $0.333
+     Komisyon: açılış $0.119 + kapanış $0.333 = $0.453
+     ► Bu coin NET: $-9.906   (teminata göre %-10.0)
+
+  #11 ❌ SHORT SKRUSDT  [KAPALI]
+     Giriş  : 0.019629  @ 04:35:42   (conf 64.6, rr 4.0, adx1 43.4/adx5 44.4, atr 0.86%)
+     Boyut  : teminat $99.21 × 4x = notional $396.84   (qty 2.022e+04)
+     Plan   : stop 0.020051 (%2.15) 4x  tp1 0.018785 (%4.3)→%40  kalan 1.5R iz-süren
+       → çıkış %100 @ 0.020051  [stop    ] 04:39:43 (4.0dk)  PnL $-8.532  kom $0.223
+     Komisyon: açılış $0.079 + kapanış $0.223 = $0.302
+     ► Bu coin NET: $-8.834   (teminata göre %-8.9)
+
+  #12 ✅ SHORT DASHUSDT  [KAPALI]
+     Giriş  : 42.2  @ 04:40:07   (conf 79.8, rr 4.0, adx1 45.2/adx5 49.7, atr 0.289%)
+     Boyut  : teminat $97.98 × 8x = notional $783.84   (qty 18.57)
+     Plan   : stop 42.5049 (%0.72) 8x  tp1 41.5902 (%1.44)→%40  kalan 1.5R iz-süren
+       → çıkış %100 @ 42.09  [zaman   ] 05:20:12 (40.1dk)  PnL $+2.043  kom $0.430
+     Komisyon: açılış $0.157 + kapanış $0.430 = $0.587
+     ► Bu coin NET: $+1.456   (teminata göre %+1.5)
+
+  #13 ❌ SHORT DOGEUSDT  [KAPALI]
+     Giriş  : 0.08071  @ 04:46:26   (conf 87.4, rr 4.0, adx1 42.9/adx5 36.5, atr 0.148%)
+     Boyut  : teminat $95.99 × 8x = notional $767.92   (qty 9515)
+     Plan   : stop 0.0810086 (%0.37) 8x  tp1 0.0801127 (%0.74)→%40  kalan 1.5R iz-süren
+       → çıkış %100 @ 0.0810086  [stop    ] 05:20:56 (34.5dk)  PnL $-2.841  kom $0.424
+     Komisyon: açılış $0.154 + kapanış $0.424 = $0.578
+     ► Bu coin NET: $-3.419   (teminata göre %-3.6)
+
+  #14 ❌ SHORT GRAMUSDT  [KAPALI]
+     Giriş  : 1.298  @ 04:56:04   (conf 86.4, rr 4.0, adx1 42.4/adx5 40.8, atr 0.209%)
+     Boyut  : teminat $96.88 × 8x = notional $775.04   (qty 597.1)
+     Plan   : stop 1.30478 (%0.52) 8x  tp1 1.28444 (%1.04)→%40  kalan 1.5R iz-süren
+       → çıkış %100 @ 1.30478  [stop    ] 05:28:50 (32.8dk)  PnL $-4.050  kom $0.428
+     Komisyon: açılış $0.155 + kapanış $0.428 = $0.584
+     ► Bu coin NET: $-4.633   (teminata göre %-4.8)
+
+  #15 ✅ SHORT TUTUSDT  [KAPALI]
+     Giriş  : 0.029537  @ 05:20:15   (conf 65.0, rr 4.0, adx1 45.6/adx5 31.2, atr 0.339%)
+     Boyut  : teminat $97.17 × 8x = notional $777.36   (qty 2.632e+04)
+     Plan   : stop 0.0297873 (%0.85) 8x  tp1 0.0290363 (%1.7)→%40  kalan 1.5R iz-süren
+       → çıkış % 40 @ 0.0290363  [tp1     ] 05:49:35 (29.3dk)  PnL $+5.271  kom $0.061
+       → çıkış % 60 @ 0.028952  [süre-sonu] 05:55:11 (34.9dk)  PnL $+9.238  kom $0.251
+     Komisyon: açılış $0.155 + kapanış $0.313 = $0.468
+     ► Bu coin NET: $+14.040   (teminata göre %+14.4)
+
+  #16 ✅ LONG ZROUSDT  [KAPALI]
+     Giriş  : 1.0195  @ 05:26:12   (conf 66.8, rr 4.0, adx1 52.9/adx5 22.4, atr 0.195%)
+     Boyut  : teminat $96.49 × 8x = notional $771.92   (qty 757.2)
+     Plan   : stop 1.01453 (%0.49) 8x  tp1 1.02944 (%0.98)→%40  kalan 1.5R iz-süren
+       → çıkış % 40 @ 1.02944  [tp1     ] 05:46:37 (20.4dk)  PnL $+3.010  kom $0.062
+       → çıkış % 60 @ 1.0307  [süre-sonu] 05:55:11 (29.0dk)  PnL $+5.088  kom $0.258
+     Komisyon: açılış $0.154 + kapanış $0.320 = $0.474
+     ► Bu coin NET: $+7.624   (teminata göre %+7.9)
+
+  #17 ❌ LONG 1000BONKUSDT  [KAPALI]
+     Giriş  : 0.002996  @ 05:29:13   (conf 64.2, rr 4.0, adx1 51.2/adx5 22.8, atr 0.179%)
+     Boyut  : teminat $95.56 × 8x = notional $764.48   (qty 2.552e+05)
+     Plan   : stop 0.00298259 (%0.45) 8x  tp1 0.00302281 (%0.9)→%40  kalan 1.5R iz-süren
+       → çıkış %100 @ 0.002993  [süre-sonu] 05:55:11 (26.0dk)  PnL $-0.766  kom $0.420
+     Komisyon: açılış $0.153 + kapanış $0.420 = $0.573
+     ► Bu coin NET: $-1.338   (teminata göre %-1.4)
+
+══════════════════════════════════════════════════════════════════════
+[05:55:11] ✅ Bitti. Detaylı rapor: /Users/mea/Desktop/Funding trader/protrend_bot_report.txt

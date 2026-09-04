@@ -1,0 +1,310 @@
+DİP/ZİRVE — SON 30 GÜN — 'TAMAMEN YANLIŞ' ZAMAN DİLİMİ TARAMASI (sinyalin tersi doğru çıkan dilimler)
+
+════════════ ÖLÇÜT: ters yöne önce %1 (fade kazanır) ════════════
+── TÜMÜ (taban %41) ──
+  [5dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:55-00:00  n=  84  yanlış % 64 (lehte önce sadece %25)  gün-çoğunluk 13/27  1.yarı % 49 / 2.yarı % 76  4s kap %-0.42
+     00:00-00:05  n= 115  yanlış % 63 (lehte önce sadece %27)  gün-çoğunluk 16/30  1.yarı % 47 / 2.yarı % 74  4s kap %-0.68
+     23:40-23:45  n= 122  yanlış % 61 (lehte önce sadece %25)  gün-çoğunluk 10/27  1.yarı % 37 / 2.yarı % 77  4s kap %-0.63
+     00:10-00:15  n= 161  yanlış % 58 (lehte önce sadece %32)  gün-çoğunluk 13/28  1.yarı % 53 / 2.yarı % 60  4s kap %-0.39
+     22:40-22:45  n= 106  yanlış % 58 (lehte önce sadece %25)  gün-çoğunluk 14/29  1.yarı % 61 / 2.yarı % 55  4s kap %-0.60
+  [10dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:50-00:00  n= 184  yanlış % 58 (lehte önce sadece %28)  gün-çoğunluk 12/29  1.yarı % 39 / 2.yarı % 74  4s kap %-0.54
+     00:10-00:20  n= 324  yanlış % 57 (lehte önce sadece %30)  gün-çoğunluk 13/29  1.yarı % 44 / 2.yarı % 64  4s kap %-0.23
+     00:00-00:10  n= 276  yanlış % 57 (lehte önce sadece %33)  gün-çoğunluk 11/31  1.yarı % 41 / 2.yarı % 65  4s kap %-0.25
+     23:40-23:50  n= 260  yanlış % 56 (lehte önce sadece %33)  gün-çoğunluk 12/29  1.yarı % 34 / 2.yarı % 74  4s kap %-0.53
+     22:40-22:50  n= 231  yanlış % 56 (lehte önce sadece %25)  gün-çoğunluk 12/30  1.yarı % 49 / 2.yarı % 60  4s kap %-0.70
+  [15dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     00:00-00:15  n= 437  yanlış % 57 (lehte önce sadece %33)  gün-çoğunluk 13/31  1.yarı % 46 / 2.yarı % 64  4s kap %-0.30
+     23:30-23:45  n= 334  yanlış % 56 (lehte önce sadece %30)  gün-çoğunluk 10/30  1.yarı % 38 / 2.yarı % 70  4s kap %-0.61
+     23:45-00:00  n= 322  yanlış % 56 (lehte önce sadece %34)  gün-çoğunluk 12/30  1.yarı % 36 / 2.yarı % 73  4s kap %-0.49
+     11:00-11:15  n= 558  yanlış % 53 (lehte önce sadece %36)  gün-çoğunluk  9/30  1.yarı % 43 / 2.yarı % 59  4s kap %-0.23
+     00:15-00:30  n= 421  yanlış % 51 (lehte önce sadece %34)  gün-çoğunluk 11/30  1.yarı % 42 / 2.yarı % 60  4s kap %+0.10
+  [30dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:30-00:00  n= 656  yanlış % 56 (lehte önce sadece %32)  gün-çoğunluk 11/30  1.yarı % 37 / 2.yarı % 71  4s kap %-0.55
+     00:00-00:30  n= 858  yanlış % 54 (lehte önce sadece %34)  gün-çoğunluk 12/31  1.yarı % 43 / 2.yarı % 62  4s kap %-0.10
+     11:00-11:30  n=1040  yanlış % 50 (lehte önce sadece %38)  gün-çoğunluk  8/30  1.yarı % 42 / 2.yarı % 56  4s kap %-0.26
+     13:00-13:30  n= 748  yanlış % 47 (lehte önce sadece %37)  gün-çoğunluk 11/30  1.yarı % 41 / 2.yarı % 52  4s kap %-0.29
+     10:30-11:00  n= 651  yanlış % 46 (lehte önce sadece %39)  gün-çoğunluk 10/30  1.yarı % 37 / 2.yarı % 54  4s kap %-0.06
+  [60dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:00-00:00  n=1366  yanlış % 50 (lehte önce sadece %35)  gün-çoğunluk  9/30  1.yarı % 41 / 2.yarı % 59  4s kap %-0.42
+     00:00-01:00  n=1601  yanlış % 48 (lehte önce sadece %38)  gün-çoğunluk  8/31  1.yarı % 38 / 2.yarı % 56  4s kap %+0.02
+     11:00-12:00  n=1884  yanlış % 47 (lehte önce sadece %40)  gün-çoğunluk 10/30  1.yarı % 39 / 2.yarı % 52  4s kap %-0.08
+     10:00-11:00  n=1356  yanlış % 45 (lehte önce sadece %40)  gün-çoğunluk  9/30  1.yarı % 38 / 2.yarı % 52  4s kap %-0.07
+     13:00-14:00  n=1444  yanlış % 44 (lehte önce sadece %41)  gün-çoğunluk 10/30  1.yarı % 43 / 2.yarı % 46  4s kap %-0.23
+── AL (taban %39) ──
+  [5dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:40-23:45  n=  70  yanlış % 77 (lehte önce sadece %10)  gün-çoğunluk 12/22  1.yarı % 50 / 2.yarı % 87  4s kap %-1.30
+     23:55-00:00  n=  37  yanlış % 73 (lehte önce sadece %19)  gün-çoğunluk 11/18  1.yarı % 68 / 2.yarı % 80  4s kap %-0.03
+     22:40-22:45  n=  57  yanlış % 72 (lehte önce sadece %19)  gün-çoğunluk 11/19  1.yarı % 81 / 2.yarı % 67  4s kap %-0.94
+     23:35-23:40  n=  56  yanlış % 64 (lehte önce sadece %29)  gün-çoğunluk  7/16  1.yarı % 45 / 2.yarı % 76  4s kap %-0.53
+     23:45-23:50  n=  78  yanlış % 63 (lehte önce sadece %29)  gün-çoğunluk  6/14  1.yarı % 47 / 2.yarı % 73  4s kap %-0.56
+  [10dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:40-23:50  n= 148  yanlış % 70 (lehte önce sadece %20)  gün-çoğunluk 11/26  1.yarı % 48 / 2.yarı % 80  4s kap %-0.91
+     22:40-22:50  n= 128  yanlış % 64 (lehte önce sadece %21)  gün-çoğunluk 13/25  1.yarı % 57 / 2.yarı % 68  4s kap %-1.06
+     23:50-00:00  n=  92  yanlış % 62 (lehte önce sadece %23)  gün-çoğunluk 13/25  1.yarı % 51 / 2.yarı % 74  4s kap %-0.23
+     23:30-23:40  n= 109  yanlış % 61 (lehte önce sadece %29)  gün-çoğunluk  9/22  1.yarı % 43 / 2.yarı % 76  4s kap %-0.35
+     00:00-00:10  n= 127  yanlış % 57 (lehte önce sadece %30)  gün-çoğunluk  8/23  1.yarı % 50 / 2.yarı % 62  4s kap %+0.05
+  [15dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:30-23:45  n= 179  yanlış % 67 (lehte önce sadece %22)  gün-çoğunluk 12/30  1.yarı % 45 / 2.yarı % 81  4s kap %-0.72
+     23:45-00:00  n= 170  yanlış % 62 (lehte önce sadece %26)  gün-çoğunluk 12/26  1.yarı % 49 / 2.yarı % 74  4s kap %-0.38
+     00:00-00:15  n= 203  yanlış % 56 (lehte önce sadece %32)  gün-çoğunluk 11/26  1.yarı % 55 / 2.yarı % 57  4s kap %-0.07
+     22:30-22:45  n= 144  yanlış % 56 (lehte önce sadece %32)  gün-çoğunluk 10/25  1.yarı % 52 / 2.yarı % 59  4s kap %-0.66
+     21:00-21:15  n= 209  yanlış % 53 (lehte önce sadece %27)  gün-çoğunluk 11/30  1.yarı % 48 / 2.yarı % 58  4s kap %+0.11
+  [30dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:30-00:00  n= 349  yanlış % 65 (lehte önce sadece %24)  gün-çoğunluk 12/30  1.yarı % 47 / 2.yarı % 78  4s kap %-0.55
+     00:00-00:30  n= 420  yanlış % 53 (lehte önce sadece %33)  gün-çoğunluk 11/28  1.yarı % 51 / 2.yarı % 56  4s kap %+0.25
+     22:30-23:00  n= 320  yanlış % 52 (lehte önce sadece %29)  gün-çoğunluk  9/29  1.yarı % 44 / 2.yarı % 59  4s kap %-0.75
+     19:00-19:30  n= 355  yanlış % 49 (lehte önce sadece %35)  gün-çoğunluk  7/30  1.yarı % 36 / 2.yarı % 58  4s kap %-0.03
+     17:30-18:00  n= 359  yanlış % 47 (lehte önce sadece %38)  gün-çoğunluk  5/28  1.yarı % 53 / 2.yarı % 41  4s kap %+0.53
+  [60dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:00-00:00  n= 677  yanlış % 55 (lehte önce sadece %32)  gün-çoğunluk  8/30  1.yarı % 47 / 2.yarı % 62  4s kap %-0.24
+     22:00-23:00  n= 622  yanlış % 46 (lehte önce sadece %37)  gün-çoğunluk  8/30  1.yarı % 43 / 2.yarı % 49  4s kap %-0.05
+     00:00-01:00  n= 796  yanlış % 46 (lehte önce sadece %40)  gün-çoğunluk  8/30  1.yarı % 45 / 2.yarı % 48  4s kap %+0.42
+     19:00-20:00  n= 624  yanlış % 44 (lehte önce sadece %41)  gün-çoğunluk  5/30  1.yarı % 35 / 2.yarı % 51  4s kap %-0.04
+     05:00-06:00  n= 757  yanlış % 43 (lehte önce sadece %40)  gün-çoğunluk  8/30  1.yarı % 39 / 2.yarı % 46  4s kap %+0.08
+── SAT (taban %42) ──
+  [5dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     11:40-11:45  n=  71  yanlış % 66 (lehte önce sadece %20)  gün-çoğunluk 12/21  1.yarı % 62 / 2.yarı % 69  4s kap %-0.55
+     11:05-11:10  n= 105  yanlış % 66 (lehte önce sadece %29)  gün-çoğunluk  9/23  1.yarı % 51 / 2.yarı % 76  4s kap %-0.44
+     00:00-00:05  n=  60  yanlış % 65 (lehte önce sadece %27)  gün-çoğunluk 10/20  1.yarı % 29 / 2.yarı % 85  4s kap %-1.25
+     11:30-11:35  n=  74  yanlış % 61 (lehte önce sadece %28)  gün-çoğunluk 10/20  1.yarı % 43 / 2.yarı % 73  4s kap %-0.54
+     14:10-14:15  n=  68  yanlış % 60 (lehte önce sadece %25)  gün-çoğunluk 10/22  1.yarı % 45 / 2.yarı % 74  4s kap %-1.27
+  [10dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     11:00-11:10  n= 160  yanlış % 60 (lehte önce sadece %29)  gün-çoğunluk 10/27  1.yarı % 46 / 2.yarı % 71  4s kap %-0.78
+     11:40-11:50  n= 139  yanlış % 60 (lehte önce sadece %30)  gün-çoğunluk 10/25  1.yarı % 51 / 2.yarı % 66  4s kap %-0.61
+     13:20-13:30  n= 121  yanlış % 58 (lehte önce sadece %35)  gün-çoğunluk 11/25  1.yarı % 34 / 2.yarı % 73  4s kap %-0.38
+     00:10-00:20  n= 174  yanlış % 57 (lehte önce sadece %29)  gün-çoğunluk  5/25  1.yarı % 32 / 2.yarı % 66  4s kap %-0.49
+     00:00-00:10  n= 149  yanlış % 56 (lehte önce sadece %36)  gün-çoğunluk  9/25  1.yarı % 30 / 2.yarı % 68  4s kap %-0.51
+  [15dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     11:00-11:15  n= 273  yanlış % 60 (lehte önce sadece %29)  gün-çoğunluk 11/28  1.yarı % 47 / 2.yarı % 68  4s kap %-0.67
+     11:30-11:45  n= 236  yanlış % 58 (lehte önce sadece %30)  gün-çoğunluk 11/28  1.yarı % 49 / 2.yarı % 64  4s kap %-0.23
+     00:00-00:15  n= 234  yanlış % 58 (lehte önce sadece %34)  gün-çoğunluk 11/26  1.yarı % 33 / 2.yarı % 68  4s kap %-0.50
+     13:15-13:30  n= 179  yanlış % 56 (lehte önce sadece %34)  gün-çoğunluk 10/27  1.yarı % 40 / 2.yarı % 67  4s kap %-0.72
+     00:15-00:30  n= 204  yanlış % 52 (lehte önce sadece %34)  gün-çoğunluk  7/28  1.yarı % 30 / 2.yarı % 64  4s kap %-0.38
+  [30dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     00:00-00:30  n= 438  yanlış % 55 (lehte önce sadece %34)  gün-çoğunluk  8/29  1.yarı % 32 / 2.yarı % 66  4s kap %-0.44
+     11:00-11:30  n= 491  yanlış % 55 (lehte önce sadece %33)  gün-çoğunluk  9/30  1.yarı % 45 / 2.yarı % 62  4s kap %-0.66
+     13:00-13:30  n= 341  yanlış % 53 (lehte önce sadece %32)  gün-çoğunluk 13/29  1.yarı % 44 / 2.yarı % 62  4s kap %-0.96
+     11:30-12:00  n= 412  yanlış % 52 (lehte önce sadece %36)  gün-çoğunluk 10/30  1.yarı % 44 / 2.yarı % 59  4s kap %-0.33
+     10:30-11:00  n= 325  yanlış % 49 (lehte önce sadece %34)  gün-çoğunluk 12/30  1.yarı % 39 / 2.yarı % 58  4s kap %-0.51
+  [60dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     11:00-12:00  n= 903  yanlış % 54 (lehte önce sadece %35)  gün-çoğunluk 10/30  1.yarı % 44 / 2.yarı % 60  4s kap %-0.51
+     13:00-14:00  n= 756  yanlış % 50 (lehte önce sadece %35)  gün-çoğunluk 15/30  1.yarı % 46 / 2.yarı % 54  4s kap %-0.66
+     00:00-01:00  n= 805  yanlış % 50 (lehte önce sadece %37)  gün-çoğunluk  7/31  1.yarı % 30 / 2.yarı % 63  4s kap %-0.38
+     10:00-11:00  n= 735  yanlış % 46 (lehte önce sadece %38)  gün-çoğunluk  9/30  1.yarı % 37 / 2.yarı % 53  4s kap %-0.33
+     23:00-00:00  n= 689  yanlış % 46 (lehte önce sadece %38)  gün-çoğunluk  8/30  1.yarı % 36 / 2.yarı % 56  4s kap %-0.60
+
+════════════ ÖLÇÜT: 4s kapanış ters ════════════
+── TÜMÜ (taban %46) ──
+  [5dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     12:20-12:25  n= 143  yanlış % 65 (lehte önce sadece %46)  gün-çoğunluk 16/29  1.yarı % 70 / 2.yarı % 60  4s kap %+0.03
+     14:10-14:15  n= 105  yanlış % 65 (lehte önce sadece %33)  gün-çoğunluk 15/27  1.yarı % 60 / 2.yarı % 71  4s kap %-0.78
+     23:40-23:45  n= 122  yanlış % 65 (lehte önce sadece %25)  gün-çoğunluk 12/27  1.yarı % 47 / 2.yarı % 77  4s kap %-0.63
+     00:00-00:05  n= 115  yanlış % 63 (lehte önce sadece %27)  gün-çoğunluk 14/30  1.yarı % 57 / 2.yarı % 67  4s kap %-0.68
+     23:55-00:00  n=  84  yanlış % 62 (lehte önce sadece %25)  gün-çoğunluk 11/27  1.yarı % 57 / 2.yarı % 65  4s kap %-0.42
+  [10dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:50-00:00  n= 184  yanlış % 60 (lehte önce sadece %28)  gün-çoğunluk 15/29  1.yarı % 56 / 2.yarı % 64  4s kap %-0.54
+     23:30-23:40  n= 212  yanlış % 58 (lehte önce sadece %33)  gün-çoğunluk 15/29  1.yarı % 45 / 2.yarı % 69  4s kap %-0.60
+     16:20-16:30  n= 312  yanlış % 58 (lehte önce sadece %38)  gün-çoğunluk 18/30  1.yarı % 53 / 2.yarı % 62  4s kap %-0.77
+     14:10-14:20  n= 247  yanlış % 57 (lehte önce sadece %43)  gün-çoğunluk 17/30  1.yarı % 55 / 2.yarı % 61  4s kap %-0.44
+     23:40-23:50  n= 260  yanlış % 57 (lehte önce sadece %33)  gün-çoğunluk 11/29  1.yarı % 41 / 2.yarı % 71  4s kap %-0.53
+  [15dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:30-23:45  n= 334  yanlış % 60 (lehte önce sadece %30)  gün-çoğunluk 15/30  1.yarı % 46 / 2.yarı % 72  4s kap %-0.61
+     12:15-12:30  n= 382  yanlış % 57 (lehte önce sadece %45)  gün-çoğunluk 15/30  1.yarı % 56 / 2.yarı % 57  4s kap %+0.16
+     23:45-00:00  n= 322  yanlış % 56 (lehte önce sadece %34)  gün-çoğunluk 14/30  1.yarı % 47 / 2.yarı % 64  4s kap %-0.49
+     22:15-22:30  n= 308  yanlış % 56 (lehte önce sadece %40)  gün-çoğunluk 16/30  1.yarı % 56 / 2.yarı % 57  4s kap %+0.19
+     10:45-11:00  n= 336  yanlış % 56 (lehte önce sadece %39)  gün-çoğunluk 13/30  1.yarı % 49 / 2.yarı % 61  4s kap %-0.09
+  [30dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:30-00:00  n= 656  yanlış % 58 (lehte önce sadece %32)  gün-çoğunluk 17/30  1.yarı % 46 / 2.yarı % 68  4s kap %-0.55
+     10:30-11:00  n= 651  yanlış % 54 (lehte önce sadece %39)  gün-çoğunluk 14/30  1.yarı % 49 / 2.yarı % 60  4s kap %-0.06
+     23:00-23:30  n= 710  yanlış % 52 (lehte önce sadece %38)  gün-çoğunluk 14/30  1.yarı % 48 / 2.yarı % 55  4s kap %-0.30
+     22:30-23:00  n= 681  yanlış % 51 (lehte önce sadece %33)  gün-çoğunluk 12/30  1.yarı % 48 / 2.yarı % 54  4s kap %-0.32
+     01:30-02:00  n= 690  yanlış % 51 (lehte önce sadece %37)  gün-çoğunluk 11/30  1.yarı % 47 / 2.yarı % 56  4s kap %-0.05
+  [60dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:00-00:00  n=1366  yanlış % 55 (lehte önce sadece %35)  gün-çoğunluk 15/30  1.yarı % 48 / 2.yarı % 62  4s kap %-0.42
+     10:00-11:00  n=1356  yanlış % 51 (lehte önce sadece %40)  gün-çoğunluk 13/30  1.yarı % 47 / 2.yarı % 56  4s kap %-0.07
+     22:00-23:00  n=1286  yanlış % 51 (lehte önce sadece %37)  gün-çoğunluk 15/30  1.yarı % 51 / 2.yarı % 50  4s kap %-0.02
+     16:00-17:00  n=1874  yanlış % 50 (lehte önce sadece %45)  gün-çoğunluk 17/30  1.yarı % 49 / 2.yarı % 51  4s kap %-0.18
+     13:00-14:00  n=1444  yanlış % 49 (lehte önce sadece %41)  gün-çoğunluk 14/30  1.yarı % 49 / 2.yarı % 48  4s kap %-0.23
+── AL (taban %45) ──
+  [5dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:40-23:45  n=  70  yanlış % 79 (lehte önce sadece %10)  gün-çoğunluk 15/22  1.yarı % 67 / 2.yarı % 83  4s kap %-1.30
+     20:10-20:15  n=  37  yanlış % 76 (lehte önce sadece %35)  gün-çoğunluk 12/17  1.yarı % 75 / 2.yarı % 76  4s kap %-0.80
+     22:30-22:35  n=  34  yanlış % 71 (lehte önce sadece %32)  gün-çoğunluk 11/16  1.yarı % 78 / 2.yarı % 62  4s kap %-1.43
+     05:25-05:30  n=  71  yanlış % 69 (lehte önce sadece %41)  gün-çoğunluk 13/19  1.yarı % 50 / 2.yarı % 78  4s kap %-0.67
+     22:40-22:45  n=  57  yanlış % 68 (lehte önce sadece %19)  gün-çoğunluk  9/19  1.yarı % 76 / 2.yarı % 64  4s kap %-0.94
+  [10dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:40-23:50  n= 148  yanlış % 70 (lehte önce sadece %20)  gün-çoğunluk 13/26  1.yarı % 54 / 2.yarı % 77  4s kap %-0.91
+     22:40-22:50  n= 128  yanlış % 66 (lehte önce sadece %21)  gün-çoğunluk 14/25  1.yarı % 64 / 2.yarı % 67  4s kap %-1.06
+     23:30-23:40  n= 109  yanlış % 61 (lehte önce sadece %29)  gün-çoğunluk 10/22  1.yarı % 47 / 2.yarı % 74  4s kap %-0.35
+     12:20-12:30  n= 161  yanlış % 61 (lehte önce sadece %50)  gün-çoğunluk 15/26  1.yarı % 58 / 2.yarı % 64  4s kap %+0.41
+     17:10-17:20  n= 178  yanlış % 60 (lehte önce sadece %54)  gün-çoğunluk 10/29  1.yarı % 45 / 2.yarı % 75  4s kap %-0.21
+  [15dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:30-23:45  n= 179  yanlış % 68 (lehte önce sadece %22)  gün-çoğunluk 16/30  1.yarı % 52 / 2.yarı % 78  4s kap %-0.72
+     22:30-22:45  n= 144  yanlış % 60 (lehte önce sadece %32)  gün-çoğunluk 12/25  1.yarı % 65 / 2.yarı % 56  4s kap %-0.66
+     05:15-05:30  n= 237  yanlış % 60 (lehte önce sadece %36)  gün-çoğunluk 11/25  1.yarı % 45 / 2.yarı % 68  4s kap %-0.42
+     23:45-00:00  n= 170  yanlış % 59 (lehte önce sadece %26)  gün-çoğunluk 13/26  1.yarı % 58 / 2.yarı % 59  4s kap %-0.38
+     12:15-12:30  n= 227  yanlış % 58 (lehte önce sadece %49)  gün-çoğunluk 14/28  1.yarı % 55 / 2.yarı % 62  4s kap %+0.20
+  [30dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:30-00:00  n= 349  yanlış % 64 (lehte önce sadece %24)  gün-çoğunluk 17/30  1.yarı % 55 / 2.yarı % 70  4s kap %-0.55
+     22:30-23:00  n= 320  yanlış % 59 (lehte önce sadece %29)  gün-çoğunluk 15/29  1.yarı % 60 / 2.yarı % 58  4s kap %-0.75
+     01:30-02:00  n= 422  yanlış % 54 (lehte önce sadece %34)  gün-çoğunluk 12/29  1.yarı % 48 / 2.yarı % 64  4s kap %-0.03
+     05:00-05:30  n= 462  yanlış % 54 (lehte önce sadece %38)  gün-çoğunluk 12/29  1.yarı % 43 / 2.yarı % 60  4s kap %-0.32
+     09:30-10:00  n= 376  yanlış % 52 (lehte önce sadece %41)  gün-çoğunluk 10/30  1.yarı % 49 / 2.yarı % 59  4s kap %-0.11
+  [60dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:00-00:00  n= 677  yanlış % 58 (lehte önce sadece %32)  gün-çoğunluk 12/30  1.yarı % 54 / 2.yarı % 60  4s kap %-0.24
+     22:00-23:00  n= 622  yanlış % 55 (lehte önce sadece %37)  gün-çoğunluk 15/30  1.yarı % 60 / 2.yarı % 49  4s kap %-0.05
+     09:00-10:00  n= 787  yanlış % 50 (lehte önce sadece %41)  gün-çoğunluk 15/30  1.yarı % 52 / 2.yarı % 46  4s kap %-0.10
+     01:00-02:00  n= 781  yanlış % 49 (lehte önce sadece %37)  gün-çoğunluk 11/30  1.yarı % 44 / 2.yarı % 57  4s kap %+0.09
+     17:00-18:00  n= 777  yanlış % 49 (lehte önce sadece %44)  gün-çoğunluk 10/30  1.yarı % 50 / 2.yarı % 48  4s kap %+0.32
+── SAT (taban %48) ──
+  [5dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     14:10-14:15  n=  68  yanlış % 76 (lehte önce sadece %25)  gün-çoğunluk 14/22  1.yarı % 70 / 2.yarı % 83  4s kap %-1.27
+     14:35-14:40  n=  89  yanlış % 69 (lehte önce sadece %39)  gün-çoğunluk 12/27  1.yarı % 62 / 2.yarı % 74  4s kap %-0.74
+     15:45-15:50  n=  65  yanlış % 66 (lehte önce sadece %38)  gün-çoğunluk 10/21  1.yarı % 39 / 2.yarı % 91  4s kap %-1.20
+     23:55-00:00  n=  47  yanlış % 66 (lehte önce sadece %30)  gün-çoğunluk 12/20  1.yarı % 31 / 2.yarı % 79  4s kap %-0.73
+     12:15-12:20  n=  40  yanlış % 65 (lehte önce sadece %32)  gün-çoğunluk 12/23  1.yarı % 71 / 2.yarı % 58  4s kap %-0.43
+  [10dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     14:10-14:20  n= 148  yanlış % 64 (lehte önce sadece %36)  gün-çoğunluk 17/30  1.yarı % 60 / 2.yarı % 68  4s kap %-0.79
+     23:50-00:00  n=  92  yanlış % 64 (lehte önce sadece %33)  gün-çoğunluk 15/26  1.yarı % 43 / 2.yarı % 77  4s kap %-0.85
+     14:30-14:40  n= 163  yanlış % 64 (lehte önce sadece %35)  gün-çoğunluk 14/30  1.yarı % 50 / 2.yarı % 75  4s kap %-0.77
+     16:20-16:30  n= 146  yanlış % 64 (lehte önce sadece %32)  gün-çoğunluk 18/26  1.yarı % 69 / 2.yarı % 58  4s kap %-1.58
+     15:40-15:50  n= 139  yanlış % 62 (lehte önce sadece %37)  gün-çoğunluk 11/26  1.yarı % 38 / 2.yarı % 85  4s kap %-1.29
+  [15dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     13:15-13:30  n= 179  yanlış % 60 (lehte önce sadece %34)  gün-çoğunluk 15/27  1.yarı % 41 / 2.yarı % 73  4s kap %-0.72
+     14:00-14:15  n= 249  yanlış % 59 (lehte önce sadece %42)  gün-çoğunluk 15/29  1.yarı % 57 / 2.yarı % 62  4s kap %-0.64
+     16:15-16:30  n= 193  yanlış % 59 (lehte önce sadece %35)  gün-çoğunluk 17/29  1.yarı % 62 / 2.yarı % 56  4s kap %-1.01
+     14:30-14:45  n= 269  yanlış % 59 (lehte önce sadece %44)  gün-çoğunluk 15/30  1.yarı % 52 / 2.yarı % 62  4s kap %-0.60
+     10:45-11:00  n= 160  yanlış % 58 (lehte önce sadece %32)  gün-çoğunluk 12/29  1.yarı % 50 / 2.yarı % 66  4s kap %-0.51
+  [30dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     13:00-13:30  n= 341  yanlış % 58 (lehte önce sadece %32)  gün-çoğunluk 14/29  1.yarı % 48 / 2.yarı % 69  4s kap %-0.96
+     10:30-11:00  n= 325  yanlış % 57 (lehte önce sadece %34)  gün-çoğunluk 15/30  1.yarı % 48 / 2.yarı % 64  4s kap %-0.51
+     14:00-14:30  n= 475  yanlış % 56 (lehte önce sadece %41)  gün-çoğunluk 15/30  1.yarı % 56 / 2.yarı % 56  4s kap %-0.47
+     16:00-16:30  n= 390  yanlış % 56 (lehte önce sadece %39)  gün-çoğunluk 18/30  1.yarı % 58 / 2.yarı % 53  4s kap %-0.82
+     00:00-00:30  n= 438  yanlış % 55 (lehte önce sadece %34)  gün-çoğunluk 14/29  1.yarı % 40 / 2.yarı % 62  4s kap %-0.44
+  [60dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     13:00-14:00  n= 756  yanlış % 56 (lehte önce sadece %35)  gün-çoğunluk 19/30  1.yarı % 52 / 2.yarı % 59  4s kap %-0.66
+     16:00-17:00  n= 897  yanlış % 55 (lehte önce sadece %39)  gün-çoğunluk 19/30  1.yarı % 57 / 2.yarı % 54  4s kap %-0.66
+     10:00-11:00  n= 735  yanlış % 54 (lehte önce sadece %38)  gün-çoğunluk 13/30  1.yarı % 48 / 2.yarı % 59  4s kap %-0.33
+     14:00-15:00  n= 945  yanlış % 54 (lehte önce sadece %45)  gün-çoğunluk 15/30  1.yarı % 52 / 2.yarı % 56  4s kap %-0.42
+     23:00-00:00  n= 689  yanlış % 52 (lehte önce sadece %38)  gün-çoğunluk  9/30  1.yarı % 41 / 2.yarı % 63  4s kap %-0.60
+
+════════════ ÖLÇÜT: 4s aleyhte>lehte ════════════
+── TÜMÜ (taban %48) ──
+  [5dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     02:25-02:30  n= 134  yanlış % 67 (lehte önce sadece %25)  gün-çoğunluk 13/28  1.yarı % 57 / 2.yarı % 74  4s kap %-0.37
+     23:35-23:40  n= 100  yanlış % 67 (lehte önce sadece %31)  gün-çoğunluk 16/27  1.yarı % 48 / 2.yarı % 83  4s kap %-0.62
+     00:00-00:05  n= 115  yanlış % 67 (lehte önce sadece %27)  gün-çoğunluk 18/30  1.yarı % 63 / 2.yarı % 70  4s kap %-0.68
+     23:40-23:45  n= 122  yanlış % 66 (lehte önce sadece %25)  gün-çoğunluk 14/27  1.yarı % 47 / 2.yarı % 79  4s kap %-0.63
+     01:25-01:30  n=  98  yanlış % 65 (lehte önce sadece %29)  gün-çoğunluk 13/25  1.yarı % 52 / 2.yarı % 76  4s kap %-0.42
+  [10dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:40-23:50  n= 260  yanlış % 63 (lehte önce sadece %33)  gün-çoğunluk 13/29  1.yarı % 44 / 2.yarı % 78  4s kap %-0.53
+     23:50-00:00  n= 184  yanlış % 62 (lehte önce sadece %28)  gün-çoğunluk 15/29  1.yarı % 52 / 2.yarı % 70  4s kap %-0.54
+     00:10-00:20  n= 324  yanlış % 62 (lehte önce sadece %30)  gün-çoğunluk 16/29  1.yarı % 58 / 2.yarı % 64  4s kap %-0.23
+     00:00-00:10  n= 276  yanlış % 62 (lehte önce sadece %33)  gün-çoğunluk 15/31  1.yarı % 53 / 2.yarı % 66  4s kap %-0.25
+     23:30-23:40  n= 212  yanlış % 61 (lehte önce sadece %33)  gün-çoğunluk 14/29  1.yarı % 45 / 2.yarı % 74  4s kap %-0.60
+  [15dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:30-23:45  n= 334  yanlış % 63 (lehte önce sadece %30)  gün-çoğunluk 14/30  1.yarı % 46 / 2.yarı % 76  4s kap %-0.61
+     00:00-00:15  n= 437  yanlış % 62 (lehte önce sadece %33)  gün-çoğunluk 17/31  1.yarı % 56 / 2.yarı % 65  4s kap %-0.30
+     23:45-00:00  n= 322  yanlış % 61 (lehte önce sadece %34)  gün-çoğunluk 15/30  1.yarı % 48 / 2.yarı % 73  4s kap %-0.49
+     00:15-00:30  n= 421  yanlış % 58 (lehte önce sadece %34)  gün-çoğunluk 16/30  1.yarı % 52 / 2.yarı % 64  4s kap %+0.10
+     10:45-11:00  n= 336  yanlış % 58 (lehte önce sadece %39)  gün-çoğunluk 15/30  1.yarı % 47 / 2.yarı % 67  4s kap %-0.09
+  [30dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:30-00:00  n= 656  yanlış % 62 (lehte önce sadece %32)  gün-çoğunluk 20/30  1.yarı % 47 / 2.yarı % 75  4s kap %-0.55
+     00:00-00:30  n= 858  yanlış % 60 (lehte önce sadece %34)  gün-çoğunluk 20/31  1.yarı % 54 / 2.yarı % 65  4s kap %-0.10
+     10:30-11:00  n= 651  yanlış % 56 (lehte önce sadece %39)  gün-çoğunluk 17/30  1.yarı % 47 / 2.yarı % 64  4s kap %-0.06
+     11:00-11:30  n=1040  yanlış % 55 (lehte önce sadece %38)  gün-çoğunluk 19/30  1.yarı % 51 / 2.yarı % 59  4s kap %-0.26
+     22:30-23:00  n= 681  yanlış % 53 (lehte önce sadece %33)  gün-çoğunluk 14/30  1.yarı % 47 / 2.yarı % 59  4s kap %-0.32
+  [60dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:00-00:00  n=1366  yanlış % 55 (lehte önce sadece %35)  gün-çoğunluk 16/30  1.yarı % 47 / 2.yarı % 63  4s kap %-0.42
+     10:00-11:00  n=1356  yanlış % 52 (lehte önce sadece %40)  gün-çoğunluk 12/30  1.yarı % 46 / 2.yarı % 59  4s kap %-0.07
+     00:00-01:00  n=1601  yanlış % 51 (lehte önce sadece %38)  gün-çoğunluk 13/31  1.yarı % 45 / 2.yarı % 57  4s kap %+0.02
+     22:00-23:00  n=1286  yanlış % 51 (lehte önce sadece %37)  gün-çoğunluk 15/30  1.yarı % 49 / 2.yarı % 54  4s kap %-0.02
+     11:00-12:00  n=1884  yanlış % 51 (lehte önce sadece %40)  gün-çoğunluk 15/30  1.yarı % 47 / 2.yarı % 54  4s kap %-0.08
+── AL (taban %45) ──
+  [5dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:40-23:45  n=  70  yanlış % 84 (lehte önce sadece %10)  gün-çoğunluk 15/22  1.yarı % 72 / 2.yarı % 88  4s kap %-1.30
+     23:35-23:40  n=  56  yanlış % 73 (lehte önce sadece %29)  gün-çoğunluk 11/16  1.yarı % 55 / 2.yarı % 85  4s kap %-0.53
+     08:10-08:15  n=  80  yanlış % 72 (lehte önce sadece %24)  gün-çoğunluk  9/19  1.yarı % 78 / 2.yarı % 70  4s kap %-0.94
+     22:40-22:45  n=  57  yanlış % 72 (lehte önce sadece %19)  gün-çoğunluk 10/19  1.yarı % 76 / 2.yarı % 69  4s kap %-0.94
+     02:25-02:30  n=  79  yanlış % 71 (lehte önce sadece %24)  gün-çoğunluk  9/20  1.yarı % 54 / 2.yarı % 88  4s kap %-0.28
+  [10dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:40-23:50  n= 148  yanlış % 77 (lehte önce sadece %20)  gün-çoğunluk 16/26  1.yarı % 60 / 2.yarı % 85  4s kap %-0.91
+     19:00-19:10  n= 138  yanlış % 67 (lehte önce sadece %30)  gün-çoğunluk 10/22  1.yarı % 55 / 2.yarı % 75  4s kap %-0.45
+     22:40-22:50  n= 128  yanlış % 66 (lehte önce sadece %21)  gün-çoğunluk 14/25  1.yarı % 59 / 2.yarı % 69  4s kap %-1.06
+     00:00-00:10  n= 127  yanlış % 65 (lehte önce sadece %30)  gün-çoğunluk 11/23  1.yarı % 64 / 2.yarı % 66  4s kap %+0.05
+     23:30-23:40  n= 109  yanlış % 64 (lehte önce sadece %29)  gün-çoğunluk  9/22  1.yarı % 47 / 2.yarı % 79  4s kap %-0.35
+  [15dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:30-23:45  n= 179  yanlış % 72 (lehte önce sadece %22)  gün-çoğunluk 16/30  1.yarı % 54 / 2.yarı % 84  4s kap %-0.72
+     23:45-00:00  n= 170  yanlış % 66 (lehte önce sadece %26)  gün-çoğunluk 15/26  1.yarı % 59 / 2.yarı % 71  4s kap %-0.38
+     05:15-05:30  n= 237  yanlış % 64 (lehte önce sadece %36)  gün-çoğunluk 11/25  1.yarı % 49 / 2.yarı % 72  4s kap %-0.42
+     00:00-00:15  n= 203  yanlış % 64 (lehte önce sadece %32)  gün-çoğunluk 13/26  1.yarı % 67 / 2.yarı % 62  4s kap %-0.07
+     19:00-19:15  n= 178  yanlış % 62 (lehte önce sadece %33)  gün-çoğunluk 11/24  1.yarı % 53 / 2.yarı % 69  4s kap %-0.32
+  [30dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:30-00:00  n= 349  yanlış % 69 (lehte önce sadece %24)  gün-çoğunluk 17/30  1.yarı % 57 / 2.yarı % 78  4s kap %-0.55
+     22:30-23:00  n= 320  yanlış % 60 (lehte önce sadece %29)  gün-çoğunluk 16/29  1.yarı % 58 / 2.yarı % 61  4s kap %-0.75
+     00:00-00:30  n= 420  yanlış % 59 (lehte önce sadece %33)  gün-çoğunluk 15/28  1.yarı % 60 / 2.yarı % 58  4s kap %+0.25
+     05:00-05:30  n= 462  yanlış % 57 (lehte önce sadece %38)  gün-çoğunluk 12/29  1.yarı % 49 / 2.yarı % 62  4s kap %-0.32
+     01:30-02:00  n= 422  yanlış % 55 (lehte önce sadece %34)  gün-çoğunluk  9/29  1.yarı % 51 / 2.yarı % 61  4s kap %-0.03
+  [60dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     23:00-00:00  n= 677  yanlış % 59 (lehte önce sadece %32)  gün-çoğunluk 15/30  1.yarı % 54 / 2.yarı % 64  4s kap %-0.24
+     22:00-23:00  n= 622  yanlış % 53 (lehte önce sadece %37)  gün-çoğunluk 15/30  1.yarı % 56 / 2.yarı % 51  4s kap %-0.05
+     05:00-06:00  n= 757  yanlış % 51 (lehte önce sadece %40)  gün-çoğunluk 11/30  1.yarı % 44 / 2.yarı % 54  4s kap %+0.08
+     01:00-02:00  n= 781  yanlış % 50 (lehte önce sadece %37)  gün-çoğunluk  9/30  1.yarı % 47 / 2.yarı % 53  4s kap %+0.09
+     19:00-20:00  n= 624  yanlış % 50 (lehte önce sadece %41)  gün-çoğunluk  8/30  1.yarı % 40 / 2.yarı % 58  4s kap %-0.04
+── SAT (taban %50) ──
+  [5dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     14:10-14:15  n=  68  yanlış % 71 (lehte önce sadece %25)  gün-çoğunluk 11/22  1.yarı % 61 / 2.yarı % 80  4s kap %-1.27
+     00:15-00:20  n=  89  yanlış % 67 (lehte önce sadece %29)  gün-çoğunluk  9/21  1.yarı % 50 / 2.yarı % 73  4s kap %-0.49
+     03:45-03:50  n=  81  yanlış % 67 (lehte önce sadece %36)  gün-çoğunluk 12/24  1.yarı % 66 / 2.yarı % 67  4s kap %-1.15
+     00:00-00:05  n=  60  yanlış % 67 (lehte önce sadece %27)  gün-çoğunluk 11/20  1.yarı % 38 / 2.yarı % 82  4s kap %-1.25
+     15:50-15:55  n=  48  yanlış % 67 (lehte önce sadece %42)  gün-çoğunluk 14/18  1.yarı % 87 / 2.yarı % 58  4s kap %-1.50
+  [10dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     00:10-00:20  n= 174  yanlış % 65 (lehte önce sadece %29)  gün-çoğunluk 12/25  1.yarı % 49 / 2.yarı % 71  4s kap %-0.49
+     11:00-11:10  n= 160  yanlış % 64 (lehte önce sadece %29)  gün-çoğunluk 13/27  1.yarı % 51 / 2.yarı % 73  4s kap %-0.78
+     16:50-17:00  n= 166  yanlış % 63 (lehte önce sadece %39)  gün-çoğunluk 18/29  1.yarı % 63 / 2.yarı % 62  4s kap %-0.58
+     11:10-11:20  n= 221  yanlış % 62 (lehte önce sadece %33)  gün-çoğunluk 12/29  1.yarı % 63 / 2.yarı % 62  4s kap %-0.32
+     16:20-16:30  n= 146  yanlış % 62 (lehte önce sadece %32)  gün-çoğunluk 17/26  1.yarı % 73 / 2.yarı % 51  4s kap %-1.58
+  [15dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     11:00-11:15  n= 273  yanlış % 63 (lehte önce sadece %29)  gün-çoğunluk 13/28  1.yarı % 56 / 2.yarı % 68  4s kap %-0.67
+     00:15-00:30  n= 204  yanlış % 62 (lehte önce sadece %34)  gün-çoğunluk 15/28  1.yarı % 44 / 2.yarı % 72  4s kap %-0.38
+     10:45-11:00  n= 160  yanlış % 62 (lehte önce sadece %32)  gün-çoğunluk 15/29  1.yarı % 50 / 2.yarı % 73  4s kap %-0.51
+     13:15-13:30  n= 179  yanlış % 60 (lehte önce sadece %34)  gün-çoğunluk 13/27  1.yarı % 45 / 2.yarı % 71  4s kap %-0.72
+     00:00-00:15  n= 234  yanlış % 60 (lehte önce sadece %34)  gün-çoğunluk 16/26  1.yarı % 42 / 2.yarı % 67  4s kap %-0.50
+  [30dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     11:00-11:30  n= 491  yanlış % 61 (lehte önce sadece %33)  gün-çoğunluk 14/30  1.yarı % 56 / 2.yarı % 65  4s kap %-0.66
+     00:00-00:30  n= 438  yanlış % 61 (lehte önce sadece %34)  gün-çoğunluk 16/29  1.yarı % 43 / 2.yarı % 69  4s kap %-0.44
+     10:30-11:00  n= 325  yanlış % 60 (lehte önce sadece %34)  gün-çoğunluk 18/30  1.yarı % 51 / 2.yarı % 68  4s kap %-0.51
+     13:00-13:30  n= 341  yanlış % 57 (lehte önce sadece %32)  gün-çoğunluk 13/29  1.yarı % 46 / 2.yarı % 69  4s kap %-0.96
+     16:30-17:00  n= 507  yanlış % 56 (lehte önce sadece %39)  gün-çoğunluk 16/30  1.yarı % 59 / 2.yarı % 53  4s kap %-0.54
+  [60dk] sinyalin en çok YANLIŞ çıktığı 5 dilim:
+     11:00-12:00  n= 903  yanlış % 58 (lehte önce sadece %35)  gün-çoğunluk 14/30  1.yarı % 56 / 2.yarı % 60  4s kap %-0.51
+     16:00-17:00  n= 897  yanlış % 55 (lehte önce sadece %39)  gün-çoğunluk 17/30  1.yarı % 59 / 2.yarı % 51  4s kap %-0.66
+     10:00-11:00  n= 735  yanlış % 55 (lehte önce sadece %38)  gün-çoğunluk 13/30  1.yarı % 48 / 2.yarı % 60  4s kap %-0.33
+     00:00-01:00  n= 805  yanlış % 55 (lehte önce sadece %37)  gün-çoğunluk 15/31  1.yarı % 34 / 2.yarı % 68  4s kap %-0.38
+     13:00-14:00  n= 756  yanlış % 53 (lehte önce sadece %35)  gün-çoğunluk 13/30  1.yarı % 51 / 2.yarı % 56  4s kap %-0.66
+
+════════════ %100 YANLIŞ DİLİM VAR MI? (5dk, ölçüt: ters yöne önce %1) ════════════
+  TÜMÜ: n≥5 ile %100 yanlış dilim: YOK  |  n≥20 ile en yüksek yanlış oranı: %64 (23:55-00:00, n=84)
+  AL: n≥5 ile %100 yanlış dilim: YOK  |  n≥20 ile en yüksek yanlış oranı: %77 (23:40-23:45, n=70)
+  SAT: n≥5 ile %100 yanlış dilim: YOK  |  n≥20 ile en yüksek yanlış oranı: %66 (11:40-11:45, n=71)
+
+════════════ ŞANS KIYASI (karıştırılmış zaman, 200 tekrar) ════════════
+  ters yöne önce %1 (fade kazanır) [5dk ] gerçek en yanlış %64 (23:55-00:00, n=84)  |  şansla: medyan %54, %95 sınır %58  → ŞANSIN ÜSTÜNDE
+  ters yöne önce %1 (fade kazanır) [10dk] gerçek en yanlış %58 (23:50-00:00, n=184)  |  şansla: medyan %49, %95 sınır %51  → ŞANSIN ÜSTÜNDE
+  ters yöne önce %1 (fade kazanır) [60dk] gerçek en yanlış %50 (23:00-00:00, n=1366)  |  şansla: medyan %43, %95 sınır %44  → ŞANSIN ÜSTÜNDE
+  4s kapanış ters                  [5dk ] gerçek en yanlış %65 (12:20-12:25, n=143)  |  şansla: medyan %59, %95 sınır %63  → ŞANSIN ÜSTÜNDE
+  4s kapanış ters                  [10dk] gerçek en yanlış %60 (23:50-00:00, n=184)  |  şansla: medyan %55, %95 sınır %57  → ŞANSIN ÜSTÜNDE
+  4s kapanış ters                  [60dk] gerçek en yanlış %55 (23:00-00:00, n=1366)  |  şansla: medyan %49, %95 sınır %50  → ŞANSIN ÜSTÜNDE
+  4s aleyhte>lehte                 [5dk ] gerçek en yanlış %67 (02:25-02:30, n=134)  |  şansla: medyan %61, %95 sınır %64  → ŞANSIN ÜSTÜNDE
+  4s aleyhte>lehte                 [10dk] gerçek en yanlış %63 (23:40-23:50, n=260)  |  şansla: medyan %56, %95 sınır %59  → ŞANSIN ÜSTÜNDE
+  4s aleyhte>lehte                 [60dk] gerçek en yanlış %55 (23:00-00:00, n=1366)  |  şansla: medyan %50, %95 sınır %51  → ŞANSIN ÜSTÜNDE
+
+════════════ GÜN BAZLI KONTROL (aynı dakikadaki sinyaller birlikte hareket eder; gerçek örneklem = gün sayısı) ════════════
+  AL 16:55-17:00 önce lehte      gün=24  günlük oran>50%: 14/24  =50%: 1  günlük oran medyanı %81  | günler: 04:100(1) 07:0(1) 08:100(2) 09:100(2) 10:40(5) 11:0(3) 12:33(3) 13:100(2) 14:0(1) 15:0(1) 17:100(1) 18:82(11) 19:94(16) 20:100(2) 21:0(2) 22:100(1) 23:100(1) 24:71(7) 25:94(18) 26:80(5) 27:0(2) 28:0(1) 30:50(2) 31:85(13)
+  AL 16:45-17:00 önce lehte      gün=30  günlük oran>50%: 17/30  =50%: 2  günlük oran medyanı %67  | günler: 04:67(3) 05:60(5) 06:100(1) 07:0(4) 08:83(6) 09:100(3) 10:35(17) 11:33(9) 12:25(8) 13:67(6) 14:0(2) 15:0(6) 16:33(6) 17:100(3) 18:85(13) 19:80(25) 20:100(4) 21:33(3) 22:100(1) 23:100(1) 24:74(46) 25:88(24) 26:50(8) 27:43(7) 28:50(8) 29:0(3) 30:75(4) 31:74(27) 01:100(2) 02:33(3)
+  TÜMÜ 07:50-08:00 4s kapanış +  gün=30  günlük oran>50%: 17/30  =50%: 4  günlük oran medyanı %62  | günler: 04:88(16) 05:80(5) 06:0(3) 07:79(14) 08:42(12) 09:50(4) 10:67(12) 11:57(7) 12:0(2) 13:40(5) 14:80(5) 15:100(2) 16:50(6) 17:44(9) 18:100(3) 19:81(16) 20:33(6) 21:0(6) 22:88(8) 23:100(14) 24:100(1) 25:100(2) 26:50(6) 27:78(9) 28:0(2) 29:89(9) 30:77(26) 31:55(11) 01:50(2) 02:0(2)
+  AL 21:30-22:00 önce lehte      gün=30  günlük oran>50%: 12/30  =50%: 1  günlük oran medyanı %45  | günler: 04:40(5) 05:29(7) 06:47(32) 07:62(13) 08:33(9) 09:38(8) 10:60(10) 11:58(19) 12:22(9) 13:46(13) 14:43(14) 15:44(9) 16:20(25) 17:18(11) 18:40(5) 19:100(7) 20:85(33) 21:58(38) 22:83(6) 23:25(4) 24:50(4) 25:43(7) 26:67(6) 27:83(24) 28:83(52) 29:0(2) 30:43(7) 31:71(7) 01:60(45) 02:33(3)
+  TÜMÜ 22:40-22:50 ters önce     gün=30  günlük oran>50%: 12/30  =50%: 4  günlük oran medyanı %50  | günler: 04:60(5) 05:71(7) 06:50(6) 07:33(3) 08:22(9) 09:100(4) 10:44(9) 11:78(9) 12:50(12) 13:33(9) 14:33(3) 15:57(7) 16:17(6) 17:50(2) 18:50(2) 19:85(13) 20:100(2) 21:15(13) 22:33(9) 23:67(6) 24:0(6) 25:90(31) 26:33(3) 27:100(1) 28:67(3) 29:22(9) 30:88(25) 31:0(5) 01:40(5) 02:43(7)
+  AL 23:30-23:50 ters önce       gün=30  günlük oran>50%: 11/30  =50%: 3  günlük oran medyanı %45  | günler: 04:44(18) 05:0(1) 06:33(3) 07:67(9) 08:33(3) 09:50(2) 10:60(5) 11:0(1) 12:0(3) 13:100(2) 14:50(2) 15:45(11) 16:60(15) 17:40(5) 18:32(19) 19:0(1) 20:0(1) 21:0(2) 22:50(2) 23:25(4) 24:0(4) 25:94(48) 26:0(3) 27:100(1) 28:80(5) 29:67(3) 30:87(75) 31:100(1) 01:57(7) 02:0(1)

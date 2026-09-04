@@ -1,0 +1,293 @@
+[09-03 19:38:36] 🤖 Flush bounce bot: $500 paper, risk %1.5, max 5, 1440 dk. Şart: breadth≥13 & BTC1s≤-0.5% & coin 1s≤-3% & hacim≥5.0× & olgun≥4
+[09-03 19:38:43] … bar 19:30 · breadth 20 · BTC1s +0.10% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 19:40:32] … bar 19:35 · breadth 22 · BTC1s -0.17% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 19:45:27] … bar 19:40 · breadth 24 · BTC1s -0.08% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 19:50:21] … bar 19:45 · breadth 27 · BTC1s +0.28% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 19:55:18] … bar 19:50 · breadth 28 · BTC1s -0.40% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 20:00:14] … bar 19:55 · breadth 18 · BTC1s -0.47% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 20:05:06] … bar 20:00 · breadth 17 · BTC1s -0.47% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 20:10:34] … bar 20:05 · breadth 21 · BTC1s +0.02% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 20:15:26] … bar 20:10 · breadth 21 · BTC1s +0.20% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 20:16:08] ⚠️ <urlopen error [Errno 54] Connection reset by peer>
+[09-03 20:20:23] … bar 20:15 · breadth 21 · BTC1s +0.41% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 20:25:14] … bar 20:20 · breadth 17 · BTC1s +0.32% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 20:30:07] … bar 20:25 · breadth 16 · BTC1s +0.29% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 20:35:05] … bar 20:30 · breadth 16 · BTC1s +0.29% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 20:40:37] … bar 20:35 · breadth 20 · BTC1s +0.40% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 20:45:33] … bar 20:40 · breadth 16 · BTC1s +0.33% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 20:50:28] … bar 20:45 · breadth 17 · BTC1s +0.19% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 20:55:20] … bar 20:50 · breadth 18 · BTC1s +0.05% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 21:00:10] … bar 20:55 · breadth 14 · BTC1s +0.10% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 21:05:03] … bar 21:00 · breadth 10 · BTC1s +0.10% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 21:10:30] … bar 21:05 · breadth 14 · BTC1s +0.38% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 21:15:19] … bar 21:10 · breadth 13 · BTC1s +0.17% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 21:20:09] … bar 21:15 · breadth 14 · BTC1s +0.11% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 21:25:34] … bar 21:20 · breadth 15 · BTC1s +0.09% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 21:30:23] … bar 21:25 · breadth 14 · BTC1s -0.07% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 21:35:20] … bar 21:30 · breadth 15 · BTC1s -0.21% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 21:40:13] … bar 21:35 · breadth 16 · BTC1s -0.16% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 21:45:06] … bar 21:40 · breadth 14 · BTC1s -0.16% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 21:50:34] … bar 21:45 · breadth 20 · BTC1s -0.14% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 21:55:31] … bar 21:50 · breadth 18 · BTC1s +0.20% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 22:00:27] … bar 21:55 · breadth 21 · BTC1s +0.26% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 22:05:25] … bar 22:00 · breadth 17 · BTC1s +0.35% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 22:10:18] … bar 22:05 · breadth 12 · BTC1s -0.03% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 22:15:11] … bar 22:10 · breadth 14 · BTC1s -0.06% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 22:20:09] … bar 22:15 · breadth 14 · BTC1s +0.30% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 22:25:04] … bar 22:20 · breadth 12 · BTC1s +0.30% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 22:30:34] … bar 22:25 · breadth 15 · BTC1s +0.74% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 22:35:27] … bar 22:30 · breadth 11 · BTC1s +0.58% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 22:40:29] … bar 22:35 · breadth 14 · BTC1s +0.60% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 22:45:21] … bar 22:40 · breadth 10 · BTC1s +0.69% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 22:50:18] … bar 22:45 · breadth 16 · BTC1s +0.51% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 22:55:22] … bar 22:50 · breadth 17 · BTC1s +0.63% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 23:00:28] … bar 22:55 · breadth 15 · BTC1s +0.60% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 23:05:26] … bar 23:00 · breadth 13 · BTC1s +0.18% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 23:10:25] … bar 23:05 · breadth 12 · BTC1s +0.45% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 23:15:21] … bar 23:10 · breadth 16 · BTC1s +0.24% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 23:20:09] … bar 23:15 · breadth 13 · BTC1s +0.11% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 23:25:01] … bar 23:20 · breadth 13 · BTC1s +0.11% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 23:30:26] … bar 23:25 · breadth 12 · BTC1s -0.02% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 23:35:23] … bar 23:30 · breadth 9 · BTC1s +0.06% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 23:40:20] … bar 23:35 · breadth 7 · BTC1s +0.08% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 23:45:11] … bar 23:40 · breadth 8 · BTC1s -0.09% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 23:50:07] … bar 23:45 · breadth 11 · BTC1s +0.09% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-03 23:55:34] … bar 23:50 · breadth 9 · BTC1s -0.29% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 00:00:34] … bar 23:55 · breadth 8 · BTC1s -0.36% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 00:05:26] … bar 00:00 · breadth 10 · BTC1s -0.28% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 00:10:19] … bar 00:05 · breadth 11 · BTC1s -0.32% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 00:15:19] … bar 00:10 · breadth 11 · BTC1s +0.23% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 00:20:14] … bar 00:15 · breadth 16 · BTC1s +0.13% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 00:25:15] … bar 00:20 · breadth 12 · BTC1s +0.14% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 00:30:15] … bar 00:25 · breadth 10 · BTC1s +0.30% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 00:35:13] … bar 00:30 · breadth 14 · BTC1s +0.77% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 00:40:09] … bar 00:35 · breadth 12 · BTC1s +0.13% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 00:45:07] … bar 00:40 · breadth 14 · BTC1s +0.13% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 00:50:35] … bar 00:45 · breadth 11 · BTC1s +0.18% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 00:55:02] … bar 00:50 · breadth 11 · BTC1s +0.18% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 01:00:04] … bar 00:55 · breadth 13 · BTC1s +0.35% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 01:05:32] … bar 01:00 · breadth 14 · BTC1s +0.22% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 01:10:24] … bar 01:05 · breadth 10 · BTC1s +0.06% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 01:15:16] … bar 01:10 · breadth 13 · BTC1s -0.25% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 01:20:09] … bar 01:15 · breadth 12 · BTC1s -0.34% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 01:25:38] … bar 01:20 · breadth 12 · BTC1s -0.31% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 01:30:31] … bar 01:25 · breadth 17 · BTC1s -0.79% · flush=EVET · olay60dk 0 · açık 0 · equity $500.00
+[09-04 01:35:21] … bar 01:30 · breadth 36 · BTC1s -1.28% · flush=EVET · olay60dk 0 · açık 0 · equity $500.00
+[09-04 01:40:26] … bar 01:35 · breadth 16 · BTC1s -0.69% · flush=EVET · olay60dk 0 · açık 0 · equity $500.00
+[09-04 01:45:13] … bar 01:40 · breadth 16 · BTC1s -0.40% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 01:50:13] … bar 01:45 · breadth 18 · BTC1s -0.63% · flush=EVET · olay60dk 0 · açık 0 · equity $500.00
+[09-04 02:12:25] … bar 02:05 · breadth 11 · BTC1s -0.33% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 02:15:30] … bar 02:10 · breadth 11 · BTC1s -0.27% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 02:20:21] … bar 02:15 · breadth 10 · BTC1s -0.08% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 02:25:15] … bar 02:20 · breadth 13 · BTC1s -0.12% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 02:30:08] … bar 02:25 · breadth 14 · BTC1s +0.19% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 02:35:01] … bar 02:30 · breadth 14 · BTC1s +0.19% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 02:40:30] … bar 02:35 · breadth 13 · BTC1s +0.25% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 02:45:22] … bar 02:40 · breadth 14 · BTC1s +0.05% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 02:50:16] … bar 02:45 · breadth 16 · BTC1s +0.09% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 02:55:08] … bar 02:50 · breadth 14 · BTC1s +0.20% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 03:00:03] … bar 02:55 · breadth 14 · BTC1s +0.20% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 03:05:34] … bar 03:00 · breadth 11 · BTC1s -0.03% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 03:10:28] … bar 03:05 · breadth 17 · BTC1s +0.05% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 03:15:22] … bar 03:10 · breadth 18 · BTC1s +0.11% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 03:20:12] … bar 03:15 · breadth 15 · BTC1s -0.04% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 03:25:09] … bar 03:20 · breadth 13 · BTC1s +0.09% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 03:30:04] … bar 03:25 · breadth 11 · BTC1s +0.09% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 03:35:33] … bar 03:30 · breadth 12 · BTC1s +0.14% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 03:40:25] … bar 03:35 · breadth 13 · BTC1s +0.09% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 03:45:19] … bar 03:40 · breadth 13 · BTC1s -0.01% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 03:50:10] … bar 03:45 · breadth 13 · BTC1s -0.14% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 03:55:05] … bar 03:50 · breadth 14 · BTC1s -0.14% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 04:00:35] … bar 03:55 · breadth 21 · BTC1s -0.36% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 04:05:25] … bar 04:00 · breadth 19 · BTC1s -0.28% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 04:10:21] … bar 04:05 · breadth 18 · BTC1s -0.22% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 04:15:13] … bar 04:10 · breadth 19 · BTC1s -0.39% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 04:20:07] … bar 04:15 · breadth 16 · BTC1s -0.36% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 04:25:37] … bar 04:20 · breadth 13 · BTC1s -0.56% · flush=EVET · olay60dk 0 · açık 0 · equity $500.00
+[09-04 04:30:29] … bar 04:25 · breadth 15 · BTC1s -0.40% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 04:35:19] … bar 04:30 · breadth 18 · BTC1s -0.61% · flush=EVET · olay60dk 0 · açık 0 · equity $500.00
+[09-04 04:40:11] … bar 04:35 · breadth 20 · BTC1s -0.70% · flush=EVET · olay60dk 0 · açık 0 · equity $500.00
+[09-04 04:45:01] … bar 04:40 · breadth 18 · BTC1s -0.70% · flush=EVET · olay60dk 0 · açık 0 · equity $500.00
+[09-04 04:50:25] … bar 04:45 · breadth 17 · BTC1s -0.32% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 04:55:02] … bar 04:50 · breadth 17 · BTC1s -0.32% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 05:00:29] … bar 04:55 · breadth 17 · BTC1s +0.00% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 05:05:22] … bar 05:00 · breadth 17 · BTC1s -0.13% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 05:10:18] … bar 05:05 · breadth 13 · BTC1s -0.29% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 05:15:16] … bar 05:10 · breadth 17 · BTC1s -0.17% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 05:20:15] … bar 05:15 · breadth 19 · BTC1s -0.18% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 05:25:02] … bar 05:20 · breadth 19 · BTC1s -0.18% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 05:30:31] … bar 05:25 · breadth 14 · BTC1s -0.13% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 05:35:24] … bar 05:30 · breadth 14 · BTC1s -0.06% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 05:40:17] … bar 05:35 · breadth 18 · BTC1s +0.02% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 05:45:12] … bar 05:40 · breadth 14 · BTC1s -0.06% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 05:50:10] … bar 05:45 · breadth 16 · BTC1s -0.23% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 05:55:03] … bar 05:50 · breadth 16 · BTC1s -0.23% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 06:00:29] … bar 05:55 · breadth 14 · BTC1s -0.17% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 06:05:19] … bar 06:00 · breadth 14 · BTC1s +0.07% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 06:10:11] … bar 06:05 · breadth 8 · BTC1s +0.20% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 06:15:02] … bar 06:10 · breadth 8 · BTC1s +0.20% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 06:20:32] … bar 06:15 · breadth 15 · BTC1s +0.19% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 06:25:21] … bar 06:20 · breadth 13 · BTC1s +0.29% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 06:30:10] … bar 06:25 · breadth 10 · BTC1s +0.14% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 06:35:37] … bar 06:30 · breadth 8 · BTC1s +0.07% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 06:40:05] … bar 06:35 · breadth 9 · BTC1s +0.07% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 06:45:38] … bar 06:40 · breadth 15 · BTC1s +0.17% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 06:50:03] … bar 06:45 · breadth 15 · BTC1s +0.17% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 06:55:30] … bar 06:50 · breadth 12 · BTC1s +0.20% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 07:00:19] … bar 06:55 · breadth 9 · BTC1s +0.00% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 07:05:15] … bar 07:00 · breadth 16 · BTC1s -0.03% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 07:10:06] … bar 07:05 · breadth 17 · BTC1s -0.12% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 07:15:30] … bar 07:10 · breadth 14 · BTC1s +0.04% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 07:20:19] … bar 07:15 · breadth 13 · BTC1s +0.22% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 07:25:11] … bar 07:20 · breadth 17 · BTC1s +0.37% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 07:30:03] … bar 07:25 · breadth 17 · BTC1s +0.37% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 07:35:30] … bar 07:30 · breadth 14 · BTC1s +0.46% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 09:18:05] … bar 09:10 · breadth 7 · BTC1s -0.11% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 09:31:27] … bar 09:25 · breadth 7 · BTC1s -0.35% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 09:35:07] … bar 09:30 · breadth 13 · BTC1s -0.38% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 09:40:31] … bar 09:35 · breadth 12 · BTC1s -0.21% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 09:45:19] … bar 09:40 · breadth 11 · BTC1s -0.18% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 09:53:02] … bar 09:45 · breadth 12 · BTC1s -0.14% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 09:55:27] … bar 09:50 · breadth 13 · BTC1s -0.08% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 11:33:22] … bar 11:25 · breadth 16 · BTC1s +0.16% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 11:35:14] … bar 11:30 · breadth 16 · BTC1s +0.31% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 11:40:06] … bar 11:35 · breadth 11 · BTC1s +0.31% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 11:45:32] … bar 11:40 · breadth 15 · BTC1s +0.34% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 11:50:26] … bar 11:45 · breadth 17 · BTC1s +0.45% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 12:08:48] … bar 12:00 · breadth 24 · BTC1s +0.67% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 12:10:39] … bar 12:05 · breadth 24 · BTC1s +0.52% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 12:15:33] … bar 12:10 · breadth 24 · BTC1s +0.38% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 12:23:23] … bar 12:15 · breadth 19 · BTC1s +0.37% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 12:25:23] … bar 12:20 · breadth 14 · BTC1s +0.06% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 12:30:19] … bar 12:25 · breadth 16 · BTC1s +0.07% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 12:35:14] … bar 12:30 · breadth 19 · BTC1s -0.03% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 12:40:10] … bar 12:35 · breadth 25 · BTC1s +0.09% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 12:45:06] … bar 12:40 · breadth 25 · BTC1s +0.09% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 12:50:37] … bar 12:45 · breadth 22 · BTC1s -0.02% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 12:53:02] ⚠️ <urlopen error [Errno 54] Connection reset by peer>
+[09-04 12:55:29] … bar 12:50 · breadth 18 · BTC1s -0.13% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 13:00:20] … bar 12:55 · breadth 22 · BTC1s -0.12% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 13:05:10] … bar 13:00 · breadth 20 · BTC1s -0.07% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 13:10:38] … bar 13:05 · breadth 21 · BTC1s -0.26% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 13:15:29] … bar 13:10 · breadth 20 · BTC1s -0.15% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 13:20:22] … bar 13:15 · breadth 26 · BTC1s -0.42% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 13:25:43] … bar 13:20 · breadth 20 · BTC1s -0.14% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 13:30:18] … bar 13:25 · breadth 16 · BTC1s -0.10% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 13:35:13] … bar 13:30 · breadth 19 · BTC1s -0.16% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 13:40:09] … bar 13:35 · breadth 18 · BTC1s -0.11% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 13:45:03] … bar 13:40 · breadth 18 · BTC1s -0.11% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 13:50:01] … bar 13:45 · breadth 19 · BTC1s -0.11% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 13:55:06] … bar 13:50 · breadth 22 · BTC1s -0.02% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 14:00:02] … bar 13:55 · breadth 23 · BTC1s +0.01% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 14:05:35] … bar 14:00 · breadth 18 · BTC1s -0.01% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 14:10:29] … bar 14:05 · breadth 17 · BTC1s +0.31% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 14:15:32] … bar 14:10 · breadth 14 · BTC1s +0.27% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 14:20:34] … bar 14:15 · breadth 18 · BTC1s +0.41% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 14:25:36] … bar 14:20 · breadth 18 · BTC1s +0.51% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 14:30:31] … bar 14:25 · breadth 18 · BTC1s +0.46% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 14:35:34] … bar 14:30 · breadth 22 · BTC1s +0.35% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 14:40:31] … bar 14:35 · breadth 21 · BTC1s +0.25% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 14:45:32] … bar 14:40 · breadth 21 · BTC1s +0.21% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 14:50:32] … bar 14:45 · breadth 20 · BTC1s +0.22% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 14:55:32] … bar 14:50 · breadth 15 · BTC1s +0.20% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 15:00:40] … bar 14:55 · breadth 13 · BTC1s +0.05% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 15:05:09] … bar 15:00 · breadth 13 · BTC1s +0.05% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 15:10:09] … bar 15:05 · breadth 14 · BTC1s +0.05% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 15:15:10] … bar 15:10 · breadth 15 · BTC1s +0.07% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 15:20:08] … bar 15:15 · breadth 13 · BTC1s +0.07% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 15:25:39] … bar 15:20 · breadth 12 · BTC1s -0.08% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 15:30:38] … bar 15:25 · breadth 6 · BTC1s +0.01% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 15:35:04] … bar 15:30 · breadth 39 · BTC1s +0.01% · flush=hayır · olay60dk 0 · açık 0 · equity $500.00
+[09-04 15:40:04] ⚡ olay LINKUSDT 1s -3.3% hacim 5.4× | breadth 66 BTC -1.72% | flush=EVET olgun=1
+[09-04 15:40:04] ⚡ olay PENGUUSDT 1s -4.8% hacim 7.6× | breadth 66 BTC -1.72% | flush=EVET olgun=2
+[09-04 15:40:04] ⚡ olay 1000BONKUSDT 1s -4.1% hacim 5.3× | breadth 66 BTC -1.72% | flush=EVET olgun=3
+[09-04 15:40:04] … bar 15:35 · breadth 66 · BTC1s -1.72% · flush=EVET · olay60dk 3 · açık 0 · equity $500.00
+[09-04 15:45:40] ⚡ olay TRUMPUSDT 1s -5.4% hacim 5.0× | breadth 73 BTC -1.93% | flush=EVET olgun=4
+[09-04 15:45:40] ⚡ olay SUIUSDT 1s -3.4% hacim 5.4× | breadth 73 BTC -1.93% | flush=EVET olgun=5
+[09-04 15:45:40] ⚡ olay NEARUSDT 1s -3.7% hacim 5.3× | breadth 73 BTC -1.93% | flush=EVET olgun=6
+[09-04 15:45:40] ⚡ olay MSTRUSDT 1s -3.6% hacim 5.2× | breadth 73 BTC -1.93% | flush=EVET olgun=7
+[09-04 15:45:40] ⚡ olay ONDOUSDT 1s -3.2% hacim 6.5× | breadth 73 BTC -1.93% | flush=EVET olgun=8
+[09-04 15:45:40] ⚡ olay ASTERUSDT 1s -3.2% hacim 6.0× | breadth 73 BTC -1.93% | flush=EVET olgun=9
+[09-04 15:45:40] ⚡ olay WIFUSDT 1s -4.1% hacim 5.1× | breadth 73 BTC -1.93% | flush=EVET olgun=10
+[09-04 15:45:40] ⚡ olay DOTUSDT 1s -3.4% hacim 5.6× | breadth 73 BTC -1.93% | flush=EVET olgun=11
+[09-04 15:45:40] … bar 15:40 · breadth 73 · BTC1s -1.93% · flush=EVET · olay60dk 11 · açık 0 · equity $500.00
+[09-04 15:50:02] … bar 15:45 · breadth 73 · BTC1s -1.93% · flush=EVET · olay60dk 11 · açık 0 · equity $500.00
+[09-04 15:55:33] ⚡ olay XPLUSDT 1s -8.8% hacim 5.3× | breadth 73 BTC -2.03% | flush=EVET olgun=12
+[09-04 15:55:33] ⚡ olay BCHUSDT 1s -3.0% hacim 5.5× | breadth 73 BTC -2.03% | flush=EVET olgun=13
+[09-04 15:55:33] ⚡ olay SPXUSDT 1s -6.4% hacim 6.1× | breadth 73 BTC -2.03% | flush=EVET olgun=14
+[09-04 15:55:33] 🟢 LONG #1 LINKUSDT @ 11.6888 stop 11.4278 (%2.23) risk $7.50 | olgun 14 breadth 73
+[09-04 15:55:33]    ✗ PENGUUSDT teyit yok
+[09-04 15:55:33]    ✗ 1000BONKUSDT teyit yok
+[09-04 15:55:33] … bar 15:50 · breadth 73 · BTC1s -2.03% · flush=EVET · olay60dk 14 · açık 1 · equity $499.82
+[09-04 16:00:36] ⚡ olay DOGEUSDT 1s -3.1% hacim 5.6× | breadth 77 BTC -2.17% | flush=EVET olgun=15
+[09-04 16:00:36] ⚡ olay TAOUSDT 1s -3.3% hacim 5.1× | breadth 77 BTC -2.17% | flush=EVET olgun=16
+[09-04 16:00:36] ⚡ olay SEIUSDT 1s -3.1% hacim 7.8× | breadth 77 BTC -2.17% | flush=EVET olgun=17
+[09-04 16:00:36]    ✗ TRUMPUSDT teyit yok
+[09-04 16:00:36] 🟢 LONG #2 SUIUSDT @ 0.751776 stop 0.732426 (%2.57) risk $7.49 | olgun 17 breadth 77
+[09-04 16:00:36]    ✗ NEARUSDT teyit yok
+[09-04 16:00:36]    ✗ MSTRUSDT teyit yok
+[09-04 16:00:36]    ✗ ONDOUSDT teyit yok
+[09-04 16:00:36]    ✗ ASTERUSDT teyit yok
+[09-04 16:00:36] 🟢 LONG #3 WIFUSDT @ 0.202601 stop 0.196473 (%3.02) risk $7.49 | olgun 17 breadth 77
+[09-04 16:00:36]    ✗ DOTUSDT teyit yok
+[09-04 16:00:36] … bar 15:55 · breadth 77 · BTC1s -2.17% · flush=EVET · olay60dk 17 · açık 3 · equity $499.52
+[09-04 16:05:03] … bar 16:00 · breadth 75 · BTC1s -2.17% · flush=EVET · olay60dk 17 · açık 3 · equity $499.52
+[09-04 16:10:33] ⚡ olay ETHUSDT 1s -3.0% hacim 6.5× | breadth 82 BTC -2.38% | flush=EVET olgun=18
+[09-04 16:10:33] ⚡ olay XRPUSDT 1s -3.1% hacim 5.2× | breadth 82 BTC -2.38% | flush=EVET olgun=19
+[09-04 16:10:33] ⚡ olay OPUSDT 1s -3.3% hacim 6.0× | breadth 82 BTC -2.38% | flush=EVET olgun=20
+[09-04 16:10:33] ⚡ olay MONUSDT 1s -6.1% hacim 5.2× | breadth 82 BTC -2.38% | flush=EVET olgun=21
+[09-04 16:10:33]    ✗ XPLUSDT teyit yok
+[09-04 16:10:33]    ✗ BCHUSDT teyit yok
+[09-04 16:10:33] 🟢 LONG #4 SPXUSDT @ 0.617208 stop 0.580587 (%5.93) risk $7.49 | olgun 21 breadth 82
+[09-04 16:10:33] … bar 16:05 · breadth 82 · BTC1s -2.38% · flush=EVET · olay60dk 21 · açık 4 · equity $499.45
+[09-04 16:15:29] ⚡ olay ZROUSDT 1s -3.2% hacim 5.1× | breadth 82 BTC -2.47% | flush=EVET olgun=22
+[09-04 16:15:29] ⚡ olay AEROUSDT 1s -3.2% hacim 7.0× | breadth 82 BTC -2.47% | flush=EVET olgun=23
+[09-04 16:15:29]    ✗ DOGEUSDT teyit yok
+[09-04 16:15:29]    ✗ TAOUSDT teyit yok
+[09-04 16:15:29]    ✗ SEIUSDT teyit yok
+[09-04 16:15:29] … bar 16:10 · breadth 82 · BTC1s -2.47% · flush=EVET · olay60dk 23 · açık 4 · equity $499.45
+[09-04 16:18:39] ⚠️ <urlopen error [Errno 54] Connection reset by peer>
+[09-04 16:20:35] ⚡ olay AAVEUSDT 1s -3.2% hacim 7.1× | breadth 74 BTC -2.24% | flush=EVET olgun=24
+[09-04 16:20:35] … bar 16:15 · breadth 74 · BTC1s -2.24% · flush=EVET · olay60dk 24 · açık 4 · equity $499.45
+[09-04 16:25:34] 🟢 LONG #5 ETHUSDT @ 2452.62 stop 2400.85 (%2.11) risk $7.49 | olgun 24 breadth 73
+[09-04 16:25:34]    ✗ MONUSDT teyit yok
+[09-04 16:25:34] … bar 16:20 · breadth 73 · BTC1s -2.20% · flush=EVET · olay60dk 24 · açık 5 · equity $499.25
+[09-04 16:30:36] ⚡ olay VIRTUALUSDT 1s -3.2% hacim 5.1× | breadth 77 BTC -2.49% | flush=EVET olgun=25
+[09-04 16:30:36]    ✗ ZROUSDT teyit yok
+[09-04 16:30:36]    ✗ AEROUSDT teyit yok
+[09-04 16:30:36] … bar 16:25 · breadth 77 · BTC1s -2.49% · flush=EVET · olay60dk 25 · açık 5 · equity $499.25
+[09-04 16:35:04] ⚡ olay SOXSUSDT 1s -3.7% hacim 5.4× | breadth 43 BTC -2.49% | flush=EVET olgun=26
+[09-04 16:35:04]    ✗ AAVEUSDT teyit yok
+[09-04 16:35:04] … bar 16:30 · breadth 43 · BTC1s -2.49% · flush=EVET · olay60dk 26 · açık 5 · equity $499.25
+[09-04 16:40:07] … bar 16:35 · breadth 25 · BTC1s -0.75% · flush=EVET · olay60dk 23 · açık 5 · equity $499.25
+[09-04 16:45:10] … bar 16:40 · breadth 23 · BTC1s -0.33% · flush=hayır · olay60dk 23 · açık 5 · equity $499.25
+[09-04 16:50:08]    ✗ SOXSUSDT teyit yok
+[09-04 16:50:08] … bar 16:45 · breadth 35 · BTC1s +0.28% · flush=hayır · olay60dk 15 · açık 5 · equity $499.25
+[09-04 16:55:10] … bar 16:50 · breadth 29 · BTC1s -0.42% · flush=hayır · olay60dk 15 · açık 5 · equity $499.25
+[09-04 17:00:16] … bar 16:55 · breadth 24 · BTC1s -0.10% · flush=hayır · olay60dk 12 · açık 5 · equity $499.25
+[09-04 17:05:21] … bar 17:00 · breadth 29 · BTC1s +0.09% · flush=hayır · olay60dk 9 · açık 5 · equity $499.25
+[09-04 17:10:28] … bar 17:05 · breadth 27 · BTC1s -0.01% · flush=hayır · olay60dk 9 · açık 5 · equity $499.25
+[09-04 17:15:30] … bar 17:10 · breadth 33 · BTC1s +0.23% · flush=hayır · olay60dk 3 · açık 5 · equity $499.25
+[09-04 17:20:33] … bar 17:15 · breadth 29 · BTC1s -0.23% · flush=hayır · olay60dk 3 · açık 5 · equity $499.25
+[09-04 17:25:32] … bar 17:20 · breadth 26 · BTC1s -0.11% · flush=hayır · olay60dk 2 · açık 5 · equity $499.25
+[09-04 17:30:35] … bar 17:25 · breadth 28 · BTC1s +0.06% · flush=hayır · olay60dk 2 · açık 5 · equity $499.25
+[09-04 17:35:29] … bar 17:30 · breadth 17 · BTC1s +0.18% · flush=hayır · olay60dk 0 · açık 5 · equity $499.25
+[09-04 17:40:27] … bar 17:35 · breadth 19 · BTC1s -0.05% · flush=hayır · olay60dk 0 · açık 5 · equity $499.25
+[09-04 17:45:29] … bar 17:40 · breadth 20 · BTC1s -0.48% · flush=hayır · olay60dk 0 · açık 5 · equity $499.25
+[09-04 17:50:26] … bar 17:45 · breadth 64 · BTC1s -1.22% · flush=EVET · olay60dk 0 · açık 5 · equity $499.25
+[09-04 17:55:31] … bar 17:50 · breadth 39 · BTC1s -0.60% · flush=EVET · olay60dk 0 · açık 5 · equity $499.25
+[09-04 18:00:24] … bar 17:55 · breadth 33 · BTC1s -0.60% · flush=EVET · olay60dk 0 · açık 5 · equity $499.25
+[09-04 18:05:21] … bar 18:00 · breadth 23 · BTC1s -0.61% · flush=EVET · olay60dk 0 · açık 5 · equity $499.25
+[09-04 18:10:24] … bar 18:05 · breadth 20 · BTC1s -0.09% · flush=hayır · olay60dk 0 · açık 5 · equity $499.25
+[09-04 18:15:20] … bar 18:10 · breadth 19 · BTC1s -0.28% · flush=hayır · olay60dk 0 · açık 5 · equity $499.25
+[09-04 18:20:16] … bar 18:15 · breadth 16 · BTC1s +0.09% · flush=hayır · olay60dk 0 · açık 5 · equity $499.25
+[09-04 18:25:06] … bar 18:20 · breadth 16 · BTC1s +0.09% · flush=hayır · olay60dk 0 · açık 5 · equity $499.25
+[09-04 18:30:37] … bar 18:25 · breadth 12 · BTC1s +0.06% · flush=hayır · olay60dk 0 · açık 5 · equity $499.25
+[09-04 18:35:34] … bar 18:30 · breadth 18 · BTC1s -0.05% · flush=hayır · olay60dk 0 · açık 5 · equity $499.25
+[09-04 18:40:30] … bar 18:35 · breadth 19 · BTC1s +0.26% · flush=hayır · olay60dk 0 · açık 5 · equity $499.25
+[09-04 18:45:36] … bar 18:40 · breadth 21 · BTC1s +0.62% · flush=hayır · olay60dk 0 · açık 5 · equity $499.25
+[09-04 19:07:48] … bar 19:00 · breadth 18 · BTC1s +0.52% · flush=hayır · olay60dk 0 · açık 5 · equity $499.25
+[09-04 19:25:19] … bar 19:20 · breadth 17 · BTC1s +0.26% · flush=hayır · olay60dk 0 · açık 5 · equity $499.25
+[09-04 19:30:33] … bar 19:25 · breadth 15 · BTC1s +0.00% · flush=hayır · olay60dk 0 · açık 5 · equity $499.25
+[09-04 19:35:11] … bar 19:30 · breadth 21 · BTC1s +0.49% · flush=hayır · olay60dk 0 · açık 5 · equity $499.25
+[09-04 19:38:54] ⏹ bitti · equity $499.25 · rapor /Users/mea/Desktop/Funding trader/flush_bounce_report.txt

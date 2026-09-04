@@ -1,0 +1,33 @@
+2 Eylül 20:00–21:00 TR — 23 sinyal, 24 saat ufku
+Hedef 1'e ulaşan (24s içinde, stop'a bakmadan): 23/23 = %100
+Hedef 2'ye ulaşan: 21/23 = %91
+Hedef 1'e STOP'tan ÖNCE ulaşan: 13/23 = %57
+Stop'a hiç değmeyen: 2/23
+24s lehte en fazla: ort %8.23, medyan %8.25 | aleyhte en fazla: ort %7.32, medyan %3.84
+24s sonra kapanış (yön lehine): ort %-0.00, pozitif 8/23
+Lehte ≥%1 gidenler: 23/23, ≥%2: 18/23, ≥%3: 17/23
+
+saat  coin       yön   k  hedef1%  stop% | H1 ne zaman     H2   stop | önce         | lehte max ne zaman  aleyhte  24s kap
+20:05 PUMPFUN    LONG  B     2.07   0.86 |        8.1s   8.2s   5.2s | stop önce    |    12.19%    24.0s    1.16%  +11.79%
+20:10 XPL        LONG  B     1.34   0.45 |        50dk   45dk   10dk | stop önce    |    20.71%    24.0s    1.15%  +20.28%
+20:10 FARTCOIN   LONG  B     1.47   0.78 |       13.5s  13.9s   10dk | stop önce    |     9.67%    22.9s    3.45%   +8.26%
+20:10 AVGO       LONG  B     0.81   0.18 |        2.0s   10dk   3.2s | hedef1 önce  |     3.22%     4.2s    6.64%   -3.04%
+20:10 ONG        LONG  B     1.13   0.68 |        45dk  19.7s   2.5s | hedef1 önce  |     8.39%    20.0s    6.72%   -0.94%
+20:10 FF         LONG  B     2.24   0.73 |        7.6s   7.6s   45dk | stop önce    |     9.17%    17.0s   13.74%   -5.02%
+20:15 BZ         SHORT B     0.30   0.15 |        35dk   45dk  15.8s | hedef1 önce  |     1.94%    13.2s    1.73%   -0.10%
+20:15 BEAT       LONG  B     1.25   0.67 |        2.9s      —   4.2s | hedef1 önce  |     1.52%     3.1s    5.93%   -5.15%
+20:15 TUT        LONG  B     1.17   0.77 |        20dk   2.2s   1.2s | hedef1 önce  |     6.08%     8.8s    8.40%   -4.08%
+20:20 ENA        LONG  B     1.58   0.60 |        45dk   40dk   4.8s | hedef1 önce  |    19.13%    23.9s    1.00%  +18.64%
+20:20 TRUMP      LONG  B     1.55   0.98 |        2.8s   6.5s      — | hedef1 önce  |    16.66%    23.8s    0.19%  +14.11%
+20:20 PENGU      LONG  B     1.14   0.39 |        1.0s   30dk    5dk | stop önce    |    10.44%    22.8s    0.42%   +9.47%
+20:25 NIULAI     SHORT C     3.68   3.06 |        2.5s      —   5.7s | hedef1 önce  |     5.29%     4.2s   34.54%  -16.28%
+20:30 H          LONG  B     2.57   1.10 |        3.5s   3.5s   1.9s | stop önce    |    16.28%    15.7s    1.79%   +4.44%
+20:45 LIT        SHORT B     1.50   0.67 |        1.2s   1.2s   5.8s | hedef1 önce  |     2.71%     1.8s   13.74%  -11.54%
+20:45 LDO        SHORT B     0.98   0.54 |        5.2s   6.8s    5dk | stop önce    |     1.55%     7.3s    6.43%   -6.27%
+20:45 MNT        SHORT B     0.78   0.39 |        50dk   50dk   6.2s | hedef1 önce  |     1.14%     55dk    3.14%   -2.39%
+20:50 KORU       SHORT B     0.99   0.37 |        6.3s   6.3s   30dk | stop önce    |     8.37%    11.7s    2.69%   -2.69%
+20:50 T          LONG  B     2.52   1.41 |        1.2s   1.2s    5dk | stop önce    |    11.30%     6.8s   11.96%   -9.07%
+20:50 ACE        SHORT B     2.22   0.68 |        30dk   25dk      — | hedef1 önce  |     8.25%     1.7s    0.43%   +2.41%
+20:50 TIA        SHORT B     1.30   0.50 |        1.2s   50dk   2.3s | hedef1 önce  |     1.85%     7.2s    4.95%   -4.50%
+20:55 XMR        SHORT B     0.96   0.46 |        1.9s   1.9s   20dk | stop önce    |     7.97%     6.4s    3.84%   -0.29%
+20:55 NIULAI     SHORT C     1.89   1.57 |        30dk   2.0s   5.2s | hedef1 önce  |     5.52%     3.8s   34.21%  -18.08%

@@ -1,0 +1,1034 @@
+══════════════════════════════════════════════════════════════════════════
+  EMA50+StochRSI SİNYAL BOTU [5m] — ARA RAPOR (21:14:28)
+══════════════════════════════════════════════════════════════════════════
+  TF 5dk | sinyal 177 | açık 40 | kapanan 137
+  TP1 dokunan 3 (%2) | TP2 dokunan 1 (%1) | stop 37 (%27 kapananın)
+  Kapananlarda ortalama son R -0.23 | ortalama max R +0.62
+══════════════════════════════════════════════════════════════════════════
+
+  #1 SHORT APRUSDT [KAPALI/zaman] 14:08:42
+     Giriş 0.2159 | Stop 0.223413 (%3.48) | TP1 0.20463 | TP2 0.197117
+     K 94.4 D 98.1 RSI 51.0 ADX 38.0 bear distEMA -0.84% | skor 8.87
+     ⚠️ ölü coin 24s -5.1% | BTC teyidi yok (1s -0.01% 4s +0.26%)
+     max +0.41R | tp1 ✗ | tp2 ✗ | son -0.25R (120.2dk)
+
+  #2 LONG CHIPUSDT [KAPALI/zaman] 14:08:42
+     Giriş 0.05738 | Stop 0.0540061 (%5.88) | TP1 0.0624409 | TP2 0.0658148
+     K 8.4 D 4.5 RSI 49.2 ADX 24.7 bull distEMA +0.45% | skor 7.88
+     ⚠️ BTC teyidi yok (1s -0.01% 4s +0.26%)
+     max +0.09R | tp1 ✗ | tp2 ✗ | son -0.75R (120.2dk)
+
+  #3 LONG MONUSDT [KAPALI/stop] 14:08:42
+     Giriş 0.02741 | Stop 0.0263246 (%3.96) | TP1 0.0290382 | TP2 0.0301236
+     K 22.5 D 18.8 RSI 57.1 ADX 35.2 bull distEMA +1.40% | skor 6.27
+     ⚠️ BTC teyidi yok (1s -0.01% 4s +0.26%)
+     max +0.08R | tp1 ✗ | tp2 ✗ | son -1.11R (82.8dk)
+
+  #4 LONG SPXUSDT [KAPALI/zaman] 14:10:31
+     Giriş 0.644 | Stop 0.607678 (%5.64) | TP1 0.698482 | TP2 0.734804
+     K 1.9 D 1.6 RSI 47.0 ADX 31.1 bull distEMA +1.17% | skor 8.87
+     ⚠️ olay: 24s +19.8%
+     max +0.73R | tp1 ✗ | tp2 ✗ | son -0.71R (120.1dk)
+
+  #5 LONG SNXXUSDT [KAPALI/stop] 14:10:31
+     Giriş 14.77 | Stop 14.5337 (%1.6) | TP1 15.1245 | TP2 15.3608
+     K 3.1 D 1.0 RSI 47.4 ADX 29.5 bull distEMA +0.39% | skor 8.87
+     max +0.76R | tp1 ✗ | tp2 ✗ | son -1.23R (81.0dk)
+
+  #6 LONG SNDKUSDT [KAPALI/stop] 14:10:32
+     Giriş 1596.18 | Stop 1580.86 (%0.96) | TP1 1619.16 | TP2 1634.49
+     K 5.2 D 2.5 RSI 49.0 ADX 28.6 bull distEMA +0.23% | skor 8.59
+     max +0.64R | tp1 ✗ | tp2 ✗ | son -1.15R (81.0dk)
+
+  #7 LONG NEARUSDT [KAPALI/stop] 14:10:32
+     Giriş 2.013 | Stop 1.97032 (%2.12) | TP1 2.07701 | TP2 2.11969
+     K 22.9 D 14.8 RSI 58.8 ADX 29.6 bull distEMA +1.29% | skor 5.93
+     max +0.37R | tp1 ✗ | tp2 ✗ | son -1.2R (80.1dk)
+
+  #8 LONG NVDAUSDT [KAPALI/stop] 14:15:26
+     Giriş 231.51 | Stop 230.491 (%0.44) | TP1 233.038 | TP2 234.057
+     K 3.7 D 3.4 RSI 52.4 ADX 35.6 bull distEMA +0.17% | skor 9.21
+     ⚠️ BTC teyidi yok (1s +0.27% 4s +0.32%)
+     max +0.71R | tp1 ✗ | tp2 ✗ | son -1.04R (91.7dk)
+
+  #9 SHORT SOXSUSDT [KAPALI/stop] 14:15:27
+     Giriş 49.05 | Stop 49.6582 (%1.24) | TP1 48.1377 | TP2 47.5294
+     K 93.3 D 97.2 RSI 50.1 ADX 36.7 bear distEMA -0.43% | skor 8.78
+     ⚠️ ölü coin 24s -7.8% | BTC teyidi yok (1s +0.27% 4s +0.32%)
+     max +1.04R | tp1 ✗ | tp2 ✗ | son -1.12R (75.4dk)
+
+  #10 LONG SOXLUSDT [KAPALI/stop] 14:15:27
+     Giriş 112.28 | Stop 110.888 (%1.24) | TP1 114.368 | TP2 115.761
+     K 6.1 D 3.9 RSI 50.5 ADX 34.8 bull distEMA +0.44% | skor 8.76
+     ⚠️ BTC teyidi yok (1s +0.27% 4s +0.32%)
+     max +0.9R | tp1 ✗ | tp2 ✗ | son -1.08R (75.4dk)
+
+  #11 LONG STXUSDT [KAPALI/stop] 14:15:27
+     Giriş 0.274 | Stop 0.269726 (%1.56) | TP1 0.280412 | TP2 0.284686
+     K 15.2 D 12.8 RSI 54.2 ADX 33.7 bull distEMA +0.46% | skor 7.47
+     ⚠️ BTC teyidi yok (1s +0.27% 4s +0.32%)
+     max +0.0R | tp1 ✗ | tp2 ✗ | son -1.15R (46.1dk)
+
+  #12 LONG INTCUSDT [KAPALI/stop] 14:15:28
+     Giriş 93.28 | Stop 92.7576 (%0.56) | TP1 94.0636 | TP2 94.5859
+     K 12.1 D 8.7 RSI 46.7 ADX 22.1 bull distEMA +0.03% | skor 7.39
+     ⚠️ BTC teyidi yok (1s +0.27% 4s +0.32%)
+     max +0.96R | tp1 ✗ | tp2 ✗ | son -1.7R (75.4dk)
+
+  #13 SHORT TEAMUSDT [KAPALI/zaman] 14:15:28
+     Giriş 192.72 | Stop 195.804 (%1.6) | TP1 188.095 | TP2 185.011
+     K 85.6 D 88.2 RSI 47.5 ADX 23.0 bear distEMA -0.26% | skor 7.05
+     ⚠️ BTC teyidi yok (1s +0.27% 4s +0.32%)
+     max +0.98R | tp1 ✗ | tp2 ✗ | son +0.53R (120.2dk)
+
+  #14 SHORT PUMPFUNUSDT [KAPALI/zaman] 14:15:28
+     Giriş 0.004196 | Stop 0.00430677 (%2.64) | TP1 0.00402985 | TP2 0.00391908
+     K 80.0 D 85.1 RSI 37.1 ADX 40.2 bear distEMA -1.74% | skor 6.75
+     ⚠️ BTC teyidi yok (1s +0.27% 4s +0.32%)
+     max +0.98R | tp1 ✗ | tp2 ✗ | son +0.54R (120.2dk)
+
+  #15 LONG MUUSDT [KAPALI/stop] 14:20:24
+     Giriş 975.94 | Stop 970.084 (%0.6) | TP1 984.723 | TP2 990.579
+     K 8.3 D 5.4 RSI 47.1 ADX 27.1 bull distEMA +0.08% | skor 8.15
+     max +0.6R | tp1 ✗ | tp2 ✗ | son -1.31R (70.9dk)
+
+  #16 SHORT AAPLUSDT [KAPALI/stop] 14:20:24
+     Giriş 326.69 | Stop 327.735 (%0.32) | TP1 325.122 | TP2 324.076
+     K 86.7 D 87.5 RSI 46.4 ADX 29.7 bear distEMA -0.11% | skor 7.61
+     ⚠️ BTC teyidi yok (1s +0.41% 4s +0.30%)
+     max +-0.0R | tp1 ✗ | tp2 ✗ | son -1.0R (39.5dk)
+
+  #17 LONG SKHYUSDT [KAPALI/stop] 14:20:24
+     Giriş 166.5 | Stop 165.634 (%0.52) | TP1 167.799 | TP2 168.665
+     K 19.3 D 11.8 RSI 53.0 ADX 24.9 bull distEMA +0.21% | skor 6.51
+     max +0.2R | tp1 ✗ | tp2 ✗ | son -1.16R (69.8dk)
+
+  #18 LONG KORUUSDT [KAPALI/stop] 14:20:25
+     Giriş 21.14 | Stop 20.9286 (%1.0) | TP1 21.4571 | TP2 21.6685
+     K 19.9 D 17.7 RSI 57.4 ADX 27.0 bull distEMA +0.60% | skor 6.42
+     max +1.42R | tp1 ✗ | tp2 ✗ | son -1.42R (70.9dk)
+
+  #19 LONG SKHYNIXUSDT [KAPALI/stop] 14:20:25
+     Giriş 1227.2 | Stop 1219.84 (%0.6) | TP1 1238.24 | TP2 1245.61
+     K 19.4 D 14.2 RSI 54.7 ADX 22.7 bull distEMA +0.24% | skor 6.38
+     max +0.04R | tp1 ✗ | tp2 ✗ | son -1.6R (69.8dk)
+
+  #20 LONG FLOCKUSDT [KAPALI/stop] 14:20:25
+     Giriş 0.04029 | Stop 0.0384689 (%4.52) | TP1 0.0430217 | TP2 0.0448428
+     K 25.1 D 20.3 RSI 59.2 ADX 39.2 bull distEMA +1.28% | skor 6.19
+     max +0.18R | tp1 ✗ | tp2 ✗ | son -1.0R (72.4dk)
+
+  #21 SHORT HEMIUSDT [KAPALI/zaman] 14:20:25
+     Giriş 0.015834 | Stop 0.016385 (%3.48) | TP1 0.0150075 | TP2 0.0144564
+     K 79.3 D 80.8 RSI 45.0 ADX 27.8 bear distEMA -1.37% | skor 6.11
+     ⚠️ BTC teyidi yok (1s +0.41% 4s +0.30%)
+     max +1.07R | tp1 ✗ | tp2 ✗ | son -0.25R (120.2dk)
+
+  #22 LONG EGLDUSDT [KAPALI/zaman] 14:25:21
+     Giriş 4.705 | Stop 4.5582 (%3.12) | TP1 4.92519 | TP2 5.07199
+     K 24.0 D 21.7 RSI 69.1 ADX 46.2 bull distEMA +2.61% | skor 5.93
+     max +1.46R | tp1 ✗ | tp2 ✗ | son -0.2R (120.1dk)
+
+  #23 LONG MORPHOUSDT [KAPALI/stop] 14:25:21
+     Giriş 2.511 | Stop 2.4417 (%2.76) | TP1 2.61496 | TP2 2.68426
+     K 26.4 D 22.2 RSI 53.3 ADX 26.5 bull distEMA +0.48% | skor 5.57
+     max +0.71R | tp1 ✗ | tp2 ✗ | son -1.11R (80.9dk)
+
+  #24 LONG QNTXUSDT [KAPALI/stop] 14:35:17
+     Giriş 49.97 | Stop 49.8101 (%0.32) | TP1 50.2099 | TP2 50.3698
+     K 11.1 D 8.8 RSI 59.1 ADX 39.5 bull distEMA +0.40% | skor 8.37
+     max +1.13R | tp1 ✗ | tp2 ✗ | son -1.31R (55.3dk)
+
+  #25 SHORT HOODUSDT [KAPALI/zaman] 14:35:17
+     Giriş 122.46 | Stop 124.174 (%1.4) | TP1 119.888 | TP2 118.174
+     K 82.1 D 88.1 RSI 41.6 ADX 26.9 bear distEMA -0.73% | skor 6.65
+     ⚠️ BTC teyidi yok (1s +0.35% 4s +0.47%)
+     max +2.46R | tp1 ✓ 15:31:54 | tp2 ✗ | son +1.36R (120.2dk)
+
+  #26 LONG LDOUSDT [KAPALI/stop] 14:45:14
+     Giriş 0.3954 | Stop 0.389864 (%1.4) | TP1 0.403703 | TP2 0.409239
+     K 26.5 D 21.1 RSI 58.9 ADX 31.2 bull distEMA +0.77% | skor 5.72
+     ⚠️ BTC teyidi yok (1s +0.21% 4s +0.58%)
+     max +0.0R | tp1 ✗ | tp2 ✗ | son -1.59R (45.0dk)
+
+  #27 LONG ENSUSDT [KAPALI/stop] 14:50:10
+     Giriş 5.981 | Stop 5.8877 (%1.56) | TP1 6.12096 | TP2 6.21426
+     K 20.2 D 15.1 RSI 60.5 ADX 33.1 bull distEMA +1.25% | skor 6.5
+     ⚠️ BTC teyidi yok (1s +0.22% 4s +0.63%)
+     max +0.03R | tp1 ✗ | tp2 ✗ | son -1.9R (40.0dk)
+
+  #28 LONG LITUSDT [KAPALI/zaman] 14:55:41
+     Giriş 4.617 | Stop 4.45818 (%3.44) | TP1 4.85524 | TP2 5.01406
+     K 3.3 D 3.3 RSI 55.3 ADX 25.6 bull distEMA +1.44% | skor 8.27
+     ⚠️ olay: 24s +17.6% | BTC teyidi yok (1s +0.20% 4s +0.72%)
+     max +0.71R | tp1 ✗ | tp2 ✗ | son +0.38R (120.1dk)
+
+  #29 LONG MNTUSDT [KAPALI/stop] 15:10:33
+     Giriş 0.5878 | Stop 0.576984 (%1.84) | TP1 0.604023 | TP2 0.614839
+     K 15.9 D 7.4 RSI 63.2 ADX 46.7 bull distEMA +1.73% | skor 7.3
+     ⚠️ BTC teyidi yok (1s +0.05% 4s +0.62%)
+     max +0.08R | tp1 ✗ | tp2 ✗ | son -1.1R (21.3dk)
+
+  #30 LONG DOGEUSDT [KAPALI/stop] 15:10:34
+     Giriş 0.0879 | Stop 0.0871968 (%0.8) | TP1 0.0889548 | TP2 0.089658
+     K 22.6 D 15.9 RSI 58.4 ADX 23.9 bull distEMA +0.36% | skor 5.97
+     ⚠️ BTC teyidi yok (1s +0.05% 4s +0.62%)
+     max +0.17R | tp1 ✗ | tp2 ✗ | son -2.97R (19.7dk)
+
+  #31 LONG BRUSDT [KAPALI/stop] 15:15:35
+     Giriş 0.32215 | Stop 0.309006 (%4.08) | TP1 0.341866 | TP2 0.355009
+     K 28.9 D 18.9 RSI 63.4 ADX 27.9 bull distEMA +2.60% | skor 4.61
+     ⚠️ BTC teyidi yok (1s +0.07% 4s +0.57%)
+     max +0.03R | tp1 ✗ | tp2 ✗ | son -1.03R (16.3dk)
+
+  #32 LONG 1000BONKUSDT [KAPALI/stop] 15:20:27
+     Giriş 0.003218 | Stop 0.00313562 (%2.56) | TP1 0.00334157 | TP2 0.00342395
+     K 6.7 D 2.6 RSI 60.6 ADX 33.2 bull distEMA +1.28% | skor 8.3
+     ⚠️ BTC teyidi yok (1s -0.00% 4s +0.36%)
+     max +0.05R | tp1 ✗ | tp2 ✗ | son -1.59R (9.8dk)
+
+  #33 LONG BTCUSDT [KAPALI/stop] 15:20:28
+     Giriş 81134.4 | Stop 80680 (%0.56) | TP1 81815.9 | TP2 82270.3
+     K 8.9 D 7.2 RSI 50.3 ADX 23.8 bull distEMA +0.08% | skor 7.88
+     ⚠️ BTC teyidi yok (1s -0.00% 4s +0.36%)
+     max +0.4R | tp1 ✗ | tp2 ✗ | son -1.21R (9.8dk)
+
+  #34 LONG ENAUSDT [KAPALI/stop] 15:20:28
+     Giriş 0.17 | Stop 0.166328 (%2.16) | TP1 0.175508 | TP2 0.17918
+     K 11.1 D 8.1 RSI 54.4 ADX 27.6 bull distEMA +0.67% | skor 7.61
+     ⚠️ BTC teyidi yok (1s -0.00% 4s +0.36%)
+     max +0.13R | tp1 ✗ | tp2 ✗ | son -1.08R (9.8dk)
+
+  #35 LONG TUSDT [KAPALI/zaman] 15:30:20
+     Giriş 0.004396 | Stop 0.00421313 (%4.16) | TP1 0.0046703 | TP2 0.00485317
+     K 10.6 D 6.0 RSI 48.2 ADX 32.8 bull distEMA +0.12% | skor 4.65
+     ⚠️ ölü coin 24s -5.8% | BTC teyidi yok (1s +0.01% 4s +0.44%)
+     max +0.0R | tp1 ✗ | tp2 ✗ | son -0.2R (120.2dk)
+
+  #36 LONG NEARUSDT [KAPALI/stop] 15:30:36
+     Giriş 2.021 | Stop 1.97815 (%2.12) | TP1 2.08527 | TP2 2.12811
+     K 15.2 D 11.8 RSI 56.6 ADX 24.7 bull distEMA +0.95% | skor 6.81
+     ⚠️ BTC teyidi yok (1s +0.01% 4s +0.44%)
+     max +0.0R | tp1 ✗ | tp2 ✗ | son -1.4R (0.3dk)
+
+  #37 LONG QNTXUSDT [KAPALI/stop] 15:30:36
+     Giriş 50.07 | Stop 49.6694 (%0.8) | TP1 50.6708 | TP2 51.0714
+     K 20.0 D 18.9 RSI 57.2 ADX 31.6 bull distEMA +0.40% | skor 6.73
+     ⚠️ BTC teyidi yok (1s +0.01% 4s +0.44%)
+     max +0.0R | tp1 ✗ | tp2 ✗ | son -1.2R (0.3dk)
+
+  #38 SHORT TSLAUSDT [KAPALI/tp2] 15:35:23
+     Giriş 365.38 | Stop 369.765 (%1.2) | TP1 358.803 | TP2 354.419
+     K 79.1 D 86.7 RSI 37.9 ADX 28.7 bear distEMA -0.68% | skor 6.36
+     max +2.51R | tp1 ✓ 16:41:25 | tp2 ✓ 17:18:20 | son +2.51R (102.9dk)
+
+  #39 SHORT SPCXUSDT [KAPALI/zaman] 15:35:23
+     Giriş 148.61 | Stop 150.691 (%1.4) | TP1 145.489 | TP2 143.409
+     K 75.2 D 89.3 RSI 33.1 ADX 32.5 bear distEMA -0.94% | skor 5.97
+     max +0.62R | tp1 ✗ | tp2 ✗ | son -0.67R (120.1dk)
+
+  #40 SHORT ONGUSDT [KAPALI/zaman] 16:10:24
+     Giriş 0.09716 | Stop 0.100036 (%2.96) | TP1 0.0928461 | TP2 0.0899701
+     K 87.4 D 94.1 RSI 38.6 ADX 51.6 bear distEMA -1.69% | skor 7.76
+     ⚠️ ölü coin 24s -7.5%
+     max +0.6R | tp1 ✗ | tp2 ✗ | son +0.46R (120.2dk)
+
+  #41 SHORT CAPUSDT [KAPALI/zaman] 16:10:24
+     Giriş 0.04519 | Stop 0.0472868 (%4.64) | TP1 0.0420448 | TP2 0.039948
+     K 76.4 D 78.3 RSI 40.9 ADX 24.7 bear distEMA -1.50% | skor 5.5
+     ⚠️ ölü coin 24s -7.5%
+     max +0.45R | tp1 ✗ | tp2 ✗ | son +0.26R (120.2dk)
+
+  #42 SHORT CYSUSDT [KAPALI/zaman] 16:15:22
+     Giriş 0.2526 | Stop 0.26715 (%5.76) | TP1 0.230775 | TP2 0.216226
+     K 82.1 D 84.1 RSI 43.9 ADX 25.6 bear distEMA -1.96% | skor 6.16
+     ⚠️ ölü coin 24s -11.6%
+     max +0.86R | tp1 ✗ | tp2 ✗ | son +0.56R (120.2dk)
+
+  #43 SHORT VVVUSDT [KAPALI/zaman] 16:15:24
+     Giriş 17.148 | Stop 17.8065 (%3.84) | TP1 16.1603 | TP2 15.5018
+     K 83.8 D 87.1 RSI 48.9 ADX 25.3 bear distEMA -0.17% | skor 3.47
+     max +-0.0R | tp1 ✗ | tp2 ✗ | son -0.49R (120.1dk)
+
+  #44 SHORT ACEUSDT [KAPALI/zaman] 16:20:20
+     Giriş 0.1813 | Stop 0.187319 (%3.32) | TP1 0.172271 | TP2 0.166252
+     K 91.7 D 93.6 RSI 46.7 ADX 32.4 bear distEMA -0.56% | skor 8.29
+     max +0.33R | tp1 ✗ | tp2 ✗ | son +0.29R (120.2dk)
+
+  #45 SHORT ARBUSDT [KAPALI/zaman] 16:35:11
+     Giriş 0.13287 | Stop 0.139407 (%4.92) | TP1 0.123064 | TP2 0.116527
+     K 95.0 D 97.3 RSI 50.1 ADX 46.1 bear distEMA -0.87% | skor 9.05
+     max +0.3R | tp1 ✗ | tp2 ✗ | son -0.15R (120.2dk)
+
+  #46 SHORT GOOGLUSDT [KAPALI/zaman] 16:35:11
+     Giriş 341.37 | Stop 344.238 (%0.84) | TP1 337.069 | TP2 334.201
+     K 87.0 D 92.2 RSI 38.2 ADX 30.4 bear distEMA -0.37% | skor 7.61
+     max +1.35R | tp1 ✗ | tp2 ✗ | son +1.1R (120.2dk)
+
+  #47 SHORT ATOMUSDT [KAPALI/zaman] 16:40:15
+     Giriş 1.501 | Stop 1.54783 (%3.12) | TP1 1.43075 | TP2 1.38392
+     K 81.6 D 84.3 RSI 43.3 ADX 49.8 bear distEMA -0.73% | skor 7.3
+     max +0.66R | tp1 ✗ | tp2 ✗ | son +0.41R (120.1dk)
+
+  #48 SHORT CRVUSDT [KAPALI/zaman] 16:45:18
+     Giriş 0.3583 | Stop 0.368762 (%2.92) | TP1 0.342606 | TP2 0.332144
+     K 96.9 D 98.1 RSI 42.9 ADX 44.6 bear distEMA -1.53% | skor 9.08
+     max +0.54R | tp1 ✗ | tp2 ✗ | son +0.12R (120.1dk)
+
+  #49 SHORT XMRUSDT [KAPALI/zaman] 16:45:18
+     Giriş 530.74 | Stop 548.573 (%3.36) | TP1 503.991 | TP2 486.158
+     K 85.1 D 85.2 RSI 38.4 ADX 45.4 bear distEMA -1.65% | skor 7.46
+     max +0.7R | tp1 ✗ | tp2 ✗ | son +0.41R (120.1dk)
+
+  #50 SHORT LAUSDT [KAPALI/stop] 16:45:19
+     Giriş 0.06433 | Stop 0.0658225 (%2.32) | TP1 0.0620913 | TP2 0.0605989
+     K 82.9 D 87.0 RSI 42.3 ADX 26.4 bear distEMA -0.70% | skor 6.73
+     max +0.3R | tp1 ✗ | tp2 ✗ | son -1.12R (106.9dk)
+
+  #51 SHORT PIPPINUSDT [KAPALI/zaman] 16:55:21
+     Giriş 0.01951 | Stop 0.0200641 (%2.84) | TP1 0.0186789 | TP2 0.0181248
+     K 94.5 D 95.1 RSI 50.8 ADX 39.4 bear distEMA -0.68% | skor 9.01
+     max +0.67R | tp1 ✗ | tp2 ✗ | son -0.76R (149.5dk)
+
+  #52 SHORT MARAUSDT [KAPALI/zaman] 16:55:21
+     Giriş 11.4 | Stop 11.7922 (%3.44) | TP1 10.8118 | TP2 10.4196
+     K 91.5 D 93.0 RSI 51.7 ADX 41.7 bear distEMA -0.25% | skor 8.78
+     max +0.41R | tp1 ✗ | tp2 ✗ | son +0.23R (149.5dk)
+
+  #53 SHORT MSTRUSDT [KAPALI/zaman] 16:55:22
+     Giriş 140.16 | Stop 146.103 (%4.24) | TP1 131.246 | TP2 125.303
+     K 95.6 D 96.2 RSI 54.5 ADX 28.1 bear distEMA -0.01% | skor 8.75
+     ⚠️ olay: hacim 5.1×
+     max +0.27R | tp1 ✗ | tp2 ✗ | son -0.3R (149.5dk)
+
+  #54 SHORT DOTUSDT [KAPALI/zaman] 16:55:23
+     Giriş 0.8582 | Stop 0.872961 (%1.72) | TP1 0.836058 | TP2 0.821297
+     K 92.4 D 92.7 RSI 44.2 ADX 44.6 bear distEMA -0.92% | skor 8.68
+     max +1.15R | tp1 ✗ | tp2 ✗ | son +0.14R (149.5dk)
+
+  #55 SHORT PYTHUSDT [KAPALI/zaman] 16:55:23
+     Giriş 0.05357 | Stop 0.05492 (%2.52) | TP1 0.0515451 | TP2 0.0501951
+     K 92.2 D 92.7 RSI 43.7 ADX 50.3 bear distEMA -1.05% | skor 8.61
+     ⚠️ ölü coin 24s -5.4%
+     max +0.76R | tp1 ✗ | tp2 ✗ | son -0.07R (149.4dk)
+
+  #56 SHORT TIAUSDT [KAPALI/zaman] 16:55:23
+     Giriş 0.3531 | Stop 0.361151 (%2.28) | TP1 0.341024 | TP2 0.332973
+     K 91.8 D 94.0 RSI 43.7 ADX 43.2 bear distEMA -0.97% | skor 8.59
+     max +0.98R | tp1 ✗ | tp2 ✗ | son +0.29R (149.4dk)
+
+  #57 SHORT OPUSDT [KAPALI/zaman] 16:55:24
+     Giriş 0.09711 | Stop 0.0994406 (%2.4) | TP1 0.093614 | TP2 0.0912834
+     K 91.1 D 94.9 RSI 44.2 ADX 41.4 bear distEMA -1.06% | skor 8.46
+     max +0.81R | tp1 ✗ | tp2 ✗ | son -0.04R (149.4dk)
+
+  #58 SHORT APTUSDT [KAPALI/zaman] 16:55:24
+     Giriş 0.5809 | Stop 0.594145 (%2.28) | TP1 0.561033 | TP2 0.547789
+     K 90.5 D 91.7 RSI 43.5 ADX 47.9 bear distEMA -1.05% | skor 8.39
+     max +0.89R | tp1 ✗ | tp2 ✗ | son +0.34R (149.4dk)
+
+  #59 SHORT STRKUSDT [KAPALI/zaman] 16:55:25
+     Giriş 0.0261 | Stop 0.0267264 (%2.4) | TP1 0.0251604 | TP2 0.024534
+     K 92.3 D 92.3 RSI 38.9 ADX 49.8 bear distEMA -1.78% | skor 8.38
+     max +1.09R | tp1 ✗ | tp2 ✗ | son +0.32R (149.4dk)
+
+  #60 SHORT AVAXUSDT [KAPALI/zaman] 16:55:25
+     Giriş 7.367 | Stop 7.47898 (%1.52) | TP1 7.19903 | TP2 7.08705
+     K 89.2 D 90.8 RSI 40.7 ADX 39.2 bear distEMA -0.83% | skor 8.24
+     max +0.64R | tp1 ✗ | tp2 ✗ | son -0.05R (149.4dk)
+
+  #61 SHORT FILUSDT [KAPALI/zaman] 16:55:25
+     Giriş 0.7494 | Stop 0.762889 (%1.8) | TP1 0.729166 | TP2 0.715677
+     K 89.5 D 90.8 RSI 38.9 ADX 47.1 bear distEMA -1.45% | skor 8.12
+     max +0.69R | tp1 ✗ | tp2 ✗ | son +0.18R (149.4dk)
+
+  #62 SHORT STXUSDT [KAPALI/zaman] 16:55:26
+     Giriş 0.2643 | Stop 0.271912 (%2.88) | TP1 0.252882 | TP2 0.24527
+     K 91.2 D 92.2 RSI 42.6 ADX 34.5 bear distEMA -1.37% | skor 8.07
+     max +0.74R | tp1 ✗ | tp2 ✗ | son +0.18R (149.4dk)
+
+  #63 SHORT WLFIUSDT [KAPALI/zaman] 16:55:26
+     Giriş 0.05724 | Stop 0.0580871 (%1.48) | TP1 0.0559693 | TP2 0.0551221
+     K 90.4 D 91.3 RSI 52.1 ADX 26.1 bear distEMA -0.13% | skor 7.91
+     max +0.37R | tp1 ✗ | tp2 ✗ | son +0.17R (149.4dk)
+
+  #64 SHORT ENSUSDT [KAPALI/zaman] 16:55:26
+     Giriş 5.701 | Stop 5.89939 (%3.48) | TP1 5.40341 | TP2 5.20501
+     K 88.1 D 89.6 RSI 39.6 ADX 46.1 bear distEMA -1.75% | skor 7.83
+     max +0.41R | tp1 ✗ | tp2 ✗ | son -0.29R (149.4dk)
+
+  #65 SHORT VIRTUALUSDT [KAPALI/zaman] 16:55:28
+     Giriş 0.6665 | Stop 0.684096 (%2.64) | TP1 0.640107 | TP2 0.622511
+     K 89.4 D 90.0 RSI 43.8 ADX 33.0 bear distEMA -1.14% | skor 7.81
+     max +0.64R | tp1 ✗ | tp2 ✗ | son +0.05R (149.4dk)
+
+  #66 SHORT BNBUSDT [KAPALI/zaman] 16:55:28
+     Giriş 714.4 | Stop 725.259 (%1.52) | TP1 698.112 | TP2 687.253
+     K 85.0 D 85.6 RSI 40.2 ADX 38.5 bear distEMA -0.59% | skor 7.72
+     max +0.55R | tp1 ✗ | tp2 ✗ | son -0.35R (149.4dk)
+
+  #67 SHORT LDOUSDT [KAPALI/zaman] 16:55:30
+     Giriş 0.3842 | Stop 0.394036 (%2.56) | TP1 0.369447 | TP2 0.359611
+     K 84.7 D 88.6 RSI 42.6 ADX 40.9 bear distEMA -1.08% | skor 7.6
+     max +1.15R | tp1 ✗ | tp2 ✗ | son +0.57R (149.3dk)
+
+  #68 SHORT AKEUSDT [KAPALI/stop] 16:55:30
+     Giriş 0.01333 | Stop 0.0138312 (%3.76) | TP1 0.0125782 | TP2 0.012077
+     K 73.7 D 78.1 RSI 43.2 ADX 28.0 bear distEMA -1.32% | skor 5.38
+     max +0.03R | tp1 ✗ | tp2 ✗ | son -1.01R (73.5dk)
+
+  #69 SHORT POLUSDT [KAPALI/zaman] 17:00:37
+     Giriş 0.09234 | Stop 0.0942607 (%2.08) | TP1 0.089459 | TP2 0.0875383
+     K 91.8 D 94.8 RSI 42.6 ADX 42.2 bear distEMA -1.09% | skor 8.54
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.81R | tp1 ✗ | tp2 ✗ | son +0.18R (144.2dk)
+
+  #70 SHORT PLUMEUSDT [KAPALI/zaman] 17:00:37
+     Giriş 0.0139 | Stop 0.0141558 (%1.84) | TP1 0.0135164 | TP2 0.0132606
+     K 90.1 D 94.6 RSI 45.0 ADX 39.1 bear distEMA -0.86% | skor 8.34
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +1.17R | tp1 ✗ | tp2 ✗ | son -0.43R (144.2dk)
+
+  #71 SHORT JTOUSDT [KAPALI/zaman] 17:00:37
+     Giriş 0.4144 | Stop 0.423517 (%2.2) | TP1 0.400725 | TP2 0.391608
+     K 90.7 D 94.0 RSI 42.9 ADX 50.2 bear distEMA -1.62% | skor 8.22
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +1.51R | tp1 ✓ 18:37:32 | tp2 ✗ | son +1.26R (144.2dk)
+
+  #72 SHORT GRAMUSDT [KAPALI/zaman] 17:00:38
+     Giriş 1.366 | Stop 1.38622 (%1.48) | TP1 1.33567 | TP2 1.31546
+     K 87.4 D 93.4 RSI 45.9 ADX 43.5 bear distEMA -0.42% | skor 8.17
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.69R | tp1 ✗ | tp2 ✗ | son +0.15R (144.2dk)
+
+  #73 SHORT MORPHOUSDT [KAPALI/stop] 17:00:38
+     Giriş 2.466 | Stop 2.52124 (%2.24) | TP1 2.38314 | TP2 2.3279
+     K 90.3 D 95.2 RSI 49.4 ADX 29.6 bear distEMA -0.51% | skor 7.96
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.69R | tp1 ✗ | tp2 ✗ | son -1.03R (144.2dk)
+
+  #74 SHORT 1000BONKUSDT [KAPALI/zaman] 17:00:38
+     Giriş 0.003128 | Stop 0.00322309 (%3.04) | TP1 0.00298537 | TP2 0.00289028
+     K 88.3 D 94.7 RSI 49.4 ADX 32.4 bear distEMA -0.38% | skor 7.89
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.82R | tp1 ✗ | tp2 ✗ | son -0.11R (144.2dk)
+
+  #75 SHORT TAOUSDT [KAPALI/zaman] 17:00:40
+     Giriş 224.29 | Stop 230.032 (%2.56) | TP1 215.677 | TP2 209.935
+     K 86.7 D 93.0 RSI 44.6 ADX 42.3 bear distEMA -1.05% | skor 7.88
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.71R | tp1 ✗ | tp2 ✗ | son +0.07R (144.2dk)
+
+  #76 SHORT ENAUSDT [KAPALI/zaman] 17:00:41
+     Giriş 0.16577 | Stop 0.172467 (%4.04) | TP1 0.155724 | TP2 0.149027
+     K 87.4 D 94.9 RSI 48.5 ADX 35.1 bear distEMA -0.57% | skor 7.86
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.72R | tp1 ✗ | tp2 ✗ | son +0.03R (144.2dk)
+
+  #77 SHORT MONUSDT [KAPALI/zaman] 17:00:41
+     Giriş 0.02553 | Stop 0.0264593 (%3.64) | TP1 0.0241361 | TP2 0.0232068
+     K 91.4 D 95.6 RSI 35.5 ADX 54.3 bear distEMA -2.98% | skor 7.86
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +1.42R | tp1 ✗ | tp2 ✗ | son +1.14R (144.1dk)
+
+  #78 SHORT BCHUSDT [KAPALI/zaman] 17:00:41
+     Giriş 251.7 | Stop 256.432 (%1.88) | TP1 244.602 | TP2 239.87
+     K 88.0 D 93.8 RSI 40.6 ADX 37.3 bear distEMA -1.28% | skor 7.83
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.97R | tp1 ✗ | tp2 ✗ | son +0.04R (144.1dk)
+
+  #79 SHORT XAUUSDT [KAPALI/zaman] 17:00:42
+     Giriş 4417.59 | Stop 4472.37 (%1.24) | TP1 4335.42 | TP2 4280.64
+     K 88.1 D 93.7 RSI 44.4 ADX 28.5 bear distEMA -0.55% | skor 7.59
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.01R | tp1 ✗ | tp2 ✗ | son -0.43R (144.1dk)
+
+  #80 SHORT XAGUSDT [KAPALI/zaman] 17:00:42
+     Giriş 65.66 | Stop 66.8681 (%1.84) | TP1 63.8478 | TP2 62.6396
+     K 87.2 D 93.4 RSI 41.9 ADX 32.8 bear distEMA -0.92% | skor 7.58
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.04R | tp1 ✗ | tp2 ✗ | son -0.43R (144.1dk)
+
+  #81 SHORT XPLUSDT [KAPALI/zaman] 17:00:43
+     Giriş 0.09291 | Stop 0.0980386 (%5.52) | TP1 0.0852171 | TP2 0.0800884
+     K 88.2 D 94.6 RSI 38.7 ADX 48.5 bear distEMA -2.69% | skor 7.53
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.21R | tp1 ✗ | tp2 ✗ | son -0.09R (144.1dk)
+
+  #82 SHORT PAXGUSDT [KAPALI/zaman] 17:00:43
+     Giriş 4414.7 | Stop 4462.38 (%1.08) | TP1 4343.18 | TP2 4295.5
+     K 87.9 D 93.5 RSI 44.1 ADX 27.6 bear distEMA -0.54% | skor 7.51
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.03R | tp1 ✗ | tp2 ✗ | son -0.43R (144.1dk)
+
+  #83 SHORT LINKUSDT [KAPALI/zaman] 17:00:44
+     Giriş 11.645 | Stop 11.8826 (%2.04) | TP1 11.2887 | TP2 11.0511
+     K 84.7 D 91.9 RSI 39.7 ADX 41.9 bear distEMA -1.46% | skor 7.47
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.77R | tp1 ✗ | tp2 ✗ | son -0.1R (144.1dk)
+
+  #84 SHORT XLMUSDT [KAPALI/zaman] 17:00:45
+     Giriş 0.1807 | Stop 0.183953 (%1.8) | TP1 0.175821 | TP2 0.172569
+     K 85.6 D 92.8 RSI 43.1 ADX 34.3 bear distEMA -0.94% | skor 7.45
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +1.08R | tp1 ✗ | tp2 ✗ | son +0.52R (144.1dk)
+
+  #85 SHORT ETHUSDT [KAPALI/zaman] 17:00:45
+     Giriş 2450.92 | Stop 2492.1 (%1.68) | TP1 2389.16 | TP2 2347.98
+     K 85.1 D 92.3 RSI 37.0 ADX 38.1 bear distEMA -1.36% | skor 7.45
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.49R | tp1 ✗ | tp2 ✗ | son +0.0R (144.1dk)
+
+  #86 SHORT ETHFIUSDT [KAPALI/zaman] 17:00:45
+     Giriş 0.5675 | Stop 0.58339 (%2.8) | TP1 0.543665 | TP2 0.527775
+     K 85.9 D 92.4 RSI 52.4 ADX 27.2 bear distEMA -0.00% | skor 7.42
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.86R | tp1 ✗ | tp2 ✗ | son +0.3R (144.1dk)
+
+  #87 SHORT XAUTUSDT [KAPALI/zaman] 17:00:45
+     Giriş 4409.1 | Stop 4458.48 (%1.12) | TP1 4335.03 | TP2 4285.65
+     K 87.4 D 93.3 RSI 44.7 ADX 26.9 bear distEMA -0.50% | skor 7.42
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.01R | tp1 ✗ | tp2 ✗ | son -0.42R (144.1dk)
+
+  #88 SHORT WLDUSDT [KAPALI/zaman] 17:00:46
+     Giriş 0.3796 | Stop 0.388559 (%2.36) | TP1 0.366162 | TP2 0.357204
+     K 84.9 D 92.6 RSI 42.0 ADX 37.0 bear distEMA -1.26% | skor 7.4
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +1.02R | tp1 ✗ | tp2 ✗ | son +0.36R (144.1dk)
+
+  #89 SHORT JUPUSDT [KAPALI/zaman] 17:00:46
+     Giriş 0.2161 | Stop 0.221805 (%2.64) | TP1 0.207542 | TP2 0.201837
+     K 85.1 D 93.1 RSI 45.8 ADX 35.4 bear distEMA -1.11% | skor 7.39
+     ⚠️ ölü coin 24s -5.1% | BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.46R | tp1 ✗ | tp2 ✗ | son -0.12R (144.1dk)
+
+  #90 SHORT FARTCOINUSDT [KAPALI/zaman] 17:00:46
+     Giriş 0.16731 | Stop 0.173266 (%3.56) | TP1 0.158376 | TP2 0.152419
+     K 85.7 D 92.7 RSI 46.3 ADX 32.6 bear distEMA -1.19% | skor 7.28
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.9R | tp1 ✗ | tp2 ✗ | son +0.54R (144.1dk)
+
+  #91 SHORT SOLUSDT [KAPALI/zaman] 17:00:47
+     Giriş 101.58 | Stop 103.49 (%1.88) | TP1 98.7154 | TP2 96.8057
+     K 81.9 D 91.1 RSI 39.7 ADX 40.5 bear distEMA -1.13% | skor 7.22
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.69R | tp1 ✗ | tp2 ✗ | son -0.04R (144.0dk)
+
+  #92 SHORT BTCUSDT [KAPALI/zaman] 17:00:49
+     Giriş 79346.3 | Stop 80488.9 (%1.44) | TP1 77632.4 | TP2 76489.8
+     K 81.6 D 90.2 RSI 36.7 ADX 50.2 bear distEMA -1.10% | skor 7.19
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.64R | tp1 ✗ | tp2 ✗ | son -0.11R (144.0dk)
+
+  #93 SHORT SHIB1000USDT [KAPALI/zaman] 17:00:50
+     Giriş 0.00525 | Stop 0.0053319 (%1.56) | TP1 0.00512715 | TP2 0.00504525
+     K 83.9 D 92.6 RSI 45.5 ADX 31.8 bear distEMA -0.69% | skor 7.17
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +1.22R | tp1 ✗ | tp2 ✗ | son +0.6R (144.0dk)
+
+  #94 SHORT ZROUSDT [KAPALI/zaman] 17:00:50
+     Giriş 1.0614 | Stop 1.09961 (%3.6) | TP1 1.00408 | TP2 0.965874
+     K 86.0 D 91.6 RSI 37.5 ADX 36.1 bear distEMA -2.48% | skor 7.1
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.43R | tp1 ✗ | tp2 ✗ | son +0.04R (144.0dk)
+
+  #95 SHORT ONDOUSDT [KAPALI/zaman] 17:00:52
+     Giriş 0.3575 | Stop 0.365794 (%2.32) | TP1 0.345059 | TP2 0.336765
+     K 82.6 D 91.3 RSI 44.3 ADX 35.2 bear distEMA -0.98% | skor 7.09
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.93R | tp1 ✗ | tp2 ✗ | son +0.42R (144.0dk)
+
+  #96 SHORT PENGUUSDT [KAPALI/zaman] 17:00:52
+     Giriş 0.008342 | Stop 0.0085956 (%3.04) | TP1 0.0079616 | TP2 0.007708
+     K 83.9 D 92.2 RSI 39.8 ADX 54.6 bear distEMA -2.29% | skor 7.08
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.83R | tp1 ✗ | tp2 ✗ | son +0.42R (144.0dk)
+
+  #97 SHORT DOGEUSDT [KAPALI/zaman] 17:00:53
+     Giriş 0.08519 | Stop 0.0867916 (%1.88) | TP1 0.0827877 | TP2 0.0811861
+     K 80.9 D 90.2 RSI 39.5 ADX 40.3 bear distEMA -1.33% | skor 7.02
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.88R | tp1 ✗ | tp2 ✗ | son +0.44R (143.9dk)
+
+  #98 SHORT 1000PEPEUSDT [KAPALI/zaman] 17:00:54
+     Giriş 0.003548 | Stop 0.00363173 (%2.36) | TP1 0.0034224 | TP2 0.00333867
+     K 81.5 D 90.7 RSI 40.9 ADX 43.7 bear distEMA -1.59% | skor 7.0
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.91R | tp1 ✗ | tp2 ✗ | son +0.31R (143.9dk)
+
+  #99 SHORT XRPUSDT [KAPALI/zaman] 17:00:54
+     Giriş 1.4124 | Stop 1.44347 (%2.2) | TP1 1.36579 | TP2 1.33472
+     K 81.9 D 89.6 RSI 41.6 ADX 36.2 bear distEMA -1.21% | skor 6.97
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.95R | tp1 ✗ | tp2 ✗ | son +0.29R (143.9dk)
+
+  #100 SHORT LTCUSDT [KAPALI/zaman] 17:00:54
+     Giriş 50.46 | Stop 51.0655 (%1.2) | TP1 49.5517 | TP2 48.9462
+     K 79.8 D 90.3 RSI 41.1 ADX 37.4 bear distEMA -0.69% | skor 6.93
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +1.16R | tp1 ✗ | tp2 ✗ | son +0.15R (143.9dk)
+
+  #101 SHORT SEIUSDT [KAPALI/zaman] 17:00:55
+     Giriş 0.04697 | Stop 0.0477215 (%1.6) | TP1 0.0458427 | TP2 0.0450912
+     K 81.7 D 91.2 RSI 35.2 ADX 37.2 bear distEMA -1.60% | skor 6.88
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.75R | tp1 ✗ | tp2 ✗ | son +0.07R (143.9dk)
+
+  #102 SHORT ICPUSDT [KAPALI/zaman] 17:00:55
+     Giriş 2.472 | Stop 2.51748 (%1.84) | TP1 2.40377 | TP2 2.35829
+     K 81.1 D 88.5 RSI 36.2 ADX 53.8 bear distEMA -1.85% | skor 6.87
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +1.17R | tp1 ✗ | tp2 ✗ | son +0.13R (143.9dk)
+
+  #103 SHORT ASTERUSDT [KAPALI/zaman] 17:00:55
+     Giriş 0.7291 | Stop 0.747765 (%2.56) | TP1 0.701103 | TP2 0.682438
+     K 78.9 D 88.9 RSI 42.2 ADX 43.4 bear distEMA -1.03% | skor 6.84
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.47R | tp1 ✗ | tp2 ✗ | son -0.56R (143.9dk)
+
+  #104 SHORT JASMYUSDT [KAPALI/zaman] 17:00:56
+     Giriş 0.004353 | Stop 0.00445225 (%2.28) | TP1 0.00420413 | TP2 0.00410488
+     K 82.7 D 92.8 RSI 50.6 ADX 24.6 bear distEMA -0.14% | skor 6.79
+     ⚠️ ölü coin 24s -7.5% | BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +1.08R | tp1 ✗ | tp2 ✗ | son +0.53R (143.9dk)
+
+  #105 SHORT WIFUSDT [KAPALI/zaman] 17:00:56
+     Giriş 0.202 | Stop 0.20604 (%2.0) | TP1 0.19594 | TP2 0.1919
+     K 80.4 D 89.1 RSI 36.7 ADX 50.2 bear distEMA -1.90% | skor 6.75
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +1.16R | tp1 ✗ | tp2 ✗ | son +0.47R (143.9dk)
+
+  #106 SHORT ADAUSDT [KAPALI/zaman] 17:00:56
+     Giriş 0.2149 | Stop 0.2198 (%2.28) | TP1 0.20755 | TP2 0.202651
+     K 79.0 D 89.5 RSI 41.5 ADX 38.0 bear distEMA -1.36% | skor 6.64
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +1.12R | tp1 ✗ | tp2 ✗ | son +0.35R (143.9dk)
+
+  #107 SHORT HBARUSDT [KAPALI/zaman] 17:00:58
+     Giriş 0.07764 | Stop 0.078727 (%1.4) | TP1 0.0760096 | TP2 0.0749226
+     K 79.1 D 89.5 RSI 42.9 ADX 33.5 bear distEMA -0.69% | skor 6.62
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +1.2R | tp1 ✗ | tp2 ✗ | son +0.32R (143.9dk)
+
+  #108 SHORT AAVEUSDT [KAPALI/zaman] 17:00:58
+     Giriş 131.29 | Stop 134.546 (%2.48) | TP1 126.406 | TP2 123.15
+     K 76.9 D 79.4 RSI 42.8 ADX 34.6 bear distEMA -0.99% | skor 6.29
+     ⚠️ BTC teyidi yok (1s -0.10% 4s -2.05%)
+     max +0.73R | tp1 ✗ | tp2 ✗ | son -0.02R (143.9dk)
+
+  #109 SHORT SIGNUSDT [KAPALI/zaman] 17:10:05
+     Giriş 0.009451 | Stop 0.00990843 (%4.84) | TP1 0.00876485 | TP2 0.00830743
+     K 73.2 D 81.5 RSI 31.8 ADX 33.8 bear distEMA -4.35% | skor 4.64
+     ⚠️ BTC teyidi yok (1s -0.01% 4s -2.04%)
+     max +0.29R | tp1 ✗ | tp2 ✗ | son +0.29R (134.7dk)
+
+  #110 SHORT CRCLUSDT [KAPALI/zaman] 17:15:13
+     Giriş 98.97 | Stop 102.889 (%3.96) | TP1 93.0912 | TP2 89.172
+     K 95.0 D 96.5 RSI 49.0 ADX 33.0 bear distEMA -0.85% | skor 8.65
+     ⚠️ BTC teyidi yok (1s +0.23% 4s -1.91%)
+     max +0.25R | tp1 ✗ | tp2 ✗ | son -0.9R (129.6dk)
+
+  #111 SHORT QNTXUSDT [KAPALI/zaman] 17:15:14
+     Giriş 48.96 | Stop 50.4484 (%3.04) | TP1 46.7274 | TP2 45.239
+     K 83.3 D 87.8 RSI 38.6 ADX 30.4 bear distEMA -1.01% | skor 6.91
+     ⚠️ BTC teyidi yok (1s +0.23% 4s -1.91%)
+     max +0.21R | tp1 ✗ | tp2 ✗ | son +0.18R (129.6dk)
+
+  #112 SHORT FLOCKUSDT [KAPALI/stop] 17:15:14
+     Giriş 0.03732 | Stop 0.03835 (%2.76) | TP1 0.0357749 | TP2 0.0347449
+     K 87.4 D 89.4 RSI 21.7 ADX 31.0 bear distEMA -3.26% | skor 6.73
+     ⚠️ BTC teyidi yok (1s +0.23% 4s -1.91%)
+     max +0.34R | tp1 ✗ | tp2 ✗ | son -1.73R (8.0dk)
+
+  #113 SHORT TRUMPUSDT [KAPALI/zaman] 17:25:18
+     Giriş 2.246 | Stop 2.30799 (%2.76) | TP1 2.15302 | TP2 2.09103
+     K 79.4 D 80.6 RSI 36.9 ADX 49.6 bear distEMA -2.46% | skor 6.44
+     ⚠️ BTC teyidi yok (1s -0.11% 4s -1.89%)
+     max +0.42R | tp1 ✗ | tp2 ✗ | son +0.05R (120.2dk)
+
+  #114 SHORT DASHUSDT [KAPALI/stop] 17:30:16
+     Giriş 50.14 | Stop 52.3863 (%4.48) | TP1 46.7706 | TP2 44.5243
+     K 78.8 D 80.2 RSI 44.0 ADX 40.4 bear distEMA -1.79% | skor 3.07
+     ⚠️ olay: 24s +16.3% | BTC teyidi yok (1s +0.06% 4s -1.96%)
+     max +0.26R | tp1 ✗ | tp2 ✗ | son -1.38R (114.6dk)
+
+  #115 LONG SAMSUNGUSDT [KAPALI/zaman] 18:00:16
+     Giriş 194.34 | Stop 191.386 (%1.52) | TP1 198.771 | TP2 201.725
+     K 13.3 D 7.5 RSI 64.0 ADX 30.8 bull distEMA +1.36% | skor 7.26
+     ⚠️ BTC teyidi yok (1s -0.60% 4s -2.81%)
+     max +1.09R | tp1 ✗ | tp2 ✗ | son +0.96R (120.1dk)
+
+  #116 LONG SOXLUSDT [KAPALI/zaman] 18:00:16
+     Giriş 116.11 | Stop 111.744 (%3.76) | TP1 122.659 | TP2 127.024
+     K 12.9 D 7.9 RSI 57.4 ADX 27.6 bull distEMA +1.97% | skor 6.93
+     ⚠️ BTC teyidi yok (1s -0.60% 4s -2.81%)
+     max +0.34R | tp1 ✗ | tp2 ✗ | son +0.28R (120.1dk)
+
+  #117 SHORT SOXSUSDT [KAPALI/zaman] 18:00:16
+     Giriş 47.15 | Stop 49.1303 (%4.2) | TP1 44.1795 | TP2 42.1992
+     K 87.4 D 92.5 RSI 42.1 ADX 28.5 bear distEMA -2.30% | skor 6.92
+     ⚠️ ölü coin 24s -11.3%
+     max +0.37R | tp1 ✗ | tp2 ✗ | son +0.31R (120.1dk)
+
+  #118 LONG KORUUSDT [KAPALI/zaman] 18:00:16
+     Giriş 22.09 | Stop 21.2859 (%3.64) | TP1 23.2961 | TP2 24.1002
+     K 16.1 D 9.3 RSI 60.0 ADX 29.4 bull distEMA +2.61% | skor 6.39
+     ⚠️ BTC teyidi yok (1s -0.60% 4s -2.81%)
+     max +0.92R | tp1 ✗ | tp2 ✗ | son +0.82R (120.1dk)
+
+  #119 LONG SKHYUSDT [KAPALI/zaman] 18:00:18
+     Giriş 169.94 | Stop 166.609 (%1.96) | TP1 174.936 | TP2 178.267
+     K 18.8 D 9.8 RSI 62.6 ADX 26.5 bull distEMA +1.44% | skor 6.27
+     ⚠️ BTC teyidi yok (1s -0.60% 4s -2.81%)
+     max +1.03R | tp1 ✗ | tp2 ✗ | son +0.86R (120.1dk)
+
+  #120 LONG SKHYNIXUSDT [KAPALI/zaman] 18:00:18
+     Giriş 1240.45 | Stop 1219.61 (%1.68) | TP1 1271.71 | TP2 1292.55
+     K 20.1 D 10.7 RSI 58.4 ADX 23.7 bull distEMA +0.92% | skor 6.11
+     ⚠️ BTC teyidi yok (1s -0.60% 4s -2.81%)
+     max +1.25R | tp1 ✗ | tp2 ✗ | son +1.1R (120.1dk)
+
+  #121 LONG DRAMUSDT [KAPALI/zaman] 18:00:19
+     Giriş 58.48 | Stop 57.4274 (%1.8) | TP1 60.059 | TP2 61.1116
+     K 19.2 D 10.3 RSI 62.0 ADX 23.8 bull distEMA +1.31% | skor 6.1
+     ⚠️ BTC teyidi yok (1s -0.60% 4s -2.81%)
+     max +0.85R | tp1 ✗ | tp2 ✗ | son +0.75R (120.0dk)
+
+  #122 LONG INTCUSDT [KAPALI/zaman] 18:00:20
+     Giriş 95.35 | Stop 92.8328 (%2.64) | TP1 99.1259 | TP2 101.643
+     K 22.8 D 17.1 RSI 61.8 ADX 31.1 bull distEMA +1.61% | skor 5.93
+     ⚠️ BTC teyidi yok (1s -0.60% 4s -2.81%)
+     max +0.2R | tp1 ✗ | tp2 ✗ | son +0.16R (120.0dk)
+
+  #123 LONG MUUSDT [KAPALI/zaman] 18:00:20
+     Giriş 1000.81 | Stop 975.59 (%2.52) | TP1 1038.64 | TP2 1063.86
+     K 22.5 D 13.8 RSI 62.7 ADX 30.0 bull distEMA +1.55% | skor 5.93
+     ⚠️ BTC teyidi yok (1s -0.60% 4s -2.81%)
+     max +0.28R | tp1 ✗ | tp2 ✗ | son +0.18R (120.0dk)
+
+  #124 LONG SNDKUSDT [KAPALI/zaman] 18:00:21
+     Giriş 1683.47 | Stop 1628.25 (%3.28) | TP1 1766.3 | TP2 1821.51
+     K 22.8 D 21.9 RSI 70.8 ADX 49.7 bull distEMA +3.46% | skor 5.8
+     ⚠️ olay: hacim 5.3× | BTC teyidi yok (1s -0.60% 4s -2.81%)
+     max +0.94R | tp1 ✗ | tp2 ✗ | son +0.85R (120.0dk)
+
+  #125 LONG VVVUSDT [KAPALI/zaman] 18:05:20
+     Giriş 17.358 | Stop 16.6984 (%3.8) | TP1 18.3474 | TP2 19.007
+     K 16.5 D 9.9 RSI 47.8 ADX 25.0 bull distEMA +0.10% | skor 6.93
+     ⚠️ BTC teyidi yok (1s -0.61% 4s -2.61%)
+     max +0.64R | tp1 ✗ | tp2 ✗ | son +0.45R (120.3dk)
+
+  #126 SHORT TSLAUSDT [KAPALI/zaman] 18:15:17
+     Giriş 353.69 | Stop 359.208 (%1.56) | TP1 345.414 | TP2 339.896
+     K 76.8 D 80.3 RSI 33.6 ADX 47.8 bear distEMA -1.83% | skor 6.3
+     ⚠️ ölü coin 24s -7.0% | BTC teyidi yok (1s -0.28% 4s -2.44%)
+     max +0.31R | tp1 ✗ | tp2 ✗ | son +0.22R (120.3dk)
+
+  #127 SHORT CAPUSDT [KAPALI/zaman] 18:20:15
+     Giriş 0.0447 | Stop 0.045737 (%2.32) | TP1 0.0431444 | TP2 0.0421074
+     K 96.9 D 98.6 RSI 48.3 ADX 28.6 bear distEMA -0.84% | skor 8.67
+     ⚠️ ölü coin 24s -8.6% | BTC teyidi yok (1s +0.09% 4s -2.37%)
+     max +0.64R | tp1 ✗ | tp2 ✗ | son -0.12R (120.3dk)
+
+  #128 SHORT ZENUSDT [KAPALI/stop] 18:20:15
+     Giriş 6.114 | Stop 6.339 (%3.68) | TP1 5.77651 | TP2 5.55151
+     K 86.2 D 89.9 RSI 47.4 ADX 28.8 bear distEMA -0.89% | skor 7.24
+     ⚠️ BTC teyidi yok (1s +0.09% 4s -2.37%)
+     max +-0.0R | tp1 ✗ | tp2 ✗ | son -1.09R (64.6dk)
+
+  #129 SHORT MNTUSDT [KAPALI/stop] 18:25:17
+     Giriş 0.5731 | Stop 0.579289 (%1.08) | TP1 0.563816 | TP2 0.557626
+     K 81.2 D 86.7 RSI 43.2 ADX 24.7 bear distEMA -0.43% | skor 6.5
+     ⚠️ BTC teyidi yok (1s -0.04% 4s -2.42%)
+     max +-0.0R | tp1 ✗ | tp2 ✗ | son -1.16R (65.4dk)
+
+  #130 SHORT RENDERUSDT [KAPALI/zaman] 18:35:04
+     Giriş 1.414 | Stop 1.43549 (%1.52) | TP1 1.38176 | TP2 1.36027
+     K 97.3 D 97.5 RSI 42.7 ADX 47.4 bear distEMA -0.99% | skor 9.31
+     ⚠️ BTC teyidi yok (1s -0.05% 4s -2.30%)
+     max +-0.0R | tp1 ✗ | tp2 ✗ | son -0.65R (120.0dk)
+
+  #131 SHORT ONGUSDT [KAPALI/zaman] 18:35:05
+     Giriş 0.09651 | Stop 0.0982086 (%1.76) | TP1 0.0939621 | TP2 0.0922635
+     K 96.0 D 96.1 RSI 50.4 ADX 30.5 bear distEMA -0.62% | skor 8.74
+     ⚠️ BTC teyidi yok (1s -0.05% 4s -2.30%)
+     max +0.39R | tp1 ✗ | tp2 ✗ | son -0.15R (120.0dk)
+
+  #132 SHORT XCNUSDT [KAPALI/stop] 18:35:05
+     Giriş 0.003755 | Stop 0.00393824 (%4.88) | TP1 0.00348014 | TP2 0.0032969
+     K 70.8 D 80.7 RSI 38.3 ADX 29.3 bear distEMA -3.58% | skor 4.31
+     ⚠️ BTC teyidi yok (1s -0.05% 4s -2.30%)
+     max +0.12R | tp1 ✗ | tp2 ✗ | son -1.02R (107.9dk)
+
+  #133 SHORT SKRUSDT [KAPALI/stop] 18:35:44
+     Giriş 0.020627 | Stop 0.0213531 (%3.52) | TP1 0.0195379 | TP2 0.0188118
+     K 98.4 D 98.7 RSI 47.6 ADX 30.2 bear distEMA -1.49% | skor 8.74
+     ⚠️ BTC teyidi yok (1s -0.05% 4s -2.30%)
+     max +0.14R | tp1 ✗ | tp2 ✗ | son -1.05R (51.8dk)
+
+  #134 SHORT NEARUSDT [KAPALI/stop] 18:35:44
+     Giriş 1.929 | Stop 1.9753 (%2.4) | TP1 1.85956 | TP2 1.81326
+     K 92.0 D 96.2 RSI 40.9 ADX 40.1 bear distEMA -1.36% | skor 8.48
+     ⚠️ BTC teyidi yok (1s -0.05% 4s -2.30%)
+     max +-0.0R | tp1 ✗ | tp2 ✗ | son -1.08R (73.5dk)
+
+  #135 SHORT HYPEUSDT [KAPALI/zaman] 18:35:45
+     Giriş 84.21 | Stop 85.8942 (%2.0) | TP1 81.6837 | TP2 79.9995
+     K 90.0 D 95.2 RSI 41.8 ADX 38.0 bear distEMA -1.11% | skor 8.18
+     ⚠️ BTC teyidi yok (1s -0.05% 4s -2.30%)
+     max +-0.0R | tp1 ✗ | tp2 ✗ | son -0.56R (120.5dk)
+
+  #136 SHORT SPXUSDT [KAPALI/zaman] 18:35:47
+     Giriş 0.5994 | Stop 0.617142 (%2.96) | TP1 0.572787 | TP2 0.555044
+     K 89.0 D 96.3 RSI 34.9 ADX 43.1 bear distEMA -2.77% | skor 7.61
+     ⚠️ BTC teyidi yok (1s -0.05% 4s -2.30%)
+     max +0.21R | tp1 ✗ | tp2 ✗ | son -0.14R (120.5dk)
+
+  #137 SHORT GOOGLUSDT [KAPALI/zaman] 18:45:06
+     Giriş 338.05 | Stop 339.808 (%0.52) | TP1 335.413 | TP2 333.655
+     K 85.7 D 86.8 RSI 37.0 ADX 36.3 bear distEMA -0.66% | skor 7.67
+     ⚠️ BTC teyidi yok (1s +0.62% 4s -2.12%)
+     max +0.15R | tp1 ✗ | tp2 ✗ | son -0.29R (120.0dk)
+
+  #138 SHORT AAPLUSDT [İZLENİYOR] 19:25:38
+     Giriş 321.26 | Stop 323.316 (%0.64) | TP1 318.176 | TP2 316.12
+     K 96.4 D 96.7 RSI 49.0 ADX 29.3 bear distEMA -0.40% | skor 8.79
+     ⚠️ BTC teyidi yok (1s +0.26% 4s -2.09%)
+     max +0.28R | tp1 ✗ | tp2 ✗
+
+  #139 SHORT ZROUSDT [İZLENİYOR] 19:25:38
+     Giriş 1.0597 | Stop 1.07454 (%1.4) | TP1 1.03745 | TP2 1.02261
+     K 94.2 D 98.1 RSI 54.9 ADX 24.7 bear distEMA -0.45% | skor 8.22
+     ⚠️ ölü coin 24s -5.2% | BTC teyidi yok (1s +0.26% 4s -2.09%)
+     max +0.11R | tp1 ✗ | tp2 ✗
+
+  #140 SHORT ONDOUSDT [İZLENİYOR] 19:25:39
+     Giriş 0.354 | Stop 0.357257 (%0.92) | TP1 0.349115 | TP2 0.345858
+     K 91.5 D 92.9 RSI 49.2 ADX 28.1 bear distEMA -0.52% | skor 8.04
+     ⚠️ BTC teyidi yok (1s +0.26% 4s -2.09%)
+     max +0.52R | tp1 ✗ | tp2 ✗
+
+  #141 SHORT XLMUSDT [İZLENİYOR] 19:25:40
+     Giriş 0.179 | Stop 0.180504 (%0.84) | TP1 0.176745 | TP2 0.175241
+     K 87.0 D 90.4 RSI 47.3 ADX 34.1 bear distEMA -0.56% | skor 7.75
+     ⚠️ BTC teyidi yok (1s +0.26% 4s -2.09%)
+     max +0.86R | tp1 ✗ | tp2 ✗
+
+  #142 SHORT XRPUSDT [İZLENİYOR] 19:30:25
+     Giriş 1.4028 | Stop 1.41683 (%1.0) | TP1 1.38176 | TP2 1.36773
+     K 98.0 D 99.2 RSI 53.0 ADX 24.2 bear distEMA -0.36% | skor 8.74
+     ⚠️ BTC teyidi yok (1s +0.17% 4s -2.20%)
+     max +0.91R | tp1 ✗ | tp2 ✗
+
+  #143 SHORT AVAXUSDT [İZLENİYOR] 19:30:25
+     Giriş 7.367 | Stop 7.40826 (%0.56) | TP1 7.30512 | TP2 7.26386
+     K 89.0 D 94.4 RSI 52.0 ADX 23.2 bear distEMA -0.14% | skor 7.55
+     ⚠️ BTC teyidi yok (1s +0.17% 4s -2.20%)
+     max +1.04R | tp1 ✗ | tp2 ✗
+
+  #144 SHORT XMRUSDT [İZLENİYOR] 19:31:10
+     Giriş 528.21 | Stop 539.619 (%2.16) | TP1 511.096 | TP2 499.687
+     K 93.1 D 97.6 RSI 55.2 ADX 29.1 bear distEMA -0.14% | skor 8.43
+     ⚠️ BTC teyidi yok (1s +0.17% 4s -2.20%)
+     max +0.53R | tp1 ✗ | tp2 ✗
+
+  #145 SHORT LDOUSDT [İZLENİYOR] 19:40:11
+     Giriş 0.3796 | Stop 0.383548 (%1.04) | TP1 0.373678 | TP2 0.36973
+     K 98.1 D 98.7 RSI 54.7 ADX 31.8 bear distEMA -0.32% | skor 9.18
+     ⚠️ BTC teyidi yok (1s +0.22% 4s -0.32%)
+     max +1.14R | tp1 ✗ | tp2 ✗
+
+  #146 SHORT DOGEUSDT [İZLENİYOR] 19:40:12
+     Giriş 0.08464 | Stop 0.0853171 (%0.8) | TP1 0.0836243 | TP2 0.0829472
+     K 98.3 D 98.7 RSI 51.3 ADX 30.3 bear distEMA -0.42% | skor 9.09
+     ⚠️ ölü coin 24s -5.1% | BTC teyidi yok (1s +0.22% 4s -0.32%)
+     max +0.96R | tp1 ✗ | tp2 ✗
+
+  #147 SHORT ATOMUSDT [İZLENİYOR] 19:40:12
+     Giriş 1.484 | Stop 1.49706 (%0.88) | TP1 1.46441 | TP2 1.45135
+     K 94.3 D 95.5 RSI 49.0 ADX 43.5 bear distEMA -0.47% | skor 9.08
+     ⚠️ BTC teyidi yok (1s +0.22% 4s -0.32%)
+     max +0.38R | tp1 ✗ | tp2 ✗
+
+  #148 SHORT STRKUSDT [İZLENİYOR] 19:40:14
+     Giriş 0.02603 | Stop 0.0263736 (%1.32) | TP1 0.0255146 | TP2 0.025171
+     K 94.8 D 98.3 RSI 58.0 ADX 35.8 bear distEMA -0.04% | skor 9.06
+     ⚠️ BTC teyidi yok (1s +0.22% 4s -0.32%)
+     max +1.19R | tp1 ✗ | tp2 ✗
+
+  #149 SHORT JTOUSDT [İZLENİYOR] 19:40:15
+     Giriş 0.4042 | Stop 0.411961 (%1.92) | TP1 0.392559 | TP2 0.384798
+     K 95.9 D 98.6 RSI 46.4 ADX 46.9 bear distEMA -1.24% | skor 9.05
+     ⚠️ ölü coin 24s -8.1% | BTC teyidi yok (1s +0.22% 4s -0.32%)
+     max +0.19R | tp1 ✗ | tp2 ✗
+
+  #150 SHORT ICPUSDT [İZLENİYOR] 19:40:16
+     Giriş 2.471 | Stop 2.49571 (%1.0) | TP1 2.43393 | TP2 2.40923
+     K 96.2 D 98.7 RSI 60.4 ADX 30.2 bear distEMA -0.05% | skor 8.93
+     ⚠️ BTC teyidi yok (1s +0.22% 4s -0.32%)
+     max +0.36R | tp1 ✗ | tp2 ✗
+
+  #151 SHORT FILUSDT [İZLENİYOR] 19:40:16
+     Giriş 0.7465 | Stop 0.753368 (%0.92) | TP1 0.736198 | TP2 0.72933
+     K 87.3 D 95.8 RSI 50.2 ADX 34.5 bear distEMA -0.40% | skor 7.87
+     ⚠️ ölü coin 24s -6.4% | BTC teyidi yok (1s +0.22% 4s -0.32%)
+     max +0.74R | tp1 ✗ | tp2 ✗
+
+  #152 SHORT MONUSDT [İZLENİYOR] 19:40:17
+     Giriş 0.02446 | Stop 0.0250373 (%2.36) | TP1 0.0235941 | TP2 0.0230168
+     K 89.8 D 94.4 RSI 38.9 ADX 56.9 bear distEMA -2.57% | skor 7.79
+     ⚠️ ölü coin 24s -9.3% | BTC teyidi yok (1s +0.22% 4s -0.32%)
+     max +0.38R | tp1 ✗ | tp2 ✗
+
+  #153 SHORT WIFUSDT [İZLENİYOR] 19:40:19
+     Giriş 0.2007 | Stop 0.203349 (%1.32) | TP1 0.196726 | TP2 0.194077
+     K 82.9 D 85.6 RSI 52.0 ADX 25.8 bear distEMA -0.48% | skor 6.77
+     ⚠️ ölü coin 24s -5.3% | BTC teyidi yok (1s +0.22% 4s -0.32%)
+     max +0.83R | tp1 ✗ | tp2 ✗
+
+  #154 LONG LAUSDT [İZLENİYOR] 19:40:20
+     Giriş 0.06696 | Stop 0.0650315 (%2.88) | TP1 0.0698527 | TP2 0.0717811
+     K 21.0 D 20.6 RSI 69.8 ADX 34.3 bull distEMA +2.33% | skor 6.11
+     ⚠️ BTC teyidi yok (1s +0.22% 4s -0.32%)
+     max +0.48R | tp1 ✗ | tp2 ✗
+
+  #155 SHORT PENGUUSDT [İZLENİYOR] 19:50:12
+     Giriş 0.008324 | Stop 0.00846051 (%1.64) | TP1 0.00811924 | TP2 0.00798273
+     K 98.9 D 98.9 RSI 59.9 ADX 31.2 bear distEMA -0.01% | skor 9.35
+     ⚠️ ölü coin 24s -7.2% | BTC teyidi yok (1s +0.51% 4s +0.44%)
+     max +1.03R | tp1 ✗ | tp2 ✗
+
+  #156 SHORT HEMIUSDT [İZLENİYOR] 19:55:31
+     Giriş 0.014566 | Stop 0.0152768 (%4.88) | TP1 0.0134998 | TP2 0.012789
+     K 85.9 D 94.0 RSI 37.7 ADX 38.8 bear distEMA -3.98% | skor 6.73
+     ⚠️ ölü coin 24s -9.9% | BTC teyidi yok (1s +0.38% 4s +0.15%)
+     max +0.12R | tp1 ✗ | tp2 ✗
+
+  #157 SHORT NVDAUSDT [İZLENİYOR] 19:55:31
+     Giriş 231.72 | Stop 233.481 (%0.76) | TP1 229.078 | TP2 227.317
+     K 87.8 D 95.8 RSI 48.0 ADX 34.8 bear distEMA -0.12% | skor 4.54
+     ⚠️ BTC teyidi yok (1s +0.38% 4s +0.15%)
+     max +0.87R | tp1 ✗ | tp2 ✗
+
+  #158 LONG MORPHOUSDT [İZLENİYOR] 20:15:21
+     Giriş 2.513 | Stop 2.46576 (%1.88) | TP1 2.58387 | TP2 2.63111
+     K 4.6 D 4.3 RSI 56.6 ADX 25.2 bull distEMA +0.78% | skor 8.3
+     ⚠️ BTC teyidi yok (1s +0.21% 4s +0.47%)
+     max +0.72R | tp1 ✗ | tp2 ✗
+
+  #159 LONG 1000BONKUSDT [İZLENİYOR] 20:15:22
+     Giriş 0.003125 | Stop 0.0030725 (%1.68) | TP1 0.00320375 | TP2 0.00325625
+     K 5.3 D 3.9 RSI 50.2 ADX 23.2 bull distEMA +0.04% | skor 4.84
+     ⚠️ BTC teyidi yok (1s +0.21% 4s +0.47%)
+     max +0.51R | tp1 ✗ | tp2 ✗
+
+  #160 LONG KORUUSDT [İZLENİYOR] 20:20:17
+     Giriş 22.77 | Stop 22.3055 (%2.04) | TP1 23.4668 | TP2 23.9313
+     K 14.7 D 7.4 RSI 60.5 ADX 36.7 bull distEMA +2.21% | skor 7.12
+     ⚠️ BTC teyidi yok (1s +0.16% 4s +0.29%)
+     max +0.17R | tp1 ✗ | tp2 ✗
+
+  #161 LONG SNDKUSDT [İZLENİYOR] 20:25:10
+     Giriş 1715.88 | Stop 1681.56 (%2.0) | TP1 1767.36 | TP2 1801.67
+     K 0.6 D 0.4 RSI 61.1 ADX 52.6 bull distEMA +2.02% | skor 9.25
+     ⚠️ BTC teyidi yok (1s +0.09% 4s +0.21%)
+     max +0.16R | tp1 ✗ | tp2 ✗
+
+  #162 LONG CRCLUSDT [İZLENİYOR] 20:25:10
+     Giriş 101.8 | Stop 100.375 (%1.4) | TP1 103.938 | TP2 105.363
+     K 2.4 D 0.8 RSI 54.6 ADX 31.1 bull distEMA +0.77% | skor 8.93
+     ⚠️ BTC teyidi yok (1s +0.09% 4s +0.21%)
+     max +0.07R | tp1 ✗ | tp2 ✗
+
+  #163 LONG SNXXUSDT [İZLENİYOR] 20:25:10
+     Giriş 16.97 | Stop 16.393 (%3.4) | TP1 17.8355 | TP2 18.4124
+     K 1.2 D 0.8 RSI 61.5 ADX 52.1 bull distEMA +3.83% | skor 8.56
+     ⚠️ olay: 24s +21.4% | BTC teyidi yok (1s +0.09% 4s +0.21%)
+     max +0.17R | tp1 ✗ | tp2 ✗
+
+  #164 LONG SAMSUNGUSDT [İZLENİYOR] 20:25:10
+     Giriş 196.61 | Stop 194.958 (%0.84) | TP1 199.087 | TP2 200.739
+     K 9.1 D 6.6 RSI 55.8 ADX 39.7 bull distEMA +0.83% | skor 8.49
+     ⚠️ BTC teyidi yok (1s +0.09% 4s +0.21%)
+     max +0.0R | tp1 ✗ | tp2 ✗
+
+  #165 LONG ASTERUSDT [İZLENİYOR] 20:25:11
+     Giriş 0.7364 | Stop 0.722556 (%1.88) | TP1 0.757166 | TP2 0.771011
+     K 9.3 D 7.7 RSI 48.2 ADX 27.9 bull distEMA +0.06% | skor 8.07
+     ⚠️ BTC teyidi yok (1s +0.09% 4s +0.21%)
+     max +0.09R | tp1 ✗ | tp2 ✗
+
+  #166 LONG DRAMUSDT [İZLENİYOR] 20:25:11
+     Giriş 59.04 | Stop 58.5441 (%0.84) | TP1 59.7839 | TP2 60.2798
+     K 8.2 D 3.9 RSI 56.5 ADX 27.4 bull distEMA +0.77% | skor 7.95
+     ⚠️ BTC teyidi yok (1s +0.09% 4s +0.21%)
+     max +0.06R | tp1 ✗ | tp2 ✗
+
+  #167 SHORT ACEUSDT [İZLENİYOR] 20:31:09
+     Giriş 0.17854 | Stop 0.181325 (%1.56) | TP1 0.174362 | TP2 0.171577
+     K 71.8 D 83.5 RSI 40.4 ADX 26.9 bear distEMA -0.98% | skor 5.19
+     ⚠️ BTC teyidi yok (1s -0.05% 4s +0.24%)
+     max +0.64R | tp1 ✗ | tp2 ✗
+
+  #168 LONG PIPPINUSDT [İZLENİYOR] 20:35:28
+     Giriş 0.0198 | Stop 0.0194515 (%1.76) | TP1 0.0203227 | TP2 0.0206712
+     K 4.0 D 2.6 RSI 53.7 ADX 30.8 bull distEMA +0.57% | skor 8.77
+     ⚠️ BTC teyidi yok (1s -0.31% 4s +0.31%)
+     max +0.0R | tp1 ✗ | tp2 ✗
+
+  #169 LONG MSTRUSDT [İZLENİYOR] 20:35:28
+     Giriş 141.99 | Stop 140.229 (%1.24) | TP1 144.631 | TP2 146.392
+     K 3.0 D 1.8 RSI 50.8 ADX 24.4 bull distEMA +0.37% | skor 8.62
+     ⚠️ BTC teyidi yok (1s -0.31% 4s +0.31%)
+     max +0.21R | tp1 ✗ | tp2 ✗
+
+  #170 LONG ZENUSDT [İZLENİYOR] 20:35:28
+     Giriş 6.501 | Stop 6.19935 (%4.64) | TP1 6.95347 | TP2 7.25512
+     K 13.4 D 5.5 RSI 62.8 ADX 39.6 bull distEMA +2.77% | skor 7.26
+     ⚠️ BTC teyidi yok (1s -0.31% 4s +0.31%)
+     max +0.22R | tp1 ✗ | tp2 ✗
+
+  #171 LONG INJUSDT [İZLENİYOR] 20:35:29
+     Giriş 4.749 | Stop 4.69581 (%1.12) | TP1 4.82878 | TP2 4.88197
+     K 17.4 D 10.9 RSI 57.6 ADX 24.1 bull distEMA +0.28% | skor 3.2
+     ⚠️ ölü coin 24s -5.9% | BTC teyidi yok (1s -0.31% 4s +0.31%)
+     max +0.36R | tp1 ✗ | tp2 ✗
+
+  #172 LONG RENDERUSDT [İZLENİYOR] 20:36:20
+     Giriş 1.428 | Stop 1.41315 (%1.04) | TP1 1.45028 | TP2 1.46513
+     K 11.0 D 8.0 RSI 55.8 ADX 27.4 bull distEMA +0.11% | skor 4.3
+     ⚠️ BTC teyidi yok (1s -0.31% 4s +0.31%)
+     max +0.13R | tp1 ✗ | tp2 ✗
+
+  #173 LONG ZECUSDT [İZLENİYOR] 20:45:28
+     Giriş 1014.4 | Stop 966.115 (%4.76) | TP1 1086.83 | TP2 1135.11
+     K 3.1 D 2.7 RSI 51.5 ADX 37.9 bull distEMA +0.99% | skor 9.15
+     ⚠️ BTC teyidi yok (1s -0.47% 4s +0.07%)
+     max +0.07R | tp1 ✗ | tp2 ✗
+
+  #174 LONG SKHYNIXUSDT [İZLENİYOR] 20:45:29
+     Giriş 1257.33 | Stop 1238.22 (%1.52) | TP1 1286 | TP2 1305.11
+     K 4.9 D 4.1 RSI 52.3 ADX 26.9 bull distEMA +0.61% | skor 8.42
+     ⚠️ BTC teyidi yok (1s -0.47% 4s +0.07%)
+     max +0.19R | tp1 ✗ | tp2 ✗
+
+  #175 LONG NEARUSDT [İZLENİYOR] 21:00:29
+     Giriş 1.976 | Stop 1.9262 (%2.52) | TP1 2.05069 | TP2 2.10049
+     K 1.7 D 1.6 RSI 54.0 ADX 31.3 bull distEMA +0.54% | skor 9.11
+     ⚠️ BTC teyidi yok (1s -0.35% 4s +0.10%)
+     max +0.54R | tp1 ✗ | tp2 ✗
+
+  #176 SHORT BTWUSDT [İZLENİYOR] 21:00:30
+     Giriş 0.44776 | Stop 0.461909 (%3.16) | TP1 0.426536 | TP2 0.412387
+     K 90.4 D 91.8 RSI 46.7 ADX 26.4 bear distEMA -0.39% | skor 7.83
+     ⚠️ BTC teyidi yok (1s -0.35% 4s +0.10%)
+     max +0.11R | tp1 ✗ | tp2 ✗
+
+  #177 LONG SKHYUSDT [İZLENİYOR] 21:00:30
+     Giriş 173.64 | Stop 171.487 (%1.24) | TP1 176.87 | TP2 179.023
+     K 16.4 D 11.3 RSI 68.7 ADX 43.1 bull distEMA +1.42% | skor 7.34
+     ⚠️ BTC teyidi yok (1s -0.35% 4s +0.10%)
+     max +0.03R | tp1 ✗ | tp2 ✗
+
+══════════════════════════════════════════════════════════════════════════

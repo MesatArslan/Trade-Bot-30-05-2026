@@ -1,0 +1,390 @@
+# EN DUSUK FUNDING COIN — GUN GUN (Bybit 288 coin, 5 Agu - 3 Eyl 2026, saatler TR)
+# A) funding saatleri (03/11/19) ayri, B) normal saatler ayri, C) davranis analizi. Uretim: funding_saat_analiz.py
+
+==============================================================================================================
+A) FUNDING SAATLERI (TR 03:00 / 11:00 / 19:00) — o anda settle olan EN DUSUK funding'li coin (tum evren, 288 coin)
+   sutunlar: coin, oran (o settlement), 2. ve 3. coin | onceki24s | +1s +4s +8s +24s kapanis | 24s max yukari / max asagi
+==============================================================================================================
+
+08-05 Wed 19:00  CYS         -0.83% [4s]  DEXE:-0.21  CXMT:-0.14            |  +38.6 |   +1.4  +11.0  +14.9   +9.1 |  +23.6   -4.3
+
+08-06 Thu 03:00  HOME        -0.24% [4s]  CXMT:-0.22  SKR:-0.18             |   -3.9 |   +2.3   +6.5   +5.4   +7.4 |  +27.3   -0.9
+08-06 Thu 11:00  CAP         -0.53% [4s]  BANK:-0.47  CXMT:-0.32            |  +15.5 |   -8.1   -4.3   +1.3   -0.4 |   +1.9  -10.8
+08-06 Thu 19:00  ACE         -0.60% [4s]  CXMT:-0.12  RDW:-0.11             |  +69.2 |   -8.4  -10.0   -9.5   -9.5 |  +26.3  -19.3
+
+08-07 Fri 03:00  ACE         -1.35% [4s]  CXMT:-0.19  RDW:-0.17             |  +56.0 |   -0.7  +20.4  +36.2   -1.6 |  +39.5   -3.9
+08-07 Fri 11:00  ACE         -2.00% [4s]  FWDI:-0.51  CXMT:-0.28            | +106.3 |   -7.3   -8.4  -26.6  -29.7 |   +2.5  -32.5
+08-07 Fri 19:00  COTI        -0.47% [1s]  BICO:-0.27  LA:-0.17              |  -14.8 |   -1.3   -1.9   -3.8   -2.2 |   +2.1   -4.8
+
+08-08 Sat 03:00  HOME        -0.12% [4s]  BZ:-0.10  WENSTOCK:-0.09          |   +1.5 |   -0.8   -1.9   -5.4   +1.3 |   +5.7   -6.8
+08-08 Sat 11:00  COTI        -1.23% [1s]  LA:-0.19  HOME:-0.16              |   -6.0 |   +1.5   +0.6   +1.3   +2.1 |   +2.2   -6.5
+08-08 Sat 19:00  KAITO       -0.88% [4s]  COTI:-0.75  CYS:-0.65             |  -23.9 |   -1.5   +5.6   +2.0   -3.0 |   +7.0   -5.2
+
+08-09 Sun 03:00  KAITO       -1.61% [4s]  COTI:-0.91  LA:-0.16              |  -12.4 |   -1.0   -0.4   -2.4   -4.6 |   +1.3   -9.5
+08-09 Sun 11:00  KAITO       -0.92% [4s]  COTI:-0.80  DEXE:-0.41            |   -5.5 |   -1.8   -2.0   -2.6   -3.9 |   +1.3   -7.3
+08-09 Sun 19:00  KAITO       -0.70% [4s]  COTI:-0.67  DEXE:-0.35            |   -3.0 |   +0.1   -1.3   +0.4   -2.6 |   +4.0   -5.3
+
+08-10 Mon 03:00  KAITO       -0.85% [4s]  COTI:-0.42  DEXE:-0.23            |   -4.6 |   +0.0   -0.7   -1.6   -4.3 |   +3.6   -7.6
+08-10 Mon 11:00  KAITO       -0.96% [4s]  CXMT:-0.25  MMT:-0.17             |   -3.9 |   -0.9   -0.7   -1.3   -3.4 |   +1.9   -6.0
+08-10 Mon 19:00  KAITO       -2.00% [4s]  COTI:-0.15  BZ:-0.12              |   -2.6 |   -0.9   -0.6   -1.4   -1.6 |   +0.7   -4.8
+
+08-11 Tue 03:00  KAITO       -0.94% [4s]  COTI:-0.29  CXMT:-0.18            |   -4.3 |   -1.0   -0.5   -0.7   -4.4 |   +1.6   -7.1
+08-11 Tue 11:00  KAITO       -0.62% [4s]  CXMT:-0.33  COTI:-0.19            |   -3.4 |   +0.3   +0.2   +0.6   -3.3 |   +1.1   -6.9
+08-11 Tue 19:00  KAITO       -0.61% [4s]  CXMT:-0.20  HOME:-0.19            |   -1.6 |   -0.9   -3.2   -4.2  -30.2 |   +0.0  -31.6
+
+08-12 Wed 03:00  KAITO       -1.25% [4s]  BZ:-0.19  CXMT:-0.18              |   -4.4 |   -0.4   -0.8   +0.3  -27.0 |   +0.5  -29.5
+08-12 Wed 11:00  KAITO       -1.89% [4s]  FWDI:-0.37  CXMT:-0.25            |   -3.3 |  -11.5  -21.2  -27.4  -26.4 |   +0.1  -31.7
+08-12 Wed 19:00  KAITO       -0.50% [4s]  BEAT:-0.28  BZ:-0.18              |  -30.2 |   +1.3   +2.3   +0.3   -1.4 |   +5.3   -5.9
+
+08-13 Thu 03:00  COTI        -1.88% [1s]  KAITO:-0.84  CXMT:-0.25           |  +25.4 |   +2.0   +4.0  -10.7  -10.7 |   +7.4  -15.5
+08-13 Thu 11:00  COTI        -2.00% [1s]  KAITO:-0.49  DOS:-0.41            |  +18.5 |   -3.3  +10.7  +16.0   +2.4 |  +20.4   -5.3
+08-13 Thu 19:00  COTI        -1.43% [1s]  HOME:-0.48  DOS:-0.30             |  +37.7 |   -4.1  -11.7  -13.7  -12.1 |   +3.4  -17.1
+
+08-14 Fri 03:00  HOME        -0.66% [4s]  MMT:-0.23  STXX:-0.23             |   +6.2 |   +2.5   +9.3  +13.3   -1.2 |  +17.1   -3.5
+08-14 Fri 11:00  HOME        -0.32% [4s]  ARKK:-0.25  DOS:-0.25             |  +14.0 |   -1.3   -4.8  -11.7  -16.4 |   +1.1  -18.4
+08-14 Fri 19:00  HOME        -0.74% [4s]  BICO:-0.46  CXMT:-0.27            |   -7.8 |   -1.6   -0.9   -1.2  -11.6 |   +3.0  -12.7
+
+08-15 Sat 03:00  HOME        -0.74% [4s]  CAP:-0.61  BICO:-0.45             |   -1.2 |   -2.2   -5.4   -4.1  -11.6 |   +3.2  -13.5
+08-15 Sat 11:00  ACE         -0.77% [4s]  CAP:-0.68  BICO:-0.67             |  +82.0 |  -17.1  -24.0  -33.2  -46.4 |   +7.6  -51.8
+08-15 Sat 19:00  ACE         -1.19% [4s]  BMT:-0.38  HOME:-0.38             |  -34.6 |   -1.6   -7.6  -15.2  -23.0 |   +0.0  -27.8
+
+08-16 Sun 03:00  ACE         -0.75% [4s]  HOME:-0.60  BICO:-0.46            |  -39.4 |   +0.5  -11.5   -5.4  -12.9 |   +3.4  -14.9
+08-16 Sun 11:00  ACE         -1.22% [4s]  BICO:-0.58  CXMT:-0.10            |  -46.4 |   -1.2   -2.8   -3.9   +3.5 |  +23.5   -9.6
+08-16 Sun 19:00  BICO        -1.06% [8s]  HOME:-0.45  ACE:-0.43             |  +11.0 |   -5.0   -7.0   -5.9  -14.2 |   +0.8  -14.3
+
+08-17 Mon 03:00  BICO        -0.81% [8s]  ACE:-0.33  HOME:-0.24             |  +11.0 |   +0.1   -0.5   -1.1  -13.4 |   +4.0  -15.1
+08-17 Mon 11:00  CXMT        -1.35% [8s]  BICO:-0.91  ACE:-0.50             |  +13.6 |   -0.9   -2.6   -0.9   -3.9 |   +0.0   -9.6
+08-17 Mon 19:00  BICO        -0.41% [8s]  ONG:-0.38  CAP:-0.22              |  -14.2 |   -1.8   -5.5   -5.1   -4.2 |   +2.5   -7.8
+
+08-18 Tue 03:00  BMT         -0.63% [4s]  HOME:-0.42  BICO:-0.34            |  +14.0 |   -0.1   -7.6   -8.5   -3.7 |   +2.9  -11.0
+08-18 Tue 11:00  CXMT        -0.78% [8s]  ACE:-0.75  BICO:-0.42             |   -3.9 |   -1.7   -1.9   -3.2   -2.0 |   +0.0   -5.8
+08-18 Tue 19:00  RED         -0.53% [4s]  BICO:-0.33  BMT:-0.32             |   +8.9 |   -0.6   +0.9   +0.5   +0.9 |   +4.2   -6.5
+
+08-19 Wed 03:00  HOME        -0.62% [4s]  COTI:-0.24  BMT:-0.22             |   -8.5 |   -1.2   -3.5   +0.3   -0.2 |   +4.8   -5.0
+08-19 Wed 11:00  UNITREE     -2.00% [8s]  BMT:-0.29  CXMT:-0.21             |  +24.3 |   -5.2   -3.6   -5.1  -16.2 |   +0.0  -18.7
+08-19 Wed 19:00  HOME        -0.27% [4s]  UNITREE:-0.22  ACE:-0.18          |   -5.6 |   -1.2   -1.5   +0.2   +3.6 |   +7.9   -3.6
+
+08-20 Thu 03:00  HOME        -0.30% [4s]  BICO:-0.24  ACE:-0.23             |   -0.2 |   +0.6   +1.6   +0.4   +1.6 |   +7.6   -2.0
+08-20 Thu 11:00  UNITREE     -0.99% [8s]  RED:-0.50  PORTAL:-0.35           |  -16.2 |   -5.5   -4.4   -6.3   -3.4 |   +2.0  -10.0
+08-20 Thu 19:00  COTI        -0.26% [1s]  UNITREE:-0.23  BICO:-0.14         |   +2.3 |   +0.7   -1.5   -2.4   +7.0 |   +8.9   -3.5
+
+08-21 Fri 03:00  ONG         -2.50% [1s]  BNC:-0.55  COTI:-0.32             |  +52.7 |  +27.1  +55.6  +18.7   -5.9 |  +86.6  -14.6
+08-21 Fri 11:00  ONG         -1.68% [1s]  UNITREE:-0.95  CXMT:-0.81         |  +76.4 |  -18.8  -18.5  -22.5  -26.8 |   +3.1  -39.8
+08-21 Fri 19:00  COTI        -0.42% [1s]  ACE:-0.19  BICO:-0.15             |   +7.0 |   -0.2  +11.5   +5.8  +11.0 |  +19.8  -15.8
+
+08-22 Sat 03:00  COTI        -0.80% [1s]  PRL:-0.26  HOME:-0.18             |  +16.0 |   -0.8   +1.6   -4.3   -0.6 |   +8.1  -20.4
+08-22 Sat 11:00  MOVE        -0.40% [4s]  BMNR:-0.20  BICO:-0.19            |  +39.6 |   -5.1   -9.1  -15.5  -16.6 |   +0.9  -21.1
+08-22 Sat 19:00  COTI        -0.80% [1s]  BICO:-0.18  MOVE:-0.14            |  +11.0 |   -2.4   -1.5   -5.2   +0.6 |   +6.3   -6.4
+
+08-23 Sun 03:00  ONG         -0.66% [1s]  MOVE:-0.37  HOME:-0.20            |  -16.7 |   -5.0   -4.0   -3.2   -0.9 |   +4.6   -7.6
+08-23 Sun 11:00  MOVE        -0.38% [4s]  ACE:-0.26  COTI:-0.22             |  -16.6 |   +1.4   +6.7   +7.3   +2.7 |  +10.8   -0.5
+08-23 Sun 19:00  ACE         -0.33% [4s]  BICO:-0.17  DOS:-0.12             |   -5.7 |   -1.6   -3.9   -1.2   -4.5 |   +6.7   -6.0
+
+08-24 Mon 03:00  ACE         -0.42% [4s]  MOVE:-0.23  HOME:-0.23            |   -2.4 |   +0.1   +5.2   +1.2  -10.2 |   +8.0  -12.1
+08-24 Mon 11:00  HOME        -0.36% [4s]  CXMT:-0.35  UNITREE:-0.30         |   -0.8 |   +0.7   +0.9   +0.3   +1.5 |   +3.6   -1.5
+08-24 Mon 19:00  BICO        -0.24% [8s]  ACE:-0.21  SAND:-0.19             |   -4.0 |   -0.4   -2.1   +0.6   +6.3 |   +7.3   -2.8
+
+08-25 Tue 03:00  SAND        -0.31% [8s]  HOME:-0.30  BICO:-0.25            |   -7.6 |   -0.5   +0.2   +0.5   -4.1 |   +3.2   -5.5
+08-25 Tue 11:00  UNITREE     -0.78% [8s]  ACE:-0.45  CXMT:-0.31             |   -1.4 |   -1.3   -0.5   +0.3   -0.2 |   +6.2   -3.1
+08-25 Tue 19:00  BICO        -0.17% [8s]  PUFFER:-0.16  SAND:-0.14          |   +6.3 |   -3.3   -1.5   +0.3  +23.6 |  +39.0   -4.9
+
+08-26 Wed 03:00  HOME        -0.23% [4s]  BMT:-0.21  ACE:-0.17              |   -2.9 |   +3.3   +1.0   +0.5   +1.1 |   +4.8   -3.7
+08-26 Wed 11:00  EDEN        -0.55% [4s]  BMT:-0.38  BNC:-0.26              |  +25.5 |   -2.8   -6.4   -1.7   -1.3 |  +21.8   -9.8
+08-26 Wed 19:00  ONG         -1.72% [1s]  BICO:-1.01  ACE:-0.42             |  +64.2 |   +4.6   -0.7  +29.9  -23.8 |  +45.3  -33.9
+
+08-27 Thu 03:00  ONG         -2.50% [1s]  BICO:-1.20  SAND:-0.19            | +126.3 |  -25.3  -45.6  -45.0  -42.1 |   +2.4  -49.1
+08-27 Thu 11:00  BICO        -0.82% [8s]  CXMT:-0.55  ACE:-0.17             |  +28.8 |   -2.5   -1.0   -7.1   -7.0 |   +7.0  -10.1
+08-27 Thu 19:00  BNC         -0.32% [8s]  PUFFER:-0.17  ACE:-0.15           |   +5.8 |   -1.3   -3.5   -4.1   -7.7 |   +0.1   -7.8
+
+08-28 Fri 03:00  ONG         -0.63% [1s]  BICO:-0.26  ACE:-0.21             |  -42.1 |   +6.2   -1.9  -12.3   -6.4 |   +8.1  -14.4
+08-28 Fri 11:00  CXMT        -0.29% [8s]  BNC:-0.21  ACE:-0.15              |   +0.2 |   -0.6   +1.8   +0.9   +2.3 |   +3.3   -0.7
+08-28 Fri 19:00  ACE         -0.15% [4s]  BICO:-0.15  ONG:-0.13             |   -4.4 |   -1.7   -3.0   -2.1   -4.4 |   +0.7   -5.5
+
+08-29 Sat 03:00  ONG         -0.22% [1s]  BICO:-0.21  SAND:-0.15            |   -6.4 |   +0.7   -1.7   +7.8   +6.9 |  +16.7   -3.1
+08-29 Sat 11:00  SKR         -0.23% [4s]  HNT:-0.19  TUT:-0.18              |   -1.9 |   -7.3   -6.8   -3.6  +24.1 |  +35.8   -8.7
+08-29 Sat 19:00  HNT         -0.74% [8s]  COTI:-0.43  TUT:-0.27             |  +60.4 |   -0.9  +10.7  +21.9 +166.5 | +183.3   -5.4
+
+08-30 Sun 03:00  TUT         -1.57% [4s]  COTI:-0.80  HNT:-0.48             |   -5.7 |   -0.8   -3.0   -0.4   -4.8 |   +3.3   -5.6
+08-30 Sun 11:00  ZKC         -1.17% [4s]  TUT:-1.01  HNT:-0.88              |  +38.1 |   -2.1  +25.7  +23.2   +5.6 |  +34.0   -6.0
+08-30 Sun 19:00  TUT         -0.88% [4s]  HNT:-0.63  SKR:-0.55              |   -0.7 |   +2.0   +1.0   -0.9  -10.1 |   +4.6  -11.6
+
+08-31 Mon 03:00  SKR         -2.46% [4s]  TUT:-0.83  HNT:-0.42              | +123.9 |   -1.2  +31.8   +8.7  +16.2 |  +43.4  -12.7
+08-31 Mon 11:00  ZORA        -1.31% [4s]  SKR:-0.90  FLOCK:-0.75            |  +57.9 |   +0.9   -8.9   -3.3  -11.4 |   +9.0  -17.4
+08-31 Mon 19:00  SKR         -2.50% [4s]  ZORA:-0.69  HNT:-0.61             |  +84.9 |   +3.3   -7.0   -3.9  -19.7 |   +9.4  -22.0
+
+09-01 Tue 03:00  HNT         -0.49% [8s]  SKR:-0.45  ONG:-0.40              |  -16.6 |   -0.2   +3.1   +6.3  -10.2 |  +15.9  -16.7
+09-01 Tue 11:00  ONG         -0.92% [1s]  SAND:-0.30  0G:-0.30              |  +13.4 |   -0.4   +3.9   +1.9   -7.3 |  +16.9   -9.2
+09-01 Tue 19:00  ACE         -1.17% [4s]  ONG:-0.33  OKTA:-0.25             |  +11.1 |   -0.5  +10.6  +13.8   -0.9 |  +20.5   -3.7
+
+09-02 Wed 03:00  ACE         -0.67% [4s]  TSEM:-0.16  BNC:-0.15             |  +28.2 |   +1.6   -6.1   -4.8  -14.6 |   +5.8  -18.7
+09-02 Wed 11:00  T           -1.27% [4s]  ACE:-0.59  BTR:-0.24              |  +18.1 |   -0.1  +31.2  +19.1   +4.5 |  +40.7   -2.5
+09-02 Wed 19:00  LA          -0.80% [4s]  TEM:-0.37  T:-0.32                |  +15.6 |   -5.9   -6.8   -3.9   -4.1 |   +2.9   -8.9
+
+09-03 Thu 03:00  LA          -1.12% [4s]  T:-0.90  OKTA:-0.75               |  +12.0 |   +3.9   -1.2   -0.5   -1.8 |   +7.1   -4.7
+
+==============================================================================================================
+B) NORMAL SAATLER (diger 21 saat) — o saatte Coinglass'ta gorunen EN DUSUK oran (1s/4s coinlerde o an settle olan, 8s coinlerde bir sonraki)
+   gun gun, saat araligi -> coin(oran): sonrasi +4s / +24s (aralik basindan)
+==============================================================================================================
+08-05 Wed: 12-15 SKR(-0.24%[4s]) +4s -2.7 +24s-14.6 | 16-18 CYS(-0.83%[4s]) +4s +2.6 +24s+14.0 | 20-23 CXMT(-0.22%[8s]) +4s +0.2 +24s -3.6
+08-06 Thu: 00-07 HOME(-0.68%[4s]) +4s -4.2 +24s +3.2 | 08-10 CAP(-0.53%[4s]) +4s -8.6 +24s -0.5 | 12-15 HOME(-0.22%[4s]) +4s +7.5 +24s -2.8 | 16-23 ACE(-1.15%[4s]) +4s+45.4 +24s+72.5
+08-07 Fri: 00-16 ACE(-2.00%[4s]) +4s -6.9 +24s -5.4 | 17 BICO(-0.27%[8s]) +4s +3.5 +24s +9.4 | 18 COTI(-0.47%[1s]) +4s +0.0 +24s -2.1 | 20 HOME(-0.10%[4s]) +4s +1.1 +24s +4.2 | 21 ACE(-0.67%[4s]) +4s -9.6 +24s+17.9 | 22-23 HOME(-0.10%[4s]) +4s -0.4 +24s +3.1
+08-08 Sat: 00 HOME(-0.12%[4s]) +4s +1.2 +24s +2.5 | 01 ACE(-0.17%[4s]) +4s -1.1 +24s+33.5 | 02 HOME(-0.12%[4s]) +4s +1.0 +24s +4.4 | 04-09 LA(-0.26%[4s]) +4s -0.9 +24s -2.5 | 10 COTI(-1.23%[1s]) +4s +0.5 +24s -3.6 | 12-23 KAITO(-1.49%[4s]) +4s -5.9 +24s -5.3
+08-09 Sun: 00-02 KAITO(-1.61%[4s]) +4s +0.6 +24s -5.0 | 04-07 CYS(-1.39%[4s]) +4s-16.9 +24s+10.5 | 08-23 KAITO(-1.66%[4s]) +4s -0.6 +24s -2.6
+08-10 Mon: 00-02 KAITO(-0.85%[4s]) +4s +2.1 +24s -0.8 | 04-07 CXMT(-0.25%[8s]) +4s -2.0 +24s -1.7 | 08-23 KAITO(-2.00%[4s]) +4s -1.0 +24s -4.3
+08-11 Tue: 00-23 KAITO(-1.06%[4s]) +4s -2.5 +24s -5.1
+08-12 Wed: 00-23 KAITO(-1.89%[4s]) +4s -1.2 +24s-28.1
+08-13 Thu: 00-01 KAITO(-0.84%[4s]) +4s -3.3 +24s -5.6 | 02 COTI(-1.88%[1s]) +4s +0.3 +24s-11.7 | 04-09 KAITO(-0.49%[4s]) +4s +1.1 +24s -3.5 | 10 COTI(-2.00%[1s]) +4s -3.2 +24s -1.9 | 12-14 DOS(-0.46%[4s]) +4s -1.7 +24s -7.1 | 15-20 COTI(-2.00%[1s]) +4s +4.7 +24s -6.8 | 21-23 STXX(-0.23%[8s]) +4s +2.0 +24s +6.9
+08-14 Fri: 00-18 HOME(-0.75%[4s]) +4s -2.9 +24s -8.1 | 20-23 CAP(-0.72%[4s]) +4s +4.2 +24s +7.3
+08-15 Sat: 00-02 HOME(-0.74%[4s]) +4s -0.4 +24s-11.4 | 04-07 CAP(-0.92%[4s]) +4s -1.8 +24s -8.2 | 08-23 ACE(-1.96%[4s]) +4s +2.0 +24s-36.4
+08-16 Sun: 00-10 ACE(-1.22%[4s]) +4s -4.6 +24s-16.7 | 12-23 BICO(-1.06%[8s]) +4s +1.5 +24s -5.1
+08-17 Mon: 00-02 BICO(-0.81%[8s]) +4s -0.3 +24s-12.4 | 04-10 CXMT(-1.35%[8s]) +4s +9.0 +24s+13.2 | 12-15 ACE(-0.55%[4s]) +4s+16.3 +24s+16.4 | 16-23 BICO(-0.41%[8s]) +4s -8.2 +24s -9.8
+08-18 Tue: 00-02 BMT(-0.63%[4s]) +4s +6.8 +24s +0.4 | 04-10 CXMT(-0.78%[8s]) +4s -3.9 +24s -8.0 | 12-18 RED(-0.95%[4s]) +4s -4.3 +24s-11.8 | 20-23 HOME(-0.28%[4s]) +4s -1.5 +24s -5.2
+08-19 Wed: 00-02 HOME(-0.62%[4s]) +4s -3.3 +24s -2.5 | 04-15 UNITREE(-2.00%[8s]) +4s+27.0 +24s+18.2 | 16-18 HOME(-0.27%[4s]) +4s +1.2 +24s +6.5 | 20-23 ACE(-0.26%[4s]) +4s +1.9 +24s+40.8
+08-20 Thu: 00-02 HOME(-0.30%[4s]) +4s +0.8 +24s -0.1 | 04-10 UNITREE(-0.99%[8s]) +4s-11.7 +24s-14.2 | 12-15 PORTAL(-0.50%[4s]) +4s +3.2 +24s +4.0 | 16-17 UNITREE(-0.23%[8s]) +4s -1.6 +24s +2.4 | 18 COTI(-0.26%[1s]) +4s -2.3 +24s +7.2 | 20-21 BNC(-0.55%[8s]) +4s -2.3 +24s+14.1 | 22-23 ONG(-0.78%[1s]) +4s +5.5 +24s +5.2
+08-21 Fri: 00-01 BNC(-0.55%[8s]) +4s -0.3 +24s+16.6 | 02-12 ONG(-2.50%[1s]) +4s+85.3 +24s +3.7 | 13-17 ACE(-0.21%[4s]) +4s +0.6 +24s +9.7 | 18 COTI(-0.42%[1s]) +4s -2.2 +24s +4.8 | 20-23 ACE(-0.26%[4s]) +4s +1.5 +24s +4.1
+08-22 Sat: 00-01 PRL(-0.26%[4s]) +4s +4.8 +24s -6.2 | 02-04 COTI(-0.80%[1s]) +4s +0.3 +24s +1.6 | 05-07 PRL(-0.23%[4s]) +4s -4.9 +24s -8.0 | 08-10 MOVE(-0.40%[4s]) +4s -5.7 +24s-20.6 | 12-22 COTI(-0.80%[1s]) +4s +0.9 +24s +3.1 | 23 MOVE(-0.22%[4s]) +4s -2.9 +24s +3.0
+08-23 Sun: 00-01 MOVE(-0.37%[4s]) +4s +8.6 +24s +4.8 | 02 ONG(-0.38%[1s]) +4s +0.4 +24s +3.1 | 04-07 MOVE(-0.80%[4s]) +4s-13.5 +24s -3.2 | 08-10 COTI(-0.80%[1s]) +4s -2.6 +24s -2.9 | 12-18 ACE(-0.53%[4s]) +4s -0.0 +24s +0.3 | 20-23 BICO(-0.23%[8s]) +4s +1.4 +24s -3.2
+08-24 Mon: 00-02 ACE(-0.42%[4s]) +4s +2.6 +24s -5.7 | 04-05 ONG(-0.87%[1s]) +4s -5.4 +24s+16.0 | 06-10 HOME(-0.51%[4s]) +4s -2.9 +24s -1.1 | 12-15 PORTAL(-0.29%[4s]) +4s -0.7 +24s -7.6 | 16-18 BICO(-0.24%[8s]) +4s -1.4 +24s +3.6 | 20-23 SAND(-0.31%[8s]) +4s -0.3 +24s -1.1
+08-25 Tue: 00-02 SAND(-0.31%[8s]) +4s -0.6 +24s -3.5 | 04-10 UNITREE(-0.78%[8s]) +4s +3.9 +24s +4.8 | 12-15 ACE(-0.28%[4s]) +4s +4.4 +24s -2.9 | 16-18 BICO(-0.17%[8s]) +4s -1.7 +24s+20.3 | 20-23 BMT(-0.99%[4s]) +4s+32.9 +24s+44.7
+08-26 Wed: 00-07 HOME(-0.43%[4s]) +4s +4.1 +24s +1.5 | 08-10 EDEN(-0.55%[4s]) +4s +7.3 +24s +9.1 | 12-17 BICO(-1.01%[8s]) +4s+14.6 +24s+31.3 | 18 ONG(-1.72%[1s]) +4s +9.9 +24s-18.2 | 20-21 BICO(-1.20%[8s]) +4s -5.5 +24s +4.1 | 22-23 ONG(-2.05%[1s]) +4s+20.9 +24s-24.7
+08-27 Thu: 00-01 BICO(-1.20%[8s]) +4s+11.3 +24s+11.0 | 02-06 ONG(-2.50%[1s]) +4s-43.6 +24s-38.8 | 07-10 BICO(-0.82%[8s]) +4s -7.7 +24s -8.9 | 12-18 BNC(-0.32%[8s]) +4s +1.9 +24s -1.3 | 20-23 BICO(-0.26%[8s]) +4s +0.8 +24s -9.3
+08-28 Fri: 00-02 BICO(-0.26%[8s]) +4s +3.1 +24s-12.0 | 04-07 ONG(-0.47%[1s]) +4s -9.9 +24s-11.2 | 08-10 CXMT(-0.29%[8s]) +4s +0.4 +24s +3.2 | 12-14 BICO(-0.15%[8s]) +4s -6.7 +24s-10.4 | 15 COTI(-0.29%[1s]) +4s -6.4 +24s -0.0 | 16-17 ONG(-0.26%[1s]) +4s -3.6 +24s+14.7 | 18 ACE(-0.15%[4s]) +4s -6.7 +24s -5.5 | 20-23 BICO(-0.21%[8s]) +4s -2.2 +24s -0.8
+08-29 Sat: 00-02 BICO(-0.21%[8s]) +4s +1.7 +24s -2.0 | 04-07 HOME(-0.65%[4s]) +4s -2.2 +24s -2.8 | 08-10 SKR(-0.23%[4s]) +4s -2.0 +24s+16.7 | 12-15 TUT(-1.70%[4s]) +4s -2.9 +24s-10.9 | 16-23 HNT(-0.74%[8s]) +4s -8.0 +24s+75.6
+08-30 Sun: 00-02 TUT(-1.57%[4s]) +4s +4.6 +24s +2.8 | 04-07 HNT(-0.88%[8s]) +4s+54.3 +24s+86.3 | 08-15 ZKC(-2.00%[4s]) +4s+20.6 +24s+31.5 | 16-23 TUT(-0.97%[4s]) +4s +1.4 +24s -9.0
+08-31 Mon: 00-07 SKR(-2.46%[4s]) +4s +0.7 +24s+14.6 | 08-10 ZORA(-1.31%[4s]) +4s -7.6 +24s-23.1 | 12-23 SKR(-2.50%[4s]) +4s +8.6 +24s+20.3
+09-01 Tue: 00-01 HNT(-0.49%[8s]) +4s -3.5 +24s-11.7 | 02-04 ONG(-0.58%[1s]) +4s +2.1 +24s+21.7 | 05-07 SKR(-0.51%[4s]) +4s -6.7 +24s-35.2 | 08 SAND(-0.30%[8s]) +4s -2.1 +24s -1.5 | 09-10 ONG(-0.89%[1s]) +4s +7.2 +24s +0.6 | 12-13 SKR(-1.13%[4s]) +4s-12.6 +24s-23.1 | 14 ONG(-1.19%[1s]) +4s -9.1 +24s-21.8 | 15 SKR(-0.62%[4s]) +4s -9.4 +24s-19.6 | 16-23 ACE(-1.17%[4s]) +4s +5.9 +24s +6.8
+09-02 Wed: 00-02 ACE(-0.67%[4s]) +4s +5.1 +24s-11.6 | 04-07 HOME(-0.83%[4s]) +4s -3.3 +24s -4.8 | 08-16 T(-2.00%[4s]) +4s+11.4 +24s+25.5 | 17-18 LA(-0.80%[4s]) +4s -5.9 +24s -3.6 | 20-22 OKTA(-0.75%[8s]) +4s +2.5 +24s +7.3 | 23 T(-1.44%[4s]) +4s -1.1 +24s-14.4
+09-03 Thu: 00-02 LA(-1.12%[4s]) +4s +7.0 +24s -0.3 | 04-10 ANKR(-1.24%[8s]) +4s -8.5 +24s-15.7
+
+==============================================================================================================
+C) DAVRANIS ANALIZI
+==============================================================================================================
+
+--- Funding saati en dusuk coin (03/11/19)  (n=86) ---
+  p24  medyan  -0.01%  ort +12.07%  yukari%  50
+  p1   medyan  +0.28%  ort  +0.86%  yukari%  57
+  h1   medyan  -0.88%  ort  -1.46%  yukari%  30
+  h4   medyan  -1.51%  ort  -0.41%  yukari%  34
+  h8   medyan  -1.21%  ort  -1.25%  yukari%  42
+  h24  medyan  -3.57%  ort  -3.51%  yukari%  28
+  up4  medyan  +2.84%  ort  +6.18%  yukari%  92
+  dn4  medyan  -4.45%  ort  -6.49%  yukari%   0
+  up   medyan  +4.77%  ort +12.23%  yukari%  95
+  dn   medyan  -7.82%  ort -11.68%  yukari%   0
+
+--- Normal saat en dusuk coin (21 saat)  (n=609) ---
+  p24  medyan  +1.41%  ort +10.92%  yukari%  53
+  p1   medyan  +0.06%  ort  +0.59%  yukari%  50
+  h1   medyan  -0.04%  ort  +0.45%  yukari%  49
+  h4   medyan  -0.60%  ort  +0.25%  yukari%  44
+  h8   medyan  -1.22%  ort  -0.28%  yukari%  41
+  h24  medyan  -3.19%  ort  -1.94%  yukari%  32
+  up4  medyan  +2.99%  ort  +6.72%  yukari%  99
+  dn4  medyan  -3.66%  ort  -5.38%  yukari%   0
+  up   medyan  +5.91%  ort +13.70%  yukari% 100
+  dn   medyan  -7.68%  ort -10.97%  yukari%   0
+
+--- Funding saati 03:00 TR  (n=29) ---
+  p24  medyan  -2.36%  ort +10.14%  yukari%  41
+  p1   medyan  +0.28%  ort  +0.42%  yukari%  59
+  h1   medyan  -0.12%  ort  +0.35%  yukari%  48
+  h4   medyan  -0.50%  ort  +1.51%  yukari%  41
+  h8   medyan  -0.48%  ort  -0.37%  yukari%  45
+  h24  medyan  -4.27%  ort  -5.61%  yukari%  21
+  up4  medyan  +3.42%  ort  +8.93%  yukari% 100
+  dn4  medyan  -3.79%  ort  -6.07%  yukari%   0
+  up   medyan  +5.70%  ort +12.00%  yukari% 100
+  dn   medyan  -9.47%  ort -11.53%  yukari%   0
+
+--- Funding saati 11:00 TR  (n=28) ---
+  p24  medyan +13.48%  ort +16.53%  yukari%  57
+  p1   medyan  +0.17%  ort  +0.89%  yukari%  54
+  h1   medyan  -1.72%  ort  -3.64%  yukari%  18
+  h4   medyan  -2.29%  ort  -1.78%  yukari%  32
+  h8   medyan  -2.16%  ort  -3.71%  yukari%  39
+  h24  medyan  -3.35%  ort  -6.33%  yukari%  32
+  up4  medyan  +1.86%  ort  +5.44%  yukari%  86
+  dn4  medyan  -5.62%  ort  -7.64%  yukari%   0
+  up   medyan  +3.21%  ort  +9.23%  yukari%  89
+  dn   medyan  -9.37%  ort -12.90%  yukari%   0
+
+--- Funding saati 19:00 TR  (n=29) ---
+  p24  medyan  +2.30%  ort  +9.69%  yukari%  52
+  p1   medyan  +0.55%  ort  +1.27%  yukari%  59
+  h1   medyan  -1.22%  ort  -1.17%  yukari%  24
+  h4   medyan  -1.53%  ort  -1.02%  yukari%  28
+  h8   medyan  -1.22%  ort  +0.24%  yukari%  41
+  h24  medyan  -3.05%  ort  +1.32%  yukari%  31
+  up4  medyan  +1.38%  ort  +4.16%  yukari%  90
+  dn4  medyan  -4.34%  ort  -5.80%  yukari%   0
+  up   medyan  +5.27%  ort +15.37%  yukari%  97
+  dn   medyan  -6.36%  ort -10.66%  yukari%   0
+
+--- Funding saati 2. en dusuk coin  (n=86) ---
+  p24  medyan  +0.38%  ort  +6.70%  yukari%  51
+  p1   medyan  -0.09%  ort  +0.19%  yukari%  43
+  h1   medyan  -0.62%  ort  -0.47%  yukari%  34
+  h4   medyan  -0.74%  ort  +0.20%  yukari%  38
+  h8   medyan  -0.63%  ort  -0.72%  yukari%  38
+  h24  medyan  -2.81%  ort  -1.78%  yukari%  34
+  up4  medyan  +1.47%  ort  +4.26%  yukari%  92
+  dn4  medyan  -3.15%  ort  -3.69%  yukari%   0
+  up   medyan  +3.93%  ort  +8.67%  yukari% 100
+  dn   medyan  -6.95%  ort  -8.38%  yukari%   0
+
+--- Funding saati 3. en dusuk coin  (n=86) ---
+  p24  medyan  -1.97%  ort  +0.67%  yukari%  41
+  p1   medyan  +0.03%  ort  -0.21%  yukari%  51
+  h1   medyan  -0.21%  ort  -0.10%  yukari%  43
+  h4   medyan  +0.04%  ort  +0.93%  yukari%  51
+  h8   medyan  -0.08%  ort  +2.23%  yukari%  49
+  h24  medyan  -0.43%  ort  +3.47%  yukari%  47
+  up4  medyan  +2.04%  ort  +4.45%  yukari%  95
+  dn4  medyan  -1.67%  ort  -3.01%  yukari%   0
+  up   medyan  +5.55%  ort +12.57%  yukari%  99
+  dn   medyan  -3.90%  ort  -6.26%  yukari%   0
+
+--- Funding saati oran -100.0%..-1.0%  (n=27) ---
+  p24  medyan +18.45%  ort +31.23%  yukari%  70
+  p1   medyan  +0.29%  ort  +0.96%  yukari%  59
+  h1   medyan  -0.93%  ort  -1.80%  yukari%  26
+  h4   medyan  -1.16%  ort  +1.45%  yukari%  33
+  h8   medyan  -1.38%  ort  -0.80%  yukari%  37
+  h24  medyan  -5.92%  ort -10.14%  yukari%  22
+  up4  medyan  +3.10%  ort +11.37%  yukari%  93
+  dn4  medyan  -5.66%  ort  -9.53%  yukari%   0
+  up   medyan  +3.35%  ort +15.07%  yukari%  93
+  dn   medyan -14.34%  ort -16.59%  yukari%   0
+
+--- Funding saati oran -1.0%..-0.5%  (n=34) ---
+  p24  medyan  -0.92%  ort  +7.54%  yukari%  47
+  p1   medyan  +0.11%  ort  +0.95%  yukari%  53
+  h1   medyan  -0.92%  ort  -1.76%  yukari%  29
+  h4   medyan  -1.40%  ort  -1.96%  yukari%  26
+  h8   medyan  -1.65%  ort  -2.03%  yukari%  32
+  h24  medyan  -3.57%  ort  -1.37%  yukari%  12
+  up4  medyan  +2.85%  ort  +4.27%  yukari%  91
+  dn4  medyan  -4.78%  ort  -6.16%  yukari%   0
+  up   medyan  +4.36%  ort +11.77%  yukari%  94
+  dn   medyan  -9.02%  ort -11.37%  yukari%   0
+
+--- Funding saati oran -0.5%..-0.2%  (n=22) ---
+  p24  medyan  -3.40%  ort  -2.95%  yukari%  27
+  p1   medyan  +0.24%  ort  +0.54%  yukari%  59
+  h1   medyan  -0.31%  ort  -0.54%  yukari%  41
+  h4   medyan  -0.68%  ort  -0.08%  yukari%  50
+  h8   medyan  +0.38%  ort  -0.43%  yukari%  64
+  h24  medyan  +1.33%  ort  -0.08%  yukari%  55
+  up4  medyan  +1.57%  ort  +3.45%  yukari%  91
+  dn4  medyan  -2.97%  ort  -3.49%  yukari%   0
+  up   medyan  +7.00%  ort  +9.07%  yukari% 100
+  dn   medyan  -5.11%  ort  -6.96%  yukari%   0
+
+--- Funding saati oran -0.2%..+0.0%  (n=3) ---
+  p24  medyan  +1.54%  ort  +1.14%  yukari%  67
+  p1   medyan  +1.73%  ort  +1.37%  yukari%  67
+  h1   medyan  -1.70%  ort  -1.93%  yukari%   0
+  h4   medyan  -1.86%  ort  -2.13%  yukari%   0
+  h8   medyan  -2.08%  ort  -2.41%  yukari%  33
+  h24  medyan  +1.33%  ort  +6.85%  yukari%  67
+  up4  medyan  +0.80%  ort  +1.26%  yukari% 100
+  dn4  medyan  -4.88%  ort  -4.87%  yukari%   0
+  up   medyan  +5.70%  ort +15.15%  yukari% 100
+  dn   medyan  -5.53%  ort  -5.73%  yukari%   0
+
+--- Funding saati, en dusuk coin 1s-aralikli (ONG/COTI tipi)  (n=17) ---
+  p24  medyan +13.36%  ort +21.48%  yukari%  71
+  p1   medyan  +0.55%  ort  +0.99%  yukari%  59
+  h1   medyan  -0.36%  ort  -1.09%  yukari%  41
+  h4   medyan  -1.52%  ort  -0.06%  yukari%  41
+  h8   medyan  -3.20%  ort  -2.45%  yukari%  41
+  h24  medyan  -2.17%  ort  -6.39%  yukari%  35
+  up4  medyan  +3.35%  ort +10.26%  yukari% 100
+  dn4  medyan  -4.92%  ort  -9.21%  yukari%   0
+  up   medyan  +8.06%  ort +15.42%  yukari% 100
+  dn   medyan -14.39%  ort -15.69%  yukari%   0
+
+--- Funding saati, en dusuk coin 4s/8s-aralikli  (n=69) ---
+  p24  medyan  -1.19%  ort  +9.75%  yukari%  45
+  p1   medyan  +0.28%  ort  +0.83%  yukari%  57
+  h1   medyan  -0.90%  ort  -1.56%  yukari%  28
+  h4   medyan  -1.50%  ort  -0.50%  yukari%  32
+  h8   medyan  -1.09%  ort  -0.95%  yukari%  42
+  h24  medyan  -3.73%  ort  -2.80%  yukari%  26
+  up4  medyan  +2.21%  ort  +5.18%  yukari%  90
+  dn4  medyan  -4.34%  ort  -5.82%  yukari%   0
+  up   medyan  +4.17%  ort +11.45%  yukari%  94
+  dn   medyan  -7.56%  ort -10.70%  yukari%   0
+
+--- Funding saati, onceki 24s > +20% (pump sonrasi)  (n=21) ---
+  p24  medyan +56.01%  ort +59.35%  yukari% 100
+  p1   medyan  +3.79%  ort  +3.73%  yukari%  67
+  h1   medyan  -2.12%  ort  -2.88%  yukari%  33
+  h4   medyan  -6.09%  ort  -0.08%  yukari%  33
+  h8   medyan  -4.82%  ort  -2.34%  yukari%  33
+  h24  medyan -11.43%  ort  -4.66%  yukari%  19
+  up4  medyan  +7.02%  ort +13.90%  yukari%  95
+  dn4  medyan -10.67%  ort -12.65%  yukari%   0
+  up   medyan  +8.99%  ort +26.78%  yukari%  95
+  dn   medyan -17.39%  ort -20.16%  yukari%   0
+
+--- Funding saati, onceki 24s <= +20%  (n=65) ---
+  p24  medyan  -3.05%  ort  -3.21%  yukari%  34
+  p1   medyan  +0.14%  ort  -0.07%  yukari%  54
+  h1   medyan  -0.80%  ort  -1.00%  yukari%  29
+  h4   medyan  -1.27%  ort  -0.52%  yukari%  34
+  h8   medyan  -0.86%  ort  -0.90%  yukari%  45
+  h24  medyan  -2.57%  ort  -3.14%  yukari%  31
+  up4  medyan  +1.77%  ort  +3.69%  yukari%  91
+  dn4  medyan  -3.79%  ort  -4.50%  yukari%   0
+  up   medyan  +4.02%  ort  +7.53%  yukari%  95
+  dn   medyan  -6.77%  ort  -8.94%  yukari%   0
+
+--- Funding saati, coin ILK KEZ en dusuk  (n=23) ---
+  p24  medyan +15.52%  ort +19.60%  yukari%  74
+  p1   medyan  +0.94%  ort  +2.37%  yukari%  61
+  h1   medyan  -1.27%  ort  -1.14%  yukari%  17
+  h4   medyan  -3.01%  ort  +2.86%  yukari%  39
+  h8   medyan  -0.95%  ort  +1.80%  yukari%  43
+  h24  medyan  -3.73%  ort  +4.74%  yukari%  30
+  up4  medyan  +1.30%  ort +10.33%  yukari%  91
+  dn4  medyan  -5.38%  ort  -6.58%  yukari%   0
+  up   medyan  +4.17%  ort +22.50%  yukari%  91
+  dn   medyan  -8.70%  ort  -9.50%  yukari%   0
+
+--- Funding saati, coin TEKRAR en dusuk (onceki slotlarda da vardi)  (n=63) ---
+  p24  medyan  -1.56%  ort  +9.32%  yukari%  41
+  p1   medyan  +0.21%  ort  +0.31%  yukari%  56
+  h1   medyan  -0.80%  ort  -1.58%  yukari%  35
+  h4   medyan  -1.16%  ort  -1.61%  yukari%  32
+  h8   medyan  -1.22%  ort  -2.36%  yukari%  41
+  h24  medyan  -3.41%  ort  -6.52%  yukari%  27
+  up4  medyan  +2.87%  ort  +4.67%  yukari%  92
+  dn4  medyan  -4.13%  ort  -6.46%  yukari%   0
+  up   medyan  +4.78%  ort  +8.48%  yukari%  97
+  dn   medyan  -7.57%  ort -12.48%  yukari%   0
+
+--- Sureklilik: en dusuk coin slotlar arasinda ne kadar ayni kaliyor ---
+  ardisik funding slotunda ayni coin: 30/85 = %35
+  en cok 'en dusuk' olan coinler (funding saati): KAITO×13, ACE×12, HOME×11, COTI×9, ONG×8, BICO×6, CXMT×3, UNITREE×3, SKR×3, MOVE×2
+  en cok 'en dusuk' olan coinler (normal saat): KAITO×95, ACE×90, HOME×69, BICO×63, ONG×32, SKR×31, COTI×27, UNITREE×27, CXMT×25, TUT×14
+
+--- Baz cizgi: ayni saatte evrendeki MEDYAN coinin hareketi (karsilastirma) ---
+  h1   medyan  +0.00%  ort  +0.08%  yukari%  48
+  h4   medyan  -0.06%  ort  +0.05%  yukari%  45
+  h24  medyan  -0.01%  ort  +1.14%  yukari%  50
+  up   medyan  +2.22%  ort  +4.95%  yukari%  99
+  dn   medyan  -2.04%  ort  -3.38%  yukari%   0
+
+--- Settlement etrafi saatlik profil (funding saati en dusuk coin): saat bazinda medyan getiri ---
+  saat -4: medyan -0.38%  ort +0.17%  yesil%  41  (n=86)
+  saat -3: medyan +0.32%  ort +1.45%  yesil%  59  (n=86)
+  saat -2: medyan +0.15%  ort +0.39%  yesil%  52  (n=86)
+  saat -1: medyan +0.28%  ort +0.86%  yesil%  57  (n=86)
+  saat +0: medyan -0.88%  ort -1.46%  yesil%  30  (n=86)
+  saat +1: medyan -0.17%  ort +0.29%  yesil%  45  (n=86)
+  saat +2: medyan -0.45%  ort +0.02%  yesil%  42  (n=86)
+  saat +3: medyan +0.33%  ort +0.56%  yesil%  56  (n=86)
+  saat +4: medyan -0.49%  ort -0.83%  yesil%  36  (n=86)
+#### SAGLAMLIK / STRATEJI SIMULASYONU ####

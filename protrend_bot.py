@@ -18,10 +18,12 @@ START_EQUITY = 500.0
 MARGIN_PCT   = 0.20      # islem basi teminat = equity'nin %20'si (kaldirac coin bazli dinamik)
 MAX_POS      = 3
 MIN_CONF     = 62
+ADX1_MAX     = 60        # 1dk adx>60 -> trend tukenmis/asiri uzamis, girme (POL/TUT/OP tipi ani ters)
+MAX_DD_STOP  = 0.06      # equity -%6'ya inerse yeni islem acma (sermaye koruma devre kesici)
 TAKER_FEE    = 0.00055   # Bybit taker %0.055 / bacak (market cikis: stop/trail/zaman)
 MAKER_FEE    = 0.0002    # limit(maker) %0.02 / bacak (giris + tp1)
 TP1_CLOSE    = 0.40      # tp1'de kalanin %40'i alinir, %60 trailing'e birakilir
-DURATION_MIN = 60
+DURATION_MIN = 180
 POLL_SEC     = 20
 MAX_HOLD_MIN = 40        # trend olgunlassin diye sabir (eski 15dk cok erken kesiyordu)
 SYM_COOLDOWN = 8 * 60
@@ -33,7 +35,7 @@ STOP_MAX_PCT  = 0.03    # stop en fazla %3.0
 TP1_R_MULT    = 2.0     # tp1 = 2.0R -> burada %40 kilitle, stop breakeven
 TRAIL_R_MULT  = 1.5     # kalan %60: en iyi noktadan 1.5R geri iz-suren stop (kosuyu yakala)
 LEV_MIN       = 4       # dinamik kaldirac tabani
-LEV_MAX       = 15      # dinamik kaldirac tavani
+LEV_MAX       = 8       # dinamik kaldirac tavani (mantikli risk: ~$4/islem, ~%0.8 equity)
 LEV_RISK_ROOM = 0.10    # stop = likidasyon mesafesinin (~1/lev) %10'u -> lev=0.10/stop_pct
                         #   sonuc: oynak coin(genis stop) dusuk kaldirac, sakin coin yuksek;
                         #   islem basi $ risk ~sabit (~%1-2 equity), likidasyon stoptan cok uzak
@@ -176,6 +178,7 @@ def try_enter(board, prices):
         if len(open_pos) >= MAX_POS: break
         sym = sig["symbol"]
         if sig["conf"] < MIN_CONF or sym in open_pos: continue
+        if (sig.get("adx1") or 0) > ADX1_MAX: continue   # asiri-uzamis/tukenmis trend -> girme
         if time.time() - last_entry.get(sym, 0) < SYM_COOLDOWN: continue
         px = prices.get(sym, sig["price"])
         if abs(px / sig["price"] - 1) > 0.004: continue
@@ -235,14 +238,22 @@ def write_report(final=False):
     return txt
 
 # ───────── ANA DÖNGÜ ─────────
-log(f"🤖 Bot başladı — ${START_EQUITY}, dinamik {LEV_MIN}-{LEV_MAX}x, {DURATION_MIN}dk, Pro Trend conf≥{MIN_CONF}, max {MAX_POS} poz | stop {STOP_ATR_MULT}×ATR, tp1 {TP1_R_MULT}R %{int(TP1_CLOSE*100)}, trail {TRAIL_R_MULT}R")
+log(f"🤖 Bot başladı — ${START_EQUITY}, dinamik {LEV_MIN}-{LEV_MAX}x, {DURATION_MIN}dk, conf≥{MIN_CONF}, adx1≤{ADX1_MAX}, max {MAX_POS} poz | stop {STOP_ATR_MULT}×ATR, tp1 {TP1_R_MULT}R %{int(TP1_CLOSE*100)}, trail {TRAIL_R_MULT}R, devre kesici -%{int(MAX_DD_STOP*100)}")
 loop = 0
+halted = False
 while time.time() < END_TS:
     loop += 1
     try:
         prices = price_map()
         manage(prices)
-        try_enter(pro_trend_board(), prices)
+        # zarar devre kesici: equity -%6'ya inince yeni islem acma (acik olanlar yonetilmeye devam)
+        if equity <= START_EQUITY * (1 - MAX_DD_STOP):
+            if not halted:
+                log(f"🛑 DEVRE KESİCİ: equity ${equity:.2f} (-%{MAX_DD_STOP*100:.0f}) — yeni işlem DURDU, açıklar yönetiliyor")
+                halted = True
+        else:
+            halted = False
+            try_enter(pro_trend_board(), prices)
         if loop % 6 == 0:
             log(f"… döngü {loop} | equity ${equity:.2f} | açık {len(open_pos)} | kapanan {len([t for t in trades if t['closed']])} | kom ${total_fees:.3f} | kalan {int((END_TS-time.time())/60)}dk")
             write_report(False)

@@ -1,0 +1,56 @@
+# 180 GUN OOS: settlement aninda en dusuk funding coini SHORT, 1 saat (Bybit 283 coin, Mart-Eylul 2026). Uretim: funding_settle_short_oos.py, veri fund180.pkl
+coin: 283 funding kayit: 194290
+
+=== 180 GUN, 288 coin evreni: settlement aninda EN DUSUK funding'li (4s/8s) coini SHORT, 1 saat tut, komisyon %0.1 ===
+  TUMU                               n=1080 isabet% 60 ort +0.57 med +0.32 top +616.3 PF1.57 enkotu -40.4
+  2026-03                            n= 141 isabet% 63 ort +0.69 med +0.43 top  +97.6 PF2.02 enkotu -14.6
+  2026-04                            n= 180 isabet% 62 ort +0.61 med +0.36 top +110.6 PF1.51 enkotu -31.3
+  2026-05                            n= 186 isabet% 51 ort -0.04 med +0.03 top   -7.3 PF0.95 enkotu -40.4
+  2026-06                            n= 180 isabet% 52 ort +0.31 med +0.09 top  +55.5 PF1.22 enkotu -27.0
+  2026-07                            n= 186 isabet% 62 ort +0.94 med +0.34 top +174.8 PF2.02 enkotu -15.6
+  2026-08                            n= 186 isabet% 68 ort +0.96 med +0.76 top +178.8 PF2.05 enkotu -31.1
+  2026-09                            n=  21 isabet% 62 ort +0.30 med +0.42 top   +6.3 PF1.33 enkotu  -6.6
+ -- oran esigi --
+  oran<=-0.1%                        n=1009 isabet% 60 ort +0.60 med +0.37 top +601.3 PF1.57 enkotu -40.4
+  oran<=-0.2%                        n= 813 isabet% 61 ort +0.68 med +0.50 top +556.3 PF1.57 enkotu -40.4
+  oran<=-0.3%                        n= 630 isabet% 62 ort +0.91 med +0.67 top +571.5 PF1.72 enkotu -31.3
+  oran<=-0.5%                        n= 437 isabet% 63 ort +1.12 med +0.80 top +489.8 PF1.80 enkotu -31.1
+  oran<=-1.0%                        n= 192 isabet% 66 ort +1.81 med +0.99 top +347.9 PF2.07 enkotu -29.7
+ -- oran<=-0.3% ay ay --
+  2026-03 <=-0.3%                    n=  78 isabet% 62 ort +1.03 med +0.63 top  +80.5 PF2.39 enkotu  -8.9
+  2026-04 <=-0.3%                    n=  97 isabet% 65 ort +1.13 med +0.68 top +109.9 PF1.73 enkotu -31.3
+  2026-05 <=-0.3%                    n=  48 isabet% 67 ort +0.70 med +1.08 top  +33.6 PF1.72 enkotu -15.5
+  2026-06 <=-0.3%                    n= 136 isabet% 50 ort +0.25 med -0.00 top  +34.1 PF1.15 enkotu -27.0
+  2026-07 <=-0.3%                    n= 112 isabet% 62 ort +1.39 med +0.77 top +156.2 PF2.10 enkotu -15.6
+  2026-08 <=-0.3%                    n= 138 isabet% 70 ort +1.09 med +0.80 top +150.9 PF2.04 enkotu -31.1
+  2026-09 <=-0.3%                    n=  21 isabet% 62 ort +0.30 med +0.42 top   +6.3 PF1.33 enkotu  -6.6
+ -- saat (TR) --
+  03:00 TR                           n= 180 isabet% 61 ort -0.01 med +0.38 top   -2.5 PF0.99 enkotu -40.4
+  07:00 TR                           n= 180 isabet% 57 ort +0.55 med +0.38 top  +98.2 PF1.76 enkotu -27.0
+  11:00 TR                           n= 180 isabet% 63 ort +1.21 med +0.45 top +217.4 PF2.55 enkotu -17.6
+  15:00 TR                           n= 180 isabet% 63 ort +1.00 med +0.48 top +180.0 PF1.81 enkotu -31.3
+  19:00 TR                           n= 180 isabet% 60 ort +1.03 med +0.28 top +185.5 PF2.33 enkotu -12.0
+  23:00 TR                           n= 180 isabet% 53 ort -0.35 med +0.06 top  -62.3 PF0.70 enkotu -31.1
+ -- saat (TR), oran<=-0.3% --
+  03:00 TR <=-0.3%                   n= 110 isabet% 65 ort +0.34 med +0.65 top  +37.7 PF1.26 enkotu -29.7
+  07:00 TR <=-0.3%                   n= 104 isabet% 60 ort +0.62 med +0.64 top  +64.5 PF1.64 enkotu -27.0
+  11:00 TR <=-0.3%                   n= 122 isabet% 64 ort +1.40 med +0.82 top +171.3 PF2.47 enkotu -17.6
+  15:00 TR <=-0.3%                   n= 104 isabet% 64 ort +1.48 med +1.24 top +154.1 PF1.81 enkotu -31.3
+  19:00 TR <=-0.3%                   n= 109 isabet% 62 ort +1.69 med +0.68 top +183.9 PF2.80 enkotu -12.0
+  23:00 TR <=-0.3%                   n=  81 isabet% 53 ort -0.49 med +0.27 top  -39.9 PF0.71 enkotu -31.1
+ -- onceki saat yesil mi (funding oncesi yukselis) --
+  onceki 1s > +1%                    n= 313 isabet% 64 ort +0.49 med +0.87 top +152.0 PF1.28 enkotu -40.4
+  onceki 1s 0..+1%                   n= 253 isabet% 59 ort +0.28 med +0.16 top  +71.1 PF1.56 enkotu -12.0
+  onceki 1s < 0                      n= 514 isabet% 57 ort +0.77 med +0.28 top +393.2 PF1.95 enkotu -15.5
+ -- tutma suresi (oran<=-0.3%) --
+  tut 1s                             n= 630 isabet% 62 ort +0.91 med +0.67 top +571.5 PF1.72 enkotu -31.3
+  tut 2s                             n= 629 isabet% 60 ort +0.58 med +0.71 top +364.8 PF1.28 enkotu -54.2
+  tut 4s                             n= 629 isabet% 55 ort +0.24 med +0.52 top +152.2 PF1.08 enkotu-122.7
+ -- sira (oran<=-0.3%) --
+  2. en dusuk                        n= 260 isabet% 57 ort +0.08 med +0.27 top  +21.9 PF1.08 enkotu -17.4
+  3. en dusuk                        n=  81 isabet% 65 ort +0.68 med +0.51 top  +55.0 PF2.05 enkotu  -8.0
+ -- plasebo: ayni anda rastgele coin short --
+  plasebo                            n=2621 isabet% 41 ort -0.21 med -0.10 top -544.9 PF0.57 enkotu -26.9
+ -- ayna: en YUKSEK funding'li coini LONG, 1s --
+  en yuksek long                     n=1075 isabet% 51 ort +0.16 med +0.04 top +175.8 PF1.19 enkotu -27.8
+  en yuksek long, oran>=+0.1%        n= 524 isabet% 58 ort +0.35 med +0.27 top +181.3 PF1.43 enkotu -27.8

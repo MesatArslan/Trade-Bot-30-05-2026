@@ -143,7 +143,7 @@ class FundingKose(rumps.App):
     def _open(self, sender):
         sym = getattr(sender, "_sym", None)
         if sym:
-            webbrowser.open(f"https://www.bybit.com/trade/usdt/{sym}")
+            webbrowser.open(f"https://futures.mexc.com/exchange/{sym.replace('USDT', '_USDT')}")
 
     def _manual(self, _):
         self.title = "⏳ Funding"
