@@ -7,6 +7,7 @@ Başlat:
 Sonra tarayıcıda:  http://localhost:8787
 """
 import os
+import re
 import json
 import time
 import threading
@@ -23,6 +24,9 @@ import binance
 import scan
 import decide
 import sr_board
+import cokus_board
+import analist_tarama
+import stoch_izle
 import config as C
 
 PORT = 8787
@@ -2607,6 +2611,112 @@ def bot_trades_snapshot(tf="5", limit=30, before=None, since=None, watch=None):
     return out
 
 
+
+# ─── 🧠 Coin Analist (claude -p --agent coin-analist: haber + teknik + trend + plan) ───
+_ANALIST_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "coin_analist")
+os.makedirs(_ANALIST_DIR, exist_ok=True)
+_ANALIST_DEFTER = os.path.join(_ANALIST_DIR, "cevaplar.jsonl")
+_ANALIST_JOBS = {}                      # id -> job dict
+_ANALIST_LOCK = threading.Lock()
+_ANALIST_SEM = threading.Semaphore(2)   # aynı anda en fazla 2 claude süreci
+_ANALIST_RE = re.compile(r"PLAN_JSON:\s*(\{.*\})", re.S)
+
+
+def _analist_plan_ayikla(text):
+    m = _ANALIST_RE.search(text or "")
+    if not m:
+        return None
+    try:
+        return json.loads(m.group(1).strip().splitlines()[0])
+    except Exception:
+        try:
+            return json.loads(m.group(1))
+        except Exception:
+            return None
+
+
+def _analist_calistir(job):
+    with _ANALIST_SEM:
+        job["durum"] = "calisiyor"; job["baslangic"] = time.time()
+        soru = f"{job['sym']} coinine bak: güncel haberleri araştır, teknik analiz yap, trendi tespit et ve işlem planı ver."
+        if job.get("not"):
+            soru += f"\nKullanıcı notu: {job['not']}"
+        env = {k: v for k, v in os.environ.items() if k not in ("CLAUDECODE", "CLAUDE_CODE_ENTRYPOINT")}
+        cmd = ["claude", "-p", soru, "--agent", "coin-analist", "--output-format", "json",
+               "--allowedTools", "Bash(.venv/bin/python coin_analiz.py:*)", "WebSearch", "WebFetch", "Read"]
+        try:
+            r = subprocess.run(cmd, cwd=os.path.dirname(os.path.abspath(__file__)), env=env,
+                               capture_output=True, text=True, timeout=600)
+            out = r.stdout.strip()
+            try:
+                j = json.loads(out)
+                cevap = j.get("result") or out
+                job["maliyet_usd"] = j.get("total_cost_usd")
+            except Exception:
+                cevap = out or r.stderr.strip()
+            if r.returncode != 0 and not cevap:
+                raise RuntimeError(r.stderr.strip()[:500] or f"claude çıkış kodu {r.returncode}")
+            job["cevap"] = cevap
+            job["plan"] = _analist_plan_ayikla(cevap)
+            job["durum"] = "bitti"
+        except subprocess.TimeoutExpired:
+            job["durum"] = "hata"; job["hata"] = "10 dk içinde cevap gelmedi"
+        except Exception as e:
+            job["durum"] = "hata"; job["hata"] = str(e)[:500]
+        job["bitis"] = time.time()
+        try:
+            with open(_ANALIST_DEFTER, "a", encoding="utf-8") as f:
+                f.write(json.dumps(job, ensure_ascii=False) + "\n")
+        except Exception:
+            pass
+
+
+def analist_sor(sym, not_=""):
+    sym = (sym or "").upper().replace("/", "").replace("-", "").replace("_", "").strip()
+    if sym.endswith("USDT"):
+        sym = sym[:-4]
+    if not re.fullmatch(r"[A-Z0-9]{2,15}", sym):
+        return {"ok": False, "msg": "geçersiz coin adı"}
+    with _ANALIST_LOCK:
+        for j in _ANALIST_JOBS.values():
+            if j["sym"] == sym and j["durum"] in ("bekliyor", "calisiyor"):
+                return {"ok": True, "id": j["id"], "msg": "zaten soruluyor"}
+        jid = f"{int(time.time()*1000)}_{sym}"
+        job = {"id": jid, "sym": sym, "not": (not_ or "")[:300], "durum": "bekliyor", "olusturma": time.time(),
+               "baslangic": None, "bitis": None, "cevap": None, "plan": None, "hata": None}
+        _ANALIST_JOBS[jid] = job
+    threading.Thread(target=_analist_calistir, args=(job,), daemon=True).start()
+    return {"ok": True, "id": jid}
+
+
+def analist_job(jid):
+    j = _ANALIST_JOBS.get(jid)
+    if not j:
+        # bellekte yoksa defterden ara
+        for g in analist_gecmis(500):
+            if g["id"] == jid:
+                return g
+        return None
+    return j
+
+
+def analist_gecmis(limit=50):
+    out = []
+    try:
+        with open(_ANALIST_DEFTER, encoding="utf-8") as f:
+            for line in f:
+                try:
+                    out.append(json.loads(line))
+                except Exception:
+                    pass
+    except FileNotFoundError:
+        pass
+    with _ANALIST_LOCK:
+        aktif = [j for j in _ANALIST_JOBS.values() if j["durum"] in ("bekliyor", "calisiyor")]
+    out = aktif + sorted(out, key=lambda x: -(x.get("olusturma") or 0))
+    return out[:limit]
+
+
 # ─── HTTP ───────────────────────────────────────────────────────
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, *a):
@@ -2633,6 +2743,81 @@ class Handler(BaseHTTPRequestHandler):
                     self._send(200, f.read(), "text/html; charset=utf-8")
             except FileNotFoundError:
                 self._send(404, "index.html yok")
+            return
+        if path == "/grafik" or path == "/grafik.html":
+            try:
+                with open(os.path.join(WEB_DIR, "grafik.html"), "rb") as f:
+                    self._send(200, f.read(), "text/html; charset=utf-8")
+            except FileNotFoundError:
+                self._send(404, "grafik.html yok")
+            return
+        if path == "/api/kline":
+            # Grafik penceresi: MEXC perp mumlari. ?symbol=BTC_USDT&interval=Min15&limit=1000
+            q = parse_qs(urlparse(self.path).query)
+            sym = (q.get("symbol", ["BTC_USDT"])[0] or "BTC_USDT").upper()
+            itv = q.get("interval", ["Min15"])[0]
+            try:
+                lim = max(2, min(2000, int(q.get("limit", ["1000"])[0])))   # canlı tazeleme 3 mum ister
+            except ValueError:
+                lim = 1000
+            secs = {"Min1": 60, "Min5": 300, "Min15": 900, "Min30": 1800, "Min60": 3600,
+                    "Hour4": 14400, "Hour8": 28800, "Day1": 86400, "Week1": 604800}
+            if itv not in secs:
+                self._json({"error": "gecersiz interval"}, 400); return
+            end_q = q.get("end", [None])[0]
+            try:
+                end = int(end_q) if end_q else int(time.time())
+            except ValueError:
+                end = int(time.time())
+            start = end - lim * secs[itv]
+            d = mexc.get(f"/api/v1/contract/kline/{sym}", interval=itv, start=start, end=end)
+            if not d or not d.get("time"):
+                self._json({"symbol": sym, "interval": itv, "t": [], "o": [], "h": [], "l": [], "c": [], "v": []})
+                return
+            self._json({"symbol": sym, "interval": itv, "t": d["time"], "o": d["open"], "h": d["high"],
+                        "l": d["low"], "c": d["close"], "v": d.get("vol", []), "a": d.get("amount", [])})
+            return
+        if path == "/api/symbols":
+            # Grafik penceresi: tum USDT perp'ler, fiyat/24s degisim/hacim/funding
+            data = mexc.get("/api/v1/contract/ticker") or []
+            rows = []
+            for r in data:
+                sym = r.get("symbol", "")
+                if not sym.endswith("_USDT"):
+                    continue
+                try:
+                    rows.append({"s": sym, "p": float(r["lastPrice"]), "chg": float(r.get("riseFallRate", 0)),
+                                 "vol": float(r.get("amount24", 0)), "fr": float(r.get("fundingRate", 0)),
+                                 "hi": float(r.get("high24Price", 0)), "lo": float(r.get("lower24Price", 0))})
+                except (KeyError, TypeError, ValueError):
+                    continue
+            rows.sort(key=lambda x: -x["vol"])
+            self._json({"ts": int(time.time()), "rows": rows})
+            return
+        if path == "/analist_ui.js":
+            with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "web", "analist_ui.js"), "rb") as f:
+                return self._send(200, f.read(), "application/javascript; charset=utf-8")
+        if path == "/api/stoch":
+            return self._json(stoch_izle.durum())
+        if path == "/api/analist/tarama":
+            return self._json(analist_tarama.durum())
+        if path == "/api/analist/job":
+            q = parse_qs(urlparse(self.path).query)
+            j = analist_job(q.get("id", [""])[0])
+            return self._json(j or {"ok": False, "msg": "iş yok"}, 200 if j else 404)
+        if path == "/api/analist/gecmis":
+            q = parse_qs(urlparse(self.path).query)
+            lim = int(q.get("limit", ["50"])[0])
+            return self._json({"ok": True, "liste": [{k: v for k, v in g.items() if k != "cevap"} | {"ozet": (g.get("cevap") or "")[:160]} for g in analist_gecmis(lim)]})
+        if path == "/api/analist/cevap":
+            q = parse_qs(urlparse(self.path).query)
+            j = analist_job(q.get("id", [""])[0])
+            return self._json(j or {"ok": False}, 200 if j else 404)
+        if path == "/api/cokus":
+            try:
+                self._json(cokus_board.board())
+            except Exception as e:
+                self._json({"error": str(e)}, 500)
             return
         if path == "/api/schedule":
             det = mexc.funding_detail("BTC_USDT") or {}
@@ -2803,6 +2988,32 @@ class Handler(BaseHTTPRequestHandler):
         except Exception:
             body = {}
 
+        if path == "/api/stoch/yenile":
+            if self.headers.get("X-Analist") != "1":
+                return self._json({"ok": False, "msg": "başlık yok"}, 403)
+            return self._json(stoch_izle.yenile())
+        if path in ("/api/stoch/ekle", "/api/stoch/sil"):
+            if self.headers.get("X-Analist") != "1":
+                return self._json({"ok": False, "msg": "başlık yok"}, 403)
+            fn = stoch_izle.ekle if path.endswith("ekle") else stoch_izle.sil
+            return self._json(fn(body.get("sym", "")))
+        if path == "/api/analist/tarama/baslat":
+            if self.headers.get("X-Analist") != "1":
+                return self._json({"ok": False, "msg": "başlık yok"}, 403)
+            try:
+                n = max(0, min(100, int(body.get("n", 10))))  # 0 = skor eşiğini geçen HEPSİ
+                mv = float(body.get("min_vol", 5_000_000))
+            except (TypeError, ValueError):
+                return self._json({"ok": False, "msg": "geçersiz ayar"}, 400)
+            return self._json(analist_tarama.baslat(n=n, min_vol=mv))
+        if path == "/api/analist/tarama/durdur":
+            if self.headers.get("X-Analist") != "1":
+                return self._json({"ok": False, "msg": "başlık yok"}, 403)
+            return self._json(analist_tarama.durdur())
+        if path == "/api/analist/sor":
+            if self.headers.get("X-Analist") != "1":
+                return self._json({"ok": False, "msg": "başlık yok"}, 403)
+            return self._json(analist_sor(body.get("sym", ""), body.get("not", "")))
         if path == "/api/scan":
             if STATE["scan"]["status"] == "running":
                 return self._json({"ok": True, "msg": "zaten çalışıyor"})
@@ -2860,7 +3071,11 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def main():
+    analist_tarama.init(analist_sor, analist_job, _notify)
+    stoch_izle.init(_notify)
+    threading.Thread(target=stoch_izle.loop, daemon=True).start()   # 📶 1dk StochRSI izleme
     threading.Thread(target=_dz_recorder_loop, daemon=True).start()   # dip/zirve defteri
+    threading.Thread(target=cokus_board.loop, daemon=True).start()   # ⚡ çöküş sıçraması kâğıt motoru
     srv = ThreadingHTTPServer(("127.0.0.1", PORT), Handler)
     url = f"http://localhost:{PORT}"
     print(f"\n  Funding Trader web arayüzü çalışıyor:  {url}")
